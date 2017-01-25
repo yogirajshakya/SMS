@@ -1,0 +1,6 @@
+git.exe checkout Release-7.0.0 --
+
+Your branch and 'origin/Release-7.0.0' have diverged,
+and have 1 and 15 different commits each, respectively.
+(use "git pull" to merge the remote branch into yours)
+Switched to branch 'Release-7.0.0'

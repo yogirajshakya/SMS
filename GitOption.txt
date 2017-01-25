@@ -1,0 +1,87 @@
+Pull		
+Usage	-
+Merging upstream changes into your local repository is a common task in Git-based collaboration workflows. 
+We already know how to do this with git fetch followed by git merge, but git pull rolls this into a single command.
+git pull <remote>
+Fetch the specified remote’s copy of the current branch and immediately merge it into the local copy. 
+This is the same as git fetch <remote> followed by git merge origin/<current-branch>.
+git pull --rebase <remote>
+Same as the above command, but instead of using git merge to integrate the remote branch with the local one, use git rebase.
+Discussion	-
+You can think of git pull as Git's version of svn update. 
+It’s an easy way to synchronize your local repository with upstream changes. 
+Pulling via Rebase (Instead Merge)	-
+I want to put my changes on top of what everybody else has done." 
+In this sense, using git pull with the --rebase flag is even more like svn update than a plain git pull.
+In fact, pulling with --rebase is such a common workflow that there is a dedicated configuration option for it:
+git config --global branch.autosetuprebase always
+After running that command, all git pull commands will integrate via git rebase instead of git merge.
+
+Fetch
+The git fetch command imports commits from a remote repository into your local repo. 
+The resulting commits are stored as remote branches instead of the normal local branches that we’ve been working with. 
+This gives you a chance to review changes before integrating them into your copy of the project.
+Usage
+git fetch <remote>
+Fetch all of the branches from the repository. 
+This also downloads all of the required commits and files from the other repository.
+git fetch <remote> <branch>
+Same as the above command, but only fetch the specified branch.
+Discussion	-
+Fetching is what you do when you want to see what everybody else has been working on. 
+Since fetched content is represented as a remote branch, it has absolutely no effect on your local development work. 
+This makes fetching a safe way to review commits before integrating them with your local repository. 
+It’s similar to svn update in that it lets you see how the central history has progressed, 
+	but it doesn’t force you to actually merge the changes into your repository.
+Remote Branches		-
+Remote branches are just like local branches, except they represent commits from somebody else’s repository. 
+You can check out a remote branch just like a local one, but this puts you in a detached HEAD state (just like checking out an old commit). 
+You can think of them as read-only branches. 
+To view your remote branches, simply pass the -r flag to the git branch command. 
+Remote branches are prefixed by the remote they belong to so that you don’t mix them up with local branches. 
+For example, the next code snippet shows the branches you might see after fetching from the origin remote:
+git branch -r # origin/master # origin/develop # origin/some-feature
+Again, you can inspect these branches with the usual git checkout and git log commands. 
+If you approve the changes a remote branch contains, you can merge it into a local branch with a normal git merge. 
+So, unlike SVN, synchronizing your local repository with a remote repository is actually a two-step process: fetch, then merge.
+Examples	-
+git fetch origin
+This will display the branches that were downloaded:
+a1e8fb5..45e66a4 master -> origin/master a1e8fb5..9e8ab1c develop -> origin/develop * [new branch] some-feature -> origin/some-feature
+To see what commits have been added to the upstream master, you can run a git log using origin/master as a filter
+git log --oneline master..origin/master
+To approve the changes and merge them into your local master branch with the following commands:
+git checkout master git log origin/master
+Then we can use git merge origin/master
+git merge origin/master
+The origin/master and master branches now point to the same commit, and you are synchronized with the upstream developments.
+
+Push
+Diff
+Diff with previous version
+Show log
+Show Reflog
+Browse Reference
+Daemon
+Revision graph
+Repo-browser
+Check for modifications
+Rebase
+Stash Save
+Bisect start
+Resolve
+Revert
+Clean-up
+Switch/Checkout
+Merge
+Create Branch
+Create Tag
+Export
+Add
+Submodule Add
+Create Patch Serial
+Apply Patch Serial
+Settings
+
+3005/2000024130/00/0000046764
+	13022025 - Bajaj Allizan
