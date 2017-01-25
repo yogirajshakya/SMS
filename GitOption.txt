@@ -1,3 +1,39 @@
+SVN uses a single central repository to serve as the communication hub for developers, 
+and collaboration takes place by passing changesets between the developers’ working copies and the central repository.
+This is different from Git’s collaboration model, which gives every developer their own copy of the repository, 
+complete with its own local history and branch structure.
+Users typically need to share a series of commits rather than a single changeset.
+Instead of committing a changeset from a working copy to the central repository, Git lets you share entire branches between repositories.
+
+git remote
+The git remote command lets you create, view, and delete connections to other repositories.
+Usage	-
+git remote
+List the remote connections you have to other repositories.
+git remote -v
+Same as the above command, but include the URL of each connection.
+git remote add <name> <url>
+Create a new connection to a remote repository. After adding a remote, you’ll be able to use <name> as a convenient shortcut for <url> in other Git commands.
+git remote rm <name>
+Remove the connection to the remote repository called <name>.
+git remote rename <old-name> <new-name>
+Rename a remote connection from <old-name> to <new-name>.
+Discussion	-
+Git is designed to give each developer an entirely isolated development environment. 
+This means that information is not automatically passed back and forth between repositories. 
+Instead, developers need to manually pull upstream commits into their local repository or manually push their local commits back up to the central repository. The git remote command is really just an easier way to pass URLs to these "sharing" commands.
+The origin Remote	-
+When you clone a repository with git clone, it automatically creates a remote connection called origin pointing back to the cloned repository.
+Repository URLs		-
+Git supports many ways to reference a remote repository. 
+Two of the easiest ways to access a remote repo are via the HTTP and the SSH protocols. 
+HTTP is an easy way to allow anonymous, read-only access to a repository.
+http://host/path/to/repo.git
+But, it’s generally not possible to push commits to an HTTP address (you wouldn’t want to allow anonymous pushes anyways). 
+For read-write access, you should use SSH instead:
+ssh://user@host/path/to/repo.git
+You’ll need a valid SSH account on the host machine, but other than that, Git supports authenticated access via SSH out of the box.
+
 Pull		
 Usage	-
 Merging upstream changes into your local repository is a common task in Git-based collaboration workflows. 
@@ -57,9 +93,36 @@ git merge origin/master
 The origin/master and master branches now point to the same commit, and you are synchronized with the upstream developments.
 
 Push
+Pushing is how you transfer commits from your local repository to a remote repo. 
+It's the counterpart to git fetch, but whereas fetching imports commits to local branches, pushing exports commits to remote branches. 
+This has the potential to overwrite changes.
+Usage
+git push <remote> <branch>
+Push the specified branch to <remote>, along with all of the necessary commits and internal objects. 
+This creates a local branch in the destination repository. 
+To prevent you from overwriting commits, Git won’t let you push when it results in a non-fast-forward merge in the destination repository.
+git push <remote> --force
+Same as the above command, but force the push even if it results in a non-fast-forward merge.
+git push <remote> --all
+Push all of your local branches to the specified remote.
+git push <remote> --tags
+Tags are not automatically pushed when you push a branch or use the --all option. The --tags flag sends all of your local tags to the remote repository.
+Force Pushing
+Git prevents you from overwriting the central repository’s history by refusing push requests when they result in a non-fast-forward merge. 
+So, if the remote history has diverged from your history, you need to pull the remote branch and merge it into your local one, then try pushing again.
+The --force flag overrides this behavior and makes the remote repository’s branch match your local one, 
+deleting any upstream changes that may have occurred since you last pulled.
+However, you must be absolutely certain that none of your teammates have pulled those commits before using the --force option.
+
 Diff
+Show the difference of non commited things.
+
 Diff with previous version
+show last commit things.
+
 Show log
+show commits of that branch.
+
 Show Reflog
 Browse Reference
 Daemon
