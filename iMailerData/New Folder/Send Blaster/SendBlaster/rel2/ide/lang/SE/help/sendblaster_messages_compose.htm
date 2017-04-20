@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html> 
+<head> 
+<title>SendBlaster</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<link href="sendblaster.css" rel="stylesheet" type="text/css"> 
+</head> 
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Redigera meddelanden</p>
+<p class="item">Här skapar du meddelanden som skickas till alla på 
+  en adresslista.</p>
+<p class="item">Medelanden skrivs precis som i ett vanligt mailprogram med rubrik, 
+  meddelandetext och eventuella bilagor. </p>
+<blockquote> 
+<p class="item"> 
+  <span class="itemelement">Taggar</span>     kan läggas till genom
+  att trycka på (#) bredvid <span class="itemelement">Ämne-</span>&nbsp;och
+  <span class="itemelement">Till</span>   fälten för att skapa
+  personlig meddelandens.</p> 
+</blockquote> 
+<blockquote>
+  <p class="item"><font color="#ff0000">Varning:</font> Om du skriver på 
+    något annat språk än svenska kan du behöva ändra 
+    fältet <i>Kodning</i>. Det måste i så fall göras innan 
+    du börjar skriva texten i meddelandet. </p>
+</blockquote>
+<p class="item">Det finns två textrutor:</p>
+<ul>
+  <li class="item">I huvudrutan överst kan du skriva formaterad text med 
+    HTML-kod. Det går att sätta in bilder och klickbara länkar. 
+    Du kan se och ändra HTML-koden genom att klicka på <span class="itemelement">Visa 
+    kod</span> knappen längst till vänster på verktygsraden. <br>&nbsp; 
+  <li class="item">I Text-rutan nedanför kan du skriva in vanlig oformaterad 
+    text. En del mottagare kan kanske inte läsa mail i HTML-format utan ser 
+    då denna text i stället, så det är viktigt att den finns. 
+    För att slippa skriva in allt kan den skapas med knappen <span class="itemelement">Text 
+    från HTML </span>när du skrivit färdigt meddelandet.</li>
+</ul>
+<p class="item">SendBlaster kan också skapa personliga meil genom att man 
+  sätter in referenser till fält i adresslistan. När meddelandet 
+  sänds erätts dessa referenser med fältets innehåll. Tex 
+  om man har fälten Förnamn och Ort (<a class="itemlink" href="../../../../www/sendblaster/httpdocs/help/sendblaster_settings_fields.htm">fältnamnen 
+  kan ändras</a>), kan man skriva:</p>
+<blockquote>
+  <p class="valore">Hej #Förnamn# i #Ort#</p>
+</blockquote>
+<p class="item">Hos mottaharen blir det då :</p>
+<blockquote> 
+  <p class="valore">Hej Anders i Stockholm </p>
+</blockquote>
+<p class="item">Eftersom fältets namn kan ändras kan man i stället 
+  använda fältets nummer för att referera till ett fält (#1# 
+  #2#, osv till #10#). Fältens nummer hittar du under Inställningar, 
+  Fält och utseende. Det finns också speciella referenser som tex: 
+  <span class="itemelement">#listname#</span> som byts ut mot listans namn när 
+  meddelandet sänds; <span class="itemelement">#managingemail#</span> byts 
+  ut mot mailadressen som används för prenumeration/avbeställning 
+  och <span class="itemelement"> #systemdate#</span> som ersätts med dagens 
+  datum med samma format som Windows använder.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#ffff99" class="item"> 
+      <p><font color="#009900"><strong>Hur man lägger till en länk för 
+        avbeställning av prenumeration ( Unsubscribe )</strong></font></p>
+      <p>SendBlaster kan hantera adresslistor genom att hämta mail från 
+        en speciell adress, olika för varje adresslista (<a class="itemlink" href="../../../../www/sendblaster/httpdocs/help/sendblaster_lists_subscribe.htm"><span class="itemelement">Hantera 
+        prenumerationer</span></a>). Här är ett exempel på en 
+        sådan länk som du kan lägga in i ditt meddelande:</p>
+      <blockquote>
+        <p class="valore">&lt;ahref="mailto:#managingemail#?Subject=Unsubscribe"&gt;Remove&lt;/a&gt;</p>
+      </blockquote>
+      <p>För att lägga in denna HTML-kod i meddelandet klickar du på 
+        <span class="itemelement">Visa kod</span>, eller använder knappen 
+        <span class="itemelement">Länk</span> på verktygsraden och 
+        skriv <em><strong>mailto:#managingemail#?Subject=Unsubscribe</strong></em> 
+        i rutan.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Meddelanden kan sparas i .eml format (används av de flesta 
+  mailprogram) genom att klicka på <span class="itemelement">Spara</span>.</p>
+<p class="item">För att skapa ett nytt meddelande kan man använda <span class="itemelement">Välj 
+  mall</span> eller knappen <span class="itemelement">Nytt. </span>Ett annat sätt 
+  är att <span class="itemelement">Öppna</span> ett tidigare sparat 
+  meddelande och ändra detta.</p>
+<ul> 
+  <li class="item">Import an .eml file (for instance, created with Outlook) with 
+    <span class="itemelement">Open</span> / <span class="itemelement">Open .eml 
+    file</span> 
+  <li class="item">Load a message previously sent with <span class="itemelement">Open</span> 
+    / <span class="itemelement">Open e-mail from History</span> 
+  <li class="item">Import a formatted text from an HTML page from the local hard 
+    disk, including images, with <span class="itemelement">Open</span> / <span class="itemelement">Import
+    HTML from file</span> 
+  <li class="item">Import plain text with <span class="itemelement">Open</span> 
+    / <span class="itemelement">Import plain text from external file</span></li> 
+</ul> 
+<p class="item">Knappen <span class="itemelement">Text från HTML</span> 
+  används för att skapa textdelen från HTML-texten. Om mottagarens 
+  mailprogram inte kan visa HTML-format är det denna text som visas. Kom 
+  ihåg att klicka här igen för att uppdatera om du ändrat 
+  något i HTML-fönstret.</p>
+<p class="item">    Trackingfunktioner kan läggas till i meddelandet med <span class="itemelement">Google Analytics</span>&nbsp;och/eller <span class="itemelement">TrackReports</span>        från HTML-panelen; länkarna i medelandet modifieras automatiskt till det valda trackingsystemet, och den valda koden läggs till. Att lägga till <a class="itemlink" href="sendblaster_messages_googleanalytics.htm">Google Analytics</a>&nbsp;eller <a class="itemlink" href="sendblaster_messages_trackreports.htm">TrackReports</a>       -kod är det sista du gör på ett meddelande - båda metoderna modifierar orginalkoden, och därför måste meddelandet redigeras klart först. Spårning av meddelandet med båda systemet är möjligt; i detta fall ska Google Analytics läggas till först.</p> 
+<p class="item">Använd gärna <span class="itemelement">Förhandsvisning</span> 
+  för att kontrollera hur det ser ut innan du startar utskicket. </p>
+ <p class="item">       Det  är möjligt att utföra spampoängskontroller medan du
+redigerar meddelandet med&nbsp;knappen <span class="itemelement">
+  Spamkontroll</span> , och då räknas spampoängen ut baserat på <b>SpamAssassin engine</b>   
+   , en av de vanligaste antispam-filtren på epost-servrar. Genom att använda den
+  här avancerade funktionen kan du undvika att ses som spam av misstag.</p> 
+<hr size="1" noshade>
+<p class="item">*Bilagor kan bara hanteras i PRO versionen.</p>
+<p>&nbsp;</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

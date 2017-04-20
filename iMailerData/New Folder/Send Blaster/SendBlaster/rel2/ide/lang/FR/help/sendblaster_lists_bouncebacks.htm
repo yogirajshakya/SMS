@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>SendBlaster</title>
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+
+</head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title"> Gérer les rebonds</p>
+
+<p class="item">Un courriel renvoyé (ou un <em>rebond</em>) est un
+message qui n&#8217;a jamais été livré à la boite destinataire et qui est
+renvoyé à l&#8217;expéditeur avec un message d&#8217;erreur qui averti l&#8217;expéditeur
+que le courriel n&#8217;a jamais été transmit correctement. Normalement, ceci
+arrive quand vous envoyez votre mailing en utilisant des serveurs SMTP
+: si une adresse n&#8217;existe pas, le serveur SMTP (qui ne peut pas le
+savoir) acceptera le message, mais le renvera plus tard.</p>
+
+<p class="item">Il y a deux types principaux de rebonds:</p>
+
+<ul>
+
+  <li class="item">Rebonds durs: le courriel ne peut pas être livré à
+cause d&#8217;une erreur permanente (ex. une adresse inexistante)</li>
+  <li class="item">Rebonds souples: une condition temporaire fait
+échoué la transmission (ex. le serveur destinataire peut être saturé) </li>
+</ul>
+
+<p class="item">SendBlaster peut reconnaitre automatiquement la
+plupart* des courriels renvoyés et désinscrire et effacer les adresses
+renvoyées dans la liste sélectionnée.</p>
+
+<p class="item">Les courriels renvoyés seront envoyés à l'adresse de
+l&#8217;expéditeur, qui ne peut pas être la même adresse utilisée pour les
+inscriptions et les désinscriptions (voir <span class="itemlink"><a href="sendblaster_lists_managing.htm" class="itemelement">Gérer les
+inscriptions</a></span>). Donc il est nécessaire de dire au logiciel
+quelle adresse doit être utilisée.</p>
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong>Quelle adresse dois-je mettre?</strong></font></p>
+      <p>Rappelez-vous que les courriels renvoyés sont envoyés à
+l&#8217;adresse de l&#8217;expéditeur, non à l&#8217;adresse utilisée pour les
+inscriptions. Supposez que vous choisissez "inscriptions@monsite.com"
+comme adresse de gestion des inscriptions pour la Liste 1, puis envoyez
+vos mailings depuis l&#8217;adresse
+"newsletter@monsite.com". Les rebonds seront donc livrés à
+"newsletter@monsite.com", et c&#8217;est l&#8217;adresse que vous devez configurer
+dans la section <span class="itemelement">Gérer les bounce-backs</span>
+pour la Liste 1.</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="item">L&#8217;adresse à contrôler est saisie en mettant les
+paramètres adéquats pour accéder à son compte POP3, comme pour tout
+logiciel client de courriel: en plus de l&#8217;adresse (<span class="itemelement">Courriel</span>) vous devez spécifier le serveur
+destinataire (<span class="itemelement">Serveur POP3</span>), le numéro
+du <span class="itemelement">Port</span> (si aucun port n'est
+spécifié, le port par défaut 110 sera utilisé), le <span class="itemelement">NomUsager</span> et le <span class="itemelement">MotDePasse</span>.
+La case à cocher <span class="itemelement">SSL</span> active la
+communication SSL, qui peut être requise par quelques serveurs POP3
+(les serveur Gmail sont un exemple typique). Dans le champ <span class="itemelement">TempsMort</span> vous pouvez insérer le nombre de
+secondes d&#8217;inactivité après lesquelles la connexion sera terminée. Pour
+vérifier les paramètres vous n&#8217;avez qu&#8217;à cliquer sur le bouton <span class="itemelement">Test de Connexion</span> (aucun message ne sera
+téléchargé).<br></p>
+<blockquote class="item">
+<font color="#ff0000">Notez bien:</font> le bouton <span class="itemelement">Profiles</span>
+permet de gérer plusieurs configurations POP3. L'information du compte
+de multiples profiles peut être enregistrée, donc tous les paramètres
+POP3 sont sauvegardés/téléchargés à l'aide de quelques clics. Cette
+particularité est très utile lorsque vous envoyez des courriels de la
+part d'autrui.</blockquote>
+
+<p class="item">Lorsque <span class="itemelement">Maintenir une copie
+des messages sur le serveur </span> est coché, SendBlaster
+téléchargera tous les nouveaux messages sans les effacer du serveur.
+Les messages seront disponibles pour un usage futur. Les nouveaux
+messages seront ignorés.</p>
+
+<p class="item">En cochant <span class="itemelement">Effacer seulement les nouveaux messages de rebonds</span>
+ SendBlaster effacera seulement ces messages, laissant les autres messages sur le serveur.</p>
+<p class="item">Si <span class="itemelement">Effacer les adresses
+renvoyées</span> est coché, les adresses renvoyées seront effacées de
+la liste sélectionnée. Sinon, ils seront juste désinscrites de la liste.</p>
+
+<p class="item">En cochant <span class="itemelement">Traiter les
+rebonds durs </span> ou <span class="itemelement">Traiter les rebonds
+souples</span> , vous pouvez choisir quels types de rebonds (voir
+ci-dessous) doivent être traités; évidemment si aucune option n'est
+choisie, les messages renvoyés ne seront pas traités.</p>
+
+<p class="item">En cliquant sur le bouton <span class="itemelement">Télécharger</span>,
+les nouveaux messages seront téléchargés et la liste de distribution
+sélectionnée sera mise à jour (comme toutes les autres listes qui
+utilisent la même adresse pour les messages de renvois).</p>
+
+<blockquote>
+  <p class="item"><font color="#ff0000">Notez Bien:</font> si le
+téléchargement de nouveaux messages paraît être trop lent, ceci peut indiquer que sur le serveur de courriel, les
+messages se sont empilés : désactivez l&#8217;option <span class="itemelement">Tenir une copie des messages sur le serveur </span>
+et cliquez sur <span class="itemelement">Télécharger</span> (ou
+exécutez le téléchargement sur votre client standard de messagerie). Les
+messages, une fois téléchargés, seront effacés du serveur et les
+téléchargements suivants seront plus rapides.</p>
+</blockquote>
+
+<p class="item">&nbsp;</p>
+
+</body></html>

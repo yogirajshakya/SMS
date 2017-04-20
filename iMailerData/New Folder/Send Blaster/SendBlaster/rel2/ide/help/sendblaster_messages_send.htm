@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Sending messages</p>
+<p class="item">In order to send a message you first need to specify the recipients 
+  and the sender.</p>
+<p class="item">The list of distribution lists (defined in <a href="sendblaster_lists_managing.htm" class="itemelement">Manage 
+  lists</a>) is shown in the <span class="itemelement">Select distribution list</span>
+  field. Select one and the addresses in the list will be used as recipients. 
+  Each contact will receive a personal message.</p>
+<p class="item">The message sender will be specified in the <span class="itemelement">Sender</span> 
+  <span class="itemelement">e-mail address</span> and <span class="itemelement">Sender 
+  name </span>fields. You can freely type in these fields or select an address 
+  and a name from the comboboxes, which display the last 10 names and addresses 
+  previously used in sending operations (the lists will be empty if no message 
+  has ever been sent). If a subscription/unsubscription address was provided to 
+  the selected distribution list, it will be automatically shown as the message 
+  sender address. However this is just default behavior, the address and/or the 
+  name can be manually changed.<br>
+  You can also optionally specify a <span class="itemelement">Reply-To</span><span class="itemelement"> 
+  address</span>: this is the address replies will be sent to. If it is left blank, 
+  replies will be sent to the sender address (this is the default behaviour for 
+  personal e-mail messages).</p>
+<p class="item">To send the message just click on the <span class="itemelement">Send</span>
+  button. Obviously if it's the first sending operation, or if the connection
+  settings have changed, it will be necessary to first set up the <span class="itemelement">Send
+  settings</span>, otherwise the message won't be sent.</p>
+<p class="item">
+As an alternative to sending messages, it is possible to <b>schedule</b> the mailing operation, and let SendBlaster
+send it later automatically, at a given day and time, or even <b>"park"</b> the mailing operation to be manually
+launched later, in order to schedule a mailing operation, just click the <span class="itemelement">Send later...</span>
+button.
+</p>
+<p class="item">Two <span class="itemelement">Send mode</span>s are available:<span class="itemelement">
+  Use SMTP server</span> and <span class="itemelement">Direct send.</span></p>
+<ul>
+<p>
+<li class="item">By selecting <span class="itemelement">Use SMTP server</span>,
+    e-mail sending will take place just like in a standard e-mail client, that
+    is, by delivering the message to one's own ISP SMTP server. It is therefore
+    necessary to specify the name of the <span class="itemelement">SMTP server</span>,
+    the <span class="itemelement">port</span> where smtp service is offered (it it's not specified, default port 25 will
+    be used), in case a user authentication is required, to select <span class="itemelement">Authentication
+    required </span> and specify<span class="itemelement"> Username</span> and
+    <span class="itemelement">Password</span>. This parameters are the ones used
+    in your e-mail client software, therefore all you'll need to do is &quot;copy&quot;
+    them from a working e-mail account (to make sure the SMTP server is reachable
+    just click on the <span class="itemelement">Connection test</span> button).
+    The <span class="itemelement">SSL</span> checkbox enables SSL communication,
+    which may be needed by some SMTP servers (a typical example is Gmail's SMTP
+    server).
+<blockquote>
+  <p class="item"><font color="#FF0000">Tip:</font>
+    <span class="itemelement">Profiles</span> button allows to manage multiple SMTP
+    settings. Account information can be
+    stored for multiple profiles, so all SMTP settings are saved/loaded
+    with a couple of clicks.This feature is specially usefull when sending mails
+    on behalf or someone else.
+    <br/>
+    <br/>
+</p>
+</blockquote>
+    By enabling the <span class="itemelement">Retry with direct send in case of
+    error</span>, in case the message won't be accepted by the SMTP server, the
+    software will try to deliver the message directly to the recipient's e-mail
+    server, by using the <span class="itemelement">Direct send</span> mode.</li>
+</p>
+<p>
+  <li class="item">By selecting <span class="itemelement">Direct send</span> the
+    software will look for each recipient's e-mail server and will automatically
+    connect to it, therefore &quot;skipping&quot; the SMTP server that won't then
+    be needed in the send settings. Keep in mind that certain e-mail domains (for instance,
+    hotmail) won't allow direct sends: the message gets rejected if it was originated
+    from a desktop system as opposed to a public SMTP server.<br>
+    By enabling the <span class="itemelement">Retry with SMTP in case of error</span>,
+    in case the message won't be accepted by the recipient's e-mail server, the
+    software will try to deliver the message to the SMTP server, by using the
+    <span class="itemelement">Use SMTP server</span> settings.<br>
+    &nbsp; </li>
+</p>
+</ul>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item">
+<p><font color="#009900"></font><strong><font color="#009900">Use direct send
+        or the SMTP server?</font></strong></p>
+      <p>The choice depends, first of all, on the availability of a good SMTP
+        server. If your ISP SMTP server is able to handle many messages in fast
+        sequence, or even sending more messages simultaneously, using an SMTP
+        server is faster and more reliable, since your SMTP server is &quot;closer&quot;
+        to your computer than the single recipient's e-mail server.</p>
+      <p>However, some providers, to prevent their users from using the server 
+        for spamming purposes, impose restrictions on the number of messages that 
+        can be sent within a specific time span and the number of messages that
+        can be sent simultaneously (for instance, an SMTP server could accept 
+        no more than a message every 5 seconds and not allow sending more than 
+        2 messages at a time). All messages that exceed these restrictions will 
+        be rejected with an error. This does not mean that the server or the software
+        aren't working properly, but rather, that it will be necessary to set 
+        in a different way the sending timing option in the <span class="itemelement">Advanced 
+        settings</span> section.</p>
+      <p>In such cases, it could be faster and more convenient to use the direct
+        send. The direct send requires a little more time to deliver each message
+        (since it has to make a request to the DNS server and the e-mail server 
+        could be very &quot;far&quot; form the user's PC), however this time increase
+        is compensated by the possibility to send more messages simultaneously
+        without having to add extra pauses between messages.</p>
+      <p>Direct send is also useful when a sending operation has to be performed 
+        using a connection without knowing the SMTP server (typically the case
+        when using a notebook &quot;away&quot;, meaning not in the office or at
+        home - common in the case of a public access wireless network).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">The <span class="itemelement">Advanced settings</span> section 
+  allows you to fine-tune the sending timing, and other special settings.
+  This is useful to perform a sending
+  operation at the maximum possible speed allowed by the SMTP server antispam
+  restrictions. Here's the meaning of each options:</p>
+  <p class="itemelement">
+  Timing Tab
+  </p>
+<ul class="item">
+  <li><span class="itemelement">Pause between messages</span>: the number of seconds
+    elapsing between message sending.</li>
+  <li><span class="itemelement">Pause between blocks</span>: the number of messages
+    elapsing between each block of messages.</li>
+  <li><span class="itemelement">Messages per block</span>: the number of messages
+    sent in each block</li>
+  <li><span class="itemelement">Timeout</span>: the maximum number of seconds 
+    after which the message sending is aborted</li>
+  <li><span class="itemelement">Connections</span>: the maximum number of simultaneous 
+    connections, meaning the number of messages simultaneously sent*.</li>
+  <li><span class="itemelement">Further attempts in case of error</span>: If
+    the SMTP server or the recipient's server (for a direct send) doesn't accept
+    the
+    message, the software can wait a certain number of seconds and retry sending
+    the message one or more times.</li>
+  <li><span class="itemelement">Pause between attempts</span>: the number of seconds 
+    of delay before retrying to send an unaccepted message.</li>
+</ul>
+<p class="item">The right configuration cannot be set before a few attempts, verifying
+  the number of messages that actually get delivered. To simplify the settings,
+  some <span class="itemelement">Suggested settings</span> are available. They
+  might not be optimized for your connection but can be considered a good starting
+  point to get to the best configuration.</p>
+<p class="item"><strong><font color="#FF0000">Warning:</font></strong> Distribution
+   lists can contain invalid e-mail addresses, or some e-mail servers may be
+  temporarily
+  inactive. Therefore, when using lists that contain a great deal of addresses
+   it should be considered normal and inevitable that, despite the chosen sending
+  
+  mode and the settings, not all messages get delivered and a certain percentage
+   will return an error. In such case it will be possible to try to complete
+  the 
+  sending operation at a later time using the <a href="sendblaster_messages_history.htm">history</a>
+  functions.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>How 
+        can I get the right advanced settings?</strong></font></p>
+      <p>To get the right advanced settings it's necessary to try out different
+        combinations (normally a list with about 10 addresses will suffice) and
+        verify how many messages actually get delivered (this info is given at
+        the end of the sending operation, when it is also possible to check the
+        logs). Users connected to a &quot;tolerant&quot; enough SMTP server won't
+        probably experience many problems, regardless of the settings specified
+        that will only effect the sending speed.<br>
+        On the other hand, if your connection is to a rather &quot;strict&quot;
+        STMP server, in order to be able to deliver a high number of messages
+        it might be necessary to slow down message sending and avoid sending messages
+        simultaneously. </p>
+      <p>Here's a few simple rules worth considering:</p>
+      <ul>
+        <li>A tolerant SMTP server allows fast sending without pauses (or limited
+          pauses anyway). On rather restricted SMTP servers that use numerous
+          antispam filters, raise pauses and lower simultaneous connections.</li>
+        <li>Normally, SMTP servers don't allow sending many messages simultaneously,
+          therefore when using the SMTP mode the number of connections must be
+          low or, in certain situations, equal to 1 (no simultaneous connections).
+          If the SMTP server is equipped with antispam restriction mechanisms, 
+          it may be necessary to slow down message sending by setting a pause
+          of a few seconds between each send, and set a longer pause between message
+          blocks. Also, blocks shouldn't contain more than a few dozen messages.</li>
+        <li>In case of a direct send, with a standard distribution list containing
+          addresses belonging to different domains, the messages will be delivered
+          to a variety of different servers: it is therefore possible to set
+          a
+          high number of connections* and limited (or none at all) pauses between
+          messages and between blocks.</li>
+        <li>Raising the number of attempts in case of error can raise the percentage 
+          of success but it will slow down the sending operation, particularly 
+          if the number of simultaneous connections is low. Completing the operation 
+          at a later time from the <a href="sendblaster_messages_history.htm">history</a> 
+          window (after having waited a few minutes) can be considered good practice.</li>
+      </ul></td>
+    <td width="7%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+  <p class="itemelement">
+  Extra Tab
+  </p>
+<ul class="item">
+  <li><span class="itemelement">Delivery Notification</span>: allows to get a confirmation
+  each time an e-mail is delivered, or when the reader opens it.</li>
+  <li><span class="itemelement">High Priority</span>: allows to notify the reader
+   that the message should be read as soon as possible.</li>
+  <li><span class="itemelement">Encoding</span>: choose between <span class="itemelement">quoted-printable</span> and <span class="itemelement">base64</span>.
+  The header content that shows the software that generated the message.</li>
+  <li><span class="itemelement">Xmailer text</span>: by using the <span class="itemelement">Default</span> setting
+  the header will include SendBlaster's name and release. Otherwise you can type
+  a free text, to simulate sending through a different e-mail client or choose
+  the <span class="itemelement">None</span> option to avoid having a header added
+  to the message.  </li>
+  <li><span class="itemelement">Domain</span>: allows for customizing
+  the machine name used by the software for connecting to SMTP server or recipients'
+  email servers. This can be useful when using <span class="itemelement">Direct
+  send</span>: some servers verify domain name before accepting messages; they
+  require that domain name corresponds to the public <em>hostname</em> on the
+  network, and before accepting messages they perform a <em>ping</em> (or similar
+  operation) in order to verify that domain name corresponds to the IP address
+  of the machine requesting connection. Should this be the case, selecting <span class="itemelement">Internet
+  address </span> may lower refused messages. We suggest using default settings,
+  or using <span class="itemelement">Internet address</span> when direct sending
+  and <span class="itemelement">PC local name</span> when using SMTP (SMTP servers
+  usually don't perform any particular check on domain name).<br>
+  SendBlaster checks your machine's public address each time it is started; should
+  Internet connection not be available when starting, public address may be left
+  empty and PC local name will be used instead. If a fixed public IP is available,
+  experienced users will select <span class="itemelement">User defined...</span>
+  and enter a fixed value (please note that a <em>hostname</em> is needed - not
+  an IP address) - but keep in mind that a wrong setting could compromise successful
+  sending.  </li>
+  <li><span class="itemelement">Manually set DNS Server</span>: SendBlaster will use the currently selected
+  default connection DNS, but it is also possible (and sometimes needed) to manually set a different DNS,
+  by enabling this option and typing the correct IP address.  </li>
+  <li><span class="itemelement">Ignore Socket Errors</span>: if there is any problem with the connection to the Internet, either due to hardware or software problems, SendBlaster will pause the mailing, alert the user and wait for user instructions - in most cases, a human intervention is in fact required (i.e. you may need to reset your network hardware, etc). If you don't want the mailing to be paused, and prefer SendBlaster to simply ignore the errors, check this option (be warned that, if there is no connection to the Internet, the mailing could fail). This is useful when your Internet connection sometimes goes down for any reason (i.e. wifi problems) but it is automatically restored in a short time. </li>
+</ul>
+  <p class="itemelement">
+  Additional Headers Tab
+  </p>
+  <blockquote>
+    <p class="item">In some cases, advanced users may need to add custom headers to their message, used for performing special tasks (i.e. tracking, signing, etc). SendBlaster allows users to add up to ten headers to the message. </p>
+</blockquote>
+  <hr size="1" noshade>
+<p class="item">*In the Free edition the maximum number of connections is 2, even 
+  if a higher number is specified.</p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Blacklist</p>
+<p class="item">Το <span class="itemelement">blacklist</span> είναι ένα φίλτρο που
+  εμποδίζει ορισμένες ηλεκτρονικές διευθύνσεις ή τομείς από το να λαμβάνουν μηνύματα, ανεξάρτητα
+  απο την <a href="sendblaster_lists_managing.htm">κατάσταση
+  εγγραφής / ενεργοποίησης τους</a>.</p>
+<p class="item">Όταν στέλνετε ένα μήνυμα σε μια συγκεκριμένη λίστα, πριν σταλεί το
+  μήνυμα, το Sendblaster ελέγχει αν η ηλεκτρονική διεύθυνση ή ο τομέας του παραλήπτη συμπεριλαμβάνεται
+  στην blacklist: αν ναι, το μήνυμα παραλείπεται (μια <em>"&lt;διεύθυνση&gt;: 
+  απο την blacklist</em>" το μήνυμα αυτό θα εμφανιστεί στο πλαίσιο καταχώρησης).</p>
+<p class="item">Το Sendblaster υποστηρίζει δύο διαφορετικές blacklists:</p>
+<ul>
+  <li class="item"><span class="itemelement">Διευθύνσεις</span> blacklist: εισάγετε 
+    εδώ μια διεύθυνση ηλεκτρονικού ταχυδρομείου στην οποία δεν θέλετε να αποστέλλεται ποτέ μηνύματα.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Τομέας</span> blacklist*: εκτός 
+    των μοναδικών διευθύνσεων, μπορείτε να ορίσετε ολόκληρους τομείς (ένας τομές ηλεκτρονικού ταχυδρομείου είναι το μέρος
+    το οποίο ακολουθεί το σήμα "@" σε μια διεύθυνση ηλεκτρονικού ταχυδρομείου: προσέξτε να μην
+    συμπεριλάβετε <em>"www.</em>" ή οποιοδήποτε άλλο τρίτου επιπέδου όνομα τομέα). 
+    Όταν ένας τομέας είναι στην blacklist, καμία διεύθυνση που ανήκει σε αυτόν δεν θα λάβει
+    ποτέ μήνυμα.</li>
+</ul>
+<p class="item">Μπορείτε να εισάγετε στοιχεία σαν ελεύθερο κείμενο, κάθε σειρά θα πρέπει να περιέχει μια διεύθυνση
+  / τομέα (και όχι παραπάνω χαρακτήρες: δεν μπορείτε να χρησιμοποιήσετε σύμβολα υποκατάστασης). Μπορείτε να αντιγράψετε σε
+  / επικολλήσετε απο το clipboard, για να μπορέσετε να χειριστείτε τα λογισμικά
+  τρίτων, ή πατήστε <span class="itemelement">Διόρθωση με το κουμπί </span>
+Notepad για να ανοίξετε μια blacklist με το ενσωματωμένο πρόγραμμα
+επεξεργασίας κειμένου των Windows'(η εκτέλεση του προγράμματος
+σταματάει όταν τελειώσετε την διόρθωση και κλείσετε το Notepad).</p>
+<form>
+  <p class="item">Ακολουθεί ένα παράδειγμα blacklist <span class="itemelement">έγκυρων</span> 
+   διευθύνσεων :</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">και μια blacklist<span class="itemelement"> έγκυρου</span> τομέα:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#ff0000"><strong>Η ακόλουθη blacklist είναι λάθος</strong></font> 
+    γιατί συμπεριλαμβάνει σύμβολα υποκατάστασης (<em>"*</em>") και τρίτου επιπέδου ονόματα
+    τομέων ("<em>www."</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p>&nbsp; </p>
+</form>
+<hr noshade="noshade" size="1">
+<p class="item">*Διαθέσιμο μόνο στην Έκδοση Pro</p>
+<p class="item">&nbsp;</p>
+</body></html>

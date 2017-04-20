@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Administrar devoluciones</p>
+<p class="item">Un e-mail devuelto (o <em>devoluci&oacute;n</em>) es un e-mail que
+nunca llega a la bandeja de entrada del destinatario y es enviado nuevamente hacia el remitente
+con un mensaje de error que indica al remitente que el e-mail no se ha podido entregar
+con &eacute;xito. Generalmente, esto sucede al enviar sus correos utilizando servidores
+SMTP: si una direcci&oacute;n no existe, el servidor (el cual no conoce la inexistencia de la direcci&oacute;n)
+ aceptar&aacute; el mensaje, pero lo devolver&aacute; m&aacute;s tarde.</p>
+<p class="item">Existen dos tipos de devoluciones:</p>
+<ul>
+  <li class="item">Devoluciones fuertes:
+  El e-mail no ha sido entregado debido a un error permanente (por ejemplo, una direcci&oacute;n inexistente).</li>
+  <li class="item">Devoluciones d&eacute;biles: Existe un problema temporal por el cu&aacute;l no es posible entregar el mensaje
+  (por ejemplo, un servidor saturado temporalmente).</li>
+</ul>
+<p class="item">SendBlaster puede reconocer la mayor&iacute;a* de las devoluciones de e-mail y
+desuscribir o eliminar las direcciones devueltas de la lista seleccionada.</p>
+<p class="item">Los e-mails devueltos ser&aacute;n enviados a la direcci&oacute;n de e-mail del remitente del mensaje,
+la cu&aacute;l puede no ser la misma direcci&oacute;n utilizada para administrar suscripciones y cancelaciones (ver <span class="itemlink"><a href="sendblaster_lists_managing.htm" class="itemelement">Administrar
+   suscripciones</a></span>). Por ello, es necesario configurar SendBlaster para que verifique la direcci&oacute;n correcta.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>
+    Qu&eacute; direcci&oacute;n deber&iacute;a ingresar?</strong></font></p>
+      <p>
+      Recuerde que cada devoluci&oacute;n de e-mail es enviada a la direcci&oacute;n del remitente del mensaje,
+      no a la direcci&oacute;n utilizada para administrar suscripciones. Suponga que utiliza &quot;suscripciones@misitio.com&quot;
+      como direcci&oacute;n de e-mail administrativa para la Lista 1, y luego env&iacute;a
+      sus e-mails desde &quot;newsletter@misitio.com&quot;. Las devoluciones ser&aacute;n
+      entregadas a &quot;newsletter@misitio.com&quot;, y esta es la direcci&oacute;n que usted deber&aacute;
+      configurar en la secci&oacute;n de <span class="itemelement">Administrar devoluciones</span> para la Lista 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">
+La direcci&oacute;n a verificar es configurada ingresando los par&aacute;metros correctos
+de la cuenta POP3, al igual que en cualquier cliente de e-mail: adem&aacute;s de la direcci&oacute;n (<span class="itemelement">E-mail</span>)
+debe especificar el servidor de recepci&oacute;n (<span class="itemelement">Servidor POP3</span>), el n&uacute;mero de
+  <span class="itemelement">Puerto</span> (en caso de no especificarlo, el puerto por defecto 110 ser&aacute; utilizado), el <span class="itemelement">Nombre de usuario</span>
+  y la <span class="itemelement">Contrase&ntilde;a</span>. La casilla <span class="itemelement">SSL</span>
+  activa la comunicaci&oacute;n SSL, la cu&aacute;l puede ser requerida por algunos servidores POP3
+  (por ejemplo el servidor de Gmail). En el campo de <span class="itemelement">Espera</span>
+  puede ingresar la cantidad de segundos de inactividad, luego de los cu&aacute;les la conexi&oacute;n
+  ser&aacute; cerrada. Para verificar los par&aacute;metros, simplemente presione el bot&oacute;n de <span class="itemelement">
+  Prueba de conexi&oacute;n</span> (no se descargar&aacute; ning&uacute;n mensaje).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Consejo:</font>
+    El bot&oacute;n de <span class="itemelement">Perfiles</span>
+    le permite administrar m&uacute;ltiples configuraciones POP3. La informaci&oacute;n de la cuenta
+    puede ser almacenada para perfiles m&uacute;ltiples, en forma tal que todas las configuraciones
+    POP3 puedan ser almacenadas/recuperadas con un par de clicks. Esta caracter&iacute;stica es especialmente
+    &uacute;til al enviar e-mails en nombre de terceros.
+  </p>
+</blockquote>
+<p class="item">Activando <span class="itemelement">Mantener una copia de los mensajes en el servidor luego de descargarlos</span>,
+SendBlaster descargar&aacute; los nuevos mensajes sin eliminarlos del servidor. Los mensajes se encontrar&aacute;n disponibles para futuro uso. Los nuevos mensajes ser&aacute;n ignorados.</p>
+<p class="item">Activando <span class="itemelement">S&oacute;lo eliminar mensajes de nuevas suscripciones y cancelaciones</span>
+ SendBlaster eliminar&aacute; s&oacute;lo estos mensajes, dejando el resto de los mensajes en el servidor.</p>
+<p class="item"> Si <span class="itemelement">Eliminar direcciones devueltas </span>
+se encuentra activado, las direcciones devueltas ser&aacute;n eliminadas de la lista. En caso contrario, s&oacute;lo ser&aacute;n
+desuscriptas de la lista.</p>
+<p class="item">Activando <span class="itemelement">Procesar devoluciones fuertes</span>
+  y <span class="itemelement">Procesar devoluciones leves </span>
+  usted puede optar los tipos de devoluciones (ver arriba) que deber&iacute;an ser procesadas; por supuesto, si ninguna
+  opci&oacute;n se encuentra activada, ninguna devoluci&oacute;n de e-mail ser&aacute;n eliminada.</p>
+<p class="item">Presionando el bot&oacute;n <span class="itemelement">Descargar</span>,
+los nuevos mensajes ser&aacute;n descargados y la lista de distribuci&oacute;n seleccionada ser&aacute; actualizada
+(como as&iacute; tambi&eacute;n cualquier otra lista que utilice la misma direcci&oacute;n de e-mail para administrar
+devoluciones).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Advertencia:</font>
+  si la descarga de nuevos mensajes parece ser lenta, esto puede indicar que se han acumulado mensajes
+  en el servidor de e-mail: desactive la opci&oacute;n <span class="itemelement">Mantener una copia de los mensajes en el servidor luego de descargarlos</span>
+  y presione <span class="itemelement">Descargar</span>
+  (o ejecute una descarga con su cliente de e-mail est&aacute;ndar). Los mensajes, una vez descargados,
+  ser&aacute;n removidos del servidor y las descargas futuras ser&aacute;n m&aacute;s r&aacute;pidas.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*Nuevos formatos de devoluciones pueden ser administrados en la secci&oacute;n de
+<a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Configuraci&oacute;n Avanzada</a>.</p>
+</body>
+</html>

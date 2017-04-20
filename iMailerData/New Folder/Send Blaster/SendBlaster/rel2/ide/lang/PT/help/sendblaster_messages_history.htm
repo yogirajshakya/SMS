@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+    <p class="title">
+        Hist&oacute;rico</p>
+    <p class="item">
+        Esta janela permite ver a lista de todas as mensagens enviadas. No caso de uma opera&ccedil;&atilde;o
+        de mailing n&atilde;o ter terminado (por exemplo, caso o seu servidor de SMTP n&atilde;o
+        permita enviar mais o que um determinado n&uacute;mero de e-mails num curto intervalo
+        de tempo) &eacute; poss&iacute;vel retomar o envio a partir do momento em que foi
+        interrompido, enviando a mensagem para todos os destinat&aacute;rios para quem a
+        mensagem n&atilde;o tinha sido enviada anteriormente.
+    </p>
+    <p class="item">
+        Cada opera&ccedil;&atilde;o de mailing &eacute; marcada com a data de envio, o nome
+        da lista para a qual a mensagem foi enviada e o assunto.</p>
+    <p class="item">
+        Clique no bot&atilde;o <span class="itemelement">Pr&eacute;-visualizar e-mail</span>
+        (ou seleccione o comando correspondente atrav&eacute;s de um clique com o bot&atilde;o
+        direito do rato) para exibir a mensagem enviada para a entrada seleccionada.</p>
+    <p class="item">
+        A <span class="itemelement">Lista de endere&ccedil;os </span>permite ver uma lista
+        de todos os endere&ccedil;os para os quais a mensagem foi enviada. Todos os endere&ccedil;os
+        para os quais a mensagem foi enviada com sucesso ser&atilde;o aqui exibidos a verde,
+        caso contr&aacute;rio ser&atilde;o exibidos a vermelho.</p>
+    <p class="item">
+        O bot&atilde;o <span class="itemelement">Registo </span>exibe o registo de envio,
+        que &eacute; o <em>di&aacute;logo</em> que houve entre o servido SMTP (ou com os
+        servidores de destino, caso seja um envio directo).</p>
+    <p class="item">
+        No caso de um ou mais endere&ccedil;os n&atilde;o serem inclu&iacute;dos na opera&ccedil;&atilde;o
+        de envio, a &uacute;ltima coluna da lista (para entradas incompletas) exibir&aacute;
+        o bot&atilde;o
+        <img src="img/sendblaster_messages_history_1.gif" width="16" height="16">. Ao clicar
+        nele activar&aacute; a retoma da opera&ccedil;&atilde;o de envio utilizando as op&ccedil;&otilde;es
+        de envio actuais, tal como indicado na aba <a href="sendblaster_messages_send.htm"
+            class="itemlink"><span class="itemelement">Envio</span></a>. A mensagem ser&aacute;
+        ent&atilde;o enviada para todos os destinat&aacute;rios que ainda a n&atilde;o tenham
+        recebido (os endere&ccedil;os a vermelho na janela da lista de endere&ccedil;os).</p>
+    <p class="item">
+        Os itens do hist&oacute;rico podem ser apagados, bastando que para isso os seleccione
+        (atrav&eacute;s da tecla <em>Ctrl do teclado para seleccionar v&aacute;rios elementos
+            ou atrav&eacute;s da tecla </em><em>Shift </em>para escolher um grupo) e clicando
+        no bot&atilde;o <span class="itemelement">Apagar itens</span>.</p>
+    <p class="item">
+        Os endere&ccedil;os entregues e n&atilde;o entregues podem ser exportados como ficheiro
+        de texto atrav&eacute;s dos bot&otilde;es <span class="itemelement">Exportar entregues
+        </span>e <span class="itemelement">Exportar n&atilde;o entregues</span>. Exportar
+        os endere&ccedil;os n&atilde;o entregues pode tamb&eacute;m ser &uacute;til para
+        quando quiser limpar os endere&ccedil;os incorrectos das listas: mais tarde poder&aacute;
+        <a href="sendblaster_lists_import.htm" class="itemlink">importar o ficheiro</a>
+        seleccionando as op&ccedil;&otilde;es exportar remover ou cancelar subscri&ccedil;&atilde;o.</p>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <strong><font color="#009900">Quando &eacute; &uacute;til utilizar as funcionalidades
+                        do hist&oacute;rico? </font></strong>
+                </p>
+                <p>
+                    Terminar uma opera&ccedil;&atilde;o de envio atrav&eacute;s das funcionalidades
+                    do hist&oacute;rico &eacute; uma &oacute;ptima forma de contornar as limita&ccedil;&otilde;es
+                    dos servidores SMTP que n&atilde;o permitem enviam v&aacute;rias mensagens num curto
+                    per&iacute;odo de tempo. As restri&ccedil;&otilde;es do servidor SMTP podem ser
+                    tais que, apesar das <span class="itemelement">Configura&ccedil;&otilde;es avan&ccedil;adas</span>
+                    da aba <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">
+                        Enviar</span></a>, n&atilde;o permitam que a opera&ccedil;&atilde;o de envio
+                    termine num s&oacute; passo. Por exemplo, numa situa&ccedil;&atilde;o em que exista
+                    um servidor que n&atilde;o permita enviar mais do que 50 mensagens por hora e uma
+                    lista de distribui&ccedil;&atilde;o com 100 endere&ccedil;os, apenas a primeira
+                    metade ir&aacute; ser enviada durante a primeira tentativa. Depois de uma hora de
+                    espera, a opera&ccedil;&atilde;o poder&aacute; ser retomada a partir da janela do
+                    hist&oacute;rico.</p>
+                <p>
+                    A exporta&ccedil;&atilde;o de endere&ccedil;os n&atilde;o entregues (vermelhos)
+                    tamb&eacute;m pode ser &uacute;til para limpar os endere&ccedil;os incorrectos das
+                    listas.</p>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p class="item">
+        &nbsp;</p>
+</body>
+</html>

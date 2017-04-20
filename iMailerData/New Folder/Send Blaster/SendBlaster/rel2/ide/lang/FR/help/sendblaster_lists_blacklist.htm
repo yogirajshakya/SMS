@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>SendBlaster</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css"></head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Listes noires </p>
+<p class="item">Une <span class="itemelement">liste noire </span> est
+un filtre qui empêche que les messages soient reçus par certaines
+adresses et domaines, indépendamment du fait qu'ils soient <a href="sendblaster_lists_managing.htm">abonnés et actifs</a>. </p>
+<p class="item">Lorsque vous envoyez un message à une liste de
+diffusion, avant que chaque message ne soit envoyé, Sendblaster vérifie
+si le destinataire ou le domaine ne soit présent dans la liste noire.
+Si c'est le cas, ce message est sauté (et dans le panneau contenant le
+journal s'affiche le message <em>"&lt;adresse&gt;</em><em>: blacklisted</em>").</p>
+<p class="item">Sendblaster prévoit deux listes noires distinctes:</p>
+<ul>
+  <li class="item">La liste noire des <span class="itemelement">Adresses</span>: où vous saisissez les adresses auquelles aucun message ne sera jamais envoyé.<br>
+  &nbsp; </li>
+  <li class="item">La liste noire des <span class="itemelement">Domaines</span>*:
+plutôt que de saisir chaque adresse séparément, vous pouvez insérer des
+domaines dans votre liste noire (le domaine d'une adresse électronique
+est le nom qui suit le symbole "@": faites attention à ne pas indiquer <em>"www.</em>" ou n'importe quel autre domaine de troisième niveau). Lorsqu'un domaine figure dans votre liste noire, 
+    aucun message ne sera alors envoyé aux adresses qui appartiennent à ce domaine.</li>
+</ul>
+<p class="item">Vous pouvez saisir chacune des occurrences en format
+"texte libre "; chaque ligne doit contenir une adresse (ou un domaine,
+suivant la liste que vous rédigez) et ne peut contenir de "<em>jokers</em>".
+Vous pouvez copier/coller du ou vers le presse-papiers afin de
+manipuler vos listes noires dans d'autres logiciels; ou encore, cliquez
+sur le bouton <span class="itemelement">Editer dans le bloc notes  </span>
+pour éditer la liste dans l'éditeur de textes de Windows (dans ce cas,
+le logiciel se congèlera jusqu'à ce que vous refermiez le Bloc notes).</p>
+<form>
+  <p class="item">Ceci est l'exemple d'une liste noire valide d'<span class="itemelement">Adresses</span>:</p>
+  <p> 
+    <textarea name="addresses">adresse@domaine.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">une liste noire valide de  <span class="itemelement">Domaines</span>:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><strong class="alert">La liste qui suit n'est pas valide</strong>  car elle inclut des  "jokers"(<em>"*</em>") 
+    ainsi que le troisième niveau d'un domaine ("<em>www."</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p class="item">SVP notez que les listes noires ont une grandeur limite et elles ne sont pas faites pour remplacer des
+tâches "appropriées" de désabonnement. Comme règle générale,
+les listes noires devraient être utilisées en cas&nbsp; d' "urgence" ou
+seulement pour des tâches spéciales (i.e. lorsque quelqu'un vous
+demande explicitement de ne plus recevoir de message de votre part et
+ce,
+même après un abonnement; ou lorsque vous voulez être certain que vos
+compétiteurs ne recoivent aucun bulletin de nouvelles de votre part). </p>
+</form>
+<hr noshade="noshade" size="1">
+<p class="item">*Disponible seulement avec l'édition Pro</p>
+<p class="item">&nbsp;</p>
+</body></html>

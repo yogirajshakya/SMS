@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Onderhoud bounce-backs</p>
+<p class="item">Een bounced e-mail (of <em>bounce-back</em>) is een e-mail die nooit aankomt in de inbox van de ontvanger en terug gestuurd wordt, of terug gebounced (gestuiterd) wordt, terug naar de afzender met een error bericht waarin staat dat de ontvanger het niet heeft ontvangen. Dit gebeurd als u SMTP gebruikt; als een adres niet bestaat, dan accepteerd de SMTP server (die niet weet dat het niet bestaat) het toch, maar stuurt het later terug.</p>
+<p class="item">Er zijn 2 types van bounce-backs:</p>
+<ul>
+  <li class="item">Hard bounces: de e-mail kon niet afgeleverd worden door een blijvende error (bijv. een niet bestaand adres)</li>
+  <li class="item">Soft bounces: een tijdelijk probleem met het afleveren van de e-mail ( de mail server kan druk zijn)</li>
+</ul>
+<p class="item">SendBlaster kan automatisch de meeste gebouncete emails herkennen en ze uitschrijven of de adressen verwijderen uit de lijst.</p>
+<p class="item">Bounced mails zullen verstuurd worden naar het adres van de verzender, wat niet altijd hetzelfde adres is als wat gebruikt wordt voor de in/uitschrijvingen (bekijk <span class="itemlink"><a href="sendblaster_lists_managing.htm" class="itemelement">Onderhoud inschrijvingen</a></span>). Daarom is het nodig om het programma te vertellen welk adres gechecked moet worden.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Welk adres moet ik invullen?</strong></font></p>
+      <p>Denk eraan dat e-mail bounces naar het adres van de afzender worden gestuurd, niet het adres voor inschrijvingen. Stel dat u &quot;inschijvingen@mijnsite.com&quot; gebruikt voor inschrijvingen van lijst 1, en later verstuurd u uw mailings van 'nieuwsbrief@mijnsite.com'. Bounce-backs zullen dan naar 'nieuwsbrief@mijnsite.com' gestuurd worden, en dit is het adres dat ingesteld moet worden in <span class="itemelement">Onderhoud bounce-backs </span>sectie voor lijst 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Het adres dat gechecked moet worden wordt ingesteld door de goede parameters in te vullen om toegang te krijgen tot het POP3 account, net als bij elke e-mail client software: naast het adres (<span class="itemelement">E-mail</span>) moet u ook de de ontvangende server specificeren (<span class="itemelement">POP3 Server</span>), waarbij, als dat nodig is, ook het poort nummer moet &quot;server:poort&quot;, de <span class="itemelement">Gebruiker</span> en het <span class="itemelement">Wachtwoord</span>. De <span class="itemelement">SSL</span> 
+  checkbox zet SSL communicatie aan, wat nodig is voor sommige POP3 servers (bijvoorbeeld Gmail). In het <span class="itemelement">Timeout</span> 
+  veld kan u de seconden invullen hoelang een niet actieve verbinding open mag blijven, waarna de verbinding gesloten wordt. Om te kijken of de parameters goed zijn klikt u gewoon op de <span class="itemelement">Test 
+  verbinding</span> knop (er worden geen berichten gedownload).</p>
+<p class="item">Als<span class="itemelement"> Bewaar een kopie van de berichten op de server</span> aan staat, zal SendBlaster nieuwe berichten downloaden zonder ze te verwijderen van de server. De berichten zullen dan voor toekomstig gebruik beschikbaar zijn. Nieuwe berichten zullen genegeerd worden.</p>
+<p class="item">Als <span class="itemelement">Verwijder bounced adressen </span>aan staat, zullen bounced adressen verwijderd worden van de geselecteerde lijst. Zo niet zullen ze gewoon uitgescheven worden van de lijst.</p>
+<p class="item">Door <span class="itemelement">Verwerk hard bounces</span> 
+  en <span class="itemelement">Verwerk soft bounces </span> aan te zetten kan u kiezen welke bounce types (zie hierboven) verwerkt moeten worden; als geen van beide aan staat zullen de bounced adressen niet verwerkt worden.</p>
+<p class="item"> Door op de <span class="itemelement">Download</span> knop te klikken, 
+  zullen de nieuwe berichten gedownload worden en de geselecteerde distributie lijst zal geupdate worden (net als andere lijsten die hetzelfde e-mail adres gebruiken voor bounce-backs).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Waarschuwing:</font> als het downloaden van nieuwe berichten sloom lijkt te gaan, kan dit zijn omdat de e-mail server veel berichten bevat: zet <span class="itemelement">Bewaar een kopie van de berichten op de server</span> uit en klik op <span class="itemelement">Download</span> 
+    (of download met uw normale e-mail client). De berichten zullen, als ze zijn gedownload, verwijderd worden van de server waardoor de volgende downloads sneller zullen zijn.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+</body>
+</html>

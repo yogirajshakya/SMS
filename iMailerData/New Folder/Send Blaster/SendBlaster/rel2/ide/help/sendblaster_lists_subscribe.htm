@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Manage subscriptions</p>
+<p class="item">SendBlaster can automatically manage subscriptions (and unsubscriptions) 
+  to distribution lists. Each list can be associated with an e-mail address: when 
+  a message with &quot;Subscribe&quot; in the subject line is sent to this e-mail
+  address the sender gets added to the list. If the subject is &quot;Unsubscribe&quot;
+  instead, the sender gets deleted (if case he/she was previously subscribed).
+  SendBlaster downloads new messages from the POP3 account, verifies the subject
+  and updates the related distribution list.</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Note:</font>
+    Default subject lines (&quot;Subscribe&quot; for subscriptions, and &quot;Unsubscribe&quot;
+    for cancelations) can be changed from the
+    <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Advanced Settings</a>
+    window.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><font color="#FF0000">Warning:</font>
+    The address chosen for managing subscriptions must allow POP3 messages downloading
+    (the same protocol used by standard e-mail clients). It's not possible to
+    use addresses that can be only managed via web (for instance the Hotmail services).</p>
+</blockquote>
+<p class="item">Normally each list will be assigned a dedicated e-mail address.
+  However, it is possible to assign the same e-mail address to more than one list.
+  In this case, when a list is updated, all other lists that use the same Subscribe/Unsubscribe
+  address will also be updated. For instance, if you create 2 lists named &quot;List
+  1&quot; and &quot;List 2&quot; and they are both linked to the same managing
+  e-mail address, by downloading the messages to update &quot;List 1&quot;, &quot;List
+  2&quot; would also get updated.</p>
+<p class="item">Each list's managing address is set by typing the correct parameters
+  to access the POP3 account, just like in an e-mail client software: besides
+  the address (<span class="itemelement">E-mail</span>) you need to specify the
+  receiving server (<span class="itemelement">POP3 Server</span>), the
+  <span class="itemelement">Port</span> number (if no port is specified, default port
+  110 will be used), the <span class="itemelement">Username</span>
+  and the <span class="itemelement">Password</span>. The <span class="itemelement">SSL</span>
+  checkbox enables SSL communication, which may be needed by some pop3 servers 
+  (a typical example is Gmail's server). In the <span class="itemelement">Timeout</span>
+  field you can type the number of seconds of inactivity after which the connection
+  will be closed. To verify the parameters just click on <span class="itemelement">Connection test
+  </span> button (no message will be downloaded).</p>
+<p class="item">Under certain, hard to predict circumstances, your POP3 server may need to slow down the downloading of messages; if you are experiencing difficulties, you may want to try enabling the <span class="itemelement">Slower</span> checkbox (there is no recurrent path here, just try either method and see which one works better). </p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tip:</font>
+    <span class="itemelement">Profiles</span> button allows to manage multiple POP3
+    settings. Account information can be
+    stored for multiple profiles, so all POP3 settings are saved/loaded
+    with a couple of clicks. This feature is specially useful when sending mails
+    on behalf of someone else; or just to quickly
+  save a profile that you can use later in the same list, or any other list.</p>
+</blockquote>
+<p class="item">By checking <span class="itemelement">Keep a copy of the messages
+  on the server once downloaded</span>, SendBlaster will download new messages without deleting
+  them from the server. The messages will then be available for future uses. New
+  messages will be ignored.</p>
+<p class="item">By checking <span class="itemelement">Only delete new subscription and
+cancellation messages</span> SendBlaster will delete only messages which have been recognized as subscriptions or cancellations; this is really
+useful if you use the same management email address to receive non management emails, like
+readers' replies, and other messages.</p>
+<p class="item"><span class="itemelement">Update all fields</span> is an extremely 
+  powerful option: when checked, not only subject but the whole message body will 
+  be processed; if message body contains <em>fieldname: value</em> lines, not 
+  only contact record's email address but other fields will be updated accordingly 
+  too (<a href="#updateallfields">see box below</a>).</p>
+<p class="item">The drawback is that messages downloading and processing will
+  be significantly slower; therefore it is strongly suggested that <span class="itemelement">Update 
+  all fields</span> is only checked when really needed, which means when your 
+  website generates subscription mails containing not only addresses but other 
+  fields too.</p>
+<p class="item">By clicking on the <span class="itemelement">Download</span> button, 
+  the new messages will be downloaded and the selected distribution list will 
+  be updated (as well as all other lists that use the same managing e-mail address).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Which 
+        address should I use?</strong></font></p>
+      <p>It is advisable to dedicate a different subscribe/unsubscribe e-mail 
+        address for each ditribution list, that is, an address that is not used 
+        for any standard e-mail sending and receiving. This will minimize the 
+        risk of receiving spam (that will be ignored) and will make it easy to 
+        manage the lists. In an environment of this kind it won't be necessary 
+        to enable the <span class="itemelement">Keep a copy of the messages on 
+        the server</span> option since the mails won't have to be read by other 
+        softwares. This way, message downloading will be faster and, most of all, 
+        the account space will be preserved. Some services have a limit on the 
+        total amount of space that the messages can occupy, and if the given space 
+        gets filled, no more messages are delivered.</p>
+      <p>It is also possible, but not advisable, to use a &quot;standard&quot; 
+        address, also used on another e-mail client to send and receive messages. 
+        This way, it is absolutely necessary to enable the <span class="itemelement">Keep 
+        a copy of the messages on the server</span> option or the
+        <span class="itemelement">Only delete new subscription and
+cancelation messages</span> option
+        (or else, once the
+        messages are downloaded they get removed from server). And even more important
+        is that even the standard e-mail client is set accordingly, in order to
+        allow SendBlaster to read the messages (in Outlook Express after selecting
+        an account choose <em>Properties / Advanced settings / Keep a copy of
+        the messages on the server</em>).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Warning:</font> if the download of new 
+    messages appears to be rather slow, this might indicate that on the e-mail 
+    server many messages have piled up: disable the <span class="itemelement">Keep 
+    a copy of the messages on the server</span> option and click on <span class="itemelement">Download</span> 
+    (or execute downloading on your standard e-mail client). The messages, once 
+    downloaded, will be removed form the server and the following downloads will 
+    be faster.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="updateallfields"></a>How 
+        does &quot;Update all fields&quot; work</strong></font></p>
+      <p>While &quot;normal&quot; processing makes SendBlaster download and process 
+        message subjects only, <span class="itemelement">Update all fields</span> 
+        option will let SendBlaster download and process whole message bodies, 
+        search for lines in the <em>fieldname: value</em> format inside message 
+        body, and update fields accordingly.</p>
+      <p>Suppose you have two fields named &quot;Surname&quot; and &quot;City&quot;; 
+        if a message is received from &quot;aaa@aaa.com&quot; with &quot;Subscribe&quot; 
+        as subject and the following body (please note that each line contains 
+        a different field):</p>
+      <p>Surname: Smith<br>
+        City: New York</p>
+      <p>a new contact &quot;aaa@aaa.com&quot; is added to the list, having &quot;Smith&quot; 
+        as &quot;Surname&quot; and &quot;New York&quot; as &quot;City&quot;.</p>
+      <p>Some other syntax formats, using the same <span class="itemelement">Tags</span> 
+        as in <a href="sendblaster_messages_compose.htm">message composing</a>, 
+        are allowed too: <em>#tag#: value</em> and <em>#fieldnumber#: value</em> 
+        as in the following examples:</p>
+      <p>#surname#: Smith<br>
+        #city#: New York</p>
+      <p>and</p>
+      <p>#2#: Smith<br>
+        #3# : New York</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

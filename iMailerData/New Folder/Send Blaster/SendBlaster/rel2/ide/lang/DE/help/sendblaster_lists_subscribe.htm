@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" class="body" marginheight="8"
+ marginwidth="8">
+<p class="title"> Anmeldung verwalten<br>
+</p>
+<p class="item">SendBlaster kann Anmeldungen an (und Abmeldungen), an
+Verteilerlisten ,automatisch verwalten. Jeder Liste kann eine
+Email-Adresse zugeteilt werden: Wenn dann eine Nachricht mit dem
+Betreff "Subscribe" in der Betreffzeile an diese Email-Adresse gesendet
+wird, wird der Absender zur Liste hinzugef&uuml;gt. Ist der Betreff
+stattdessen "Unsubscribe", wird der Sender aus der Liste entfernt
+(sofern er vorher angemeldet war). SendBlaster l&auml;dt nur die neuen
+Nachrichten von einem POP3 Konto herunter, &uuml;berpr&uuml;ft die
+Betreffzeile und aktualisiert die dazugeh&ouml;rige Verteilerliste.</p>
+<blockquote>
+  <p class="item"><font color="#ff0000">Achtung:</font> Die
+gew&auml;hlte Adresse f&uuml;r die Verwaltung von Verteilerlisten muss
+das Herunterladen der Nachrichten im POP3 Protokoll (demselben
+Protokoll, das Standard Email-Clients verwenden) erlauben. Es ist nicht
+m&ouml;glich, Adressen zu verwenden, die nur &uuml;ber einen Webzugang
+verf&uuml;gen (wie z.B. der Hotmail-Dienst).</p>
+</blockquote>
+<p class="item">Normalerweise wird jeder Liste genau eine Email-Adresse
+zugeordnet. Trotzdem ist es m&ouml;glich, die selbe Email-Adresse
+mehreren Listen zuzuordnen. In diesem Fall werden alle Listen, die die
+selbe An- und Abmelde Email-Adresse nutzen, nach dem Pr&uuml;fen
+aktualisiert. Sollten Sie z.B. 2 Listen erstellen, mit den
+Bezeichnungen "Liste 1" und "Liste 2", und diese sind beide mit der
+selben Email-Adresse verkn&uuml;pft, so wird beim Herunterladen der
+Nachrichten f&uuml;r das Aktualisieren von "Liste 1", "Liste 2"
+ebenfalls aktualisiert.</p>
+<p class="item">Jede Adresse, die einer Liste zugeordnet ist, wird
+durch das Eingeben
+der korrekten Parameter f&uuml;r den Zugang zum POP3 Konto
+eingerichtet,
+genauso wie es beim Einrichten eines Email-Clients funktioniert: Neben
+der Adresse (<span class="itemelement">Email</span>) m&uuml;ssen Sie
+die den Server angeben (<span class="itemelement">POP3 Server</span>),
+den <span class="itemelement">Benutzer</span> und das <span
+ class="itemelement">Passwort</span>. Die <span class="itemelement">SSL</span>-Checkbox
+erm&ouml;glicht die SSL-Kommunikation, welche von einigen POP3 Servern
+gefordert wird (ein typisches Beipiel sind die GMail Server). Im <span
+ class="itemelement">Timeout</span> Feld k&ouml;nnen Sie die Sekunden
+angeben, nach denen bei Inaktivit&auml;t die Verbindung beendet wird.
+Um die Parameter zu &uuml;berpr&uuml;fen klicken Sie auf den <span
+ class="itemelement">Verbindungstest</span>-Button (Nachrichten werden
+nicht heruntergeladen).</p>
+<p class="item">Wenn Sie <span class="itemelement">Eine Kopie der
+Nachricht auf dem Server belassen </span>aktivieren, wird SendBlaster
+die neuen Nachrichten herunterladen, ohne diese auf dem Server zu
+l&ouml;schen. Die Nachrichten werden dann f&uuml;r einen eventuellen
+zuk&uuml;nftigen Gebrauch weiterhin zur Verf&uuml;gung stehen, neue
+Nachrichten werden ignoriert.</p>
+<p class="item"><span class="itemelement">Alle Felder aktualisieren</span>
+ist eine sehr leistungsstarke Funktion: Wenn aktiviert wird nicht nur
+der Betreff, sondern die ganze Nachricht verarbeitet. Enth&auml;lt die
+Nachricht <em>Feldnamen:</em><em> Werte</em> Reihen, nicht nur
+Email-Adresse sondern auch andere Felder werden entsprechend
+aktualisiert (<a href="sendblaster_lists_subscribe.htm#updateallfields">siehe
+untere Hinweisbox</a>).</p>
+<p class="item">Der Haken ist, dass das Herunterladen und die
+Verarbeitung solcher Nachrichten entscheident verlangsamt wird. Deshalb
+wird empfohlen das <span class="itemelement">Alle Felder aktualisieren
+</span>nur dann aktiviert wird, wenn wirklich ben&ouml;tigt, sprich nur
+dann, wenn Ihre Webseite entsprechende Anmelde Emails erzeugt die nicht
+nur Adressen sondern auch andere Felder enthalten.</p>
+<p class="item">Indem Sie auf den <span class="itemelement">Herunterladen</span>-Button
+klicken, werden die neuen Nachrichten heruntergeladen und die
+gew&auml;hlte Verteilerliste wird aktualisiert (so wie auch alle
+anderen Listen, die die selbe Verwaltungs Email-Adresse verwenden).</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong>Welche Adresse sollte ich
+benutzen?</strong></font></p>
+      <p>Es ist ratsam, jeder Verteilerliste eine andere An- und
+Abmelde Email-Adresse zuzuordnen, ebenso eine Adresse, die nicht
+f&uuml;r den Standardempfang und -versand von Emails verwendet wird.
+Dies wird das Risiko, Spam zu erhalten (der ignoriert wird) minimieren
+und macht es einfacher, Listen zu verwalten. Sollten Sie dies so
+handhaben, ist es nicht n&ouml;tig, die Funktion <span
+ class="itemelement">Eine Kopie der Nachricht auf dem Server belassen </span>
+zu aktivieren, da die Mails nicht von anderer Software gelesen werden
+m&uuml;ssen. Auf diese Art wird das Herunterladen der Nachrichten
+schneller und, viel wichtiger, Speicherplatz wird gespart. Manche
+Dienste setzen ein Limit des zur Verf&uuml;gung stehenden
+Speicherplatzes, den Nachrichten belegen d&uuml;rfen. Sollte dieser
+Speicherplatz voll sein, werden keine Nachrichten mehr angenommen.</p>
+      <p>Es ist auch m&ouml;glich, aber nicht empfehlenswert, eine
+"Standard"-Adresse zu verwenden, die Sie auch in einem anderen
+Email-Client verwenden, um Nachrichten zu versenden und zu erhalten.
+In diesem Fall ist es absolut notwendig, die <span class="itemelement">Eine
+Kopie der Nachricht auf dem Server belassen</span>-Funktion zu
+aktivieren (anderenfalls werden die Nachrichten, sobald sie
+heruntergeladen wurden vom Server gel&ouml;scht). Noch wichtiger ist,
+dass der Standard Email-Client entsprechend eingestellt wird, um
+SendBlaster es zu erm&ouml;glichen, die Nachrichten abzurufen (bei
+Outlook Express geschieht dies in einem Profil unter <em>Eigenschaften
+/ Erweitert / Nachrichten nach dem Abrufen auf dem Server belassen</em>).</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<blockquote>
+  <p class="item"><font color="#ff0000">Achtung:</font> Sollte der
+Download von neuen Nachrichten nur sehr langsam vonstatten gehen,
+k&ouml;nnte dies ein Hinweis darauf sein, dass sich auf diesem Server
+viele Nachrichten angesammelt haben: Deaktivieren Sie die <span
+ class="itemelement">Eine Kopie der Nachricht auf dem Server belassen</span>-Option
+und klicken Sie auf <span class="itemelement">Herunterladen</span>
+(oder f&uuml;hren Sie das Herunterladen mit ihrem Standard Email-Client
+durch). Die Nachrichten werden nach ihrem Download vom Server
+gel&ouml;scht und die folgenden Downloads werden schneller sein.</p>
+</blockquote>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong><a name="updateallfields"></a>Wie
+funktioniert "Alle Felder aktualisieren" ?</strong></font></p>
+      <p>"Normalerweise" l&auml;dt SendBlaster Nachrichten nur herunter
+und verarbeitet den Betreff. Die <span class="itemelement">Alle Felder
+aktualisieren</span>-Option l&auml;&szlig;t SendBlaster die komplette
+Nachricht verarbeiten. Dabei wird nach Zeilen im Format <em>Feldname:
+Wert </em>gesucht und entsprechende Felder aktualisiert.</p>
+      <p>Angenommen Sie haben zwei Felder "Familienname" und "Stadt":
+Wenn eine Nachricht von "aaa@aaa.com" empfangen wird, mit "Subscribe"
+als Betreff und dem folgenden Nachrichtentext (beachten Sie, dass jede
+Zeile ein anderes Feld enth&auml;lt):</p>
+      <p>Familienname: Smith<br>
+Stadt: New York</p>
+      <p>wird ein neuer Kontakt "aaa@aaa.com" mit dem Familienname
+"Smith" und "New York" als Stadt der Liste hinzugef&uuml;gt.</p>
+      <p>Auch einige andere Syntax-Formate, die die selben <span
+ class="itemelement">Tags</span> wie in <a
+ href="sendblaster_messages_compose.htm">Nachricht erstellen</a>, sind
+erlaubt: <em>#tag#: Wert</em> und <em>#Feldnummer#: Wert</em> wie in
+den folgenden Beispielen:</p>
+      <p>#Familienname#: Smith<br>
+#Stadt#: New York</p>
+      <p>und</p>
+      <p>#2#: Smith<br>
+#3#: New York</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

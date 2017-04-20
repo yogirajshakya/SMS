@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster 2 release notes</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+.body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #666666;
+}
+.link {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #003366;
+	font-weight: bold;
+	text-decoration: none;
+}
+.link:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #003366;
+	font-weight: bold;
+	text-decoration: underline;
+}
+-->
+</style>
+</head>
+
+<body class="body">
+<p><strong>Versionsfakta</strong></p>
+<ul>
+  <li>Detta är en betaversion, fortfarande under utveckling; några av funktionerna  
+    fungerar inte helt för tillfället.</li>
+  <li>Dokumentationen har inte uppdaterats och refererar fortfarande till version 1.</li>
+</ul>
+<p><strong>Vad är nytt i SendBlaster 2</strong></p>
+<blockquote>
+  <p>Utvecklingen av SendBlaster 2 tog mer än ett år; under varje steg 
+		av utvecklingen, lyssnade vi noga på våra användarens förslag, önskemål 
+		och åsikter.</p>
+</blockquote>
+<ul>
+  <li><strong>Förbättrat och omdesignat gränssnitt</strong> SendBlaster är till och med 
+    lättare att använda än förrut. Användare kan välja mellan den klassiska vänstra panelen, 
+    som är omdesignad för att vara mer visuellt tilltalande och som nu stödjer stora och små 
+		ikoner, och ett nytt verktygsfält som sparar horisontalt utrymme på skärmen. Alla paneler 
+    kan nu skrollas med musens hjul; listmarkeringar kan synkroniseras 
+    över alla paneler och sorteras i bokstavsordning; alla ikoner har 
+		omdesignats; och många mindre gränssnittsförbättringar har gjorts.<br>
+    &nbsp; </li>
+  <li><strong>Schemlagda utskick</strong> Nu kan användare skapa ett utskicka och låta 
+    SendBlaster 2 skicka det senare automatiskt, på ett givet datum och tid. Eller, så kan användare 
+    till och med &quot;parkera&quot; utskicket så att man manuellt kan starta det 
+    senare. SendBlaster kan nu också köras i ett minimerat schemaläge och starta när 
+    Windows startar.<br>
+    &nbsp; </li>
+  <li> <strong>Epost-spårning</strong> SendBlaster 2 har inbyggt stöd, guider 
+    och paneler för Google Analytics, Google's kampanjövervakande gratis tjänst, 
+    och för TrackReports, våran avancerade spårning- och rapporttjänst online.<br>
+    &nbsp; </li>
+  <li><strong>Nya, kraftfulla datafilter</strong> Ett kraftfullt filter har lagts till, 
+    vilket låter användarna finjustera utskicken genom att välja och aktivera/avaktivera 
+    poster som motsvarar några villkor. Det stödjer flera villkor och komplexa 
+    operatörer så att man visuellt kan bygga en kraftfull SQL-fråga utan att skriva någon 
+    kod. Dubletter kan nu filtreras ut automatiskt, som i version 1, eller 
+    hanteras av användaren genom ett ny kraftfull sökmotor.<br>
+    &nbsp; </li>
+  <li><strong>Fler alternativ för utskick</strong> Användare kan nu lägga till egna headers, 
+    få läsbekräftelser, sätta prioritet på meddelandet, definiera en anpassad 
+    To: header som stödjer sammanslagna taggar, aktivera eller avaktivera automatisk utfiltrering 
+    av adressdubletter vid utskick.<br>
+    &nbsp; </li>
+  <li><strong>Fler alternativ för att redigera meddelanden</strong> Många nya knappar i 
+    skapandepanelen låter användarna enkelt lägga till uppsägningslänkar i meddelandet, lägga till speciella 
+    länkar för Google Analytics och TrackReports, och lägga till sammanslagna taggar i ämnet 
+    och To:-fältet. Nu kan klartext-meddelanden (till skillnad från HTML) skapas enklare 
+    genom att bara kryssa i en ruta.<br>
+    &nbsp; </li>
+  <li> <strong>Spamkontroll</strong> Det är nu möjligt att utföra spampoängskontroll 
+    medan du redigerar ett meddelande; spampoängen baseras på 
+    populära SpamAssassin-motorn, en av de vanligaste antispamfiltren med 
+    epost-servrar.<br>
+    &nbsp; </li>
+  <li><strong>Förhandsgranska sammanslagningstaggar</strong> Förhandsgranskning stödjer nu ersättning av 
+    sammanslagningstaggar också, så att användare kan få er bättre bild av vad som kommer att skickas.<br>
+    &nbsp; </li>
+  <li><strong>Högre hastighet</strong> SendBlaster stödjer nu upp till 50 anslutningar 
+    - detta kan förbättra utskickshastigheten dramatiskt när man använder en snabb 
+    SMTP-server. Dessutom erbjuder SendBlaster alternativet att inte avbryta  
+    ett utskick om anslutningen temporärt slutar fungera, vilket kan 
+    hjälpa till med obevakade utskick.<br>
+    &nbsp; </li>
+  <li><strong>Anpassningsbara prenumeration- och studsformat</strong> Användare 
+    kan nu anpassa prenumeration- och uppsägningsämnen och lägga till anpassade studsformat 
+    för enklare, automatisk hantering av olevererade meddelanden.<br>
+    &nbsp; </li>
+  <li><strong>SMTP och POP3-profiler</strong> Att använda flera SMTP och POP3-inställningar 
+    är enklare än förrut - kontoinformation kan sparas i flera profiler, så 
+    att alla SMTP och/eller POP3-inställningar kan ändras med ett par klick. 
+    Detta är extra användbart när du gör utskick på uppdrag av någon annan.<br>
+    &nbsp; </li>
+  <li> <strong>Ögonblicksbilder</strong> Spara alla inställningar för varje panel och återanvänd 
+    dem senare med bara ett klick - det är lika enkelt som att göra en ögonblicksbild. Ögonblicksbilder 
+    utökar konceptet med &quot;profiler&quot; till en ny nivå - nästan varje grupp  
+    med relaterade inställningar i SendBlaster kan sparas som en ögonblicksbild.<br>
+    &nbsp; </li>
+  <li><strong>Stöd för externa tillägg</strong> Användare kan ladda ner gratis tillägg 
+    (små verktyg som utför specifika uppgifter, som importering från olika epost-klienter, 
+    etc) från våran hemsida, och många fler kommer att läggas till i framtiden. Tilläggs-API:er 
+    är publika och tredjepartsutvecklare uppmuntras att skapa nya, användbara 
+    tillägg.<br>
+    &nbsp;</li>
+  <li> <strong>Nya mallas som är enkla att redigera</strong> SendBlaster 2 har mer än 
+    100 nya professionellt designade mallar, där alla har flexibla layouter 
+    vilka enkelt kan anpassas.<br>
+    &nbsp; </li>
+  <li><strong>Enklare åtkomst till datafiler </strong> Direktåtkomst till databas-filer 
+    för backup är nu enklare, eftersom de sparas i dokumentmappen 
+    (Documents)<br>
+    &nbsp; </li>
+  <li><strong>Inga administrativa privelegier krävs</strong> SendBlaster 2 kan 
+    köras av standardanvändare på alla Windowssystem<br>
+    &nbsp; </li>
+  <li><strong>Felsökning och finjustering</strong> Många små buggar har fixats, 
+    och prestandan har funjusterats på många områden.<br>
+    &nbsp;</li>
+  <li><strong>Klar för Windows 7</strong> Mjukvaran testas konstant 
+    med Microsoft's nästa operativsystem; det körs naturligt på det och kräver inte 
+    några kompatibilitetsåtgärder. <br>
+    &nbsp; </li>
+  <li><strong>Och mycket mer!</strong> SendBlaster 2 har många fler små förbättringar 
+    som låter användarna arbeta bättre och snabbare.</li>
+</ul>
+<p>&nbsp;</p>
+</body>
+</html>

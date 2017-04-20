@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Hantera prenumerationer</p>
+<p class="item">SendBlaster kan automatiskt hantera prenumerationer (och avbeställningar). 
+  Varje adresslista kan associeras med en mailadress: När ett mail med "Subscribe" 
+  på rubrikraden skickas till denna adress läggs avsändaren till 
+  i adresslistan. Om rubrikraden är "Unsubscribe" istället 
+  kommer avsändaren att tas bort från listan SendBlaster hämtar 
+  mail från detta mailkonto (POP3), kontrollerar rubrikraden och uppdaterar 
+  adresslistan.</p>
+<blockquote> 
+  <p class="item"><font color="#ff0000">Notis:</font> 
+    Ämnesraderna (standard "Subscribe" ("Prenumerera") för prenumerationer och "Unsubscribe"
+    ("Säg upp") för uppsägningar) kan ändras i&nbsp;
+    <a class="itemelement" href="sendblaster_settings_advancedsettings.htm">Advancerade inställningar</a> 
+    s.</p> 
+</blockquote> 
+<blockquote> 
+  <p class="item"><font color="#ff0000">V</font><font color="#ff0000">arning:</font> 
+    Adressen som väljs för att hantera prenumerationerna måste 
+    tillåta att POP3 används för att ta emot mail. (samma metod 
+    som ett normalt epostprogram använder). Det går inte med en mailadress 
+    som bara tillåter webmail (som tex HotMail). </p>
+</blockquote>
+<p class="item">Normalt används en mailadress för varje adresslista 
+  men det är möjligt att använda samma adress till mer än 
+  en lista. Alla dessa adresslistor kommer i så fall att uppdateras samtidigt. 
+</p>
+<p class="item">Varje listas hanteringsadress sätts genom att skriva in rätt parametrar
+  för att komma åt POP3-kontot, precis som i vilken annan epost-klient som helst:
+  förrutom adressen (<span class="itemelement">E-mail</span>   ) behöver du
+  specificera mottagarservern (<span class="itemelement">POP3 Server</span> ),&nbsp;
+  <span class="itemelement">Port</span>        
+   -numret (standardporten är 110), <span class="itemelement">Användarnamn</span> 
+   och&nbsp; <span class="itemelement">Lösenord</span>.&nbsp; <span class="itemelement">SSL</span> 
+         -rutan aktiverar SSL-kommunikation, vilket kanske 
+  krävs av vissa POP3-servrar (t.ex. Gmail's server). I <span class="itemelement">Timeout</span> 
+         skriver du in antalet sekunder med inaktivitet
+  innan anslutningen stängs. För att verifiera parametrarna klickar du på <span class="itemelement"> Anslutningstest
+  </span> (inga meddelanden kommer att laddas ner).</p> 
+<p class="item">         Under vissa, svårförrutsedda förhållanden kanske POP3-servern måste sakta ner hastigheten på nerladdning av meddelanden; om detta händer, testa att aktivera rutan <span class="itemelement">Långsammare</span>     &nbsp;(det finns inget standardsvar här, prova båda och se vilket som fungerar bäst). </p> 
+<blockquote> 
+  <p class="item"><font color="#ff0000">Tips:</font> 
+    <span class="itemelement">Profile</span>     -knappen låter
+    dig hantera flera POP3-konton. Kontoinformation
+    kan lagras för flera profiler, så att alla POP3-inställningar kan
+    sparas/laddas med bara ett par klick. Den här funktionen är speciellt användbar när
+    du skickar epost åt någon annan; eller bara för
+  att spara en profil som du kan använda senare i samma lista, eller någon annan lista.</p> 
+</blockquote> 
+<p class="item">Genom att markera <span class="itemelement">Behåll en kopia 
+  på servern</span>, kommer SendBlaster att 
+hämta bara nya meddelanden utan att radera dem från servern. Det kan vara bra 
+för att tex 
+  senare hämta dessa.</p>
+<p class="item">Genom att kryssa i <span class="itemelement"> Radera bara nya prenumerations
+och uppsägningsmeddelanden</span>         kommer SendBlaster bara att radera meddelanden som ses
+som prenumerationer eller uppsägningar; detta är användbart om du använder samma epost-adress för att få
+läsares svar eller andra meddelanden.</p> 
+<p class="item"><span class="itemelement">Uppdatera alla fält</span> är 
+  en mycket användbar funktion. När den används kommer även 
+  meddelandets text att analyseras och inte bara rubrikraden. Om meddelandet innehåller 
+  <i>fältnamn:värde</i> kommer motsvarande fält i adresslistan 
+  att uppdateras med detta värde. (<a href="#updateallfields">see rutan nedan</a> 
+               
+         
+  ). </p>
+<p class="item">   Nackdelen är att nerladdning och hantering
+  av meddelanden kommer att bli långsammare; därför föreslårs att <span class="itemelement">Uppdatera 
+  alla dält</span>   bara kryssas när det verkligen behövs, alltså när 
+  din webbsida genererar prenumerationsmeddelanden som inte bara innehåller adressfält utan 
+  andra fält.</p> 
+<p class="item">Genom att klicka på <span class="itemelement">Hämta</span> 
+  hämtas de nya prenumerationsmailen och den aktuella adresslistan uppdateras. 
+  (liksom eventuellt andra listor som använder samma prenumerationsadress). 
+</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#ffff99" class="item"> 
+      <p><font color="#009900"><strong>Vilken adress skall jag använda?</strong></font></p>
+      <p>Det är bäst att ha en prenumerationsadress för varje adresslista, 
+        det är en speciell mailadress som bara används för prenumerationer 
+        och avbeställningar (och inte för vanliga mail). Eventuell skräppost 
+        till denna adress kommer att ignoreras och det blir enkelt att administrera 
+        adresslistan. Eftersom denna mailadress bara används för prenumerationer 
+        blir det inte heller nödvändigt att spara meddelanden på 
+        servern, eftersom inget annat program än SendBlaster behöver 
+        hämta dessa mail. Hämtningen av meddelanden blir också 
+        snabbare. </p>
+      <p>Det är möjligt, men inte att rekommendera, att använda 
+        din vanliga mailadress även för prenumerationsmeddelanden. I 
+        så fall är det nödvändigt att använda <span class="itemelement">Spara 
+        en kopia på servern</span> så att vanliga mail senare kan 
+        hämtas av ditt ordinarie epostprogram. Och även i det vanliga 
+        mailprogrammet måste du ha inställningen "Spara en kopia 
+        på servern" så att eventuella prenumerationsmail raderas 
+        från servern innan SendBlaster hämtat dem. </p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#ff0000">Varning:</font> Om hämtningen av 
+    nya meddelanden verkar långsam kan det vara ett tecken på att 
+    många meddelanden sparats på servern. Ständ i så fall 
+    av "Spara en kopia på servern" i ditt mailprogram och klicka 
+    på "Skicka och ta emot". Alla meddelanden hämtas då 
+    från servern och tas bort där. Aktivera sedan "Spara kopia 
+    på server" igen. </p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#ffff99" class="item"> 
+      <p><font color="#009900"><strong><a name="updateallfields"></a>Hur fungerar 
+        "Uppdatera alla fält" ?</strong></font></p>
+      <p>Normalt hanterar SendBlaster bara informationen på rubrikraden 
+        men med <span class="itemelement">Uppdatera alla fält</span> analyseras 
+        även textdelen av prenumerationsmailet. Sökning sker efter rader 
+        av typ Fältnamn:värde och dessa fält i adresslistan uppdateras. 
+      </p>
+      <p>Antag att du har två fält i adresslistan som heter "Förnamn" 
+        och "Ort" och ett meddelande tas emot från "aaa@aaa.com" 
+        med "Subscribe" som rubrik och följande text:</p>
+      <p>Förnamn: Anders<br>
+        Ort: Stockholm</p>
+      <p>En ny rad kommer då att läggas till i adresslistan för 
+        "aaa@aaa.com" med Anders i fältet Förnamn och Stockholm 
+        i fältet Ort.</p>
+      <p>Ett annat format är också tillåtet, samma som vid <a href="sendblaster_messages_compose.htm">meddelande 
+        utformning</a> som i följande exempel:</p>
+      <p>#Förnamn#: Anders<br>
+        #Ort#: Stockholm</p>
+      <p>Eller</p>
+      <p>#2#: Anders<br>
+        #3# : Stockholm</p>
+      <p>&nbsp;</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

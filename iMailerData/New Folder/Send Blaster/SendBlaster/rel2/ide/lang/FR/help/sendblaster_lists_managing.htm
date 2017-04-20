@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>SendBlaster</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css"></head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Gérer les listes </p>
+<p class="item">SendBlaster vous permet de gérer plusieurs listes de diffusion*. 
+</p>
+<p class="item">La liste courante est sélectionnée dans le menu
+déroulant se trouvant dans la partie supérieure de l'écran. À côté de
+celui-ci, trois boutons permettent de créer une nouvelle liste (bouton <span class="itemelement">Nouvelle</span>), 
+  de renommer la liste courante (<span class="itemelement">Renommer</span>), de l'éliminer (<span class="itemelement">Éliminer</span>) ou encore de l'imprimer <span class="item">(</span><span class="itemelement">Imprimer</span><span class="item">)</span>. Ces opérations sont également possible en utilisant le bouton droit de votre souris sur le menu déroulant.</p>
+<p class="item">Tout le reste de l'écran est occupé par les adresses de la liste de diffusion sélectionnée.</p>
+<p class="item">Pour chaque adresse est affiché : l'état de l'inscription (indiqué par les symboles <img src="img/sendblaster_lists_managing_1.gif" height="12" width="12"> 
+  et <img src="img/sendblaster_lists_managing_2.gif" height="12" width="12">), 
+  l'activation (si l'adresse est cochée), le contenu des quinze <a href="sendblaster_settings_fields.htm" class="itemlink">champs personnalisables</a> (le premier champ étant toujours l'adresse de courriel), la présence éventuelle de notes (signalées par la présence du symbole <img src="img/sendblaster_lists_managing_3.gif" height="10" width="15">,
+qui ouvre les notes lorsqu'il est cliqué). L'ordre des colonnes peut
+être modifié en déplaçant les colonnes (Il suffit de faire glisser
+l'en-tête de la colonne); en outre, vous pouvez redimensionner les
+colonnes. </p>
+<p class="item">Lorsque vous  <a href="sendblaster_messages_send.htm" class="itemlink">Envoyer</a>
+un message, les adresses des non-abonnés et des abonnés inactifs seront
+ignorées. Votre envoi ne sera envoyé qu'aux adresses qui sont à la fois
+abonnées et actives. Un coup d'oeil suffit pour identifier les adresses
+exclues de l'envoi puisqu'elles sont affichées en gris:</p>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr> 
+    <td><img src="img/sendblaster_lists_managing_4.gif" height="94" width="156"></td>
+    <td class="item" valign="middle">&nbsp;</td>
+    <td class="item" valign="top" width="100%">Dans l'exemple de gauche, l'envoi ne sera fait qu'à la première adresse, qui est la seule à être à la fois abonnée et active. </td>
+  </tr>
+</tbody></table>
+<p class="item">La liste des adresses peut être ordonnée librement en
+cliquant sur l'en-tête des colonnes. Si vous faites glisser un ou
+plusieurs titres des colonnes dans la zone immédiatement supérieure à
+la liste (<span class="itemelement">Faire glisser une colonne à cet endroit pour regrouper des données</span>) vous pourrez regrouper vos adresses en fonction du contenu des champs sélectionnés. En outre la case <span class="itemelement">Total</span> apparaît, vous permettant (lorsque sélectionnée) d'afficher le nombre d'adresses contenu dans chaque groupe.</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody><tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="item" bgcolor="#ffff99" width="100%"> <p><font color="#009900"><strong>Comment filtrer les adresses ?</strong></font></p>
+      <p>La
+possibilité de rendre temporairement active ou inactive une ou
+plusieurs adresses (sans les désabonner) permet d'envoyer un message à
+un sous-ensemble de la liste de distribution sélectionnée. Cette
+fonction, combinée à la possibilité d'ordonner et de regrouper les
+adresses, vous permet de créer des filtres puissants pour la gestion de
+l'envoi. </p>
+      <p>Par exemple, supposant que le champ "Ville"
+ait été défini, vous pouvez restreindre la remise du message aux seuls
+habitants de cette ville, en désactivant momentanément toutes les
+autres adresses. Ou encore, si vous avez défini le champ "Travail",
+vous pouvez envoyer votre message à une catégorie professionnelle de
+votre choix (il est également possible de combiner ces deux filtres) </p>
+      <p>SendBlaster
+fournit un contructeur puissant de filtre de données permettant aux
+usagers d'affiner leur envoi en sélectionnant et en activant ou en
+désactivant des enregistrements selon certaines conditions. Ce
+constructeur supporte des conditions multiples et des opérateurs
+complexes. Donc ils peuvent visuellement construire une puissante
+requête SQL sans jamais écrire de code. This Le constructeur de filtre
+peut être accédé à l'aide du bouton <span class="itemelement">Filtre</span> .</p>
+      <p>Désactiver
+les adresses permet en outre de créer des listes d'exclusion (des
+adresses auxquelles vous n'enverrez jamais de messages même si le
+destinataire s'inscrit à la liste) </p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody></table>
+<p class="item">Au-dessus de la liste d'adresses se trouvent les
+boutons qui vous permettent de les gérer. Ces commandes sont également
+disponibles dans le menu contextuel auquel vous pouvez accéder avec le
+bouton droit de votre souris. </p>
+<p class="item">Vous pouvez ajouter une adresse (bouton <span class="itemelement">Nouveau</span>), 
+  modifier l'adresse sélectionnée (<span class="itemelement">Modifier</span>) 
+  ou éliminer une ou plusieurs adresses (<span class="itemelement">Eliminer</span>).
+Le clavier et la souris vous permettent de sélectionner plusieurs
+adresses : cliquer sur une adresse tout en maintenant la touche <em>Ctrl</em> 
+  enfoncée permet d'ajouter une adresse à la sélection, cliquer sur une adresse tout en maitenant les touches  <em>Shift/Majusc</em> 
+  enfoncées permet d'ajouter un groupe d'adresse.</p>
+<p class="item">Les boutons  <span class="itemelement">Couper</span> / <span class="itemelement">Copier</span> 
+  / <span class="itemelement">Coller</span>
+vous permettent de d'effacer les adresses sélectionnées ou encore de
+les copier du/vers le Presse-Papiers (si vous avez besoin de
+sélectionner tous les enregistrements, cliquer avec le bouton droit de
+la souris sur un quelconque enregistrement et choissisez <span class="item"></span><span class="itemelement">Tout sélectionner</span><span class="item">).</span></p>
+<p class="item">Les boutons <span class="itemelement">Inscrire les adresses sélectionnées </span> 
+  et <span class="itemelement">Désinscrire les adresses sélectionnées </span>
+permettent de gérer à la main les inscriptions à la liste courante
+(l'inscription d'une adresse comporte la modification de la date
+d'inscription); les boutons <span class="itemelement">Activer les adresses sélectionnées </span> et <span class="itemelement">Désactiver les adresses sélectionnées </span> permettent d'activer ou désactiver une adresse indépendamment du fait de son état d'abonnement.</p>
+<p class="item">Le bouton  <span class="itemelement">Journal</span> permet d'afficher la liste des envois qui a été envoyé à l'adresse sélectionnée.</p>
+<p class="item">Enfoncer le bouton  <span class="itemelement">Notes</span>
+ouvre une fenêtre dans laquelle vous pouvez inscrire du texte libre
+pour être conservé comme des notes concernant l'adresse sélectionnée.
+Les adresses pour lesquelles une note est présente affiche le symbole <img src="img/sendblaster_lists_managing_3.gif" height="10" width="15"> 
+  dans la dernière colonne (Cliquer sur ce symbole ouvrira également la fenêtre des <span class="itemelement">Notes</span>).</p>
+<p class="item">Le bouton  <span class="itemelement">Rechercher</span>**
+ouvre une fenêtre pour une recherche dans un champ précis ou n'importe
+quel champ (y compris les Notes). Si vous sélectionnez <span class="itemelement">Correspondance exacte </span> 
+  vous obtiendrez les adresses qui contiennent exactement le texte recherché.&nbsp; <span class="itemelement"></span>Dans
+le cas contraire, vous obtiendrez toutes les adresses qui contiennent
+le texte cherché même s'il ne correspond pas exactement. Vous pouvez
+vous déplacer dans les résultats en utilisant les boutons <span class="itemelement">Trouver le premier</span>, <span class="itemelement">Suivant</span> et <span class="itemelement">Précédent</span> 
+  de la fenêtre de recherche.</p>
+<p class="item">Le bouton <span class="itemelement">Trouver les Doubles</span>
+affichera une fenêtre qui permet de gérer les adresses de courriel se
+trouvant en plusieurs copies à travers les listes. Vous pouvez chercher
+pour des doubles dans les listes sélectionnées, ainsi qu'enlever ou
+éditer les contacts en double de cette même fenêtre. Prenez note que
+vous pouvez avoir des adresses de courriels en plusieurs copies dans
+vos listes et choisir si vous voulez ou non envoyer des messages à des
+adresses de courriels multiples dans la fenêtre des <a href="../../English/help/sendblaster_settings_advancedsettings.htm" class="itemlink">Paramètres Avancés</a> .</p>
+<p class="item">Le bouton  <span class="itemelement">Changer de point de vue </span>
+permet de passer d'une vue normale à la vue en "Fiche" et vice-versa.
+En vue 'Fiche", chaque adresse est affichée dans une fiche différente;
+vous vous déplacez avec la barre horizontale et vous pouvez
+redimensionner la largeur de chaque Fiche.</p>
+
+<p class="item">Vous pouvez vouloir qu'utilisez qu'une partie des 15
+champs disponibles;&nbsp; afin de sauver de l'espace à l'écran, vous
+pouvez sélectionner quels champs à afficher en cliquant le bouton <span class="itemelement">Champs visibles</span>.</p>
+<hr noshade="noshade" size="1">
+<p class="item">*L'édition Gratuite permet de gérer un maximum de deux listes <br>
+**La fonction de recherche n'est disponible qu'avec l'édition Pro </p>
+<p class="item">&nbsp;</p>
+</body></html>

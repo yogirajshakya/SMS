@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Anpassade format för Bounce-backs </p>
+<p class="item">Format för Bounce-backs var först designade 
+för att kunna läsas av människan,
+    inte av maskiner, men ändå finns det inga standarder eller regler. SendBlaster kan hantera de flesta formaten för bounce-backs med hjälp av sin interna databas, men du kanske stöter på&nbsp;något format som inte känns igen av mjukvaran. Om det händer, så kan du manuellt lägga till ett nytt anpassat format till SendBlaster's databas
+för bounce-backs.</p>
+<p class="item">Ett anpassat format består av ett antal regler; alla måste följas för att ett meddelande ska kunna ses som en bounce-back (med andra ord, den logiska operanden för reglerna är AND (och)). </p>
+<p class="item">När du vill lägga ttill ett&nbsp; <span class="itemelement">Nytt format</span> måste du först av allt identifiera mönster i ämnesraden eller i headern, vilket unikt identifierar meddelanden som ett studsat meddelande (en <span class="itemelement">Hård studs</span>   , om du kryssar i rutan, eller en mjuk om den är inte är ikryssad). Dropplistan över headers är bara ett exempel, du kan manuellt lägga till specifika headers genom att skriva in headernamnet i <span class="itemelement">Header</span>  -fältet och det önskade mönstret i <span class="itemelement">Värde</span>-fältet.</p>
+<p class="item">Ett&nbsp; <span class="itemelement">mönster</span>   inkluderar wildcards (tecknet "*" vilket betyder "vilket tecken som helst"): om du t.ex. skriver "*delivery*notification*" som ämnesmönster så kommer alla meddelanden som innehåller "delivery" och "notification" i ämnet  - t.ex. "delivery to xxx@yyy.com notification failure" - att ses som ett studsat meddelande, förrutsatt att det matchar de andra reglerna som du kan ha definierat. Om du använder "delivery notification", utan wildcards, kommer bara meddelanden som har den exakta frasen "delivery notification" att hanteras som studsade meddelanden - "delivery to xxx@yyy.com notification failure" skulle inte ses som ett giltligt ämne.</p>
+<p class="item">           Du kan också skriva in mer specifika ord (separerade med komma) som måste finnas i kroppen av meddelandet: om inget av dessa ord hittas hanteras inte meddelandet som ett studsat. Som ett exempel, de flesta bounce-backs innehåller&nbsp;ordet "orsak" ("reason", följt med text som förklarar varför meddelandet inte levererades). Vänligen notera att listan över ord inte är ett mönster (du kan inte använda wildcards) och den logiska operanden är OR (eller). </p>
+<p class="item">   Om ett meddelande möter alla regler som du har definierat, kommer det att hanteras som ett studsat meddelande och alla epostadresser som hittas i meddelandet sägs upp, om de också finns i listan som du laddar ner studsar för. Du kan också välja att exkludera typiska postmaster-adresser med mönster.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#ffff99" class="item"><p><strong><font color="#009900">Ett exempel </font></strong></p>
+        <p class="item">Låt oss säga att du vill att meddelanden ska hanteras som bounce-backs när de:</p>
+        <p class="item">a) har orden "undeliverable" (ungefär "olevererbart")&nbsp;och "message" ("meddelande")&nbsp;i ämnet;<br>
+             b)&nbsp;kommer från en&nbsp;"postmaster@..."-adress;<br>c) 
+      Content-Type-headern&nbsp;är "delivery notification"&nbsp;eller "delivery failure notification" ("leveransnotifikation" eller "leveransfelsnotifikation")<br>
+             d) innehåller orden "reason"&nbsp;eller "error" ("orsak" eller "fel")&nbsp;i kroppen</p>
+        <p class="item">  och du vill givetvis inte att avsändarens ("postmaster@...") adress ska bli uppsagd, eftersom den riktiga adressen finns någon annanstans i kroppen. </p>
+        <p class="item">  Såhär skulle formatet kunna se ut: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong> Hård studs:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(checked)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>  Ämnesmönster:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">From</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Värde:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Värde:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*delivery*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Kroppen innehåller&nbsp;:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reason, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Exkludera&nbsp;:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>    Och här är ett mycket enklare format, vilket hanterar alla meddelanden som har ordet "undeliverable" i ämnesraden (och exkluderar både postmaster@...&nbsp;och majordomo@...):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Hård studs&nbsp;:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(checked)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>  Ämnesmönster:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*undeliverable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Värde:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Värde:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Kroppen innehåller&nbsp;:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Exkludera:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

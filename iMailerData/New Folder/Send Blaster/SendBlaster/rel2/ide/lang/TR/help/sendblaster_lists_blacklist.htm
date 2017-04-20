@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Blacklist</p>
+<p class="item">Bir <span class="itemelement">blacklist</span> (veya karaliste) belirli e-posta adreslerinin veya alan isimlerinin <a href="sendblaster_lists_managing.htm">&uuml;yelik/aktivasyon durumundan</a> ba&#287;&#305;ms&#305;z olarak mesaj almas&#305;n&#305; engelleyen bir filtredir.</p>
+<p class="item">Belirli bir listeye bir mesaj g&ouml;nderdi&#287;inizde, her mesaj ger&ccedil;ekten g&ouml;nderilmeden &ouml;nce, SendBlaster al&#305;c&#305; adresinin veya alan ad&#305;n&#305;n blacklist i&ccedil;erisinde olup olmad&#305;&#287;&#305;n&#305; kontrol eder: e&#287;er blacklist i&ccedil;erisindeyse mesaj g&ouml;nderilmes (<em>&quot;&lt;address&gt;: 
+  blacklisted</em>&quot; &#351;eklinde bir mesaj kay&#305;tlarda g&ouml;r&uuml;n&uuml;r).</p>
+<p class="item">SendBlaster iki  &ccedil;e&#351;it blacklist t&uuml;r&uuml;n&uuml; desteklemektedir:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adresler</span> blacklist: buraya hi&ccedil; mesaj g&ouml;nderilmesini istemedi&#287;iniz adresleri girin.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Alan adlar&#305;</span> blacklist*: tek tek adres girmek yerine, t&uuml;m alan ad&#305;n&#305; tan&#305;mlayabilirsiniz (bir alan ad&#305;, e-posta adresindeki &quot;@&quot; i&#351;aretinden sonra gelen k&#305;s&#305;md&#305;r: &quot;www&quot; veya herhangi bir &uuml;&ccedil;&uuml;nc&uuml; seviye alan ismini dahil etmedi&#287;inizden emin olun). Bir alan ad&#305; blacklist i&ccedil;erisine eklendi&#287;inde bu alan ad&#305; i&ccedil;erisindeki hi&ccedil; bir adrese mesaj g&ouml;nderilmes.</li>
+</ul>
+<p class="item">&Ouml;&#287;eleri d&uuml;z metin olarak girebilirsiniz; her sat&#305;r bir adresi / alan ad&#305;n&#305; (ve herhangi bir ekstra karakter olmamas&#305; gerekmektedir: &ouml;zel sembol kullanamazs&#305;n&#305;z). &Uuml;&ccedil;&uuml;nc&uuml; parti bir yaz&#305;l&#305;m ile blacklistleri d&uuml;zenlemek i&ccedil;in ta&#351;&#305;ma panosundan kopyalama/ yap&#305;&#351;t&#305;rma yapabilirsiniz veya Windows'un yerle&#351;ik metin d&uuml;zenleyicisi ile d&uuml;zenlemek i&ccedil;in <span class="itemelement">Notepad ile d&uuml;zenle</span> d&uuml;&#287;mesi &uuml;zerine t&#305;klayabilirsiniz (Notepad ile d&uuml;zenleme i&#351;leminin bitene ve Notepad kapanana kadar program&#305;n &ccedil;al&#305;&#351;mas&#305; durur).</p>
+<form>
+  <p class="item">Ge&ccedil;erli bir  <span class="itemelement">adres</span> 
+    blacklist &ouml;rne&#287;i a&#351;a&#287;&#305;daki gibidir:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">ve ge&ccedil;erli bir <span class="itemelement">alan ad&#305;</span> blacklist &ouml;rne&#287;i:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>A&#351;a&#287;&#305;daki blacklist yaln&#305;&#351;t&#305;r</strong></font> 
+    &ccedil;&uuml;nki &ouml;zel sembol olan  (<em>&quot;*</em>&quot;) i&#351;aretini i&ccedil;ermektedir ve &uuml;&ccedil;&uuml;nc&uuml; seviye alan isimlerini (&quot;<em>www.&quot;</em>) i&ccedil;ermektedir:</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+   <p class="item">Lütfen, blacklistlerin bir boyut limitine sahip oldu&#287;unu ve &quot;normal&quot; üyelikten ç&#305;karma i&#351;lemlerinin yerini almak için tasarlanmad&#305;&#287;&#305;na dikkat edin. Genel bir kural olarak, blacklistler yaln&#305;zca &quot;acil&quot; durumlar için veya yaln&#305;zca özel görevler için kullan&#305;lmal&#305;d&#305;rlar ( örne&#287;in birisi, üye olsa dahi sizden art&#305;k mesaj almak istemedi&#287;inde; veya rakiplerinizin sizin bültenlerinizi almad&#305;&#287;&#305;ndan emin olmak için).</p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Yaln&#305;zca Pro Edition i&ccedil;erisinde mevcuttur</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

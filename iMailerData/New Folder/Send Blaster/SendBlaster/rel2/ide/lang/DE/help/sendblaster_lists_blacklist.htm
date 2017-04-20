@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" class="body" marginheight="8"
+ marginwidth="8">
+<p class="title">Sperrliste</p>
+<p class="item">Eine <span class="itemelement">Sperrliste</span> ist
+ein Filter, der verhindert, dass bestimmte Email-Adressen oder ganze
+Dom&auml;nen Emails erhalten, unabh&auml;ngig davon, ob ihr Zustand <a
+ href="sendblaster_lists_managing.htm">angemeldet/abgemeldet</a> ist.</p>
+<p class="item">Wenn Sie eine Nachricht an eine Liste versenden,
+&uuml;berpr&uuml;ft SendBlaster vor dem eigentlichen Versand, ob die
+Empf&auml;ngeradresse oder Dom&auml;ne in der Sperrliste enthalten ist:
+Ist dies der Fall, wird der Empf&auml;nger &uuml;bersprungen (die
+Meldung <em>"&lt;Adresse&gt;: ist in der Sperrliste</em>" wird im
+Log-Bereich angezeigt).</p>
+<p class="item">Sendblaster unterst&uuml;tzt zwei verschiedene
+Sperrlisten:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adressen</span>-Sperrliste:
+Geben Sie hier die Email-Adressen ein, denen Sie niemals eine Nachricht
+zukommen lassen m&ouml;chten.<br>
+&nbsp; </li>
+  <li class="item"><span class="itemelement">Dom&auml;nen</span>-Sperrliste*:
+Statt einer einzelnen Adresse k&ouml;nnen Sie auch ganze Dom&auml;nen
+angeben (eine Dom&auml;ne ist jener Teil einer Email-Adresse, der nach
+dem "@"-Zeichen folgt: Achten Sie bitte darauf, nicht <em>"www.</em>"
+oder andere Third-Level-Dom&auml;nennamen einzuf&uuml;gen). Wenn eine
+Dom&auml;ne gesperrt ist, wird niemals eine Nachricht an eine
+Email-Adressen dieser Dom&auml;ne geschickt werden.</li>
+</ul>
+<p class="item">Sie k&ouml;nnen Eintr&auml;ge als freien Text
+vornehmen. Jede Zeile darf jedoch nur eine Adresse / Dom&auml;ne
+enthalten (Sonderzeichen sind nicht zul&auml;ssig: Sie d&uuml;rfen
+keine sogenannten Wildcards / Platzhalter verwenden). Sie k&ouml;nnen
+Daten &uuml;ber die Zwischenablage austauschen, um Sperrlisten mit
+anderen Programmen zu bearbeiten oder klicken Sie den <span
+ class="itemelement">Mit Notepad editieren</span>-Button, um eine
+Sperrliste mit dem in Windows integrierten Texteditor zu
+bearbeiten&nbsp;(die Ausf&uuml;hrung der Software wird dabei
+unterbrochen bis Sie das Bearbeiten beenden und den Editor
+schlie&szlig;en).</p>
+<form>
+  <p class="item">Hier ein Beispiel f&uuml;r eine g&uuml;ltige <span
+ class="itemelement">Adressen</span>-Sperrliste:</p>
+  <p> <textarea name="addresses">address1@domain.com
+test2@site.biz </textarea> </p>
+  <p class="item">und eine g&uuml;ltige <span class="itemelement">Dom&auml;nen</span>-Sperrliste:</p>
+  <p> <textarea name="domains">domain.com
+site.biz </textarea> </p>
+  <p class="item"><font color="#ff0000"><strong>Die folgende Sperrliste
+ist falsch</strong></font>, da Sie sogenannte Wildcards (<em>"*</em>")
+sowie Third-Level-Dom&auml;nennamen enth&auml;lt ("<em>www."</em>):</p>
+  <p> <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz </textarea> </p>
+  <p>&nbsp; </p>
+</form>
+<hr noshade="noshade" size="1">
+<p class="item">* Nur in der Pro-Version verf&uuml;gbar.</p>
+</body>
+</html>

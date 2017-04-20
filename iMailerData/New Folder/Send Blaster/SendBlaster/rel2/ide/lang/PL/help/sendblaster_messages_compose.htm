@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.style1 {
+				font-style: italic;
+				font-weight: bold;
+				color: #1441A0;
+}
+.style2 {
+				font-style: italic;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 8pt;
+}
+.style3 {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 8pt;
+}
+.style4 {
+				color: #FF0000;
+}
+</style>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Tworzenie wiadomo&#347;ci</p>
+<p class="item">Okno tworzenia wiadomo&#347;ci pozwala na stworzenie wiadomo&#347;ci, która 
+zostanie wys&#322;ana do listy dystrybucyjnej .</p>
+<p class="item">Tworzenie wiadomo&#347;ci wygl&#261;da tak samo jak w standardowym 
+kliencie poczty: wprowad&#378; <span class="itemelement">Temat </span>wiadomo&#347;ci, 
+do&#322;&#261;cz je&#380;eli potrzebujesz <span class="style1">Za&#322;&#261;czniki</span>*, okre&#347;l 
+odbiorców wiadomo&#347;ci&nbsp;
+  (tylko dost&#281;pne w opcji podgl&#261;du wiadomo&#347;ci), oraz wprowad&#378; tekst. 
+Je&#380;eli tekst potrzebuje specjalnych znaków (nie typu Latin), musisz najpierw 
+dostosowa&#263; <span class="style1">Kodowanie</span><span class="itemelement"> </span>(domy&#347;lne 
+kodowanie mo&#380;e zosta&#263; zmienione w oknie <span class="itemelement">
+<a class="itemlink" href="sendblaster_settings_advancedsettings.htm">Ustawie&#324; 
+zaawansowanych</a></span>).</p>
+<blockquote>
+<p class="item">
+  <span class="itemelement">Tagi mog&#261;</span> zosta&#263; wstawione i u&#380;yte przez 
+	wci&#347;ni&#281;cie przycisku tag (#) obok<span class="style2"> </span> 
+	<span class="style3">pól <span class="style1">Temat</span></span> i
+  <span class="itemelement">Do,</span> aby wys&#322;a&#263; spersonalizowany email.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><span class="style4">Uwaga</span><font color="#FF0000">:</font> 
+	Kodowanie wiadomo&#347;ci musi zosta&#263; okre&#347;lone <strong>przed</strong> 
+	wprowadzeniem wiadomo&#347;ci, aby mie&#263; poprawny rezultat. W przypadku z&#322;ego 
+	kodowania mo&#380;na uzyska&#263; wiadomo&#347;&#263;, której si&#281; nie da przeczyta&#263;.</p>
+</blockquote>
+<p class="item">Strona pokazuje dwa obszary:</p>
+<ul>
+  <li class="item">W g&#322;ównym obszarze, gdzie d&#322;ugi pasek jest umieszczony, 
+	mo&#380;esz wstawia&#263; sformatowany tekst, aby generowa&#263; wiadomo&#347;ci w stylu HTML. 
+	Mo&#380;esz równie&#380; wstawia&#263;&nbsp; obrazy i linki, mo&#380;esz sprawdzi&#263; (i zmieni&#263;) 
+	automatycznie wygenerowany kod HTML, klikaj&#261;c w dowolnym momencie na 
+	przycisk <span class="itemelement">Poka&#380; kod</span>.<br>
+    &nbsp; </li>
+  <li class="item">W obszarze <span class="style1">Zwyk&#322;y tekst</span>, 
+	mo&#380;esz wprowadzi&#263; wiadomo&#347;&#263; jako zwyk&#322;y tekst. Niektórzy odbiorcy mog&#261; nie 
+	by&#263; w stanie wy&#347;wietli&#263; wiadomo&#347;ci w formacie HTML, wa&#380;nym jest wi&#281;c 
+	dostarczanie alternatywnego formatu, bez obrazów i linków. Tekst mo&#380;e zosta&#263; 
+	automatycznie wygenerowany z tekstu formatowanego przez klikni&#281;cie na 
+	przycisk <span class="itemelement">Tekst z HTML, </span>kiedy 
+	zako&#324;czysz pisanie wiadomo&#347;ci. </li>
+</ul>
+<p class="item">Aby wys&#322;a&#263; dostosowan&#261; wiadomo&#347;&#263; (jako przeciwno&#347;&#263; ogólnej 
+wiadomo&#347;ci), 
+  w linii tematu i cia&#322;a (obydwie sekcja HTML i tekstu) mo&#380;esz wstawi&#263;
+<span class="itemelement">Tagi</span>. Ka&#380;dy tag jest referencj&#261; do pola: kiedy 
+wiadomo&#347;&#263; jest wysy&#322;ana, tag jest zast&#281;powany warto&#347;ci&#261; odczytywan&#261; z tekstu 
+odbiorcy w konkretnym polu. Na przyk&#322;ad je&#380;eli list ma pola &quot;BusinessName&quot; 
+oraz &quot;Address&quot; 
+  (<a class="itemlink" href="sendblaster_settings_fields.htm">nazwy pól mog&#261; 
+zosta&#263; zmienione</a>), wprowadzaj&#261;c taki tekst do cia&#322;a wiadomo&#347;ci:</p>
+<blockquote>
+  <p class="valore">Messrs. #businessname#<br>
+    #address#</p>
+</blockquote>
+<p class="item">odbiorca dostanie dostosowan&#261; wiadomo&#347;&#263; jak (przyk&#322;ad):</p>
+<blockquote> 
+  <p class="valore">Messrs. The Coca Cola Company<br>
+    Atlanta, GA</p>
+</blockquote>
+<p class="item">Z racji tego, &#380;e nazwy pól mog&#261; by&#263; zmieniane, jest równie&#380; 
+mo&#380;liwe &quot;naprawianie&quot; tagów (nazw pól niepowi&#261;zanych z tagami), które odnosz&#261; 
+si&#281; do numerów pól 
+  (#1# #2#, i tak dalej a&#380; do #10#). Numery pól mo&#380;na znale&#378;&#263; w oknie
+<span class="itemelement">
+<a class="itemlink" href="sendblaster_settings_fields.htm">Pola</a></span>. S&#261; 
+jeszcze trzy specjalne tagi: <span class="itemelement">#listname#</span>
+  który zast&#281;puje naw&#281; listy do której wiadomo&#347;&#263; jest wysy&#322;ana; <span class="itemelement">#managingemail#</span> 
+  jest zast&#281;powane przez adres email do którego Subskrybuj/ Zako&#324;cz subskrypcj&#281; 
+s&#261; wys&#322;ane (to pozwoli odbiorcom &#322;atwo usun&#261;&#263; ich adres z listy); oraz<span class="itemelement"> 
+  #systemdate#</span> który zostanie zast&#261;piony przez aktualn&#261; data, 
+sformatowan&#261; do ustawie&#324; Windows.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900">
+	<strong>Jak stworzy&#263; link do zako&#324;czenia subskrypcji </strong></font></p>
+      <p>SendBlaster mo&#380;e zarz&#261;dza&#263; listami dystrybucyjnymi pobieraj&#261;c 
+		wiadomo&#347;ci przez dedykowany email, inny dla ka&#380;dej z list 
+		dystrybucyjnych (<span class="itemelement"><a class="itemlink" href="sendblaster_lists_subscribe.htm">Zarz&#261;dzanie 
+		subskrypcjami</a></span>). Dzi&#281;ki korzystaniu z tagów jest &#322;atwym 
+		do&#322;&#261;czanie kodu&nbsp; HTML do zako&#324;czenia subskrypcji:</p>
+      <blockquote>
+        <p class="valore">&lt;a href=&quot;mailto:#managingemail#?Subject=Unsubscribe&quot;&gt;USU&#323;&lt;/a&gt;</p>
+      </blockquote>
+      <p>Ten kod mo&#380;e zosta&#263; &#322;atwo wstawiony do kodu HTML wiadomo&#347;ci korzystaj&#261;c 
+		z przycisku <span class="itemelement">Wstaw link zako&#324;czenia subskrypcji </span> 
+		<span class="style3">na pasku przycisków</span>, co równie&#380; pozwala na 
+		okre&#347;lenie tekstu który zostanie powi&#261;zany z linkiem usuni&#281;cia.</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Edytowana wiadomo&#347;&#263; mo&#380;e zosta&#263; zapisana w formacie .eml 
+(kompatybilnym z wi&#281;kszo&#347;ci&#261; klientów poczty) klikaj&#261;c na przycisk
+<span class="itemelement">Zapisz</span>.</p>
+<p class="item">Aby utworzy&#263; now&#261; wiadomo&#347;&#263; mo&#380;esz zacz&#261;&#263; od podstaw (z 
+przyciskami <span class="itemelement">Nowy</span> 
+  lub <span class="style1">Wybierz wzorzec</span>) lub, korzystaj&#261;c z przycisku
+<span class="style1">Otwórz</span>, otwórz wcze&#347;niej zapisan&#261; wiadomo&#347;&#263;:</p>
+<ul>
+  <li class="item">Importuj plik .eml (na przyk&#322;ad utworzony w Outlook) z&nbsp; 
+    <span class="itemelement">Otówrz</span> / <span class="style1">Otówrz plik</span><span class="itemelement"> .eml </span></li>
+  <li class="item">Za&#322;aduj wiadomo&#347;&#263; wcze&#347;niej wys&#322;an&#261; z <span class="style1">
+	Otwórz</span> 
+    / <span class="itemelement">Otówrz email z historii </span></li>
+  <li class="item">Importuj sformatowany tekst z strony HTML z lokalnego dysku, 
+	w&#322;&#261;cznie z obrazami z <span class="style1">Otwórz</span> / <span class="itemelement">Importuj 
+	z pliku
+    HTML </span></li>
+  <li class="item">Importuj z tekstu z <span class="itemelement">Otwórz</span>
+    / <span class="itemelement">Import tekst z zewn&#281;trznego pliku </span></li>
+</ul>
+<p class="item">Przycisk <span class="itemelement">Tekst z HTML</span> pozwala 
+na wyodr&#281;bnienie tekstu ze sformatowanego tekstu HTML. Jest równie&#380; zalecanym 
+wykonanie tego po zako&#324;czeniu tworzenia wiadomo&#347;ci.</p>
+<p class="item" style="height: 65px">Mo&#380;liwo&#347;&#263; &#347;ledzenia emaili mo&#380;e zosta&#263; dodana z wykorzystaniem 
+przycisków <span class="itemelement">Google Analytics</span> i/lub <span class="itemelement">TrackReports</span> 
+w panelu HTML panel;  linki w wiadomo&#347;ci s&#261; automatycznie dostosowywane w 
+wiadomo&#347;ci w zale&#380;no&#347;ci od tego co wybra&#322;e&#347;, a wymagany kod jest dodany. Dodanie 
+kodu czy to <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a> 
+czy <a href="sendblaster_messages_trackreports.htm" class="itemlink">TrackReports</a> 
+musi zawsze by&#263; ostatni&#261; operacj&#261; - obydwie metody zmieniaj&#261; kod 
+wiadomo&#347;ci, 
+dlatego u&#380;ytkownicy musz&#261; najpierw zako&#324;czy&#263; edycj&#281; wiadomo&#347;ci. &#346;ledzenie 
+wiadomo&#347;ci z wykorzystaniem obydwu systemów jest mo&#380;liwe; w tym przypadku 
+najpierw powinien zosta&#263; dodany kod Google Analytics.</p>
+<p class="item">Przed wys&#322;aniem wiadomo&#347;ci, jest mo&#380;liwe (i mocno zalecane) 
+sprawdzenie jak wiadomo&#347;&#263; b&#281;dzie wygl&#261;da&#322;a w kliencie poczty, korzystaj&#261;c z 
+przycisku <span class="itemelement">Podgl&#261;d email</span>. Ta opcja skorzysta z 
+przyk&#322;adowych danych zdefiniowanych w <span class="style2">s</span><span class="style3">ekcji </span>
+<span class="itemelement">Moje dane personalne</span> na ekranie&nbsp;
+<a target="mainframe" class="itemlink" href="sendblaster_settings_fields.htm">
+Pola</a>.
+</p>
+<p class="item">Jest mo&#380;liwe równie&#380; sprawdzenie wyniku sprawdzanie anty 
+spamowego, w trakcie edycji wiadomo&#347;ci, korzystaj&#261;c z przycisku <span class="itemelement">
+Sprawdzanie Spamu</span>, jest to sprawdzanie na bazie <b>SpamAssassin engine</b>, 
+jednego z najpopularniejszych silników antyspamowych na serwerach poczty. 
+Korzystaj&#261;c z tej zaawansowanej opcji SendBlaster pozwala ci na unikni&#281;cia 
+uznania pomy&#322;kowo twojej przesy&#322;ki za spam przez filtry.</p>
+
+<hr size="1" noshade>
+<p class="item">*Za&#322;&#261;czniki s&#261; dost&#281;pne tylko w wersji&nbsp; Pro.</p>
+</body>
+</html>

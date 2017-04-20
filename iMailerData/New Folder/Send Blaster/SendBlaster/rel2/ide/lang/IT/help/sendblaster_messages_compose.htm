@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Componi messaggio</p>
+<p class="item">La schermata di composizione del messaggio consente di creare 
+  il messaggio da inviare ad una lista di distribuzione.</p>
+<p class="item">La composizione avviene come in un normale client di posta elettronica: 
+  si digita l'<span class="itemelement">Oggetto</span> del messaggio, si inseriscono 
+  eventuali <span class="itemelement">Allegati</span>*, quindi si compone il testo; 
+  se il testo utilizza alfabeti speciali (cirillico, greco, etc.) &egrave; necessario 
+  impostare prima di tutto la <span class="itemelement">Codifica</span> (la codifica 
+  predefinita per i nuovi messaggi pu&ograve; essere modificata nella scheda <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Campi 
+  e interfaccia</span></a>).</p>
+<p class="item"> Si possono aggiungere <span class="itemelement">marcatori</span> ai campi <span class="itemelement">Oggetto</span> e <span class="itemelement">A</span> premendo i tasti contrassegnati dal simbolo &quot;#&quot; a fianco ai relativi campi.	</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Nota:</font> per la corretta visualizzazione 
+    del messaggio &egrave; importante impostare la codifica <strong>prima</strong> 
+    di cominciare a digitare il testo; in caso contrario il testo inserito diverr&agrave; 
+    illeggibile.</p>
+</blockquote>
+<p class="item">Nella pagina sono presenti due aree di testo:</p>
+<ul>
+  <li class="item">nell'area principale, caratterizzata da una estesa barra di 
+    strumenti, &egrave; possibile inserire testo formattato per generare un messaggio 
+    in formato HTML. Si possono inoltre inserire immagini e collegamenti ipertestuali, 
+    ed &egrave; in ogni momento possibile controllare (e modificare) il codice 
+    HTML premendo il pulsante <span class="itemelement">Visualizza codice</span> 
+    nella barra superiore.<br>
+    &nbsp; </li>
+  <li class="item">nell'area <span class="itemelement">Testo puro</span>, invece, 
+    si inserisce il contenuto del messaggio in formato testo. Alcuni destinatari 
+    potrebbero non essere in grado di visualizzare un messaggio HTML, quindi &egrave; 
+    necessario fornire una versione alternativa del contenuto, priva di formattazione 
+    ed immagini. Il testo puro pu&ograve; essere ricavato automaticamente a partire 
+    dal testo formattato premendo il pulsante <span class="itemelement">Testo 
+    da HTML</span> al termine della composizione del messaggio.</li>
+</ul>
+<p class="item">Per inviare messaggi personalizzati e non anonimi, nell'oggetto 
+  e nel corpo della mail (sia nella parte HTML che in quella di puro testo) &egrave; 
+  possibile inserire alcuni <span class="itemelement">marcatori</span>. Ogni marcatore 
+  corrisponde ad un campo: quando il messaggio sar&agrave; inviato, il marcatore 
+  sar&agrave; sostituito dal testo prelevato dal campo corrispondente di ogni 
+  destinatario. Ad esempio, supponendo che la lista contenga un campo &quot;Ditta&quot; 
+  ed un campo &quot;Indirizzo&quot; (ricordando che <a href="sendblaster_settings_fields.htm" class="itemlink">i 
+  nomi dei campi possono essere modificati</a>), inserendo nel corpo della mail 
+  un testo:</p>
+<blockquote>
+  <p class="valore">Spettabile #ditta#<br>
+    #indirizzo#</p>
+</blockquote>
+<p class="item">i destinatari riceveranno un messaggio personalizzato, ad esempio:</p>
+<blockquote>
+  <p class="valore">Spettabile eDisplay srl<br>
+    via Wildt 19/3</p>
+</blockquote>
+<p class="item">Dato che i nomi dei campi possono cambiare, &egrave; anche possibile 
+  usare marcatori &quot;fissi&quot;, indipendenti dal nome del campo, che fanno 
+  riferimento al numero del campo (#1#, #2#, e cos&igrave; via fino a #10#) - 
+  i numeri dei campi possono essere letti nella scheda <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Campi 
+  e interfaccia</span></a>. Esistono inoltre alcuni marcatori speciali: <span class="itemelement">#nomelista#</span> 
+  viene sostituito dal nome della lista a cui si invier&agrave; il messaggio; 
+  <span class="itemelement">#emailgestione#</span> dall'indirizzo a cui inviare 
+  sottoscrizioni e cancellazioni, cos&igrave; come impostato per ogni lista nella 
+  scheda Gestione iscrizioni. Questo consente di creare facilmente un link che 
+  consentir&agrave; al destinatario di rimuovere il proprio indirizzo dalla lista.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Come 
+        creare un link per le cancellazioni</strong></font></p>
+      <p>SendBlaster pu&ograve; gestire le liste di distribuzione scaricando i 
+        messaggi da una casella di posta elettronica appositamente dedicata, diversa 
+        per ogni lista (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Gestione 
+        iscrizioni</span></a>). Pertanto usando i marcatori &egrave; semplice 
+        inserire nel codice HTML del messaggio un link per le cancellazioni:</p>
+      <blockquote>
+        <p class="valore">&lt;a href=&quot;mailto:#emailgestione#?Subject=Unsubscribe&quot;&gt;Cancellati&lt;/a&gt;</p>
+      </blockquote>
+      <p>Questo codice HTML potr&agrave; essere inserito nel messaggio in modo molto semplice usando il pulsante  <span class="itemelement">Inserisci link per la cancellazione </span>nella barra dei pulsanti di composizione; 
+        sar&agrave; anche possibile specificare il associato al link (ad esempio &quot;Cancellami&quot;).</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">E' possibile salvare il messaggio corrente in formato .eml (letto 
+  da tutti i pi&ugrave; comuni client di posta) utilizzando il pulsante <span class="itemelement">Salva</span>.</p>
+<p class="item">Per creare un nuovo messaggio si pu&ograve; partire da zero (con 
+  i tasti <span class="itemelement">Nuovo</span> o <span class="itemelement">Scegli 
+  template</span>) oppure, usando il pulsante <span class="itemelement">Apri</span>, 
+  aprire un messaggio precedentemente salvato:</p>
+<ul>
+  <li class="item">importare un file .eml (ad esempio salvato da Outlook) con 
+    <span class="itemelement">Apri</span> / <span class="itemelement">Apri file 
+    .eml</span></li>
+  <li class="item">ricaricare una mail precedentemente inviata con <span class="itemelement">Apri</span> 
+    / <span class="itemelement">Apri mail dalla Cronologia</span></li>
+  <li class="item">importare il solo testo formattato da una pagina html presente 
+    sul proprio hard disk, incorporando eventuali immagini, con <span class="itemelement">Apri</span> 
+    / <span class="itemelement">Importa HTML da file esterno</span></li>
+  <li class="item">importare il solo testo puro con <span class="itemelement">Apri</span> 
+    / <span class="itemelement">Importa testo puro da file esterno</span></li>
+</ul>
+<p class="item">Il pulsante <span class="itemelement">Testo da HTML</span> consente 
+  di ricavare automaticamente il testo puro a partire dal testo formattato in 
+HTML; lo si utilizzer&agrave; quindi al termine della composizione del messaggio.</p>
+<p class="item">Con i pulsanti <span class="itemelement">Google Analytics</span> e <span class="itemelement">TrackReports</span> si possono aggiungere al messaggio funzionalit&agrave; di monitoraggio (tracking);  i link contenuti nel messaggio sono automaticamente modificati in base alle specifiche del sistema di monitoraggio scelto, e il relativo codice viene aggiunto al messaggio. L'aggiunta del codice di <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a> o <a href="sendblaster_messages_trackreports.htm" class="itemlink">TrackReports</a> deve sempre essere l'ultima operazione eseguita prima dell'invio - entrambi i sistemi modificano il codice HTML finale, quindi &egrave; necessario aver finito di comporre il messaggio prima di inserire il codice di monitoraggio. E' anche possibile usare entrambi i sistemi; in questo caso, sar&agrave; necessario inserire il codice di Google Analytics per primo.</p>
+<p class="item">Prima di inviare il messaggio, &egrave; possibile (ed &egrave; 
+  sempre consigliabile) verificare come apparir&agrave; il messaggio nel client 
+  di posta usando il tasto <span class="itemelement">Anteprima</span>. L'anteprima sostituir&agrave; gli eventuali marcatori con i dati inseriti nella sezione <span class="itemelement">Dati personali</span> del <a href="sendblaster_settings_fields.htm" class="itemlink">pannello di configurazione dei campi</a>.</p>
+<p class="item">E' possibile stimare al volo il punteggio di spam del messaggio premendo il pulsante <span class="itemelement">Controllo antispam</span>; il calcolo utilizza il popolare motore di <b>SpamAssassin</b>, uno dei filtri antispam pi&ugrave; utilizzati dai server di e-mail. L'uso di questa funzione aiuta a progettare correttamente i messaggi in modo che non siano scambiati per spam per errore.</p>
+<hr size="1" noshade>
+<p class="item">*La gestione degli allegati &egrave; disponibile nell'edizione 
+  Pro </p>
+</body>
+</html>

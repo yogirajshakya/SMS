@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>SendBlaster</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css"></head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Importer</p>
+<p class="item">Vous pouvez importer dans la liste courante des données
+provenant d'une source externe. Elles peuvent provenir de quatre
+sources:</p>
+<ul>
+  <li class="item">Vous pouvez importer le contenu d'un fichier texte formaté  
+    (.csv, .txt) se trouvant sur votre PC ou sur un réseau local, en sélectionnant 
+    <span class="itemelement">Importer un fichier texte </span>.
+Le format "texte formaté" est un format d'échange largement utilisé par
+les bases de données et les feuilles de calcul: presque tous les
+logiciels de ce type sont capables d'exporter leurs données dans ce
+format.<br>
+  &nbsp; </li>
+  <li class="item">Vous pouvez importer depuis une adresse internet en choisissant 
+    <span class="itemelement">Importer depuis un site web  via http://</span>.
+L'importation est en tout semblable à celle du texte formaté, mis à
+part que le fichier pour l'importation ne se trouve ni sur le PC de
+l'utilisateur, ni sur un réseau local mais peut être atteint sur
+internet par le protocole http. Les données à importer peuvent être
+produites dynamiquement par un script (asp ou php par exemple). Cette
+méthode vous permettra d'importer le contenu d'une base de données en
+ligne disposant d'un script d'exportation. Le lien du site sera indiqué
+comme source des données. <br>
+  &nbsp; </li>
+  <li class="item">Vous
+pouvez importer le contenu du presse-papiers de Windows (après l'avoir
+copié les donnés d'un autre logiciel) en sélectionnant l'option <span class="itemelement">Importer depuis le Presse-Papiers </span>.<br>
+  &nbsp; </li>
+  <li class="item">Vous pouvez importer le carnet d'adresses de  Outlook Express (aka Livre d'Adresses de Windows) en sélectionnant <span class="itemelement">Importer depuis Outlook 
+    Express</span>.</li>
+</ul>
+<p class="item">Ces données importées d'une source externe peuvent servir pour une des opérations suivantes :</p>
+<ul>
+  <li class="item">vous pouvez les insérer dans la liste sélectionnée, en choisissant
+    <span class="itemelement">Ajouter à la liste et inscrire les nouvelles adresses </span>.<br>
+    &nbsp; </li>
+  <li class="item">vous pouvez les éliminer de la liste sélectionnée  en choisissant <span class="itemelement">Eliminer les adresses de la liste</span>. Si les adresses contenues dans la liste importée se trouvent dans la liste, elles seront éliminées.<br>
+  &nbsp; </li>
+  <li class="item">Vous pouvez désabonner les adresses de la liste  (sans les effacer, c-à-d. en les conservant). Sélectionnez <span class="itemelement">Désinscrire les nouvelles adresses</span>.
+L'opération est similaire à la précédente, mais les adresses sont
+simplement désabonnées et non plus éliminées. De cette façon, vous
+conservez les données mais tout en évitant d'utiliser les adresses de
+courriels dans les opérations d'envoi de courriels.</li>
+</ul>
+<p class="item">Après avoir sélectionnée la liste, la source des données et l'opération, 
+  vous pouvez cliquer le bouton <span class="itemelement">Importer</span>. Une procédure guidée vous demandera d'indiquer les éléments nécessaires pour compléter l'importation:</p>
+<ul>
+  <li class="item">le <span class="itemelement">Parcours du fichier à importer </span>, 
+    ou bien l'<span class="itemelement">URL du fichier à importer</span>
+si l'importation a lieu au départ du web (pour l'importation du
+Presse-Papiers et du carnet d'adresses de Outlook Express, il n'est pas
+nécessaire que vous spécifiez le parcours);<br>
+  &nbsp; </li>
+  
+  <li class="item">le <span class="itemelement">Format</span> de vos données (sauf pour Outlook Express): en choisissant <span class="itemelement">Délimité</span>, vous devrez également spécifier le <span class="itemelement">Champs servant à Délimiter</span> et si la<span class="itemelement"> Première ligne contient le nom du champs</span>. En sélectionnant le format <span class="itemelement">Libre</span>
+, seules les adresses électroniques, reconnues automatiquement, seront
+importées, et vous ne devrez donc pas indiquer le format des données;<br>
+  &nbsp; </li>
+
+  <li class="item">S'il s'agit d'une véritable importation  (c-à-d. l'ajout de données par l'opération  <span class="itemelement">Ajouter à la liste et inscrire les nouvelles adresses</span>),
+deux options supplémentaires sont disponibles. Elles indiquent au
+logiciel comment il doit se comporter lorsqu'une adresse contenue dans
+les données importées est déjà présente dans la liste: vous pouvez
+choisir de <span class="itemelement">Ne pas ajouter les doublons et adresses déjà présentes dans la liste de distribution</span> (ces adresses seront ignorées, dans le cas contraire l'adresse est ajoutée et crée un doublon). Si vous choisissez <span class="itemelement">Inscrire les adresses qui figurent dans la liste</span>,
+les adresses présentes dans la liste importée et qui ne sont pas encore
+inscrites seront abonnées à la liste de distribution sélectionnée
+(consulter <a href="sendblaster_lists_managing.htm" class="itemlink"><span class="itemelement">Gérer les listes</span></a>).
+Dans ce cas, les adresses ne sont pas importées mais si elles figurent
+déjà dans la liste, elles sont abonnées à cette liste. <br>
+  &nbsp; </li>
+  <li class="item">L'étape suivante vous permet d'indiquer des correspondances entre les champs importés et les champs du logiciel SendBlaster. 
+    Enfoncer le bouton <span class="itemelement">Suivant</span> démarre l'importation.</li>
+</ul>
+<p class="item">Les <span class="item"><a href="../../English/help/sendblaster_snapshots.htm" class="itemelement">Captures</a>
+sont particulièrement très utiles lorsque vous importez: si vous
+importez avec succès un fichier, prenez une capture de votre
+configuration afin de sauvegarder les paramètres que vous utilisez;
+vous serez capables de les réutiliser plus tard à l'aide de quelques
+clics.</span></p>
+<p class="item"><strong><font color="#ff0000">Attention:</font></strong> indiquer correctement quel est le champ de la source extérieure qui contient l'adresse électronique est fondamental car:</p>
+
+<ol>
+  <li class="item"><strong>tous les enregistrements externes qui
+ne contiennent pas d'adresse électronique formellement valable dans le
+champ que vous avez indiqué sont systématiquement ignorés</strong>. Si
+vous n'indiquez pas le bon champ, aucun enregistrement ne contiendra
+d'adresse valable et toutes vos données seront ignorées.</li>
+  <li class="item">la
+comparaison entre la source extérieure et les données déjà présentes
+dans le logiciel, pour vérifier si une adresse est déjà dans la liste,
+se fait sur la base de l'adresse électronique trouvée dans le champ
+spécifié.<br>
+</li>
+</ol>
+</body></html>

@@ -1,0 +1,62 @@
+.body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.titlelink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #14418A;
+	font-weight: bold;
+}
+.itemlink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #14418A;
+	font-weight: normal;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #14418A;
+	font-weight: bold;
+}
+.item {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	font-weight: normal;
+}
+.itemelement {
+	font-style: italic;
+	font-weight: bold;
+	color: #1441A0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+
+}
+.alert {
+	color: #FF0000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+
+}
+.valore {
+	font-family: "Courier New", Courier, mono;
+	font-size: 12px;
+}
+.title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.bigtitle {
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #14418A;
+	font-weight: bold;
+}
+.smallblack {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}

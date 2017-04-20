@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Svarteliste</p>
+<p class="item">En <span class="itemelement">svarteliste</span> er et filter som
+  hindrer enkelte e-postadresser og domener fra &aring; motta e-post, uavhengig av
+  deres <a href="sendblaster_lists_managing.htm">abonnement/aktiveringsstatus</a>.</p>
+<p class="item">N&aring;r du sender en meldig til en gitt liste, vil SendBlaster sjekke
+  hver enkelt mottakers adresse og domene mot svartelisten f&oslash;r meldingen faktisk blir sendt.
+  Hvis adressen eller domenet finnes p&aring; svartelisten, blir e-posten til den aktuelle
+  mottakeren hoppet over (en <em>&quot;&lt;adresse&gt;: 
+  svartelistet</em>&quot;-melding vil bli vist i log-panelet).</p>
+<p class="item">SendBlaster st&oslash;tter to forskjellige typer svartelister:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adresse</span>-svarteliste: skriv
+    inn de e-postadressene du ikke &oslash;nsker det noen gang skal sendes melding til.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Domene</span>-svarteliste*: i steden for
+    enkeltadresser kan du spesifisere hele domener (et maildomene er den delen som
+    kommer etter &quot;@&quot;-tegnet i e-postadressen: v&aelig;r forsiktig og ikke 
+    inkludere <em>&quot;www.</em>&quot; eller andre tredjeniv&aring; domenenavn). 
+    N&aring;r et domene er svartelistet, vil aldri meldinger sendes til noen adresse som tilh&oslash;rer domenet.</li>
+</ul>
+<p class="item">Du kan skrive inn oppf&oslash;ringer som fritekst; hver rad m&aring; inneholde en adresse
+  / domene (og ingen ekstrategn: du kan ikke bruke jokertegn). Du kan kopiere til
+  / lime inn fra hurtigbufferet, for &aring; manipulere svartelistene ved hjelp av tredjeparts software; 
+  eller trykke <span class="itemelement">Edit med Notepad</span>-knappen 
+  for &aring; &aring;pne en svarteliste med Windows' egen innebygde teksteditor(programeksekveringen stopper 
+  inntil du er ferdig med &aring; editere og lukker Notepad).</p>
+<form>
+  <p class="item">Her er et eksempel p&aring; en gyldig <span class="itemelement">adresse</span>-svarteliste:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">og en gyldig <span class="itemelement">domene</span>-svarteliste:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>F&oslash;lgende svarteliste er ugyldig</strong></font> 
+    fordi den inneholder jokertegn (<em>&quot;*</em>&quot;) og tredjeniv&aring; domenenavn
+    (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p class="item">Vennligst merk at svartelistene har en st&oslash;rrelsesbegrensning og skal ikke brukes som en erstatning for &quot;riktig&quot; av-abonnering. Generelt kan man si at svartelister skal brukes i &quot;krise&quot; eller for spesielle oppgaver (f.eks. n&aring;r noen eksplisitt ber om &aring; ikke motta meldinger fra deg lengre, selv ikke etter abonnering, eller hvis du &oslash;nsker &aring; forsikre deg om at dine konkurrenter ikke mottar nyhetsbrev fra deg).</p>
+  <p>&nbsp; </p>
+<hr size="1" noshade>
+<p class="item">*Kun tilgjengelig i Pro Edition</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

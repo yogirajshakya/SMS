@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.style1 {
+				font-style: italic;
+				font-weight: bold;
+				color: #1441A0;
+}
+.style2 {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 8pt;
+}
+.style3 {
+				color: #FF0000;
+}
+.style4 {
+				font-style: italic;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 8pt;
+}
+</style>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Wys&#322;anie wiadomo&#347;ci</p>
+<p class="item">Aby móc wys&#322;a&#263; wiadomo&#347;&#263; musisz najpierw okre&#347;li&#263; odbiorc&#281; i 
+nadawc&#281;.</p>
+<p class="item">Listy dystrybucyjne (zdefiniowane w
+<a class="itemelement" href="sendblaster_lists_managing.htm">Zarz&#261;dzanie listami</a>) 
+s&#261; pokazane w polu <span class="itemelement">Wybierz list&#281; dystrybucyjn&#261;</span>. 
+Wybierz jedn&#261;, a adresy z listy zostan&#261; wykorzystane jako odbiorcy. 
+  Ka&#380;dy kontakt dostanie osobist&#261; wiadomo&#347;&#263;.</p>
+<p class="item">Nadawca wiadomo&#347;ci zostanie okre&#347;lony w polach
+<span class="style1">Adres email wysy&#322;aj&#261;cego</span><span class="itemelement"> </span>
+i <span class="style1">Nazwa wysy&#322;aj&#261;cego</span>. Mo&#380;esz dowolnie wpisywa&#263; 
+w te pola lub te&#380; wybra&#263; adres i nazw&#281; z pola combo, które poka&#380;e ostatnie 10 
+nazw i adresów poprzednio wykorzystanych do operacji wysy&#322;ania (lista b&#281;dzie 
+pusta je&#380;eli nie zosta&#322;y wys&#322;ane &#380;adne wiadomo&#347;ci). Je&#380;eli adresy do subskrybuj/ 
+zako&#324;cz subskrypcj&#281; by&#322;y podane dla danej listy dystrybucyjnej, zostan&#261; 
+automatycznie pokazane jako adres nadawcy. Aczkolwiek jest to zachowanie 
+domy&#347;lne adres i/lub nazwa mog&#261; zosta&#263; r&#281;cznie zmienione. Opcjonalnie mo&#380;esz 
+równie&#380; okre&#347;li&#263; <span class="itemelement">Odpowiedz na adres</span>: jest to 
+adres na który b&#281;d&#261; wysy&#322;ane odpowiedzi. Je&#380;eli pole to zostanie puste, wtedy 
+zostan&#261; one wys&#322;ane na adres wysy&#322;aj&#261;cego (jest to zachowanie domy&#347;lne dla 
+spersonalizowanych wiadomo&#347;ci).</p>
+<p class="item">Aby wys&#322;a&#263; wiadomo&#347;&#263; po prostu naci&#347;nij przycisk
+<span class="style1">Wy&#347;lij</span>. Zazwyczaj, je&#380;eli jest to pierwsza 
+operacja tego typu, lub te&#380; parametry po&#322;&#261;czenia uleg&#322;y zmianie, b&#281;dzie 
+koniecznym ustawianie <span class="style1">Parametrów wysy&#322;ania</span>, inaczej 
+wiadomo&#347;&#263; nie zostanie wys&#322;ana.</p>
+<p class="item">
+Jako alternatyw&#281; do wysy&#322;ania wiadomo&#347;ci, jest mo&#380;liwie <b>zaplanowanie </b>
+operacji wysy&#322;ania i pozwolenie SendBlaster
+na wys&#322;anie ich w pó&#378;niejszym terminie automatycznie, w okre&#347;lonym dniu i godzinie, 
+lub te&#380; <b>"zaparkownie"</b> operacji, aby uruchomi&#263; j&#261; r&#281;cznie 
+pó&#378;niej. Aby zaplanowa&#263; wysy&#322;k&#281; po prostu naci&#347;nij przycisk <span class="style1">
+Wy&#347;lij pó&#378;niej</span><span class="itemelement">...</span>
+.
+</p>
+<p class="item">S&#261; dost&#281;pne dwa <span class="style1">Rodzaje wysy&#322;ania</span>:<span class="itemelement">
+  U&#380;yj serwera SMTP </span><span class="style2">
+  i</span> <span class="style1">Bezpo&#347;rednie wysy&#322;anie</span><span class="itemelement">.</span></p>
+<ul>
+<p>
+<li class="item">Wybieraj&#261;c <span class="itemelement">U&#380;yj&nbsp;serwera SMTP</span>, 
+proces wysy&#322;ania emaila b&#281;dzie mia&#322; miejsce jak w zwyk&#322;ym kliencie poczty, czyli 
+z wykorzystaniem serwera SMTP. Jest koniecznym równie&#380; podane nazwy <span class="itemelement">
+serwera SMTP</span>,
+    <span class="itemelement">portu</span> na którym us&#322;uga dzia&#322;a (je&#380;eli nie 
+jest podany domy&#347;lny port 25 zostanie u&#380;yty), je&#380;eli jest wymagana autentykacja, 
+trzeba wybra&#263; <span class="itemelement">Autentykacja wymagana </span>
+<span class="style2">i</span> okre&#347;lenie <span class="itemelement"> &nbsp;Nazwa 
+u&#380;ytkownika </span>i <span class="style1">has&#322;o</span>. Te parametry s&#261; 
+wykorzystywane przez oprogramowanie pocztowe, wi&#281;c wystarczy je&#380;eli je 
+skopiujesz z dzia&#322;aj&#261;cego konta (aby sprawdzi&#263; czy serwer SMTP dzia&#322;a po prostu 
+naci&#347;nij przycisk <span class="style1">Test po&#322;&#261;czenia</span>).
+    Checkbox <span class="itemelement">SSL</span> w&#322;&#261;cza komunikacj&#281; po SSL,
+    co mo&#380;e by&#263; konieczne dla niektórych serwerów SMTP (typowy przyk&#322;ad to 
+serwer SMTP
+    Gmail).
+<blockquote>
+  <p class="item"><span class="style3">Podpowied&#378;</span><font color="#FF0000">: </font>
+	przycisk <span class="itemelement">Profile</span> pozwala na zarz&#261;dzanie 
+	wieloma ustawieniami SMTP. Informacje o koncie mog&#261; by&#263; przechowywane w 
+	wielu profilach, tak &#380;e wszystkie ustawienia SMTP s&#261; zapisywane/ &#322;adowane 
+	dzi&#281;ki kilku klikni&#281;ciom. Ta opcja jest szczególnie u&#380;yteczna kiedy wysy&#322;asz 
+	emaile w czyim&#347; imieniu lub robi to kto&#347; inny.
+    <br/><br/>
+</p>
+</blockquote>
+    W&#322;&#261;czenie <span class="itemelement">Powtórz z bezpo&#347;rednim wysy&#322;aniem w 
+przypadku b&#322;&#281;du</span>, gdy wiadomo&#347;&#263; nie zostanie zaakceptowana przez serwer&nbsp; SMTP, 
+oprogramowanie spróbuje dostarczy&#263; wiadomo&#347;&#263; bezpo&#347;rednio do serwera odbiorcy, 
+korzystaj&#261;c z trybu <span class="style1">Bezpo&#347;rednie wysy&#322;anie </span>.</li>
+</p>
+<p>
+  <li class="item">Wybieraj&#261;c <span class="style1">Bezpo&#347;rednie wysy&#322;anie</span> 
+	program b&#281;dzie szuka&#322; serwera poczty dla ka&#380;dego z odbiorców i automatycznie 
+	&#322;&#261;czy&#322; do nich, pomijaj&#261;c serwer SMTP który nie pozwala na to. Pami&#281;taj, &#380;e 
+	nie które domeny (na przyk&#322;ad hotmail) nie pozwalaj&#261; na bezpo&#347;rednie 
+	wysy&#322;anie: wiadomo&#347;&#263; zostanie odrzucona jako pochodz&#261;ca z systemu 
+	desktopwego, zamiast publicznego serwera SMTP. W&#322;&#261;czaj&#261;c <br>
+    <span class="style1">Powtórz z SMTP w przypadku b&#322;&#281;du</span>,
+    je&#380;eli wiadomo&#347;&#263; nie zostanie zaakceptowana przez serwer pocztowy odbiorcy,&nbsp; 
+	aplikacja spróbuje dostarczy&#263; wiadomo&#347;&#263; do serwera SMTP, korzystaj&#261;c z opcji
+	<span class="style1">U&#380;yj serwera </span><span class="itemelement">SMTP</span>.<br>
+    &nbsp; </li>
+</p>
+</ul>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item">
+<p><strong><font color="#009900">Korzysta&#263; z bezpo&#347;redniego wysy&#322;ania czy 
+serwera SMTP?</font></strong></p>
+      <p>Wybór zale&#380;y przede wszystkim od dost&#281;pno&#347;ci dobrego serwera SMTP. Je&#380;eli 
+		serwer SMTP Twojego dostawcy jest w stanie przetworzy&#263; wiele wiadomo&#347;ci 
+		w krótki czasie lub serwer jest nawet w stanie pracowa&#263; wieloprocesowo, 
+		korzystanie z niego jest szybsze i bardziej wydajne, z racji tego &#380;e 
+		Twój serwer SMTP jest bli&#380;ej Twojego komputera ni&#380; serwer odbiorcy.</p>
+      <p>Aczkolwiek niektórzy dostawcy uniemo&#380;liwiaj&#261; swoim u&#380;ytkownikom 
+		korzystanie z serwera w celach spamowych, w&#322;&#261;czaj&#261;c restrykcje na ilo&#347;&#263; 
+		wysy&#322;anych wiadomo&#347;ci równocze&#347;nie (na przyk&#322;ad serwer SMTP nie 
+		zaakceptuje wi&#281;cej ni&#380; jedna wiadomo&#347;&#263; co 5 sekund i nie pozwoli wys&#322;a&#263; 
+		równocze&#347;nie 
+        2 wiadomo&#347;ci w tym samym czasie). Wszystkie wiadomo&#347;ci, które przekrocz&#261; 
+		limit zostan&#261; odrzucone z b&#322;&#281;dem. Nie oznacza to, &#380;e program dzia&#322;a &#378;le, 
+		ale raczej &#380;e trzeba u&#380;y&#263; innych ustawie&#324; w sekcji <span class="style1">
+		Ustawienia zaawansowane</span>.</p>
+      <p>W takim przypadku, b&#281;dzie szybciej i bardziej sensownie wykorzysta&#263; 
+		bezpo&#347;rednie wysy&#322;anie. Bezpo&#347;rednie wysy&#322;anie wymaga troch&#281; wi&#281;cej 
+		czasu do dostarczenia ka&#380;dej wiadomo&#347;ci
+        (cho&#263;by z racji tego &#380;e musi komunikowa&#263; si&#281; z serwerem DNS a serwer 
+		poczty mo&#380;e by&#263; daleko o PC u&#380;ytkownika, ale ten czas mo&#380;e zosta&#263; 
+		poprawiony, dzi&#281;ki mo&#380;liwo&#347;ci równoczesnego wysy&#322;ania kilku wiadomo&#347;ci 
+		bez dodawania dodatkowych przerw pomi&#281;dzy wiadomo&#347;ciami.</p>
+      <p>Bezpo&#347;rednie wysy&#322;anie jest równie&#380; u&#380;yteczne gdy operacja wysy&#322;ania 
+		musi sie odby&#263; bez znania serwera SMTP (zazwyczaj przy korzystaniu 
+		daleko od biura - zazwyczaj w przypadku publicznej sieci bezprzewodowej).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Sekcja <span class="style1">Ustawienia zaawansowane</span> 
+pozwala na dopasowanie czasów wysy&#322;ania i innych specjalnych ustawie&#324;.
+  Jest to u&#380;yteczne, aby uzyska&#263; jak najwi&#281;ksz&#261; wydajno&#347;&#263; przy unikni&#281;ciu 
+restrykcji anty spamowych serwera. Oto znaczenie ka&#380;dej z opcji:</p>
+  <p class="itemelement">
+  Zak&#322;adka Czas
+  </p>
+<ul class="item">
+  <li><span class="style1">Przerwa pomi&#281;dzy wiadomo&#347;ciami</span>: ilo&#347;&#263; sekund 
+	pomi&#281;dzy wysy&#322;anymi wiadomo&#347;ciami.</li>
+  <li><span class="style1">Przerwa pomi&#281;dzy blokami</span>: ilo&#347;&#263; wiadomo&#347;ci w 
+	ka&#380;dym bloku wiadomo&#347;ci.</li>
+  <li><span class="style1">Wiadomo&#347;ci w bloku</span>: ilo&#347;&#263; wysy&#322;anych 
+	wiadomo&#347;ci w ka&#380;dym bloku</li>
+  <li><span class="itemelement">Timeout</span>: maksymalna ilo&#347;&#263; sekund po 
+	których wysy&#322;anie wiadomo&#347;ci zostanie przerwane </li>
+  <li><span class="style1">Po&#322;&#261;czenia</span>: maksymalna ilo&#347;&#263; równoczesnych 
+	po&#322;&#261;cze&#324;, co oznacza ilo&#347;&#263; równocze&#347;nie wysy&#322;anych wiadomo&#347;ci*.</li>
+  <li><span class="style1">Dalsze post&#281;powanie w przypadku b&#322;&#281;du</span>: Je&#380;eli 
+	serwer SMTP lub serwer odbiorcy (do bezpo&#347;redniego wysy&#322;ania ) nie akceptuje 
+	wiadomo&#347;ci, oprogramowanie poczeka i spróbuje wys&#322;a&#263; wiadomo&#347;&#263; jeden lub 
+	wi&#281;cej razy.</li>
+  <li><span class="style1">Przerwa pomi&#281;dzy próbami</span>: ilo&#347;&#263; sekund 
+	opó&#378;nienia zanim b&#281;dzie próba dostarczenia nie zaakceptowanej wiadomo&#347;ci.</li>
+</ul>
+<p class="item">W&#322;a&#347;ciwa konfiguracja nie mo&#380;e zosta&#263; ustawiona przed kilkoma 
+próbami, weryfikuj&#261;c w&#322;a&#347;ciw&#261; ilo&#347;&#263; wiadomo&#347;ci, która zosta&#322; w&#322;a&#347;nie 
+dostarczona. Aby upro&#347;ci&#263; ustawienia, kilka <span class="style1">Ustawie&#324; 
+Sugerowanych </span>jest dost&#281;pne. Mog&#261; nie by&#263; zoptymalizowane dla Twojego 
+po&#322;&#261;czenia ale mog&#261; by&#263; rozwa&#380;ane jako dobry pocz&#261;tek przed uzyskaniem lepszych 
+ustawie&#324;.</p>
+<p class="item"><span class="style3">Uwaga</span><strong><font color="#FF0000">:</font></strong> 
+Listy dystrybucyjne mog&#261; zawiera&#263; b&#322;&#281;dne adresy email lub niektóre z serwerów&nbsp; 
+mog&#261; by&#263; niedost&#281;pne. Dlatego przy korzystaniu z listy zawieraj&#261;cej ogromn&#261; 
+ilo&#347;&#263; adresów powinno by&#263; rozwa&#380;onym &#380;e pomimo wybrania trybu wysy&#322;ania i 
+ustawie&#324; nie wszystkie wiadomo&#347;ci zostan&#261; dostarczone, a okre&#347;lony procent 
+b&#281;dzie mia&#322;o b&#322;&#261;d. W takim przypadku jest mo&#380;liwym doko&#324;czenie operacji w 
+pó&#378;niejszym terminie korzystaj&#261;c z funkcji
+<a href="sendblaster_messages_history.htm">historia</a>.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900">
+	<strong>Jak mog&#281; uzyska&#263; w&#322;a&#347;ciwe ustawienia zaawansowane?</strong></font></p>
+      <p>Aby uzyska&#263; w&#322;a&#347;ciwe ustawienia&nbsp; zaawansowane trzeba przetestowa&#263; 
+		wiele ró&#380;nych kombinacji (zazwyczaj lista z 10 adresami b&#281;dzie 
+		wystarczaj&#261;ca)&nbsp; i zweryfikowa&#263; jak wiele wiadomo&#347;ci zosta&#322;o 
+		dostarczonych (ta informacja jest podawana na koniec procesu wysy&#322;ania, 
+		mo&#380;na równie&#380; sprawdzi&#263; logi). U&#380;ytkownicy pod&#322;&#261;czeni do tolerancyjnych 
+		serwerów SMTP prawdopodobnie nie b&#281;d&#261; mieli wielu problemów, praktycznie 
+		ustawienia b&#281;d&#261; mia&#322;y znaczenie dla szybko&#347;ci wysy&#322;ania.<br>
+        Z drugiej strony je&#380;eli korzystasz raczej z restrykcyjnego serwera SMTP, 
+		aby dostarczy&#263; du&#380;&#261; ilo&#347;&#263; wiadomo&#347;ci mo&#380;e trzeba b&#281;dzie zwolni&#263; 
+		wysy&#322;anie wiadomo&#347;ci i unika&#263; wysy&#322;ania wielu wiadomo&#347;ci w tym samym 
+		czasie. </p>
+      <p>Oto kilka prostych zasad wartych rozwa&#380;enia:</p>
+      <ul>
+        <li>Tolerancyjny serwer SMTP pozwala na szybkie wysy&#322;anie bez przerw (lub 
+		ograniczonych przerwach). W przypadku restrykcyjnych serwerów, które 
+		korzystaj&#261; z wielu filtrów, zwi&#281;ksz ilo&#347;&#263; pauz i zmniejsz ilo&#347;&#263; 
+		równoczesnych po&#322;&#261;cze&#324;.</li>
+        <li>Zazwyczaj, serwery SMTP nie pozwalaj&#261; na wysy&#322;anie wielu wiadomo&#347;ci 
+		równocze&#347;nie, jednak przy korzystaniu z trybu SMTP ilo&#347;&#263; po&#322;&#261;cze&#324; musi 
+		by&#263; niska lub te&#380; w okre&#347;lonych sytuacjach równa 1 (brak równoczesnych 
+		po&#322;&#261;cze&#324;). Je&#380;eli serwer SMTP ma filtry anty spamowe, by&#263; mo&#380;e b&#281;dzie 
+		trzeba zwolni&#263; wysy&#322;anie wiadomo&#347;ci ustawiaj&#261;c kilku sekundow&#261; przerw&#281; 
+		po ka&#380;dym wys&#322;aniu i ustawi&#263; d&#322;u&#380;sz&#261; przerw&#281; pomi&#281;dzy blokami 
+		wiadomo&#347;ci. Równie&#380; bloki nie powinny zawiera&#263; wi&#281;cej ni&#380; kilka 
+		wiadomo&#347;ci.</li>
+        <li>W przypadku bezpo&#347;redniego wysy&#322;ania, standardowej listy 
+		dystrybucyjnej zawieraj&#261;cej adresy nale&#380;&#261;ce do innych domen, wiadomo&#347;ci 
+		b&#281;d&#261; dostarczane do ró&#380;nych serwerów: mo&#380;e by&#263; mo&#380;liwe ustawienie du&#380;ej 
+		ilo&#347;ci równoczesnych po&#322;&#261;cze&#324;* i ograniczy&#263; (lub nie wszystkie) pauzy 
+		pomi&#281;dzy wiadomo&#347;ciami i blokami.</li>
+        <li>Zwi&#281;kszanie ilo&#347;ci prób w przypadku b&#322;&#281;dy mo&#380;e zwi&#281;kszy&#263; procent 
+		wys&#322;anych wiadomo&#347;ci, ale spowolni sam&#261; operacj&#281; wysy&#322;ania, zazwyczaj 
+		je&#380;eli ilo&#347;&#263; równoczesnych po&#322;&#261;cze&#324; jest ma&#322;a. Doko&#324;czenie operacji w 
+		pó&#378;niejszym terminie z okna&nbsp;
+		<a href="sendblaster_messages_history.htm">historia</a> (po odczekaniu 
+		kilku minut ) mo&#380;e by&#263; równie&#380; dobrym pomys&#322;em.</li>
+      </ul></td>
+    <td width="7%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+  <p class="itemelement">
+  Zak&#322;adka Extra</p>
+<ul class="item">
+  <li><span class="style1">Powiadomienie o dostarczeniu</span>: pozwala otrzyma&#263; 
+	potwierdzenie o dostarczeniu emaila lub te&#380; gdy wiadomo&#347;&#263;.</li>
+  <li><span class="itemelement">Wysoki priorytet</span>: pozwala poinformowa&#263; 
+	odbiorc&#281;, &#380;e wiadomo&#347;&#263; powinna by&#263; odczytana tak szybko jak to mo&#380;liwe.</li>
+  <li><span class="style1">Kodowanie</span>: wybierz pomi&#281;dzy
+	<span class="itemelement">quoted-printable</span> i <span class="itemelement">base64</span>.
+  Nag&#322;ówek zawarto&#347;ci pokazuje oprogramowanie które stworzy&#322;o wiadomo&#347;&#263; .</li>
+  <li><span class="itemelement">Text Xmailer</span>: korzystaj&#261;c z
+	<span class="itemelement">Domy&#347;lnych</span> ustawie&#324; nag&#322;ówek b&#281;dzie 
+	do&#322;&#261;cza&#322; nazw&#281; SendBlaster oraz wersj&#281;. W innym przypadku mo&#380;e wprowadzi&#263; 
+	dowolny tekst, aby symulowa&#263; wysy&#322;anie przez inne programy pocztowe lub 
+	wybierz opcj&#281; <span class="itemelement">None</span> aby unikn&#261;&#263; dodawania 
+	nag&#322;ówka do wiadomo&#347;ci.  </li>
+  <li><span class="style1">Domena</span>: pozwala na dostosowanie nazwy maszyny 
+	wykorzystanej przez oprogramowanie do &#322;&#261;czenia si&#281; z serwerem SMTP lub 
+	serwerami odbiorców. Mo&#380;e by&#263; do przydatne przy korzystaniu z
+	<span class="itemelement">Bezpo&#347;redniego wysy&#322;ania</span>: niektóre z 
+	serwerów sprawdzaj&#261; nazw&#281; domeny przed zaakceptowaniem wiadomo&#347;ci, wymagaj&#261; 
+	domeny która b&#281;dzie odpowiada&#263; publicznej nazwie <em>hostname</em> w sieci, 
+	i przed zaakceptowaniem mog&#261; wykona&#263; polecenie <em>ping</em> (lub co&#347; 
+	podobnego) aby sprawdzi&#263; &#380;e nazwa domeny odpowiada adresowi IP maszyny 
+	&#380;&#261;daj&#261;cej po&#322;&#261;czenia. Je&#380;eli to ten przypadek wybieraj&#261;c
+	<span class="itemelement">Adres internetowy </span>mo&#380;esz obni&#380;y&#263; ilo&#347;&#263; 
+	odrzuconych wiadomo&#347;ci.&nbsp; Sugerujemy korzystanie z domy&#347;lnych ustawie&#324;
+	<span class="style4">l</span><span class="style2">ub korzystanie z </span>
+	<span class="itemelement">Adres internetowy</span> gdy wysy&#322;asz wiadomo&#347;ci z 
+	bezpo&#347;rednim wysy&#322;aniem i <span class="itemelement">Nazwa lokalnego 
+	komputera</span> przy korzystaniu z SMTP (serwery SMTP zazwyczaj nie 
+	sprawdzaj&#261; nazw domen).<br>
+  SendBlaster sprawdza adres publiczny twojej maszyny za ka&#380;dym razem gdy jest 
+	uruchamiana, je&#380;eli po&#322;&#261;czenie b&#281;dzie niedost&#281;pne adres publiczny pozostanie 
+	pusty, a zamiast tego zostanie u&#380;yta nazwa PC. Je&#380;eli jest dost&#281;pny sta&#322;y 
+	adres IP, do&#347;wiadczeni u&#380;ytkownicy mog&#261; wybra&#263; <span class="style1">
+	Zdefiniowany przez u&#380;ytkownika</span><span class="itemelement">...</span>
+  i prowadzi&#263; sta&#322;&#261; warto&#347;&#263; (prosz&#281; pami&#281;ta&#263; &#380;e jest potrzeba nazwa hosta a nie 
+	adres IP) - ale te&#380; pami&#281;taj &#380;e z&#322;e ustawienia mog&#261; uniemo&#380;liwi&#263; wysy&#322;anie.  </li>
+  <li><span class="itemelement">R&#281;cznie ustaw DNS Serwer</span>: SendBlaster 
+	pozwala na u&#380;ycie domy&#347;lnego po&#322;&#261;czenia DNS, ale jest równie&#380; mo&#380;liwe (i 
+	czasami potrzebne) r&#281;czne ustawienie innego DNS, w&#322;&#261;czaj&#261;c t&#261; opcj&#281; i 
+	r&#281;cznie wprowadzaj&#261;c adres IP.  </li>
+  <li><span class="itemelement">Ignoruj b&#322;&#281;dy gniazd</span>: je&#380;eli jest problem 
+	z po&#322;&#261;czeniem do Internetu, czy to ze wzgl&#281;dów na sprz&#281;t czy oprogramowania, SendBlaster 
+	zatrzyma wysy&#322;anie wiadomo&#347;ci, alarmuj&#261;c u&#380;ytkownika i czekaj&#261;c na polecenia - 
+	w wi&#281;kszo&#347;ci przypadków interwencja cz&#322;owieka jest konieczna (na przyk&#322;ad 
+	musisz zrestartowa&#263; po&#322;&#261;czenie do sieci, etc). Je&#380;eli nie chcesz aby wysy&#322;ka 
+	by&#322;a zatrzymywana i preferujesz, &#380;e po prostu SendBlaster po prostu 
+	zignoruje b&#322;&#281;dy zaznacz t&#261; opcj&#281; (zostaniesz ostrze&#380;ony, &#380;e je&#380;eli nie 
+	b&#281;dzie po&#322;&#261;czenia do Internetu wysy&#322;ka si&#281; nie powiedzie). Jest to u&#380;yteczne 
+	gdy twoje po&#322;&#261;czenie internetowe si&#281; psuje bez powodu (np. problemy z wifi), 
+	ale si&#281; automatycznie naprawia w krótkim czasie. </li>
+</ul>
+  <p class="itemelement">
+  Zak&#322;adka dodatkowe nag&#322;ówki Headers Tab
+  </p>
+  <blockquote>
+    <p class="item">Czasami zaawansowani u&#380;ytkownicy mog&#261; potrzebowa&#263; doda&#263; 
+	w&#322;asny nag&#322;ówek do wiadomo&#347;ci, w konkretnym celu (np. &#347;ledzenie, podpis, etc). SendBlaster 
+	pozwala u&#380;ytkownikom dodawa&#263; do dziesi&#281;ciu nag&#322;ówków w wiadomo&#347;ci. </p>
+</blockquote>
+  <hr size="1" noshade>
+<p class="item">*W wersji Free maksymalna liczba jednoczesnych po&#322;&#261;cze&#324; do 2, 
+nawet je&#380;eli jest podana wy&#380;sza liczba.</p>
+</body>
+</html>

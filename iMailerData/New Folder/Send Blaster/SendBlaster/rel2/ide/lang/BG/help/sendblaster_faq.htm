@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<title>SendBlaster</title>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body"> 
+  <p class=title>Често задавани въпроси</p>
+  <p class=item><strong>Когато изпратя съобщение до няколко получателя, могат ли те да видят адресите на другите?</strong></p>
+  <blockquote> 
+<p class=item>Не, SendBlaster изпраща всяко писмо отделно: личните данни на получателите са защитени. Използването на SendBlaster за многобройни изпращания предотвратява случайното показване на другите email адреси, което би нарушило правилата за неприкосновеност на личните данни.</p>
+  </blockquote>
+  <p class=item><strong>Как може да филтрирам един списък?</strong></p>
+  <blockquote>   
+  <p class=item>Като използвате функциите за сортиране/групиране в раздела <a href="sendblaster_lists_managing.htm" class="itemelement">Управление на списъци</a> и временно активирате/деактивирате група адреси, ще може да изпращате съобщение до подгрупа адреси в списъка. Може да използвате и бутона <span class="itemelement">Филтър</span>.</p>
+  </blockquote>
+  <p class=item><strong>Как мога да вмъкна линк за отписване от списък с адреси в текста на съобщението?</strong></p>
+<blockquote> 
+  <p class=item>SendBlaster може да обработва списъците като изтегля съобщенията 
+    от специален email адрес, различен за всеки списък (виж <a href="sendblaster_lists_subscribe.htm" class="itemelement">Обработка 
+    на абонаменти</a>). Ако използвате бутона <span class="itemelement">Вмъкни 
+    връзка за отписване</span> когато пишете съобщението, линкът ще изглежда така:</p>
+    <blockquote>
+
+    <p class=valore>&lt;a href=&quot;mailto:#managingemail#?Subject=Unsubscribe&quot;&gt;Unsubscribe&lt;/a&gt;</p>
+    </blockquote>
+
+  <p class=item>HTML кодът ще бъде вмъкнат в HTML частта на съобщението, може да го видите/промените като натиснете <span class="itemelement">Покажи кода</span>. </p>
+  </blockquote>
+  <p class=item><strong>Когато изпращам съобщение до даден списък, някои съобщения не се доставят и се връщат с грешка.</strong></p>
+  <blockquote> 
+    
+  <p class=item>Когато изпращате до много адреси е нормално не всички съобщения да бъдат доставени: някои адреси може да са неактивни или да са временно препълнени, може email сървърите да са претоварени или връзката да е временно прекъсната.</p>
+    
+    <p class=item>Ако процентът изпратени съобщения е много малък или нулев, трябва да проверите <a href="sendblaster_messages_send.htm" class="itemlink">Настройки на изпращане</a>.</p>
+    
+  <p class=item>Всъщност, може да се наложи да промените режима на изпращане (директен или през SMTP) и ако вашият SMTP сървър използва антиспам филтри, намалете броя на свързванията и увеличете паузата между съобщенията. SMTP сървърът може да има ограничения, които няма да позволят изпращането на повече от определен брой съобщения за дадено време (например даден сървър може да не позволи изпращането на повече от 50 писма на час); в този случай, след първото изпращане, операцията ще бъде завършена по-късно чрез функциите на <a href="sendblaster_messages_history.htm" class="itemelement">История</a>.</p>
+    
+  <p class=item>Ако антиспам ограниченията на SMTP сървъра не могат да бъдат преодоляни и изпращането е възможно само при много бавни настройки, може да използвате директното изпращане или да изберете по-толерантен SMTP сървър (в Интернет може да се абонирате, дори и на ниска цена, за много ефикасни SMTP услуги).</p>
+    <p class=item>Ако проблемът възникне по време на директно изпращане, може да се наложи ръчно да определите IP адреса на DNS сървъра.</p>
+  </blockquote>
+  <p class=item><strong>Загубих паролата си и не мога да вляза в програмата. Какво да направя?</strong></p>
+  <blockquote> 
+    
+  <p class=item>Трябва да знаете, че не може да възстановите изгубени данни. Следната процедура ще ви помогне само да влезете отново в програмата.</p>
+    
+  <p class=item>1. Деинсталирайте програмата от Контрол панела на Windows.</p>
+    
+  <p class=item>2. Премахнете ръчно инсталационната папка (т.е. <i>C:\Program files\SendBlaster</i>), включително и всички подпапки; поради причини, свързани със сигурността, в случай на деинсталиране на програмата, базата данни няма да се изтрие автоматично (затова трябва да я изтриете ръчно).</p>
+    <p class=item>3. Инсталирайте програмата отново.</p>
+  </blockquote>
+<p align="center"><a href="http://blog.sendblaster.com" target="_blank"><img src="welcome/blog_logo_header2.png" width="90" height="27" border="0"></a>&nbsp;&nbsp;<a href="http://facebook.sendblaster.com" target="_blank"><img src="welcome/facebook_logo_header2.png" width="112" height="27" border="0"></a> &nbsp;&nbsp;<a href="http://twitter.sendblaster.com" target="_blank"><img src="welcome/twitter_logo_header2.png" width="116" height="27" border="0"></a></p>
+</body>
+</html>

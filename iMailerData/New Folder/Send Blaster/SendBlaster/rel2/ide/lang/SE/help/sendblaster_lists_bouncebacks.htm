@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Hantera Bounce-backs</p>
+<p class="item">Ett studsat epostmeddelande (eller <em>bounce-back</em>) är ett meddelande som aldrig anländer
+  till mottagarens inkorg och skickas, eller studsar, tillbaka till avsändaren med
+  ett felmeddelande som indikerar för avsändaren att epostmeddelandet aldrig
+  överfördes. Detta händer vanligtvis när du skickar dina utskick med SMTP-servrar
+  : om en adress inte existerar så kommer SMTP-servern (som inte har en chans att veta om
+	det) att acceptera meddelandet, men det kommer att studsa senare.</p>
+<p class="item">Det finns två typer av bounce-backs:</p>
+<ul>
+  <li class="item">Hårda studsar: epost-meddelandet kunde inte levereras p.g.a. ett permanent
+    fel (t.ex. en icke-existerande adress)</li>
+  <li class="item">Mjuka studsar: Ett temporärt tillstånd gör att leveransen
+    misslyckas (t.ex. kan mottagarens epost-server vara temporärt upptagen)</li>
+</ul>
+<p class="item">SendBlaster kan automatiskt känna igen de flesta* studsande epostmeddelandena och
+  säga upp eller radera studsande adresser i den valda listan.</p>
+<p class="item">Studsande meddelanden kommer att skickas till utskickets avsändare, som
+  inte kan vara samma adress för uppsägning och avbeställning (se <span class="itemlink"><a href="sendblaster_lists_managing.htm" class="itemelement">Hantera 
+  prenumerationer</a></span>). Därför måste man tala om för programmet vilken
+  adress som ska kollas.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Vilken
+        adress ska jag fylla i?</strong></font></p>
+      <p>Kom ihåg att epoststudsar skickas till utskickets avsändare,
+        inte adressen som används för prenumerationer. Anta att du väljer &quot;prenumerationer@minsida.com&quot; 
+        som din prenumerationshanteringsadress för Lista 1, och senare skickar
+        dina utskick från &quot;nyhetsbrev@minsida.com&quot;. Bounce-backs 
+        kommer då att levereras till &quot;nyhetsbrev@minsida.com&quot;, och 
+        det är den adressen du måste konfigurera i <span class="itemelement">Hantera 
+        bounce-backs</span>-sektionen för Lista 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Adressen att kolla sätts genom att skriva in rätt parametrar för att
+  komma åt POP3-kontot, precis som vilken epostklient: förrutom
+  adressen (<span class="itemelement">E-mail</span>) måste du specificera
+  mottagarservern (<span class="itemelement">POP3-server</span>),
+  <span class="itemelement">Port</span>-numret (om ingen port specificeras kommer standardporten
+  110 att användas), <span class="itemelement">Användarnamn</span>
+  och <span class="itemelement">Lösenord</span>. <span class="itemelement">SSL</span>-checkrutan
+  aktiverar SSL-kommunikation, vilket kan krävas av vissa POP3-servrar
+  (ett typiskt exempel är Gmail's server). I <span class="itemelement">Timeout</span>-fältet
+  skriver du antalet sekunder med inaktivitet som ska tillåtas innan anslutningen
+  stängs. För att verifiera parametrarna, klicka på <span class="itemelement">Anslutningstest</span>-knappen
+	(inget meddelande kommer att laddas ner).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tips:</font>
+    <span class="itemelement">Profil</span>-knappen låter dig hantera flera POP3-inställningar
+    Kontoinformation kan lagras för 
+		flera profiler, så att alla POP3-inställningar sparas/laddas
+		med ett par klick. Den här funktionen är speciellt användbar när man skickar utskick
+		åt någon annan.
+  </p>
+</blockquote>
+<p class="item">Genom att kryssa i <span class="itemelement">Spara en kopia av meddelanden
+  på servern vid nedladdning</span>, kommer SendBlaster att ladda ner nya meddelanden utan att radera
+	dem från servern. Meddelandena kommer sedan att finnas tillgängliga för framtida bruk. Nya
+	meddelanden kommer att ignoreras.</p>
+<p class="item">Genom att kryssa i <span class="itemelement">Radera bara nya bounce-back-meddelanden</span>
+ kommer SendBlaster att bara radera dessa meddelanden, och lämna resten av meddelandena på servern.</p>
+<p class="item">Om <span class="itemelement">Radera studsade adresser </span>är
+  ikryssad kommer studsade adresser raderas från listan. Om inte, kommer de
+  bara att sägas upp från listan.</p>
+<p class="item">Genom att kryssa i <span class="itemelement">Processa hårda studsar</span> 
+  och <span class="itemelement">Processa mjuka studsar </span> kan du välja vilka
+  studstyper (se ovan) som bör behandlas; om inget alternativ är ikryssat kommer givetvis
+	inga studsade meddelanden att hanteras.</p>
+<p class="item">Genom att klicka på <span class="itemelement">Hämta</span>-knappen, 
+  kommer de nya meddelandena att laddas ner och den valda distribution listan kommer att
+  uppdateras (liksom alla andra listor som använder samma e-postadress för
+  bounce-backs).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Varning:</font> om hämtningen av nya
+    meddelanden verkar seg, så kan det betyda att det har travats upp många meddelanden
+    på epostservern: inaktivera <span class="itemelement">Behåll 
+    en kopia av meddelanden på servern</span> och klicka på <span class="itemelement">Hämta</span> 
+    (eller hämta med dina standardklient). Meddelandena kommer att tas bort från servern så
+    fort de har hämtats och framtida hämtningar kommer att gå
+    fortare.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*Nya bounce-back-format kan hanteras från
+<a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Advancerade inställningar</a>.</p>
+</body>
+</html>

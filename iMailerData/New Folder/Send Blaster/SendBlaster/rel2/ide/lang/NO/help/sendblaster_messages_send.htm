@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Sende meldinger</p>
+<p class="item">For &aring; sende en melding m&aring; du f&oslash;rst spesifisere mottakerne og avsender.</p>
+<p class="item">Listen over distribusjonslister (definert i <a href="sendblaster_lists_managing.htm" class="itemelement">Administrér 
+  lister</a>) vises i <span class="itemelement">Velg distribusjonsliste</span>-feltet.
+  Velg en og adressene i denne listen vil bli brukt som mottakere. 
+  Hver kontakt vil motta en personlig melding.</p>
+<p class="item">Meldingsavsenderen blir spesifisert i <span class="itemelement">Avsender</span> 
+  <span class="itemelement">e-postadresse</span> og <span class="itemelement">Avsender 
+  navn </span>-feltene. Du kan fritt skrive i disse feltene eller velge en adresse 
+  og et navn fra combo-boksene, som viser de 10 siste navn og adresser som har blitt brukt 
+  i tidligere sende-operasjoner (listene vil v&aelig;re tomme hvis ingen melding har blitt sendt). 
+  Hvis abonner / av-abonner adress ble spesifisert til den valgte distribusjonslisten,
+  vil den automatisk bli vist som meldingens avsenderadresse. Men dette er kun default 
+  oppf&oslash;rsel, adressen og/eller navnet kan endres manuelt.<br>
+  Du kan ogs&aring;, valgfritt, spesifisere en <span class="itemelement">Svar-til:</span><span class="itemelement"> 
+  adresse</span>: det er til denne adressen svar vil bli sendt. Hvis feltet er blank vil svar 
+  bli sendt til avsenderadressen (dette er default oppf&oslash;rsel for personlige e-postmeldinger).</p>
+<p class="item">For &aring; sende meldingen, er det bare &aring; klikke p&aring; 
+  <span class="itemelement">Send</span>-knappen. 
+  Selvf&oslash;lgelig, hvis dette er f&oslash;rste sendeoperasjon, eller tilkoblingsinnstillingene 
+  har endret seg, vil det v&aelig;re n&oslash;dvendig &aring; sette opp 
+  <span class="itemelement">Sendeinnstillinger</span> f&oslash;rst, ellers vil meldingen ikke bli sendt.</p>
+<p class="item">
+Som et alternativ til &aring; sende meldinger er det mulig &aring; <b>tidsplanlegge</b> postingsoperasjonen, og la SendBlaster
+sende den senere automatisk p&aring; en gitt dag og et gitt tidspunkt, eller til og med <b>"parkere"</b> postingen, slik at den
+kan sendes manuelt senere. For &aring; tidsplanlegge en postingsoperasjon, bare klikk p&aring;
+<span class="itemelement">Send senere...</span>-knappen.
+</p>
+<p class="item">To <span class="itemelement">Sendemodus</span>er er tilgjengelige:<span class="itemelement"> 
+  Bruk SMTP-server</span> og <span class="itemelement">Direct send.</span></p>
+<ul>
+  <li class="item">Ved &aring; velge <span class="itemelement">Bruk SMTP-server</span>, 
+    vil e-postsending foreg&aring; p&aring akkurat samme m&aring;te som i en standard e-postklient, 
+    dvs, ved &aring; levere meldingen til sin egen ISP SMTP-server. Det er derfor
+    n&oslashdvendig &aring spesifisere navnet til  <span class="itemelement">SMTP server</span>en, 
+    <span class="itemelement">port</span>nummeret der smtp-tjenesten tilbys (hvis ikke spesifisert 
+    vil default-port 25 benyttes), og, dersom brukerautentisering er n&oslash;dvendig, 
+    &aring; velge <span class="itemelement">Autentisering 
+    n&oslash;dvendig </span> og spesifisere <span class="itemelement"> Brukernavn</span> og 
+    <span class="itemelement">Passord</span>. Disse parametrene er de som brukes i din
+    e-postklient-software, derfor alt du trenger &aring; gj&oslash;re er &aring; &quot;kopiere&quot; 
+    dem fra en gyldig e-postkonto (for &aring; forsikre deg om at SMTP-serveren kan n&aringes
+    kan du klikke p&aring; <span class="itemelement">Tilkoblingstest</span>-knappen). 
+    <span class="itemelement">SSL</span>-sjekkboksen aktiverer SSL-kommunikasjon,  
+    som kan v&aelig;re n&oslash;dvendig p&aring; noen SMTP-servere (et typisk eksempel er 
+    Gmails SMTP-server).
+	<blockquote>
+  <p class="item"><font color="#FF0000">Tips:</font>
+    <span class="itemelement">Profiler</span>-knappen lar deg administrere multiple SMTP-
+	innstillinger. Konotoinformasjon kan lagres for multiple profiler, s&aring; alle SMTP-instillinger 
+	kan lagres/lastes ved hjelp av et par klikk. Denne funksjonaliteten er spesielt
+    nyttig n&aring;r du sender e-post p&aring; vegne av andre.
+    <br/><br/>
+</p>
+</blockquote>
+	Ved &aring aktivere <span class="itemelement">Gjenta med direct send ved feil</span>, vil softwaren fors&oslash;ke &aring; 
+	levere meldingen direkte til mottakers e-postserver
+    ved hjelp av <span class="itemelement">Direct send</span> innstillingene, dersom meldingen
+    ikke blir akseptert av SMTP-serveren.<br>
+    &nbsp; </li>
+  <li class="item">Ved &aring; velge <span class="itemelement">Direct send</span> vil
+    softwaren lete etter hver mottakers e-postserver og automatisk koble til den,
+    derfor  &quot;hopper den over&quot; SMTP-server som ikke er n&oslash;dvendig
+    i sendeinstillingene. Husk at enkelte e-postdomener (for eksempel 
+    hotmail) tillater ikke direct send: meldingen blir avvist dersom den stammer fra 
+    et desktop-system i steden for en public SMTP-server.<br>
+    Ved &aring; aktivere <span class="itemelement">Gjenta med SMTP ved feil</span>, 
+    dersom meldingen ikke blir akseptert av motakerens e-postserver, vil softwaren 
+    fors&oslash;ke &aring; levere meldingen til SMTP-serveren, ved &aring; bruke
+    <span class="itemelement">Bruk SMTP-server</span> innstillingene.<br>
+    &nbsp; </li>
+</p>
+</ul>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item">
+<p><font color="#009900"></font><strong><font color="#009900">Bruke direct send 
+        eller SMTP-server?</font></strong></p>
+      <p>Valget avhenger f&oslash;rst og fremst av tilgangen til en god SMTP 
+        server. Hvis din ISP SMTP-server er i stand til &aring; h&aring;ndtere mange 
+        meldigner i rask sekvens, eller til og med flere meldinger samtidig, vil
+        bruk av SMTP-server v&aelig;re raskere og mer p&aring;litelig siden 
+        din SMTP-server er &quot;n&aelig;rmere&quot; 
+        din datamaskin enn hver enkelt mottakers e-postserver.</p>
+      <p>Men enkelte tilbydere legger restriksjoner p&aring; antall meldinger som kan
+        sendes innenfor et gitt tidsintervall og antall meldinger som kan sendes
+        samtidig, for &aring; hindre deres kunder i &aring; benytte serveren til spamming
+        (for eksempel en SMTP-server kan akseptemer maksimum én melding hvert
+        5. sekund og maksimum 2 meldinger samtidig).
+        Alle meldinger som overskrider disse restriksjonene vill bli avvist med en feilkode. 
+        Dette betyr ikke at serveren eller softwaren ikke fungerer korrekt, men at det vil bli 
+        n&oslash;dvendig &aring; sette andre timing-innstillinger i  <span class="itemelement">Avanserte
+        innstillinger</span>-seksjonen.</p>
+      <p>I slike tilfeller kan det v&aelig;re raskere og enklere &aring; bruke direct send
+        Direct send krever litt mer tid til levering av hver melding 
+        (siden den m&aring; gj&oslash;re en foresp&oslash;rsel til DNS-serveren og 
+        e-postserveren kan ligge veldig 
+        &quot;langt unna&quot; brukerens PC), men denne &oslash;kte tidsbruken
+        kompenseres ved muligheten til &aring; sende flere meldinger samtidig 
+        uten &aring; m&aring;tte legge til ekstra pauser mellom meldingene.</p>
+      <p>Direct send er ogs&aring; nyttig dersom en sendeoperasjon m&aring; gj&oslash;res 
+        ved hjelp av en tilkobling der SMTP-serveren er ukjent(typisk tilfelle
+        n&aring;r man bruker en laptop &quot;ute&quot;, dvs. ikke p&aring; kontoret eller hjemme,
+        vanlig ved bruk av offentlig tr&aring;dl&oslash;st nettverk).</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item"><span class="itemelement">Avanserte innstillinger</span>-seksjonen
+  lar deg fintune sende-timingen. Dette er nyttig for &aring; utf&oslash;re sendeoperasjoner 
+  ved maksimal hastighet tillatt av SMTP-serverens antispam-restriksjoner
+  Her er betydningen av hver parameter:</p>
+  <p class="itemelement">
+  Timing Tab
+  </p>
+<ul class="item">
+  <li><span class="itemelement">Pause mellom meldinger</span>: antall sekunder 
+    mellom hver meldingsforsendelse.</li>
+  <li><span class="itemelement">Pause mellom blokker</span>: antall sekunder 
+    mellom hver blokk av meldinger.</li>
+  <li><span class="itemelement">Meldinger pr blokk</span>: antall meldinger 
+    sendt in hver blokk.</li>
+  <li><span class="itemelement">Timeout</span>: maksimum antall sekunder 
+    f&oslash;r sendingen av meldingen aborteres</li>
+  <li><span class="itemelement">Tilkoblinger</span>: maksimum antall samtidige 
+    tilkoblinger, dvs. antall meldinger som sendes samtidig*.</li>
+  <li><span class="itemelement">Ytterligere fors&oslash;k ved feil</span>: Hvis
+    SMTP-serveren eller mottakerens server(ved direct send) ikke aksepterer 
+    meldingen, lam softwaren vente et antall sekunder og fors&oslash;ke &aring; sende meldingen en 
+    eller flere ganger til.</li>
+  <li><span class="itemelement">Pause mellom fors&oslash;k</span>: antall sekunder 
+    pause f&oslash;r en uakseptert melding blir fors&oslash;kt sendt igjen.</li>
+</ul>
+<p class="item">Riktig konfigurasjon kan f&oslash;rst finnes etter noen fors&oslash;k, ved &aring; verifisere
+  antall meldinger som faktisk ble levert. For &aring; forenkle innstillingene 
+  er noen <span class="itemelement">Foresl&aring;tte innstillinger</span> tilgjengelige. De 
+  er ikke n&oslash;dvendigvis optimalisert for din nettverkstilkobling, men kan sees p&aring; som et godt 
+  startpunkt for &aring; finne den beste konfigurasjonen.</p>
+<p class="item"><strong><font color="#FF0000">Advarsel:</font></strong> Distribusjonslister
+   kan inneholde ugyldige e-postadresser, eller noen e-postservere kan v&aelig;re midlertidig
+   inaktive. Derfor, n&aring;r man bruker lister som inneholder store antall adresser, m&aring; det regnes som
+   normal og uung&aring;elig til tross for valg av sendemodus og innstillinger, at ikke alle meldinger blir
+   levert og en viss andel blir returnert med feilkode. I slike tilfeller vil det v&aelig;re mulig
+   &aring; fors&oslash;ke &aring; fullf&oslash;re sendeoperasjonen ved et senere tidspunkt ved hjelp av <a href="sendblaster_messages_history.htm">historikk</a> 
+  funksjonene.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hvordan 
+        kan jeg finne korrekte avanserte innstillinger?</strong></font></p>
+      <p>For &aring; finne korrekte avanserte innstillinger er det n&oslash;dvendig &aring; fors&oslash;ke forskjellige 
+        kombinasjoner (vanligvis vil en liste p&aring; ca 10 adresser v&aelig;re tilstrekkelig) og 
+        verifisere hvor mange meldinger som faktisk ble levert (denne informasjonen  
+        blir gitt i slutten av en sendeoperasjon, da er det ogs&aring; mulig &aring; sjekke loggene). 
+        Brukere tilkoblet en tilstrekkelig &quot;tolerant&quot; SMTP-server vil sannsynligvis
+        ikke oppleve s&aelig;rlig mange problemer, uavhengig av innstillingene som bare 
+        p&aring;virker hastigheten.<br>
+        P&aring; den annen side, hvis din tilkobling er en forholdsvis&quot;striks&quot; 
+        STMP-server, s&aring; kan det v&aelig;re n&oslash;dvendig &aring; senke hastigheten p&aring; sending av meldinger
+        og unng&aring; &aring; sende flere meldinger samtidig, f&aring;r i det hele tatt &aring; v&aelig;re i stand til &aring;
+        sende et h&oslash;yt antall meldinger. </p>
+      <p>Her er noen f&aring; enkle regler som er verdt &aring; vurdere:</p>
+      <ul>
+        <li>En tolerant SMTP-server tillater rask sending uten pauser (eller ihvertfall 
+          korte pauser). P&aring; ganske strikte SMTP-servers som bruker et h&oslash;yt antall
+          antispam-filtre, b&oslash;r man &oslash;ke pausene og resudere antall samtidige tilkoblinger.</li>
+        <li>Vanligvis tillater ikke SMTP-servere sending av mange meldinger samtidig, 
+          derfor n&aring;r man brukerSMTP-modus b&oslash;r antall tilkoblinger setter lavt,
+          eller helt ned til 1 (ingen samtidige tilkoblinger). 
+          Hvis SMTP-serveren er utstyrt med antispam-restriksjonsmekanismer, 
+          kan det v&aelig;re n&oslash;dvendig &aring; senke meldingshastigheten ved &aring; sette en pause 
+          p&aring; flere sekunder mellom hver sending, og sette en lengre pause mellom 
+          meldingsblokker. I tillegg b&oslash;r ikke meldingsblokker inneholde mer enn noen
+          f&aring; dusin meldinger.</li>
+        <li>N&aring;r det gjelder direct send, med en standardstandard distribusjonsliste som 
+          inneholder adresser som h&oslash;rer til i forskjellige domener, vil meldingene bli
+          levert til diverse forskjellige servere: det er derfor mulig &aring; sette et
+          h&oslash;yt antall tilkoblinger* og begrenset (eller ingen) pause mellom meldinger og mellom
+          blokker.</li>
+        <li>&Oslash;king av antall fors&oslash;k ved feil kan &oslash;ke suksessraten, men det vil senke hastigheten
+           p&aring; sendeoperasjonen, s&aelig;rlig hvis antall samtidige tilkobliner er lavt. Fullf&oslash;ring av 
+           operasjonen p&aring; et senere tidspunkt fra 
+           <a href="sendblaster_messages_history.htm">historikk</a>-vinduet(etter &aring; ha ventet noen
+           minutter) kan v&aelig;re en god praksis.</li>
+      </ul></td>
+    <td width="7%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+  <p class="itemelement">
+  Ekstra-tab
+  </p>
+<ul class="item">
+  <li><span class="itemelement">Leveringsbekreftelse</span>: gir deg en bekreftelse
+  hver gang en e-post har blitt leverert eller n&aring;r leseren &aring;pner den.</li>
+  <li><span class="itemelement">H&oslash;y Prioritet</span>: gj&oslash;r mottakeren
+   oppmerksom p&aring; at meldingen b&oslash;r leses s&aring; snart som mulig.</li>
+  <li><span class="itemelement">Encoding</span>: velg mellom <span class="itemelement">quoted-printable</span> and <span class="itemelement">base64</span>.
+  Header-innholdet som viser programvaren som genererte meldingen.</li>
+  <li><span class="itemelement">Xmailer text</span>: ved &aring; bruke <span class="itemelement">Default</span>-innstilling
+  vil headeren inneholde SendBlasters navn og versjon. Ellers kan du legge inn 
+  egendefinert tekst, for &aring; simulere sending fra en annen e-postklient eller velge 
+  <span class="itemelement">None</span> for &aring; ikke inkludere header til meldingen.</li>
+  <li><span class="itemelement">Domene</span>: lar deg spesifisere
+  maskinnavn brukt av programvaren for &aring; koble til SMTP-server eller mottakers
+  e-post-server. Dette kan v&aelig;re nyttig ved bruk av  <span class="itemelement">Direct
+  send</span>: enkelte servere verifiserer domenenavn f&oslash;r de aksepterer meldinger; de
+  kreve at domenenavnet korresponderer med public <em>hostnavn</em> p&aring;
+  nettverket, og f&oslash;r de aksepterer meldingen gj&oslash;r de en <em>ping</em>-operasjon (eller
+  lignende) for &aring; verifisere at domenenavnet korresponderer med IP-adressen til maskinen som
+  ba om oppkobling. I dette tilfellet, kan valg av <span class="itemelement">Internett
+  adresse </span> redusere antall avviste meldigner. Vi foresl&aring;r &aring; bruke default innstilliger,
+  eller bruke <span class="itemelement">Internett adresse</span> ved bruk av direct send
+  og <span class="itemelement">PC lokalt navn</span> ved bruk av SMTP (SMTP-servere
+  gj&oslash;r vanligivis ingen spesiell sjekk av domenenavn).<br>
+  SendBlaster sjekker din maskins public adresse hver gang den starte opp; dersom
+  Internett-tilkobling ikke er tilgjengelig ved oppstart vil public adresse bli st&aring;ende
+  tomt, og PC lokalt navn blir bruk i steden. Dersom en fast public IP-adresse er tilgjengelig, 
+  vil erfarne brukere velge <span class="itemelement">Brukerdefinert...</span>
+  og skrive inn en fast verdi (vennligst merk at et <em>hostnavn</em> er n&oslash;dveindg - ikke
+  en IP-adresse) - men husk at feil innstillinger kan forhindre vellykket
+  sending.  </li>
+  <li><span class="itemelement">Manuelt valg av DNS-Server</span>: SendBlaster bruker den valgte default 
+  DNS-tilkoblingen, men det er ogs&aring; mulig (og av og til n&oslash;dvendig) å&aring; manuelt velge
+  en annen DNS ved &aring; velge denne opsjonen og skrive inn korrekt IP-adresse.
+  by enabling this option and typing the correct IP address.  </li>
+  <li><span class="itemelement">Ignorer Socket Errors</span>: hvis det oppst&aring;r et problem med tilkobling til internett, enten pga hardware- eller softwarefeil, vil SendBlaster avbryte postingen, varsle brukeren og vente p&aring; brukerens instruksjoner - i de fleste tilfeller er det n&oslash;dvendig med en menneskelig inngripen (f.eks du er n&oslash;dt til &aring; restarte en nettverksrouter, etc). Hvis du ikke &oslash;nsker at postingen skal settes p&aring; pause og foretrekker at SendBlaster ignorerer feilen, kryss av denne opsjonen (men du advares om at dersom det ikke finne nettverkstilkobling kan postingen feile). Dette er nyttig dersom din internett-tilkobilng av og til er nede av ulike &aring;rsaker (f.eks wifi-problemer), men automatisk gjenopprettes etter kort tid.. </li>
+</ul>
+  <p class="itemelement">
+  Additional Headers Tab
+  </p>
+  <blockquote>
+    <p class="item">I enkelte tilfeller kan avanserte brukere &oslash;nske &aring; legge til tilpassede headere til sine meldinger, for &aring; kunne utf&oslash;re spesielle oppgaver (f.eks sporing, signering etc). SendBlaster lar brukeren legge til opp til to headere fil meldingen. </p>
+</blockquote>
+  <hr size="1" noshade>
+<p class="item">*I Free edition er maksimum antall tilkoblinger 2, 
+  selv om et h&oslash;yere antall er spesifisert.</p>
+</body>
+</html>

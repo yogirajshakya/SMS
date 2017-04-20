@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Bounce-backs custom formats </p>
+<p class="item">Bounce-back email formats were originally designed
+    to be read by humans, not by machines, thus there is no standard format or rule. SendBlaster can process most common bounce-back formats using its internal database, but you may encounter some formats which are not recognized by the software. If this happens, you can manually add a new, custom format to SendBlaster's
+bounce-backs database.</p>
+<p class="item">A custom format consists of some rules; all of them must be met in order for a message to be considered a bounce-back (in other words, the logical operator of the rules is AND). </p>
+<p class="item">When you want to add a <span class="itemelement">New format</span>, first of all you must identify some pattern in the Subject or in other headers, which uniquely identify the message as a bounce-back (a <span class="itemelement">Hard bounce</span>, if you tick the checkbox, or a soft one if it is left unchecked). The drop-down list of headers only serves as an example, you can manually add a specific header by typing the header name in <span class="itemelement">Header</span> field and the desired pattern in the <span class="itemelement">Value</span> field.</p>
+<p class="item">A <span class="itemelement">pattern</span> typically includes some wildcards (the &quot;*&quot; sign which means &quot;any character&quot;): as an example, if you enter &quot;*delivery*notification*&quot; as the Subject pattern, any message containing the words &quot;delivery&quot; and &quot;notification&quot;  in its subject - i.e. &quot;delivery to xxx@yyy.com notification failure&quot; - will be considered a bounce-back, provided it also matches the other rules you may have defined. If you use &quot;delivery notification&quot;, without wildcards, only messages exactly having &quot;delivery notification&quot; as their subject will be processed as bounce-backs - &quot;delivery to xxx@yyy.com notification failure&quot; would not be considered a valid subject.</p>
+<p class="item">You can also enter some specific words (separated with comma) which must be found in the body of the message: if none of these words is found, the message is not considered a bounce-back. As an example, most bounce-backs contain the word &quot;reason&quot; (followed by a text which explains the reason why the message was not delivered). Please note that the list of words is not a pattern (you cannot use wildcards) and the logical operator of the list is OR. </p>
+<p class="item">If a given message meets all the rules you have defined, it is processed as a bounce-back, and all e-mail addresses found inside the message will be unsubscribed, if they are also found in the list you are downloading bounces for. You may want to exclude typical postmaster addresses using a pattern.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">An example </font></strong></p>
+        <p class="item">Let's say you want messages to be processed as bounc-backs when they:</p>
+        <p class="item">a) have the words &quot;undeliverable&quot; and &quot;message&quot; in their subject;<br>
+          b) are from a &quot;postmaster@...&quot; address;<br>
+          c) their Content-Type header is &quot;delivery notification&quot; or &quot;delivery failure notification&quot;<br>
+          d)  contain the word &quot;reason&quot; or &quot;error&quot; in the main body</p>
+        <p class="item">and you obviously don't want the sender (&quot;postmaster@...&quot;) address to be unsubscribed, as the real unreachable address is somewhere else in the body. </p>
+        <p class="item">Here is what the format may look like: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(checked)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Pattern of subject:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">From</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Value:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Value:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*delivery*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Message body contains :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reason, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Exclude :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>And here is a much simpler format, which will process all messages having the word &quot;undeliverable&quot; in their subject (and exclude both postmaster@... and majordomo@... addresses):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(checked)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Pattern of subject:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*undeliverable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Value:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Value:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Message body contains :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Exclude :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

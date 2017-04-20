@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+    <p class="title">
+        Lista negra</p>
+    <p class="item">
+        A <span class="itemelement">lista negra</span> &eacute; um filtro que impede que
+        determinados endere&ccedil;os de e-mail ou dom&iacute;nios recebam e-mails, independentemente
+        do seu <a href="sendblaster_lists_managing.htm">estado de subscri&ccedil;&atilde;o/activa&ccedil;&atilde;o</a>.</p>
+    <p class="item">
+        Quando voc&ecirc; envia uma mensagem para uma determinada lista, antes de cada e-mail
+        ser enviado o Sendblaster verifica se o endere&ccedil;o do destinat&aacute;rio ou
+        o seu dom&iacute;nio est&aacute; inclu&iacute;do na lista negra: se estive, o e-mail
+        n&atilde;o &eacute; enviado (aparece uma mensagem <em>&quot;&lt;endere&ccedil;o&gt;:
+            em lista negra</em>&quot; no painel de registo).</p>
+    <p class="item">
+        O Sendblaster suporta dois tipos de listas negras:</p>
+    <ul>
+        <li class="item">Lista negra de <span class="itemelement">endere&ccedil;os</span>: introduza
+            aqui os endere&ccedil;os de e-mail para os quais n&atilde;o quer enviar mensagens.<br>
+            &nbsp; </li>
+        <li class="item">Lista negra de <span class="itemelement">dom&iacute;nios</span> *:
+            em vez de endere&ccedil;os individuais, voc&ecirc; pode indicar dom&iacute;nios
+            inteiros (um dom&iacute;nio de e-mail &eacute; a parte que vem depois do sinal &quot;@&quot;
+            de um endere&ccedil;o de e-mail: cuidado para n&atilde;o incluir <em>&quot;www.</em>&quot;
+            ou outro tipo de nome de dom&iacute;nio de terceiro n&iacute;vel). Quando um dom&iacute;nio
+            &eacute; colocado em lista negra, nenhuma mensagem ser&aacute; enviada para nenhum
+            endere&ccedil;o pertencente a ele.</li>
+    </ul>
+    <p class="item">
+        Voc&ecirc; pode introduzir itens como texto livre; cada linha tem de conter um endere&ccedil;o
+        / dom&iacute;nio (e nenhuns caracteres extra: n&atilde;o &eacute; poss&iacute;vel
+        utilizar caracteres joker). Voc&ecirc; pode copiar para / colar da &aacute;rea de
+        transfer&ecirc;ncia, de modo a manipular listas negras com outro software; ou pressionar
+        o bot&atilde;o <span class="itemelement">Editar com bloco de notas</span> para abrir
+        uma lista negra com o editor de texto do Windows (a execu&ccedil;&atilde;o &eacute;
+        interrompida at&eacute; voc&ecirc; terminar a edi&ccedil;&atilde;o e fechar o bloco
+        de notas).</p>
+    <form>
+    <p class="item">
+        Eis um exemplo de uma lista negra de <span class="itemelement">endere&ccedil;os</span>
+        v&aacute;lida:</p>
+    <p>
+        <textarea name="addresses">endereco1@dominio.com
+teste2@site.biz
+</textarea>
+    </p>
+    <p class="item">
+        e uma lista negra de <span class="itemelement">dom&iacute;nios</span> v&aacute;lida:</p>
+    <p>
+        <textarea name="domains">domínio.com
+site.biz
+</textarea>
+    </p>
+    <p class="item">
+        <font color="#FF0000"><strong>A lista negra seguinte est&aacute; errada</strong></font>
+        porque inclui caracteres joker (<em>&quot;*</em>&quot;) e dom&iacute;nios de terceiro
+        n&iacute;vel (&quot;<em>www.&quot;</em>):</p>
+    <p>
+        <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+    </p>
+    <p class="item">
+        Note que as listas negras tem um limite para o seu tamanho, e não servem como um
+        substituto das tarefas &quot;próprias&quot; de cancelamento de subscrições. Como regra
+        geral, devem ser usadas como uma &quot;emergência&quot; ou apenas em tarefas especiais
+        (i.e. quando alguém pede explicitamente que não quer receber mensagens de ninguém,
+        nem depois da subscrição; ou quando quer assegurar que os seus concorrentes não
+        estão a receber as suas newsletters).</p>
+    <p>
+        &nbsp;
+    </p>
+    </form>
+    <hr size="1" noshade>
+    <p class="item">
+        *Apenas dispon&iacute;vel na vers&atilde;o profissional</p>
+    <p class="item">
+        &nbsp;</p>
+</body>
+</html>

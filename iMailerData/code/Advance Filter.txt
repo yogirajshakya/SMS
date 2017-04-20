@@ -1,0 +1,1118 @@
+
+
+<Form Name="TRS103" Size="669, 456" SearchControl="SearchPage" DetailControl="DetailPage" Text="Advance Filter" TargetCollection="PersonaSecurityInfo.PersonaSecurityApplications" HelpTopicID="2277">
+
+                <Titlebar Title="Title" Style="Standard" SourceURI="file:///R:/Source/TIMSS/Win/TIMSS/Config/FormTemplates" />
+
+                <Controls>
+
+                                <PageGroup Name="PageGroup1" Text="PageGroup1" Location="0, 0" Dock="Fill" Size="661, 429">
+
+                                                <Controls>
+
+                                                                <Page Name="SearchPage" Visible="True" Location="" Enabled="True" Text="SearchPage" Size="634, 421">
+
+                                                                                <Titlebar Subtitle="Search" />
+
+                                                                                <Controls>
+
+                                                                                                <SearchControl Name="SearchControl1" DetailControl="DetailPage" QueryPanelName="" Location="0, 0" Size="634, 421" ParameterRendering="Auto" AutoSearch="False" BackColor="White" TabIndex="0" TargetCollection="" NoResultsText="" Dock="Fill">
+
+                                                                                                                <SearchParameters>
+
+                                                                                                                                <SearchParameter Heading="" Required="False" ShowInQuery="True" ShowInResults="True" SortDirection="Ascending" SortOrder="0" Text="" TextAlign="Left" UseInQuery="True" Value="" Width="120" PropertyPath="Application" Operator="StartsWith" RenderAs="TextBox" />
+
+                                                                                                                                <SearchParameter Heading="" Required="False" ShowInQuery="True" ShowInResults="True" SortDirection="Ascending" SortOrder="0" Text="" TextAlign="Left" UseInQuery="True" Value="" Width="120" PropertyPath="ApplicationDescription" Operator="StartsWith" RenderAs="TextBox" />
+
+                                                                                                                </SearchParameters>
+
+                                                                                                                <Buttons>
+
+                                                                                                                                <Button Action="Search" Name="Button1" Text="Refresh" Depth="2" AutoSize="True" Enabled="True" ViewPermission="" Visible="True" />
+
+                                                                                                                                <Button Action="Detail" Name="Button2" Text="Select " Depth="2" AutoSize="True" Enabled="True" ViewPermission="" Visible="True" />
+
+                                                                                                                                <Button Action="ResetSearch" Name="Button4" Text="Reset" Depth="2" AutoSize="True" Enabled="True" ViewPermission="" Visible="True" />
+
+                                                                                                                </Buttons>
+
+                                                                                                </SearchControl>
+
+                                                                                </Controls>
+
+                                                                </Page>
+
+                                                                <Page Name="DetailPage" Visible="True" Location="" Enabled="True" Text="DetailPage" Size="634, 421">
+
+                                                                                <Titlebar Subtitle="Advance Filter">
+
+                                                                                </Titlebar>
+
+                                                                                <Controls>
+
+                                                                                                <GroupBox Name="fraAdvanceFilter" Text="Advance Filter" Size="634, 421" Location="0, 0" TabIndex="12" ExpandedSize="0, 0" Dock="Fill">
+
+                                                                                                                <Controls>
+
+                                                                                                                                <!-- BindTo="ApplicationMetaViews.MetaQueryViewColumns" -->
+
+                                                                                                                                <DataGrid HorizontalGap="4" VerticalGap="4" Margins="0, 0, 0, 4" Name="grdCondition" Text="Advance Filter" Size="407, 167" Location="218, 29" TabIndex="0" AutoFit="ExtendLastColumn" PropertyName=" " BindTo="">
+
+                                                                                                                                </DataGrid>
+
+                                                                                                                                <TextBox Name="txtCondition" Text="" Location="15, 218" Size="610, 81" TabIndex="1" Multiline="True" ScrollBars="Vertical">
+
+                                                                                                                                </TextBox>
+
+                                                                                                                                <Button Name="btnOk" Text="Ok" TabIndex="2" Size="100, 23" Location="170, 305" Command="cmd://Form/ReturnValue">
+
+                                                                                                                                </Button>
+
+                                                                                                                                <Button Name="btnCancel" Text="Cancel" TabIndex="3" Size="100, 23" Location="276, 305" Command="cmd://Form/CloseWindow">
+
+                                                                                                                                </Button>
+
+                                                                                                                                <Button Name="btnTest" Text="Check Syntax" TabIndex="4" Size="100, 23" Location="15, 305" Command="cmd://Form/CheckSyntax">
+
+                                                                                                                                </Button>
+
+                                                                                                                                <Label Name="lblCondition" Text="Advance Filter:" TabIndex="7" Size="100, 16" Location="15, 199" AutoSize="True">
+
+                                                                                                                                </Label>
+
+                                                                                                                                <ComboBox Name="cboViews" Text="" Location="15, 29" Size="198, 22" TabIndex="8" PropertyName="">
+
+                                                                                                                                </ComboBox>
+
+                                                                                                                                <Label Name="lblViews" Text="Views:" TabIndex="11" Size="49, 16" Location="15, 10" AutoSize="True">
+
+                                                                                                                                </Label>
+
+                                                                                                                                <!-- BindTo="ApplicationMetaViews.MetaQueryViewColumns"  -->
+
+                                                                                                                                <!-- 
+
+                                                                                                                                                <Columns>
+
+                                                                                                                                                                <Column Heading="Field Name" ReadOnly="True" TextAlign="Left" Visible="True" Width="120" ObjectProperty="ColumnCaption" />
+
+                                                                                                                                                </Columns>
+
+                                                                                                                                  -->
+
+                                                                                                                                <DataGrid HorizontalGap="4" VerticalGap="4" Margins="0, 0, 0, 4" Name="grdColumns" Text="Columns" Size="197, 139" Location="15, 57" TabIndex="12" Command="cmd://Form/AddColumn" BindTo="">
+
+                                                                                                                                </DataGrid>
+
+                                                                                                                                <Label Name="lblAdvanceFilter" Text="Define Advance Filter:" TabIndex="13" Size="100, 16" Location="218, 11" AutoSize="True">
+
+                                                                                                                                </Label>
+
+                                                                                                                </Controls>
+
+                                                                                                </GroupBox>
+
+                                                                                </Controls>
+
+                                                                </Page>
+
+                                                </Controls>
+
+                                </PageGroup>
+
+                </Controls>
+
+                <Code>
+
+                                <![CDATA[
+
+Dim oViewColumns As API.MetaDataInfo.IMetadataQueryViewColumns
+
+Dim ds as New System.data.dataset
+
+Dim boolFilter1 As Boolean
+
+Dim _ExistingFilter As String = String.Empty
+
+Private Sub TRS103Test_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles TRS103.Load
+
+                If TheForm.FormParameters.Contains("Filter1") Then
+
+                                boolFilter1 = TheForm.FormParameters("Filter1")
+
+                Else
+
+                                boolFilter1 = True
+
+                End If    
+
+                
+
+                If TheForm.FormParameters.Contains("FilterSQL") Then
+
+                                '_ExistingFilter = TheForm.FormParameters("FilterSQL").Replace("~|~|~", "%")
+
+                                _ExistingFilter = EncryptDecryptValue(TheForm.FormParameters("FilterSQL"), False)
+
+
+
+                                _txtCondition.Text = _ExistingFilter
+
+                End If
+
+End Sub
+
+
+
+Private Sub TRS103Test_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles TRS103.FormClosed
+
+                If grdCondition IsNot Nothing Then
+
+                                RemoveHandler grdCondition.Grid.AfterCellUpdate, AddressOf grdCondition_AfterCellUpdate 
+
+                                RemoveHandler grdCondition.Grid.BeforeCellActivate, AddressOf grdCondition_BeforeCellActivate 
+
+                                RemoveHandler grdCondition.Grid.ClickCellButton, AddressOf grdCondition_ClickCellButton 
+
+                                RemoveHandler grdCondition.Grid.AfterRowsDeleted, AddressOf grdCondition_AfterRowsDeleted
+
+                End If
+
+End Sub
+
+
+
+                
+
+Private Sub PageGroup1_SelectedPageChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles _PageGroup1.SelectedPageChanged
+
+                                If PageGroup1.SelectedPage.Name = "DetailPage" Then
+
+
+
+                                                oViewColumns = Me.GetCollection(Enumerations.NamespaceEnum.MetaDataInfo, "MetadataQueryViewColumns")
+
+                                                grdCondition.Grid.DataSource = oViewColumns
+
+                                                FormatConditionGrid()
+
+                                                If TheForm.FormParameters.Contains("Filter1") Then
+
+                                                                boolFilter1 = TheForm.FormParameters("Filter1")
+
+                                                Else
+
+                                                                boolFilter1 = True
+
+                                                End If
+
+                                                Static boolAddedHandler As Boolean = False
+
+                                                If grdCondition IsNot Nothing Then
+
+                                                                If boolAddedHandler = False Then
+
+                                                                                AddHandler grdCondition.Grid.AfterCellUpdate, AddressOf grdCondition_AfterCellUpdate
+
+                                                                                AddHandler grdCondition.Grid.BeforeCellActivate, AddressOf grdCondition_BeforeCellActivate
+
+                                                                                AddHandler grdCondition.Grid.ClickCellButton, AddressOf grdCondition_ClickCellButton
+
+                                                                                AddHandler grdCondition.Grid.AfterRowsDeleted, AddressOf grdCondition_AfterRowsDeleted
+
+                                                                                
+
+                                                                                boolAddedHandler = True
+
+                                                                                grdCondition.Grid.DisplayLayout.Override.AllowDelete = Infragistics.Win.DefaultableBoolean.True
+
+                                                                End If
+
+                                                End If
+
+                                                cboViews.DataSource = GetViewList(boolFilter1)
+
+                                                If cboViews.DataSource IsNot Nothing AndAlso _cboViews.DataSource.Count > 0 Then
+
+                                                                cboViews.Value = _cboViews.DataSource.Item(0).Code
+
+                                                Else
+
+                                                                CommandProcessor.Exec(String.Concat("cmd://App/Popup?Title=TRS103&Text=No view found for this application."))
+
+                                                                CommandProcessor.Exec(TheForm, "cmd://Form/CloseWindow")
+
+                                                End If
+
+                                                
+
+                                End If
+
+End Sub
+
+
+
+Private Function GetViewObject() As TIMSS.API.ApplicationInfo.IApplicationMetadataView
+
+                If cboViews.Value IsNot Nothing Then
+
+                                For Each oView As  TIMSS.API.ApplicationInfo.IApplicationMetadataView In Context.ApplicationMetaViews
+
+                                                If oView.ViewName = _cboViews.Value.ToString Then
+
+                                                                If (boolFilter1 = True AndAlso oView.ReportingFilter1Flag = True) OrElse (boolFilter1 = False AndAlso oView.ReportingFilter2Flag = True) Then
+
+                                                                                Return oView
+
+                                                                End If                                                    
+
+                                                End If
+
+                                Next
+
+                End If
+
+                Return Nothing
+
+End Function
+
+
+
+Private Function GetViewList(ByVal Filter1Flag As Boolean) As ICodeList
+
+                Dim oList As ICodeList = New CodeList
+
+                For Each oView As  TIMSS.API.ApplicationInfo.IApplicationMetadataView In Context.ApplicationMetaViews
+
+                                If Filter1Flag = True AndAlso oView.ReportingFilter1Flag = True Then
+
+                                                oList.Add(oView.ViewName, oView.Description)
+
+                                ElseIf Filter1Flag = False AndAlso oView.ReportingFilter2Flag = True Then
+
+                                                oList.Add(oView.ViewName, oView.Description)
+
+                                End If
+
+                Next
+
+                Return oList
+
+End Function
+
+
+
+Private Function GetViewColumns(ByVal oView As  TIMSS.API.ApplicationInfo.IApplicationMetadataView) As API.MetaDataInfo.IMetadataQueryViewColumns
+
+                If oView IsNot Nothing Then
+
+                                Return oView.MetaQueryViewColumns
+
+                Else
+
+                                Return Nothing
+
+                End If
+
+End Function
+
+
+
+Private Sub cboViews_ValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles _cboViews.ValueChanged
+
+                If _cboViews.Value IsNot Nothing Then
+
+                                Static oldValue As String = "-1"
+
+                                If oldValue <> _cboViews.Value Then
+
+                                                grdColumns.Grid.DataSource = Nothing
+
+                                                grdColumns.Grid.DataSource = GetViewColumns(GetViewObject())
+
+                                                FormatColumnGrid()
+
+                                                oldValue = _cboViews.Value
+
+                                End If
+
+                End If
+
+                
+
+End Sub
+
+
+
+ <CommandInfo("ReturnValue", "Check SQL Syntax for error and return advance filter")> _
+
+ Public Function ReturnValue(ByVal sender As Object, ByVal e As CommandEventArgs) As Object 
+
+                Try
+
+                                If txtCondition.Text.Length > 0 Then
+
+                                                If CheckSyntax(Nothing, Nothing) = True Then
+
+                                                                'CommandProcessor.Exec(TheForm,"cmd://Form/CloseWindow?FILTER=" & txtCondition.Text.Replace("%","~|~|~"))
+
+                                                                CommandProcessor.Exec(TheForm,"cmd://Form/CloseWindow?FILTER=" & EncryptDecryptValue(txtCondition.Text, True))
+
+                                                End If
+
+                                End If
+
+                                Return True
+
+                Catch ex As System.Exception
+
+                                TIMSS.Win.CommandProcessor.Exec(String.Format("cmd://App/Alert?Text={0}&Style=Error", "Invalid SQL statment: " & txtCondition.Text ))
+
+                                Return False
+
+                End Try
+
+End Function
+
+
+
+ <CommandInfo("CheckSyntax", "Check SQL Syntax for error")> _
+
+ Public Function CheckSyntax(ByVal sender As Object, ByVal e As CommandEventArgs) As Object 
+
+                Dim strSQL As String 
+
+                Dim strViews As String =""
+
+                Try
+
+                                Dim oList As ICodeList = cboViews.DataSource
+
+                                For i as integer = 0 to oList.Count - 1
+
+                                                If strViews.Length > 0 Then
+
+                                                                strViews = strViews & ", " 
+
+                                                End If
+
+                                                strViews = strViews & oList(i).Code
+
+                                Next
+
+                                strSQL = String.Format("SELECT TOP 1 * FROM {0} WHERE {1}", strViews , txtCondition.Text)
+
+                                If txtCondition.Text.Length > 0 Then
+
+                                                Timss.[Global].App.GetData(New Timss.DataAccess.SimpleRequest("T1",  strSQL))
+
+                                End If
+
+                                If e IsNot Nothing Then
+
+                                                CommandProcessor.Exec(String.Concat("cmd://App/Popup?Title=TRS103&Text=Correct syntax."))
+
+                                End If
+
+                                Return True
+
+                Catch ex As System.Exception
+
+                                CommandProcessor.Exec(String.Concat("cmd://App/Popup?Title=TRS103&Text=Incorrect syntax."))
+
+                                Return False
+
+                End Try
+
+End Function
+
+                                                
+
+                
+
+ <CommandInfo("AddColumn", "Add new record for this Column in advance filter grid")> _
+
+ Public Function AddColumn(ByVal sender As Object, ByVal e As CommandEventArgs) As Object 
+
+                Dim intCount As Integer = grdCondition.Grid.Rows.Count
+
+                grdCondition.Grid.DataSource.AddNew()
+
+                If intCount <> grdCondition.Grid.Rows.Count Then
+
+                                grdCondition.Grid.ActiveRow = grdCondition.Grid.Rows(grdCondition.Grid.Rows.Count -1)
+
+                                With grdColumns.Grid.ActiveRow
+
+                                                grdCondition.Grid.ActiveRow.Cells("VIEWNAME").Value = .Cells("VIEWNAME").Value
+
+                                                grdCondition.Grid.ActiveRow.Cells("COLUMNCAPTION").Value = .Cells("COLUMNCAPTION").Value
+
+                                                grdCondition.Grid.ActiveRow.Cells("COLUMNNAME").Value = .Cells("COLUMNNAME").Value
+
+                                                grdCondition.Grid.ActiveRow.Cells("OPERATORCODE").Value = .Cells("OPERATORCODE").Value
+
+                                                grdCondition.Grid.ActiveRow.Cells("DEFAULTVALUE").Value = .Cells("DEFAULTVALUE").Value
+
+                                                grdCondition.Grid.ActiveRow.Cells("DATATYPECODE").Value = .Cells("DATATYPECODE").Value
+
+                                                grdCondition.Grid.ActiveRow.Cells("LISTSQL").Value = .Cells("LISTSQL").Value
+
+                                End With
+
+                End If
+
+                
+
+ End Function
+
+                
+
+ Private Sub grdCondition_BeforeCellActivate(ByVal Sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.CancelableCellEventArgs)
+
+        Try
+
+                                if e.Cell.Column.Header.Caption.ToUpper="VALUE"  AndAlso grdCondition.Grid.ActiveRow.Cells("ListSQL").Value.ToString.Trim.Length > 0 Then
+
+                                    e.Cell.Style = Infragistics.Win.UltraWinGrid.ColumnStyle.EditButton
+
+                                                e.Cell.Column.CellButtonAppearance.Image = TIMSS.Win.Resources.Manager.GetImage("find.ico")
+
+                                end if
+
+     Catch ex As Exception
+
+            System.Windows.Forms.MessageBox.Show("Bind Combo " & ex.Message)
+
+        Finally
+
+
+
+        End Try
+
+ End Sub
+
+    
+
+   Private Sub grdCondition_AfterCellUpdate(ByVal sender As Object, ByVal e As Infragistics.Win.UltraWinGrid.CellEventArgs) 'Handles _grdCondition.Grid.AfterCellUpdate
+
+                                RefreshFilter()
+
+   End Sub
+
+
+
+   Private Sub grdCondition_AfterRowsDeleted(ByVal sender As Object, ByVal e As System.EventArgs) 'Handles grdCondition.AfterRowsDeleted
+
+                RefreshFilter()
+
+   End Sub
+
+    
+
+  Private Sub grdCondition_ClickCellButton(ByVal sender As Object, _
+
+     ByVal e As Infragistics.Win.UltraWinGrid.CellEventArgs) 'Handles grdCondition.Grid.ClickCellButton
+
+                If e.Cell.Row.Cells("listsql").Value.ToString.Length > 0 Then
+
+                                Dim oResult As CommandResult
+
+                                Try
+
+                                                oResult = TIMSS.Win.CommandProcessor.Exec(TheForm, "cmd://Form/OpenChooser?Name=GenericChooserSQL&!SqlProperty=" & grdCondition.Grid.ActiveRow.Cells("listsql").Value.ToString & "&:1=^{Code}"  )
+
+                                                If Not oResult.Data Is Nothing AndAlso TypeOf oResult.Data Is ICommandParameters Then       
+
+                                                                If oResult.Data.Contains("1") Then
+
+                                                                                e.Cell.Value=oResult.Data("1")
+
+                                                                End If
+
+                                                End If    
+
+                        Catch ex As Exception
+
+                            System.Windows.Forms.MessageBox.Show("Error on opening Generic Chooser: " & ex.Message)
+
+                        Finally
+
+
+
+                        End Try
+
+                End If
+
+    End Sub
+
+    
+
+    Private Function GetAdvanceFilter() As String
+
+        Dim strCondition As New System.Text.StringBuilder
+
+                Dim strSingleCondition As String
+
+        Dim strColName, strColCaption, strOper, strValue, strType, strCaseTo As String
+
+        For Each row As Infragistics.Win.UltraWinGrid.UltraGridRow In grdCondition.Grid.Rows
+
+            strColCaption = row.Cells("COLUMNCAPTION").Value.ToString
+
+            strColName = String.Format("{0}.{1}", row.Cells("VIEWNAME").Value.ToString, row.Cells("COLUMNNAME").Value.ToString)
+
+            strOper = row.Cells("OPERATORCODE").Value.Code.ToString.Trim
+
+            strValue = row.Cells("DEFAULTVALUE").Value.ToString
+
+            strType = row.Cells("DATATYPECODE").Value.Code.ToString.Trim
+
+            strCaseTo = row.Cells("CONVERTCASECODE").Value.Code.ToString.Trim
+
+            If strColName <> "" AndAlso strOper <> "" AndAlso (strValue <> "" OrElse strOper.ToLower = "notnull" OrElse strOper.ToLower = "null") Then
+
+                Select Case strOper.ToLower
+
+                    Case "bt", "bet", "between"
+
+                        AddCondition(strCondition, GetBetweenCondition(strColCaption, strColName, strValue, strOper, strType, strCaseTo))
+
+                    Case "in", "notin", "not in"
+
+                        AddCondition(strCondition, GetInCondition(strColCaption, strColName, strValue, strOper, strType, strCaseTo))
+
+                    Case "has", "starts", "ends"
+
+                        AddCondition(strCondition, GetLikeCondition(strColCaption, strColName, strValue, strOper, strType, strCaseTo))
+
+                    Case "lt or null"
+
+                        AddCondition(strCondition, String.Format("({0} OR {1})", GetOtherCondition(strColCaption, strColName, strValue, "LT", strType, strCaseTo, False), GetOtherCondition(strColCaption, strColName, strValue, "NULL", strType, strCaseTo, False)))
+
+                    Case "lt or eq or null"
+
+                        AddCondition(strCondition, String.Format("({0} OR {1})", GetOtherCondition(strColCaption, strColName, strValue, "LTE", strType, strCaseTo, False), GetOtherCondition(strColCaption, strColName, strValue, "NULL", strType, strCaseTo, False)))
+
+                    Case "gt or null"
+
+                        AddCondition(strCondition, String.Format("({0} OR {1})", GetOtherCondition(strColCaption, strColName, strValue, "GT", strType, strCaseTo, False), GetOtherCondition(strColCaption, strColName, strValue, "NULL", strType, strCaseTo, False)))
+
+                    Case "gt or eq or null"
+
+                        AddCondition(strCondition, String.Format("({0} OR {1})", GetOtherCondition(strColCaption, strColName, strValue, "GTE", strType, strCaseTo, False), GetOtherCondition(strColCaption, strColName, strValue, "NULL", strType, strCaseTo, False)))
+
+                    Case Else
+
+                        AddCondition(strCondition, GetOtherCondition(strColCaption, strColName, strValue, strOper, strType, strCaseTo))
+
+                End Select
+
+            End If
+
+        Next
+
+        Return strCondition.ToString
+
+    End Function
+
+
+
+    Private Sub AddCondition(ByVal oStringBuilder As System.Text.StringBuilder, ByVal strCondition As String)
+
+                If strCondition.Length > 0 Then
+
+                                If oStringBuilder.Length > 0 Then
+
+                                                oStringBuilder.Append(" AND ")
+
+                                                oStringBuilder.Append(System.Environment.NewLine)
+
+                                End If
+
+                                oStringBuilder.Append(strCondition)
+
+                End If
+
+    End Sub
+
+    
+
+    Private Function GetBetweenCondition(ByVal ColumnCaption As String, ByVal ColumnName As String, ByVal Value As String, ByVal OperatorCode As String, ByVal DataType As String, ByVal CaseTo As String, Optional AddCrLfChar As Boolean = True) As String
+
+        Dim strValues As String() = Value.ToString.Split(",")
+
+        If strValues.Length <> 2 Then
+
+            MessageBox.Show("Please enter proper range of values for " & ColumnCaption & ".")
+
+            Return ""
+
+        End If
+
+        For Each strValue As String In strValues
+
+            If Not IsValidValue(strValue, DataType) Then
+
+                MessageBox.Show(String.Format("Invalid {0}value '{1}' for {2}.", GetDataTypeName(DataType), strValue, ColumnCaption))
+
+                Return ""
+
+            End If
+
+        Next
+
+        Return String.Format("{0} BETWEEN {1} AND {2} ", GetCasedColumnName(ColumnName, CaseTo), GetQuotedValue(strValues(0), DataType, CaseTo), GetQuotedValue(strValues(1), DataType, CaseTo))
+
+    End Function
+
+
+
+    Private Function GetInCondition(ByVal ColumnCaption As String, ByVal ColumnName As String, ByVal Value As String, ByVal OperatorCode As String, ByVal DataType As String, ByVal CaseTo As String, Optional AddCrLfChar As Boolean = True) As String
+
+        Dim strValues As String() = Value.ToString.Split(",")
+
+        Dim strCondition As New System.Text.StringBuilder
+
+        If strValues.Length < 1 Then
+
+            MessageBox.Show("Please enter proper range of values for " & ColumnCaption & ".")
+
+            Return ""
+
+        End If
+
+        For Each strValue As String In strValues
+
+            If strValue.Trim.Length <> 0 Then
+
+                                If Not IsValidValue(strValue, DataType) Then
+
+                                    MessageBox.Show(String.Format("Invalid {0}value '{1}' for {2}.", GetDataTypeName(DataType), strValue, ColumnCaption))
+
+                                    Return ""
+
+                                End If
+
+                                If strCondition.Length > 0 Then
+
+                                                strCondition.Append(", ")
+
+                                End If
+
+                                strCondition.Append(GetQuotedValue(strValue, DataType, CaseTo))
+
+            End If
+
+        Next
+
+        If OperatorCode.Trim.ToLower = "in" Then
+
+            Return String.Format("{0} IN ({1})", GetCasedColumnName(ColumnName, CaseTo), strCondition.ToString)
+
+        Else
+
+            Return String.Format("{0} NOT IN ({1})", GetCasedColumnName(ColumnName, CaseTo), strCondition.ToString)
+
+        End If
+
+    End Function
+
+
+
+    Private Function GetLikeCondition(ByVal ColumnCaption As String, ByVal ColumnName As String, ByVal Value As String, ByVal OperatorCode As String, ByVal DataType As String, ByVal CaseTo As String, Optional AddCrLfChar As Boolean = True) As String
+
+        If DataType.ToLower = "d" OrElse DataType.ToLower = "n" Then
+
+            MessageBox.Show(String.Format("Invalid value '{3}' for {4}.{2}{0} operator can not be used with {1}datatype.", OperatorCode.ToUpper, GetDataTypeName(DataType), Microsoft.VisualBasic.Constants.vbCrLf, Value, ColumnCaption))
+
+            Return ""
+
+        End If
+
+        Select Case OperatorCode.ToLower
+
+            Case "has"
+
+                Return String.Format("{0} LIKE '%{1}%'", GetCasedColumnName(ColumnName, CaseTo), Value)
+
+            Case "starts"
+
+                Return String.Format("{0} LIKE '{1}%'", GetCasedColumnName(ColumnName, CaseTo), Value)
+
+            Case "ends"
+
+                Return String.Format("{0} LIKE '%{1}'", GetCasedColumnName(ColumnName, CaseTo), Value)
+
+        End Select
+
+        Return ""
+
+    End Function
+
+
+
+    Private Function GetOtherCondition(ByVal ColumnCaption As String, ByVal ColumnName As String, ByVal Value As String, ByVal OperatorCode As String, ByVal DataType As String, ByVal CaseTo As String, Optional AddCrLfChar As Boolean = True) As String
+
+        If OperatorCode.Trim.ToLower = "notnull" OrElse OperatorCode.Trim.ToLower = "null" Then
+
+            Return String.Format("{0} {1}", ColumnName, GetOperator(OperatorCode))
+
+        Else
+
+            If Not IsValidValue(Value, DataType) Then
+
+                MessageBox.Show(String.Format("Invalid {0}value '{1}' for {2}.", GetDataTypeName(DataType), Value, ColumnCaption))
+
+                Return ""
+
+            End If
+
+            Return String.Format("{0} {1} {2}", GetCasedColumnName(ColumnName, CaseTo), GetOperator(OperatorCode), GetQuotedValue(Value, DataType, CaseTo))
+
+        End If
+
+    End Function
+
+
+
+    Private Function IsValidValue(ByVal Value As String, ByVal DataType As String) As Boolean
+
+        If Value Is Nothing Then Return False
+
+        Select Case DataType
+
+            Case "D"
+
+                Return Microsoft.VisualBasic.IsDate(Value)
+
+            Case "N"
+
+                Return Microsoft.VisualBasic.IsNumeric(Value)
+
+            Case Else
+
+                Return True
+
+        End Select
+
+    End Function
+
+
+
+    Private Function GetDataTypeName(ByVal DataType As String) As String
+
+        Select Case DataType
+
+            Case "D"
+
+                Return "Date "
+
+            Case "N"
+
+                Return "Number "
+
+            Case Else
+
+                Return ""
+
+        End Select
+
+    End Function
+
+
+
+    Private Function GetQuotedValue(ByVal Value As String, ByVal DataType As String, ByVal ChangeCaseTo As String) As String
+
+        If Value Is Nothing Then Return ""
+
+        Select Case DataType
+
+            Case "D"
+
+                                                                Return String.Format("'{0}'", Timss.Common.Functions.InvariantDateFormat(CType(Value, Date).Date))
+
+            Case "N"
+
+                Return Value
+
+            Case Else ' "S", "C"
+
+                If Value.Trim.StartsWith("'") AndAlso Value.Trim.EndsWith("'") Then
+
+                    Return Value
+
+                Else
+
+                    If ChangeCaseTo.Trim.ToLower = "u" Then
+
+                        Return String.Format("'{0}'", Value.Replace("'", "''")).ToUpper
+
+                    ElseIf ChangeCaseTo.Trim.ToLower = "l" Then
+
+                        Return String.Format("'{0}'", Value.Replace("'", "''")).ToLower
+
+                    Else
+
+                        Return String.Format("'{0}'", Value.Replace("'", "''"))
+
+                    End If
+
+                End If
+
+            'Case Else
+
+            '    Return Value
+
+        End Select
+
+    End Function
+
+
+
+    Private Function GetCasedColumnName(ByVal ColumnName As String, ByVal ChangeCaseTo As String)
+
+        If ChangeCaseTo.Trim.ToLower = "u" Then
+
+            Return String.Format("UPPER({0})", ColumnName)
+
+        ElseIf ChangeCaseTo.Trim.ToLower = "l" Then
+
+            Return String.Format("LOWER({0})", ColumnName)
+
+        Else
+
+            Return ColumnName
+
+        End If
+
+    End Function
+
+
+
+    Private Function GetOperator(ByVal OperatorCode As String) As String
+
+        Select Case OperatorCode.ToLower
+
+            Case "null"
+
+                Return "IS NULL"
+
+            Case "notnull"
+
+                Return "IS NOT NULL"
+
+            Case "eq"
+
+                Return "="
+
+            Case "noteq"
+
+                Return "<>"
+
+            Case "gt"
+
+                Return ">"
+
+            Case "lt"
+
+                Return "<"
+
+            Case "gte"
+
+                Return ">="
+
+            Case "lte"
+
+                Return "<="
+
+                    Case Else
+
+                                Return "="
+
+        End Select
+
+        Return ""
+
+    End Function
+
+
+
+                Private Sub FormatColumnGrid()
+
+                                grdColumns.Grid.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand
+
+                                With grdColumns.Grid.DisplayLayout.Bands(0)
+
+                                                For i As Integer = 0 To .Columns.Count - 1
+
+                                                                .Columns(i).Hidden = True
+
+                                                Next
+
+                                                
+
+                                                .Columns("ColumnCaption").Header.Caption = "Field Name"
+
+                                                .Columns("ColumnCaption").Header.VisiblePosition = 0
+
+                                                .Columns("ColumnCaption").Width = 120
+
+                                                .Columns("ColumnCaption").Hidden = False
+
+                                End With             
+
+                End Sub
+
+                
+
+                Private Sub FormatConditionGrid()
+
+                                grdCondition.Grid.DisplayLayout.ViewStyle = Infragistics.Win.UltraWinGrid.ViewStyle.SingleBand
+
+                                grdCondition.Grid.DisplayLayout.Override.AllowDelete = Infragistics.Win.DefaultableBoolean.True
+
+                                With grdCondition.Grid.DisplayLayout.Bands(0)
+
+                                                For i As Integer = 0 To .Columns.Count - 1
+
+                                                                .Columns(i).Hidden = True
+
+                                                Next
+
+                                                
+
+                                                .Columns("ColumnCaption").Header.Caption = "Field Name"
+
+                                                .Columns("ColumnCaption").Header.VisiblePosition = 0
+
+                                                .Columns("ColumnCaption").Width = 150
+
+                                                .Columns("ColumnCaption").Hidden = False
+
+                                                
+
+                                                .Columns("OperatorCode").Header.Caption = "Operator"
+
+                                                .Columns("OperatorCode").Header.VisiblePosition = 1
+
+                                                .Columns("OperatorCode").Width = 80
+
+                                                .Columns("OperatorCode").Hidden = False
+
+                                                .Columns("OperatorCode").CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.Edit
+
+                                                
+
+                                                .Columns("DefaultValue").Header.Caption = "Value"
+
+                                                .Columns("DefaultValue").Header.VisiblePosition = 2
+
+                                                .Columns("DefaultValue").Width = 80
+
+                                                .Columns("DefaultValue").Hidden = False
+
+                                                .Columns("DefaultValue").CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.Edit
+
+
+
+                                End With
+
+                End Sub
+
+                
+
+                Private Sub TRS103_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles TRS103.Shown
+
+                                If oViewColumns Is Nothing Then
+
+                                                oViewColumns = Me.GetCollection(Enumerations.NamespaceEnum.MetaDataInfo, "MetadataQueryViewColumns")
+
+                                End If
+
+                                grdCondition.Grid.DataSource = oViewColumns
+
+                                FormatConditionGrid()
+
+    End Sub
+
+                
+
+                Private Sub RefreshFilter()
+
+                                Dim strFilter As String = GetAdvanceFilter()
+
+                                If String.IsNullOrEmpty(_ExistingFilter ) Then
+
+                                                txtCondition.Text = strFilter
+
+                                ElseIf Not String.IsNullOrEmpty(strFilter) Then
+
+                                                txtCondition.Text = String.format("{0} AND {1}{2}", _ExistingFilter, System.Environment.NewLine, strFilter)
+
+                                Else 
+
+                                                txtCondition.Text = _ExistingFilter
+
+                                End If       
+
+                End Sub
+
+
+
+'This function used to encrypt/decrypt data. Any change in this function should be replicated in TRS100.xml too for same function.
+
+Private Function EncryptDecryptValue(ByVal Value As String, ByVal Encrypt As Boolean) As String
+
+                Dim _ReplaceValues As System.Collections.Hashtable
+
+        Dim strResult As String = Value
+
+                If _ReplaceValues Is Nothing Then
+
+                                _ReplaceValues = New System.Collections.Hashtable
+
+                                _ReplaceValues.Add("%", "~|~|~")
+
+                                _ReplaceValues.Add("\", "~#~#~")    
+
+                                _ReplaceValues.Add("/", "~@~@~")    
+
+                                _ReplaceValues.Add("&", "~||~||~")    
+
+                                _ReplaceValues.Add("^", "~##~##~")    
+
+                                _ReplaceValues.Add("+", "~@@~@@~")    
+
+                End If
+
+        For Each oKey As String In _ReplaceValues.Keys
+
+            If Not (String.IsNullOrEmpty(oKey) OrElse String.IsNullOrEmpty(_ReplaceValues(oKey))) Then
+
+                                If Encrypt Then
+
+                                                strResult = strResult.Replace(oKey, _ReplaceValues(oKey))
+
+                                Else
+
+                                                strResult = strResult.Replace(_ReplaceValues(oKey), oKey)
+
+                                End If
+
+            End If
+
+        Next
+
+        Return strResult
+
+End Function
+
+                
+
+]]>
+
+                </Code>
+
+</Form>
+

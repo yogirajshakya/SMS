@@ -1,0 +1,149 @@
+<center><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Redacci&oacute;n de Mensajes</p>
+<p class="item">
+La ventana de redacci&oacute;n de mensajes le permite crear el mensaje a ser
+enviado a la lista de distribuci&oacute;n.</p>
+<p class="item">
+La redacci&oacute;n del mensaje es realizada al igual que en cualquier cliente de e-mail
+est&aacute;ndar: escriba el <span class="itemelement">Asunto</span> del mensaje,
+inserte cualquier <span class="itemelement">Adjunto</span>*, necesario,
+especifique una direcci&oacute;n de e-mail de destinatario (s&oacute;lo utilizada
+para la funcionalidad de vista previa del mensaje), e ingrese el texto del mensaje.
+En caso de que el texto necesite alfabetos especiales (no latinos), usted puede
+establecer en primer lugar la <span class="itemelement">Codificaci&oacute;n</span>
+(la codificaci&oacute;n por defecto puede ser modificada en la ventana de
+<a href="sendblaster_settings_advancedsettings.htm" class="itemlink"><span class="itemelement">Configuraci&oacute;n Avanzada</span></a>).</p>
+<blockquote>
+<p class="item">
+  Puede insertar <span class="itemelement">Etiquetas</span> utilizando los
+  botones de etiquetas (#) que se encuentran al lado de los campos de
+  <span class="itemelement">Asunto</span> y
+  <span class="itemelement">Para</span>
+  para enviar cabeceras de e-mail personalizadas.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><font color="#FF0000">Advertencia:</font>
+  Lo codificaci&oacute;n del mensaje debe ser especificada <strong>antes</strong>
+  de redactar el mensaje para obtener los resultados correctos. En caso de no
+  establecer la codificaci&oacute;n antes de escribir el texto, puede resultar en texto
+  ilegible.</p>
+</blockquote>
+<p class="item">La p&aacute;gina muestra dos &aacute;reas de texto:</p>
+<ul>
+  <li class="item">
+  En el &aacute;rea principal, en la cual se encuentra ubicada la barra de herramientas,
+  usted puede insertar texto con formato para generar un mensaje estilo HTML. Tambi&eacute;n
+  puede insertar im&aacute;genes y v&iacute;nculos. Es posible observar (y editar) el c&oacute;digo
+  HTML utilizando el bot&oacute;n <span class="itemelement">Mostrar
+  c&oacute;digo</span> de la barra superior.<br>
+    &nbsp; </li>
+  <li class="item">En el &aacute;rea de <span class="itemelement">Texto plano</span>,
+  usted puede ingresar el texto del mensaje en formato de texto plano. Algunos destinatarios
+  no son capaces de visualizar mensajes en formato HTML, por ello es importante proveer un formato
+  de texto alternativo, sin im&aacute;genes o v&iacute;nculos. El texto plano puede ser generado
+  autom&aacute;ticamente a partir del texto con formato, utilizando el bot&oacute;n
+  <span class="itemelement">Texto de HTML</span>
+  al finalizar la redacci&oacute;n del mensaje.</li>
+</ul>
+<p class="item">
+Para enviar mensajes personalizados (en oposici&oacute;n a los mensajes gen&eacute;ricos),
+en la l&iacute;nea de asunto del mensaje y en el cuerpo del mensaje
+(tanto en la secci&oacute;n HTML como en la secci&oacute;n de texto plano), usted
+puede insertar <span class="itemelement">Etiquetas</span>.
+Cada etiqueta es en realidad una referencia a un campo: cuando el mensaje sea enviado, la etiqueta
+ser&aacute; reemplazada por el valor obtenido del campo especificado para el destinatario. Por ejemplo,
+si la lista incluye un campo &quot;NombreDeNegocio&quot; y un campo &quot;Direcci&oacute;n&quot;
+(<a href="sendblaster_settings_fields.htm" class="itemlink">los nombres de los campos pueden ser modificados</a>),
+al escribir en el cuerpo del mensaje un texto como el siguiente:</p>
+<blockquote>
+  <p class="valore">#NombreDeNegocio#<br>
+    #Direccion#</p>
+</blockquote>
+<p class="item">los destinatarios recibir&aacute;n un mensaje personalizado como por ejemplo:</p>
+<blockquote>
+  <p class="valore">Empresa Robles S.A.<br>
+    Barcelona, Ba</p>
+</blockquote>
+<p class="item">
+Debido a que los nombres de los campos pueden ser modificados, tambi&eacute;n es posible utilizar
+etiquetas
+  &quot;fijas&quot; (etiquetas independientes del nombre del campo)
+  que hacen referencia al n&uacute;mero del campo
+  (#1# #2#, etc. hasta #10#).
+  Los n&uacute;meros de los campos pueden encontrarse en la ventana de <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Campos</span></a>.
+  Existen tres etiquetas especiales: <span class="itemelement">#nombredelista#</span>
+  la cu&aacute;l es reemplazada por el nombre de la lista a la cu&aacute;l es enviado el mensaje; <span class="itemelement">#emailadministrativo#</span>
+  reemplazado por la direcci&oacute;n de e-mail a la cu&aacute;l las Suscripciones/Desuscripciones son enviadas
+  (esto permite a los destinatarios f&aacute;cilmente eliminar sus direcciones de la lista); y <span class="itemelement">
+  #fechadelsistema#</span> la cu&aacute;l es reemplazada por la fecha actual, con el formato especificado en la configuraci&oacute;n de Windows.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>
+    C&oacute;mo crear un v&iacute;nculo de Desuscripci&oacute;n</strong></font></p>
+      <p>SendBlaster puede administrar listas de distribuci&oacute;n descargando
+      mensajes desde una direcci&oacute;n de e-mail dedicada, diferente para cada lista (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Administrar suscripciones</span></a>).
+      Por ello, utilizando etiquetas es f&aacute;cil incluir en el c&oacute;digo HTML un v&iacute;nculo de desuscripci&oacute;n:</p>
+      <blockquote>
+        <p class="valore">&lt;a href=&quot;mailto:#nombredelista#?Subject=Remover&quot;&gt;Remover&lt;/a&gt;</p>
+      </blockquote>
+      <p>Este c&oacute;digo HTML puede ser incluido f&aacute;cilmente en el mensaje utilizando el bot&oacute;n de
+      <span class="itemelement">Insertar v&iacute;nculo de desuscripci&oacute;n</span>
+      de la barra de botones, el cual tambi&eacute;n le permitir&aacute; especificar el texto que ser&aacute; vinculado
+      a la url de desuscripci&oacute;n.</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">
+El mensaje editado puede ser almacenado en formato .eml (compatible con la mayor&iacute;a de los clientes de e-mail)
+utilizando el bot&oacute;n <span class="itemelement">Guardar</span>.</p>
+<p class="item">Para crear un nuevo mensaje, usted puede comenzar desde un mensaje vac&iacute;o
+(utilizando los botones <span class="itemelement">Nuevo</span> o <span class="itemelement">Elegir plantilla</span>)
+o, utilizando el bot&oacute;n <span class="itemelement">Abrir</span>,
+para abrir un mensaje previamente almacenado:</p>
+<ul>
+  <li class="item">Importar un archivo .eml (por ejemplo, creado con Outlook Express) con
+    <span class="itemelement">Abrir</span> / <span class="itemelement">Abrir archivo .eml</span></li>
+  <li class="item">Cargar un mensaje enviado previamente con <span class="itemelement">Abrir</span>
+    / <span class="itemelement">Abrir desde el Historial</span></li>
+  <li class="item">Importar texto formateado desde una p&aacute;gina web desde el disco local,
+  incluyendo im&aacute;genes, con <span class="itemelement">Abrir</span> / <span class="itemelement">Importar HTML desde archivo</span></li>
+  <li class="item">Importar texto plano con <span class="itemelement">Abrir</span>
+    / <span class="itemelement">Importar texto plano desde un archivo externo</span></li>
+</ul>
+<p class="item">El bot&oacute;n<span class="itemelement">Texto de HTML</span>
+le permite extraer el texto plano desde el texto HTML. Por ello es aconsejable utilizar
+este bot&oacute;n una vez finalizada la redacci&oacute;n del mensaje.</p>
+<p class="item">Puede incluir caracter&iacute;sticas de seguimiento de mensajes
+utilizando los botones de <span class="itemelement">Google Analytics</span> y/o <span class="itemelement">TrackReports</span>
+de la barra de herramientas del panel HTML; los v&iacute;nculos del mensaje ser&aacute;n modificados autom&aacute;ticamente de acuerdo
+al sistema de seguimiento seleccionado, y el c&oacute;digo necesario ser&aacute; agregado.
+El agregado de c&oacute;digo de <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a> o <a href="sendblaster_messages_trackreports.htm" class="itemlink">TrackReports</a> debe siempre ser el &uacute;ltimo paso realizado sobre el mensaje - ambos m&eacute;todos modifican el c&oacute;digo final, por ello los usuarios deber&iacute;an finalizar la redacci&oacute;n en primer lugar. Es posible realizar el seguimiento utilizando ambos sistemas; en este caso, el usuario deber&iacute;a agregar el seguimiento de Google Analytics primero.</p>
+<p class="item">
+Antes de enviar el mensaje, es posible (y sugerido) verificar la forma en que el mensaje ser&aacute; mostrado en los clientes de e-mail, utilizando el bot&oacute;n de
+<span class="itemelement">Vista Previa</span>.
+La funcionalidad de vista previa, utilizar&aacute; la informaci&oacute;n de remitente definida en la secci&oacute;n
+  <span class="itemelement">Mi informaci&oacute;n personal</span> en la pantalla de
+  <a href="sendblaster_settings_fields.htm" target="mainframe" class="itemlink">Campos</a>.
+</p>
+<p class="item">
+Es posible realizar una verificaci&oacute;n de calificaci&oacute;n de spam inmediata, mientras edita el mensaje, utilizando
+el bot&oacute;n de <span class="itemelement">Verificar Spam</span>,
+el puntaje de spam es calculado en base al popular motor de <b>SpamAssassin</b>,
+uno de los filtros antispam m&aacute;s utilizado en los servidores de e-mail. Utilizando esta funcionalidad avanzada de SendBlaster,
+usted evitar&aacute; que su mensaje sea considerado como spam por error.</p>
+
+<hr size="1" noshade>
+<p class="item">*Las funcionalidades de adjuntos, s&oacute;lo se encuentran disponibles en la edici&oacute;n Pro.</p>
+</body>
+</html>
+</center>

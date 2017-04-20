@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Skicka meddelanden</p>
+<p class="item">För att skicka meddelanden måste du först ange mottagare 
+	och avsändare.</p>
+<p class="item">Adresslistorna (som skapas under <a class="itemelement" href="sendblaster_lists_managing.htm">Hantera 
+  listor</a>) visas i fältet <span class="itemelement">Välj adresslista</span>.
+	Välj den lista du vill använda för utskicket.
+	Var och en kommer att få ett personligt mail.</p>
+<p class="item">   Avsändaren specificeras i fälten för&nbsp; <span class="itemelement">Avsändarens 
+epost-adress</span> och <span class="itemelement"> 
+  Avsändarnamn </span>            
+    . Du kan fylla i dessa fält eller välja en adress och 
+  ett namn från dropprutorna, vilken visar de sista 10 namnen och adresserna som 
+  du har använt i dina utskick (listorna är timma om inga 
+  utskick har gjorts). Om en prenumerations-/uppsägningsadress angavs till den valda listan, kommer 
+  den automatiskt att visas som avsändaradressen. Men detta är bara standard, adressen 
+  och/eller namnet kan ändras manuellt.<br>
+   Du kan också specificera en <span class="itemelement">Svara till-adress</span>        : detta är adressen som svar kommer 
+  att skickas till. Om den är tom, kommer svar att skickas till avsändaradressen (standard 
+  för personliga epost-meddelanden).</p>
+<p class="item">För att skicka ett meddelande, klicka på knappen <span class="itemelement">Skicka</span>
+         . Om det är ditt
+  första utskick, eller om anslutningsinställningarna har ändrats, måste du först ställa in&nbsp; <span class="itemelement">Sändinställningarna</span>, annars kommer inte meddelandet att skickas.</p>
+<p class="item">
+Som ett alternativ till att skicka meddelande så är det möjligt att&nbsp; <b>schemalägga</b>  utskicket och låta SendBlaster skicka
+det senare, på en given dag och tid, eller till och med <b>"parkera"</b>      utskicket
+för att köras senare. För att schemalägga ett utskick, klicka på knappen&nbsp; <span class="itemelement">Skicka senare...</span>
+.
+</p>
+<p class="item">Två <span class="itemelement"> sändlägen</span>  finns:<span class="itemelement">
+   Använd SMTP-server</span> och <span class="itemelement"> Direktsänd.</span></p>
+<ul>
+<p>
+<li class="item">Genom att välja <span class="itemelement">Använd SMTP-server</span>
+           , kommer utskicken att fungera som
+    i en vanlig epostklient, vilket betyder att meddelandet levereras till din ISP's SMTP-server. Därför
+    är det viktigt att specificera namnet på <span class="itemelement">SMTP-servern</span>
+    ,&nbsp; <span class="itemelement">porten</span>             där
+    SMTP-tjänsten erbjuds (standard är port 25), om autensiering krävs välj select <span class="itemelement">Autensiering
+    krävs </span>och&nbsp;fyll i<span class="itemelement">&nbsp;Användarnamn</span> och
+    <span class="itemelement">Lösenord</span>      
+      . Parametrarna är de som används i din epostklient, därför behöver
+    du bara "kopiera" dem från ett fungerande epost-konto (för att försökra dig om att
+    SMTP-servern kan nås, klicka <span class="itemelement"> Anslutningstest</span> 
+    -knappen).&nbsp; <span class="itemelement">SSL</span>    
+       -rutan aktiverar SSL, vilket kan krävas av vissa SMTP-servrar (t.ex. Gmail's
+    SMTP-server).
+<blockquote>
+  <p class="item"><font color="#ff0000">Tips:</font>
+    <span class="itemelement">Profil</span>      
+     -knappen tillåter hantering av
+    flera SMTP-inställningar. Kontoinformation kan lagras för flera profiler, så alla
+    SMTP-inställningar sparas/laddas med ett par klick. Funktionen är speciellt användbar när man
+    skickar epost åt någon annan.
+    <br><br>
+</p>
+</blockquote>
+    Genom att aktivera <span class="itemelement">Försök igen&nbsp;med direktsändning vid
+    fel</span>          &nbsp;kommer, om meddelandet
+    inte accepteras av SMTP-servern, mjukvaran att försöka leverera meddelandet direkt till mottagarens
+    server genom att använda <span class="itemelement">Direktsändnings</span>-läget. 
+  <p></p>
+<p>
+</p>
+  <li class="item">Genom att välja <span class="itemelement">Direktsändning</span> 
+              
+      kommer mjukvaran att leta efter varje mottagares epostserver och
+    automatiskt ansluta till den, och därmed "skippa" SMTP-servern som inte kommer att behövas i sädningsinställningarna.
+    Kom ihåg att vissa epostdomäner (t.ex. hotmail) inte tillåter direktsändning: meddelandet avvisas om
+    det kom från en skrivbordsapplikation till skillnad från en publik SMTP-server.<br>
+    Genom att aktivera <span class="itemelement"> Försök igen med SMTP vid fel</span>
+             kommer, om meddelandet inte
+    accepteras av mottagarens SMTP-server, mjukvaran att försöka leverera meddelandet till SMTP-servern genom att använda
+    <span class="itemelement">Använd SMTP-server</span>-inställningarna.<br>&nbsp; 
+  <p></p>
+     </li>
+</ul>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#ffff99" class="item">
+<p><font color="#009900"></font><strong><font color="#009900">  
+         Direktsändning eller SMTP-server?</font></strong></p>
+      <p>           Valet beror,
+        först av allt, på om man har en bra SMTP-server. Om din ISP's SMTP-server
+        kan hantera många meddelanden snabbt, eller till och med skicka
+        flera meddelanden samtidigt, så är SMTP-servern snabbbare och mer pålitlig eftersom in
+        SMTP-server är "närmare" din dator än en mottagares epost-server.</p>
+      <p>           
+                   
+             Vissa leverantörer har infört restriktioner í antalet meddelandet som
+        kan skickas inom en viss tid och antalet meddelanden som skickas 
+        samtidigt (till exempel så kanske en SMTP-server inte accepterar mer än ett meddelande per 
+        5 sekunder eller 2 meddelanden åt gången) för att användarna inte ska 
+        kunna använda dem för spam. Alla meddelanden som överskrider den här gränsen kommer att avvisas
+        med ett fel. Detta betyder inte att servern eller mjukvaran inte fungerar, 
+        utan istället&nbsp;kan det vara nödvändigt att ställa in tidsinställningarna i <span class="itemelement">Advancerade 
+        inställningar</span> .</p>
+      <p>             
+        I så fall kanske det är snabbare och mer bekvämt att använda direktsändning.
+        Direktsändning kräver lite mer tid för att leverera varje meddelande (eftersom det måste göra en 
+        förfrågan till DNS-servern och epost-servern kan vara "långt" från användarens PC), men
+        tiden kompenseras med möjligheterna att skicka flera meddelanden samtidigt utan
+        att behöva lägga till extra pauser mellan meddelanden.</p>
+      <p>             
+        Direktsändning är också användbart när en sändning måste utföras med en
+        anslutning utan en SMTP-servern (t.ex. när du använder en bärbar dator "borta",
+        alltså inte hemma eller på jobbet - vanligt bland publika trådlösa nätverk).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item"> <span class="itemelement">Advancerade inställningar</span>  
+            -sektionen
+  låter dig finjustera sändingstiming och andra specialinställningar.
+  Detta är användbart när man gör ett utskick med den maximala hastigheten
+  som SMTP-servern tillåter. Här förklaras varje alternativ:</p>
+  <p class="itemelement">
+   Timingtabb
+  </p>
+<ul class="item">
+  <li><span class="itemelement">Paus mellan meddelanden</span>  : antalet sekunder mellan varje sänt 
+  meddelande. 
+  <li><span class="itemelement">Paus mellan block</span>: antalet meddelanden mellan varje block av meddelandenthe number of messages elapsing between each block of 
+  messages. 
+  <li><span class="itemelement">Meddelanden per block</span>   : antalet meddelanden i varje block 
+  <li><span class="itemelement">Timeout</span>      : antalet 
+  sekunder innan meddelandets leverans avbryts 
+  <li><span class="itemelement">Anslutningar</span>   : antalet samtidiga 
+  anslutningar, alltså antalet meddelanden som kan skickas samtidigt*. 
+  <li><span class="itemelement">  Ytterligare försök vid fel</span>         
+  : Om SMTP-servern eller mottagarens server (vid direktsändning) inte accepterar meddelanden, kan mjukvaran 
+  vänta ett antal sekunder och försöka skicka om meddelandet en eller flera gånger. 
+  <li><span class="itemelement">Paus mellan försök</span>  : längden på 
+    pausen innan ytterligare försök att skicka ett oaccepterad meddelande.</li>
+</ul>
+<p class="item">       Den rätta konfigurationen kan
+  inte sättas innan du har sett antalet meddelanden levereras. För att förenkla
+  inställningarna,&nbsp;finns <span class="itemelement">Föreslagna inställningar</span>  . De
+  kanske inte är de optimala för din anslutning men kan ses som en bra
+  start för att få den bästa konfigurationen.</p>
+<p class="item"><font color="#ff0000"><strong>Varning:</strong><font color="#000000"> Adresslistor 
+kan innehålla felaktiga mailadresser eller någon mailserver kan tillfälligt vara 
+ur funktion. Detta kan anses normalt om det gäller stora mängder adresser, och 
+man får räkna med att alla mail inte når fram, och att en del felmeddelanden 
+returneras. I sådana fall är det möjligt att försöka slutföra sändningen senare 
+genom att använda funktionern under </font><a href="sendblaster_messages_history.htm" >historik</a><font 
+color=#000000>.</font></font>
+  </p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#ffff99" class="item"> <p><font color="#009900"><strong> 
+        Hur hittar jag de rätta Avancerade inställningarna?</strong></font></p>
+      <p>För att optimera de avancerade inställningarna 
+      måste man testa med ett mindre utskick (normalt räcker det med 10 
+      adresser), och kontrollera hur många som verkligen levereras. Den 
+      informationen visas när utskicket avslutats och då kan man också 
+      kontrollera loggarna. Om du använder en tolerant SMTP-server kommer det 
+      antagligen inte att vara några problem oavsett inställningarna, men i 
+      vissa fall kan det bli nödvändigt att begränsa hastigheten. </p>
+      <p>Här finns några enkla regler som bör följas:</p>
+      <ul>
+        <li>       
+        En tolreant SMTP-server tillåter snabba sändningar utan pauser (eller begränsade 
+        pauser). SMTP-servrar som använder flera antispamfilter&nbsp;ökar pauserna och sänker antalet 
+        samtidiga anslutningar. 
+        <li>       
+                  
+                  Normalt sett tillåter 
+        SMTP-servrar inte många meddelanden samtidigt och&nbsp;därför måste kanske Anslutningar-fältet var 
+        lågt, kanske till och med 1 (inga samtidiga anslutningar). Om SMTP-servern 
+        är utrustad med antispammekanismer kanske man måste öka Paus mellan meddelanden. och sätta långa pauser 
+        mellan block. Dessutom bör varje block inte innehålla mer än ett 
+        par dussin meddelanden. 
+        <li>         
+          Vid direktsändning, med en lista som 
+        innehåller adresser från flera domäner, kommer meddelandena att levereras till flera olika servrar: 
+        det är därför möjligt att sätta ett högt antal samtidiga anslutningar* och 
+        begränsade (eller ingen alls) pauser mellan meddelanden och block. 
+        <li>         Att öka antalet försök 
+          vid fel kan ökning av lyckosamma leveranser öka men sakta ner 
+          sändningen, speciellt om antalet samtidiga anslutningar är väldigt lågt. Det&nbsp;kan vara 
+          bättre att avsluta utskicket senare via&nbsp; <a href="sendblaster_messages_history.htm">historik</a> 
+                     -fönstret.</li>
+      </ul></td>
+    <td width="7%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+  <p class="itemelement">
+  Extra Tab
+  </p>
+<ul class="item">
+  <li><span class="itemelement"> Leveransnotifikation</span>  : ger dig en bekräftelse varje gång ett meddelande 
+  har levererats, eller när läsaren öppnar det. 
+  <li><span class="itemelement">Hög prioritet</span>    : notifierar läsaren om att meddelandet ska läsas 
+  så fort som möjligt. 
+  <li><span class="itemelement">Teckenkodning</span>: välj mellan&nbsp; <span class="itemelement">quoted-printable</span>&nbsp;och <span class="itemelement">base64</span>            
+     . 
+  <li><span class="itemelement"> Xmailer-text</span>: genom att använda <span class="itemelement">Standard</span>-inställningarna i
+  headern så kommer SendBlaster's namn och version att inkluderas. Annars kan du
+  bara skriva in text för att simulera utskick från en annan epostklient eller
+  välja <span class="itemelement">Ingen</span>      
+      . 
+  <li><span class="itemelement">Domän</span>: låter dig anpassa maskinnamnet som används av mjukvaror som ansluter genom en&nbsp;SMTP-server eller mottagarens
+  epostserver. Detta kan vara användbart när man använder&nbsp; <span class="itemelement">
+  Direktsändning</span>: vissa servrar verifierar domännamnet innan man accepterar meddelanden; de
+  kräver att domännamnet stämmer överens med det publika <em>hostnamnet</em> eller på&nbsp;nätverket,
+  och innan man accepterar meddelanden utför de en&nbsp; <em>ping</em>  
+         &nbsp;för att verifiera att domännamnet stämmer
+  överens med IP-adressen på maskinens förfrågan. Om detta är fallet, kommer&nbsp; <span class="itemelement">
+  Internetadress </span>att sänka antalet avvisade meddelanden. Vi föreslår att du använder standardinställningar,&nbsp;eller genom
+  att använda <span class="itemelement"> Internetadress</span>  vid direktsändning
+  och <span class="itemelement">PC's lokala namn</span>    när man
+  använder SMTP&nbsp;(SMTP-servrar utför vanligtvis inte någon check på domännamn).<br>
+     SendBlaster kollar maskinens publika adress varje gång den startar;
+  om internetanslutningen inte är tillgänglig när den startas kommer publika adressen att
+  lämnas tom och PC's lokala namn kommer att användas istället. Om en fixerad publik IP finns,
+  kan erfarna användare välja <span class="itemelement">Användardefinierad...</span>
+    och ange ett fixerat värde (notera att&nbsp; <em>hostnamn</em>    krävs - inte en IP-adress) - men 
+  kom ihåg att en felinställning kan göra att sändningar misslyckas. 
+  <li><span class="itemelement">Sätt DNS-server manuellt</span>     : SendBlaster kommer 
+  att använda den valda standardinställningen, men det går (ibland krävs) också att sätta 
+  en annan DNS, genom att aktivera alternativet och skriva in den rätta IP-adressen. 
+  <li><span class="itemelement"> Ignorera Socketfel</span>                        : om det är några problem med anslutningen till Internet, endera pga hårdvara eller mjukvara, kommer SendBlaster att pausa utskicket, informera användaren och vänta på användarens instruktioner - i de flesta fall så krävs en&nbsp;handling (t.ex. så måste du återställa nätverkshårdvaran). Om du inte vill att utskicket ska pausas och föredrar&nbsp;att SendBlaster ignoerar felen, kryssa i den här alternativet (men kom ihåg att om det inte&nbsp;finns någon internetanslutning kan utskicket misslyckas). Detta är användbart när din internetanslutning går ner av någon anledning (t.ex.&nbsp;wifi-problem) men&nbsp;den återställs automatiskt inom kort tid. </li>
+</ul>
+  <p class="itemelement">
+   Ytterligare Headerstabb
+  </p>
+  <blockquote>
+    <p class="item">I vissa fall kan advancerade användare behöva&nbsp;lägga till anpassade headers till meddelandet, för att utföra speciella&nbsp;aktiviteter (t.ex. tracking, signing, etc). SendBlaster tillåter upp till tio headers&nbsp;i ett meddelande. </p>
+</blockquote>
+  <hr size="1" noshade>
+<p class="item">     *I gratisversonen är det maximala antalet anslutningar 
+  2, även om fler ställs in.</p>
+</body>
+</html>

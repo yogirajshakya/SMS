@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+
+<title>SendBlaster</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+
+</head>
+
+
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+
+<p class="title">Nutzerspezifische Formate f&uuml;r unzustellbare E-Mails </p>
+
+<p class="item">Formate f&uuml;r unzustellbare Emails wurden urspr&uuml;nglich entworfen, um von Programmen und nicht um von Menschen gelesen zu werden. Aus diesem Grund gibt es keine standardisierten Formate oder Regeln. SendBlaster ist aufgrund der integrierten Datenbank in der Lage die meisten Formate f&uuml;r unzustellbare Emails zu bearbeiten. Sollten Sie trotzdem auf Formate sto&szlig;en, welche von der Software nicht erkannt werden, k&ouml;nnen Sie manuell ein neues nutzerspezifisches Format zu SendBlaster hinzuf&uuml;gen.</p>
+
+<p class="item">Ein kundenspezifisches Format basiert auf  den vom Anwender festgelegten Regeln; diese m&uuml;ssen in der Reihenfolge den Auswahlkriterien entsprechen, welche die Nachricht als R&uuml;ckl&auml;ufer einstufen.
+
+(Mit anderen Worten: der logische Operator der Regeln ist UND) </p>
+
+<p class="item">Wenn Sie ein neues Format hinzuf&uuml;gen m&ouml;chten, m&uuml;ssen Sie zuerst einige Muster f&uuml;r Themen oder Titel festlegen, welche eine Nachricht unverwechselbar als Unzustellbar definieren (als HARTE Unzustellbarkeit, falls sie das Kontrollk&auml;stchen ausw&auml;hlen, oder als WEICHE Unzustellbarkeit, falls es ungepr&uuml;ft bleiben soll). Die Dropdown-Liste der Titel dient nur als Beispiel. Sie k&ouml;nnen spezifische Titel manuell hinzuf&uuml;gen, indem Sie den Namen des Titels in das HEADER-Feld eintragen und das gew&uuml;nschte Muster im INHALT Feld angeben.</p>
+
+<p class="item">Ein <span class="itemelement">Muster</span> enth&auml;lt normalerweise einige Platzhalter (Ein &quot;*&quot; Symbol steht f&uuml;r &quot;alle Zeichen&quot;) wie zum Beispiel: Wenn Sie &quot;*delivery*notification*&quot; als Betreffsmuster eingeben, wird jede Nachricht die das Wort &quot;delivery&quot; und &quot;notification&quot; im Betreff enth&auml;lt - wie beispielsweise &quot;delivery to xxx@yyy.com notification failure&quot; - als ein bounce-back betrachtet.<br>
+
+  Weitere vom Anwender erfasste Regeln werden ebenfalls unterst&uuml;tzt und bei der Analyse der Nachrichten nach bounce-backs mit einbezogen. Falls Sie &quot;delivery notification&quot; ohne Platzhalter verwenden werden ausschliesslich Nachrichten mit der exakten &Uuml;bereinstimmung des Betreffs &quot;delivery notification&quot; als Bounce-Back verarbeitet. Eine Email mit dem Betreff &quot;delivery to xxx@yyy.com notification failure&quot; w&uuml;rde dann nicht als &uuml;bereinstimmend gewertet werden.</p>
+
+<p class="item">Sie k&ouml;nnen au&szlig;erdem bestimmte W&ouml;rter (getrennt mit dem Komma) festlegen, welche in der Nachricht vorhanden sein m&uuml;ssen, um diese Nachricht als unzustellbar einzuordnen. So enthalten zum Beispiel die meisten Unzustellbarkeitsberichte das Wort &quot;Grund&quot; (gefolgt von einem Text, welcher den Grund des Nichtzustellens der Nachricht erl&auml;utert). Please note that the list of words is not a pattern (you cannot use wildcards) and the logical operator of the list is OR. </p>
+
+<p class="item">Falls auf eine Nachricht die von Ihnen festgelegten Regeln zutreffen, wird diese als Bounce-back behandelt und alle Email-Adressen, welche in dieser Nachricht angegeben sind werden abgemeldet, falls diese ebenfalls in der heruntergeladenen Bounce-back Liste enthalten sind. Aus diesem Grund m&ouml;chten Sie sicherlich, dass alle typischen Postmasteradressen nach einem bestimmten Muster ausgeschlossen werden.</p>
+
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+
+  <tr>
+
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">Beispiel</font></strong><br>
+    </p>
+
+        <p class="item">Stellen Sie sich vor, Sie m&ouml;chten eine Nachricht  als Bounce-back behandeln, wenn diese: </p>
+
+        <p class="item">a) das Wort &quot;undeliverable&quot; und &quot;message&quot; in der Betreffzeile beinhaltet;
+          <br>
+
+          b) von einer &quot;postmaster@...&quot; Adresse kommen; <br>
+
+          c) deren Betreffzeilentyp &quot;delivery notification&quot; oder &quot;delivery failure notification&quot; lautet<br>
+
+      d)  deren Inhalt die Worte &quot;reason&quot; oder &quot;error&quot; im Haupttext beinhaltet </p>
+
+        <p class="item">und Sie nat&uuml;rlich den Absender  (&quot;postmaster@...&quot;) nicht abmelden m&ouml;chten, da die eigentliche nicht zu erreichende Adresse im Nachrichtentext steht.</p>
+
+        <p class="item">Hier sehen Sie, wie dieses Format aussieht:        </p>
+
+        <table border="0" cellspacing="0" cellpadding="2">
+
+          <tr>
+
+            <td colspan="2" class="item"><strong>Harte R&uuml;ckl&auml;ufer:</strong></td>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item">(&uuml;berpr&uuml;ft)</td>
+          </tr>
+
+          <tr>
+
+            <td colspan="2" class="item"><strong>Musterbetreff:</strong></td>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+
+          <tr>
+
+            <td width="0" class="item"><strong>1.</strong></td>
+
+            <td class="item"><strong>Header-Variable:</strong></td>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item">From</td>
+          </tr>
+
+          <tr>
+
+            <td width="0" class="item">&nbsp;</td>
+
+            <td class="item"><strong>Inhalt:</strong></td>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item">*postmaster*</td>
+          </tr>
+
+          <tr>
+
+            <td class="item"><strong>2.</strong></td>
+
+            <td class="item"><strong>Header-Variable:</strong></td>
+            <td class="item">&nbsp;</td>
+
+            <td class="item">Content-Type</td>
+          </tr>
+
+          <tr>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item"><strong>Inhalt:</strong></td>
+            <td class="item">&nbsp;</td>
+
+            <td class="item">*delivery*notification*</td>
+          </tr>
+
+          <tr>
+
+            <td colspan="2" class="item"><strong>Nachrichteninhalt :</strong></td>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item">reason, error </td>
+          </tr>
+
+          <tr>
+
+            <td colspan="2" class="item"><strong>Ausgeschlossen :</strong></td>
+
+            <td class="item">&nbsp;</td>
+
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+
+    <p>Und hier noch ein einfachereres Format, welches ausgef&uuml;hrt werden soll, wenn das Wort &quot;undeliverable&quot; in deren Betreffzeile vorhanden ist (und postmaster@... und webmaster@... ausgeschlossen werden sollen: </p>
+
+    <table border="0" cellspacing="0" cellpadding="2">
+
+      <tr>
+        <td colspan="2" class="item"><strong>Harte R&uuml;ckl&auml;ufer:</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item">(&uuml;berpr&uuml;ft)</td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="item"><strong>Musterbetreff:</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item">*undeliverable*</td>
+      </tr>
+
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Header-Variable:</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Inhalt:</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Header-Variable:</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Inhalt:</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="item"><strong>Nachrichteninhalt :</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" class="item"><strong>Ausgeschlossen :</strong></td>
+
+        <td class="item">&nbsp;</td>
+
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+
+    <br>
+    <br></td>
+
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+
+  </tr>
+
+</table>
+
+</body>
+
+</html>

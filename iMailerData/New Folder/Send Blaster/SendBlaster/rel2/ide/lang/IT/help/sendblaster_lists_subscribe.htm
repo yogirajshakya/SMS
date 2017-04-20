@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Gestione iscrizioni</p>
+<p class="item">SendBlaster pu&ograve; gestire in modo automatico le iscrizioni 
+  alle liste di distribuzione (e le relative cancellazioni). Ad ogni lista si 
+  pu&ograve; infatti associare un indirizzo e-mail: quando a questo indirizzo 
+  viene inviato un messaggio con oggetto &quot;Subscribe&quot; il mittente viene 
+  iscritto alla lista; se invece l'oggetto &egrave; &quot;Unsubscribe&quot; il 
+  mittente viene cancellato (se era precedentemente iscritto). SendBlaster scarica 
+  i nuovi messaggi dall'account POP3, ne verifica l'oggetto ed aggiorna conseguentemente 
+  la lista.</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Nota: </font>L'oggetto predefinito  (&quot;Subscribe&quot; per le iscrizioni, e &quot;Unsubscribe&quot;
+  per le cancellazioni) pu&ograve; essere personalizzato nel pannello <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Impostazioni avanzate</a>.</p>
+  <p class="item"><font color="#FF0000">Importante:</font> l'indirizzo per la gestione 
+    deve consentire lo scaricamento dei messaggi tramite il protocollo POP3 (lo 
+    stesso usato dai &quot;normali&quot; client di posta elettronica); non &egrave; 
+    possibile utilizzare indirizzi che possano essere gestiti unicamente via web 
+    (ad esempio servizi come Hotmail).</p>
+</blockquote>
+<p class="item">Normalmente si user&agrave; un diverso indirizzo di gestione per 
+  ogni lista; tuttavia &egrave; possibile assegnare uno stesso indirizzo e-mail 
+  a pi&ugrave; liste. In questo caso eseguendo l'aggiornamento di una lista saranno 
+  aggiornate anche tutte le altre liste che usano lo stesso indirizzo per la ricezione 
+  delle iscrizioni. Se, ad esempio, fossero definite due liste chiamate &quot;Lista 
+  1&quot; e &quot;Lista 2&quot;, e ad entrambe fosse assegnato lo stesso indirizzo 
+  di gestione, scaricando i messaggi per aggiornare la &quot;Lista 1&quot; verrebbe 
+  contemporaneamente aggiornata anche la &quot;Lista 2&quot;.</p>
+<p class="item">L'indirizzo di gestione di ogni lista viene impostato inserendo 
+  i corretti parametri per l'accesso all'account POP3, gli stessi utilizzati nel 
+  proprio client di posta elettronica: oltre all'indirizzo (<span class="itemelement">E-mail</span>) 
+  &egrave; necessario indicare il server di ricezione (<span class="itemelement">Server 
+  POP3</span>), il nome utente (<span class="itemelement">Username</span>) e la 
+  <span class="itemelement">Password</span>. La casella <span class="itemelement">SSL</span> 
+  abilita la comunicazione in modalit&agrave; SSL, che pu&ograve; essere richiesta 
+  da alcuni server (un esempio tipico &egrave; il servizio di GMail). Nel campo 
+  <span class="itemelement">Timeout</span> si imposter&agrave; inoltre il numero 
+  di secondi di inattivit&agrave; trascorsi i quali la connessione viene interrotta. 
+  Per verificare di aver inserito i parametri corretti &egrave; sufficiente eseguire 
+  una prova di connessione premendo su <span class="itemelement">Test connessione</span> 
+  (non verr&agrave; scaricato alcun messaggio).</p>
+<p class="item">In alcune circostanze, di difficile prevedibilit&agrave;, il server di posta potrebbe richiedere che il download dei messaggi sia rallentato; se si incontrano errori e difficolt&agrave; nel download, si pu&ograve; provare ad abilitare la casella <span class="itemelement">Pi&ugrave; lento </span>  (non c'&egrave; una regola sempre valida, il consiglio &egrave; provare entrambi i metodi e verificare quale funziona meglio). </p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Suggerimento:</font> il pulsante <span class="itemelement">Profili</span> permette di gestire pi&ugrave; configurazioni POP3. I dati degli account POP3 possono essere salvati in pi&ugrave; profili e poi ricaricati con pochissimi click. Questa funzionalit&agrave; &egrave; utile in particolare quando si inviano mailing per conto terzi; o semplicemente per salvare velocemente un profilo da utilizzare anche per un'altra lista.</p>
+</blockquote>
+<p class="item">Abilitando la casella <span class="itemelement">Conserva sul server 
+  una copia dei messaggi</span>, SendBlaster scaricher&agrave; i nuovi messaggi 
+  senza cancellarli dal server; i messaggi potranno quindi essere letti successivamente 
+  anche con un altro client di posta. I messaggi gi&agrave; scaricati saranno 
+  ignorati.</p>
+<p class="item">Abilitando <span class="itemelement">Elimina solo i nuovi messaggi di iscrizione / cancellazione </span> SendBlaster canceller&agrave; dal server di posta solo i messaggi che sono stati riconosciuti come iscrizioni o cancellazioni; questo &egrave; utile quando si usa l'indirizzo di gestione anche per ricevere e-mail &quot;normali&quot;, come ad esempio le risposte dei destinatari.</p>
+<p class="item">L'opzione <span class="itemelement">Aggiorna tutti i campi</span> 
+  &egrave; particolarmente potente: selezionandola, sar&agrave; esaminato non 
+  solo l'oggetto dei messaggi, ma l'intero contenuto; se il corpo del messaggio 
+  contiene righe nel formato <em>nomecampo:valore</em>, saranno aggiornati tutti 
+  i corrispondenti campi del record e non solo l'indirizzo e-mail (<a href="#tutticampi">vedi 
+  box sotto</a>). Il rovescio della medaglia &egrave; che il download sar&agrave; molto pi&ugrave; lento, dato che SendBlaster scarica l'intero corpo dei messaggi e non solo gli header, per cui questa opzione deve essere abilitata solo quando &egrave; necessaria, cio&egrave; quando i messaggi di iscrizione (ad esempio generati da un form sul sito) contengono effettivamente altri campi oltre all'indirizzo e-mail. </p>
+<p class="item">Premendo il pulsante <span class="itemelement">Scarica</span> 
+  verranno ricevuti i nuovi messaggi e sar&agrave; aggiornata la lista selezionata 
+  (e le eventuali altre liste che utilizzino lo stesso indirizzo).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Quale 
+        indirizzo utilizzare?</strong></font></p>
+      <p>E' consigliabile utilizzare per ogni lista un indirizzo dedicato unicamente 
+        alle iscrizioni e cancellazioni; cio&egrave; un indirizzo che non venga 
+        utilizzato per l'invio e ricezione di posta &quot;normale&quot;. Questo 
+        minimizzer&agrave; la possibilit&agrave; di ricevere spam (che sar&agrave; 
+        semplicemente ignorato) e render&agrave; pi&ugrave; facile la gestione. 
+        In una configurazione di questo tipo non &egrave; necessario abilitare 
+        la casella <span class="itemelement">Conserva sul server una copia dei 
+        messaggi</span>, dato che la posta non dovr&agrave; essere letta da altri 
+        programmi; in questo modo lo scaricamento dei nuovi messaggi sar&agrave; 
+        pi&ugrave; veloce e, soprattutto, si risparmier&agrave; spazio sul proprio 
+        account di posta: alcuni servizi hanno infatti un limite sulle dimensioni 
+        totali dei messaggi che possono essere conservati sul server, superato 
+        il quale l'account non riceve pi&ugrave; messaggi.</p>
+      <p>E' comunque possibile, anche se non consigliabile, utilizzare un indirizzo 
+        &quot;normale&quot;, usato cio&egrave; anche su un altro client di posta 
+        per inviare e ricevere messaggi. In questo caso &egrave; indispensabile 
+        abilitare la casella <span class="itemelement">Conserva sul server una 
+        copia dei messaggi</span> (altrimenti i messaggi una volta scaricati saranno 
+        cancellati); ancora pi&ugrave; importante, &egrave; necessario che anche 
+        il normale client di posta elettronica sia impostato allo stesso modo, 
+        per permettere a SendBlaster di leggere i messaggi (in Outlook Express 
+        dopo aver selezionato un account scegliere <em>Propriet&agrave; / Impostazioni 
+        avanzate / Conserva una copia dei messaggi sul server</em>).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Nota:</font> se il download dei nuovi 
+    messaggi appare particolarmente lento, questo pu&ograve; significare che sul 
+    server di posta si sono accumulati molti messaggi: deselezionare <span class="itemelement">Conserva 
+    sul server una copia dei messaggi</span> e premere <span class="itemelement">Scarica</span> 
+    (oppure eseguire le operazioni equivalenti sul proprio &quot;normale&quot; 
+    client di posta); i messaggi, una volta scaricati, verranno cancellati ed 
+    i successivi download saranno pi&ugrave; veloci.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="tutticampi"></a>Come 
+        funziona &quot;Aggiorna tutti i campi&quot;</strong></font></p>
+      <p>Normalmente SendBlaster scarica ed interpreta solo l'oggetto dei messaggi; 
+        attivando questa opzione SendBlaster scaricher&agrave; ed interpreter&agrave; 
+        il corpo intero dei messaggi, alla ricerca di righe nella forma <em>nomecampo:valore, 
+        </em>ed aggiornando cos&igrave; tutti i campi.</p>
+      <p>Supponiamo di aver definito due campi chiamati &quot;Nome&quot; e &quot;Cognome&quot;; 
+        se viene ricevuto un messaggio da&quot;aaa@aaa.com&quot; con oggetto &quot;Subscribe&quot; 
+        ed il testo che segue (notare che ogni riga contiene un diverso campo):</p>
+      <p>Nome: Mario<br>
+        Cognome: Rossi</p>
+      <p>un nuovo contatto &quot;aaa@aaa.com&quot; sar&agrave; aggiunto alla lista, 
+        con&quot;Mario&quot; come &quot;Nome&quot; e &quot;Rossi&quot; come &quot;Cognome&quot;.</p>
+      <p>E' possibile utilizzare anche altri formati, servendosi degli stessi 
+        marcatori usati nella <a href="sendblaster_messages_compose.htm">composizione 
+        dei messaggi</a>: <em>#marcatore#:valore</em> e <em>#numerocampo#: valore</em> 
+        come negli esempi che seguono:</p>
+      <p>#nome#: Mario<br>
+        #cognome#: Rossi</p>
+      <p>e</p>
+      <p>#2#: Mario<br>
+        #3# : Rossi</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

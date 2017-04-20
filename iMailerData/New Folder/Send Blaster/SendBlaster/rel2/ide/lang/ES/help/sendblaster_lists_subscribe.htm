@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Administrar suscripciones</p>
+<p class="item">SendBlaster
+puede administrar suscripciones (y desuscripciones) a listas de distribuci&oacute;n
+en forma autom&aacute;tica. Cada lista puede ser asociada con una direcci&oacute;n
+de e-mail: cuando un mensaje con el asunto &quot;Suscribir&quot;
+en el campo del asunto es enviado a esta direcci&oacute;n de e-mail, el remitente
+es agregado a la lista. Si el asunto es &quot;Remover&quot;,
+el remitente ser&aacute; eliminado de la lista (en caso de encontrarse previamente suscripto).
+SendBlaster descarga los nuevos mensajes desde una cuenta POP3, verifica el asunto del mensaje
+y actualiza la lista de distribuci&oacute;n relacionada.</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Nota:</font>
+  Las l&iacute;neas de asunto por defecto (&quot;Suscribir&quot; para suscripciones, y &quot;Remover&quot;
+    para las cancelaciones) pueden ser cambiadas desde la ventana de
+    <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Configuraci&oacute;n Avanzada</a>.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><font color="#FF0000">Advertencia:</font>
+  Las direcciones seleccionadas para administrar suscripciones deben permitir la descarga de mensajes
+  mediante POP3 (el mismo protocolo de e-mail utilizado por los clientes de e-mail habituales). No es posible
+  utilizar direcciones que s&oacute;lo permitan ser administradas mediante web (por ejemplo los servicios de Hotmail).</p>
+</blockquote>
+<p class="item">
+Normalmente, se asigna una direcci&oacute;n de e-mail dedicada a cada lista. Sin embargo, es posible
+asignar la misma direcci&oacute;n de e-mail a m&aacute;s de una lista. En este caso, cuando una lista sea actualizada,
+todas las listas restantes que utilicen la misma direcci&oacute;n de Suscripci&oacute;n/Cancelaci&oacute;n tambi&eacute;n
+ser&aacute;n actualizadas. Por ejemplo, si usted crea 2 listas denominadas &quot;Lista
+  1&quot; y &quot;Lista 2&quot;, y ambas se encuentran vinculadas a la misma direcci&oacute;n de e-mail administrativa, al descargar
+  los mensajes para actualizar la &quot;Lista 1&quot;, la &quot;Lista
+  2&quot; tambi&eacute;n ser&aacute; actualizada.</p>
+<p class="item">
+La direcci&oacute;n administrativa de cada lista es configurada ingresando los par&aacute;metros correctos
+para acceder a la cuenta POP3, al igual que en un software cliente de e-mail:
+adem&aacute;s de la direcci&oacute;n (<span class="itemelement">E-mail</span>),
+usted debe especificar el servidor de recepci&oacute;n (<span class="itemelement">Servidor POP3</span>),
+el n&uacute;mero de <span class="itemelement">Puerto</span>
+(si no especifica ning&uacute;n n&uacute;mero de puerto, el puerto por defecto 110 ser&aacute; utilizado), el <span class="itemelement">Usuario</span>
+  y la <span class="itemelement">Contrase&ntilde;a</span>. La casilla <span class="itemelement">SSL</span>
+activa la comunicaci&oacute;n SSL, la cual puede ser requerida por los servidores pop3
+  (un ejemplo t&iacute;pico es el servidor de Gmail). En el campo de <span class="itemelement">Espera</span>
+  usted puede ingresar la cantidad de segundos de inactividad, luego de la cu&aacute;l la conexi&oacute;n ser&aacute;
+  cerrada. Para verificar los par&aacute;metros, simplemente presione el bot&oacute;n
+  <span class="itemelement">Prueba de conexi&oacute;n
+  </span> (ning&uacute;n mensaje ser&aacute; descargado).</p>
+<p class="item">Bajo ciertas circunstancias, dif&iacute;ciles de predecir, su servidor POP3 necesita disminuir la velocidad de descarga de mensajes; si posee problemas descargando los mensajes, puede intentar habilitar la casilla <span class="itemelement">Más lento</span>. </p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Consejo:</font>
+    El bot&oacute;n <span class="itemelement">Perfiles</span>
+    permite administrar m&uacute;ltiples configuraciones POP3. La informaci&oacute;n de la cuenta puede ser
+    almacenada para distintos perfiles, de esta forma todos los par&aacute;metros de la cuenta POP3 son
+    almacenados/recuperados con s&oacute;lo un par de clicks. Esta caracter&iacute;stica es especialmente
+    &uacute;til al enviar e-mails en nombre de terceros; o para simplemente almacenar un perfil
+    que utilizar&aacute; m&aacute;s tarde en la misma lista, o en cualquier otra lista.</p>
+</blockquote>
+<p class="item">Activando <span class="itemelement">Mantener una copia de los mensajes en el servidor luego de descargarlos</span>, SendBlaster
+descargar&aacute; los nuevos mensajes sin eliminarlos del servidor. Los nuevos mensajes se encontrar&aacute;n disponibles para usos futuros.
+Los nuevos mensajes ser&aacute;n ignorados.</p>
+<p class="item">Activando <span class="itemelement">S&oacute;lo eliminar mensajes de nuevas suscripciones y cancelaciones</span> SendBlaster
+s&oacute;lo eliminar&aacute; los mensajes que han sido reconocidos como suscripciones o cancelaciones; esto es realmente &uacute;til
+si usted utiliza la misma direcci&oacute;n de e-mail administrativa para recibir mensajes no administrativos, tales como respuestas de lectores, y
+otros mensajes.</p>
+<p class="item"><span class="itemelement">Actualizar todos los campos</span>
+es una opci&oacute;n muy poderosa: al ser activada, no s&oacute;lo el asunto es analizado, todo
+el cuerpo del mensaje es procesado; si el mensaje contiene l&iacute;neas con el formato <em>campo: valor</em>,
+todos los campos del contacto son actualizados (<a href="#updateallfields">observe la caja de abajo</a>).</p>
+<p class="item">
+La desventaja, es que los mensajes ser&aacute;n descargados y procesados en forma significativamente m&aacute;s lenta;
+por ello, sugerimos que la opci&oacute;n de <span class="itemelement">Actualizar todos los campos</span>
+sea activada s&oacute;lo en caso de ser necesario, es decir cuando su sitio web genere
+e-mails de suscripci&oacute;n que no s&oacute;lo contenga direcciones, sino tambi&eacute;n otros campos.</p>
+<p class="item">Presionando el bot&oacute;n <span class="itemelement">Descargar</span>,
+los nuevos mensajes ser&aacute;n descargados y la lista de distribuci&oacute;n seleccionada ser&aacute; actualizada
+(como as&iacute; tambi&eacute;n todas las otras listas que utilicen la misma direcci&oacute;n de e-mail administrativa).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>
+    Qu&eacute; direcci&oacute;n deber&iacute;a utilizar?</strong></font></p>
+      <p>
+      Es aconsejable utilizar una direcci&oacute;n dedicada diferente de suscripci&oacute;n/desuscripci&oacute;n
+      para cada lista de distribuci&oacute;n, es decir, que la direcci&oacute;n no sea utilizada
+      para la recepci&oacute;n y env&iacute;o de e-mails est&aacute;ndar. Esto minimizar&aacute; el riesgo
+      de recibir spam (el cu&aacute;l ser&aacute; ignorado) y facilitar&aacute; la administraci&oacute;n
+      de las listas. En un ambiente de este tipo, no ser&aacute; necesario activar la opci&oacute;n de
+      <span class="itemelement">Mantener una copia de los mensajes en el servidor luego de descargarlos</span>
+      debido a que los e-mails no deber&aacute;n ser le&iacute;dos por otros productos de software.
+      De esta forma, la descarga de mensajes ser&aacute; m&aacute;s r&aacute;pida, y por sobre todo,
+      el espacio de la cuenta ser&aacute; preservado. Algunos servicios poseen un l&iacute;mite
+      en la cantidad de espacio total que los mensajes pueden ocupar, y si dicho espacio es completado,
+      no se entregar&aacute;n m&aacute;s mensajes.</p>
+      <p>Tambi&eacute;n es posible, pero no aconsejable, utilizar una direcci&oacute;n de e-mail &quot;est&aacute;ndar&quot;,
+      tambi&eacute;n utilizadas en otro cliente de e-mail para enviar y recibir mensajes.
+      En este caso, es absolutamente necesario activar la opci&oacute;n de <span class="itemelement">
+      Mantener una copia de los mensajes en el servidor luego de descargarlos</span>
+      o la opci&oacute;n de
+        <span class="itemelement">S&oacute;lo eliminar mensajes de nuevas suscripciones y cancelaciones</span>
+        (o en caso contrario, una vez que los mensajes sean descargados, ser&aacute;n eliminados del servidor).
+        Es m&aacute;s importante a&uacute;n que el cliente de e-mail est&aacute;ndar sea configurado adecuadamente,
+        para permitir a SendBlaster leer los mensajes (en Outlook Express, luego de seleccionar una cuenta,
+        seleccione <em>Propiedades / Configuraci&oacute;n Avanzada / Mantener una copia de los mensajes en el servidor</em>).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Advertencia:</font>
+  Si la descarga de nuevos mensajes parece ser lenta, esto puede indicar que los mensajes se han acumulado en el servidor
+  de e-mail: desactive la opci&oacute;n de <span class="itemelement">
+  Mantener una copia de los mensajes en el servidor luego de descargarlos</span> y presione <span class="itemelement">Descargar</span>
+    (o ejecute la descarga en su cliente de e-mail habitual). Los mensajes, una vez descargados, ser&aacute;n eliminados del servidor y
+    las descargas subsiguientes ser&aacute;n m&aacute;s r&aacute;pidas.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="updateallfields"></a>C&oacute;mo
+        funciona &quot;Actualizar todos los campos&quot;</strong></font></p>
+      <p>Mientras que durante el procesamiento &quot;normal&quot;
+      SendBlaster s&oacute;lo descarga y procesa los asuntos de los mensajes, la opci&oacute;n de
+      <span class="itemelement">Actualizar todos los campos</span>
+      permitir&aacute; a SendBlaster descargar y procesar todo el cuerpo del mensaje,
+      buscando l&iacute;neas que cumplan con el formato <em>campo: valor</em>
+      dentro del cuerpo del mensaje, y actualizar los campos correspondientes.</p>
+      <p>Suponga que usted posee dos campos denominados &quot;Apellido&quot; y &quot;Ciudad&quot;;
+        si recibe un mensaje de &quot;aaa@aaa.com&quot; con el asunto &quot;Suscribir&quot;
+        y el siguiente cuerpo del mensaje (por favor tenga en cuenta que cada l&iacute;nea contiene
+        un campo diferente):</p>
+      <p>Apellido: Funes<br>
+        Ciudad: Barcelona</p>
+      <p>un nuevo contacto &quot;aaa@aaa.com&quot; ser&aacute; agregado a la lista, con &quot;apellido&quot; &quot;Funes&quot;
+      y &quot;Ciudad&quot; &quot;Barcelona&quot;.</p>
+      <p>Otros formatos de sintaxis, utilizando las mismas <span class="itemelement">Etiquetas</span>
+        que en la <a href="sendblaster_messages_compose.htm">redacci&oacute;n de mensajes</a>,
+        tambi&eacute;n son permitidos: <em>#etiqueta#: valor</em> y <em>#numerodecampo#: valor</em>
+        como en los siguientes ejemplos:</p>
+      <p>#apellido#: Funes<br>
+        #ciudad#: Barcelona</p>
+      <p>y</p>
+      <p>#2#: Funes<br>
+        #3#: Barcelona</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

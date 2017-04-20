@@ -1,0 +1,144 @@
+E:\GP\Infolancers\Utilities\iMailer\iMailer\bin\Debug\InfoLancers.iMailer.exe
+E:\GP\Infolancers\Utilities\iMailer\iMailer\bin\Debug\iMailer.mdb
+E:\GP\Infolancers\Utilities\iMailer\iMailer\bin\Debug\Infolancers.iMailer.exe.config
+E:\GP\Infolancers\Utilities\iMailer\iMailer\bin\Debug\HtmlAgilityPack.dll
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeLib.Properties.Resources.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\MailMergeTest.FrmMain.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeTest.Properties.Resources.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.DatabaseSettings.FieldMapping.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmExport.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmImport.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Editor.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Main.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.TemplateEditor.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.LinkDialog.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.SearchDialog.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.TextInsertForm.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Properties.Resources.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Resource1.resources
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.exe
+E:\GP\Infolancers\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.pdb
+E:\GP\Infolancers\Utilities\iMailer\iMailer\bin\Debug\Infolancers.iMailer.pdb
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\bin\Debug\Infolancers.iMailer.exe
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\bin\Debug\iMailer.mdb
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\bin\Debug\Infolancers.iMailer.exe.config
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\bin\Debug\HtmlAgilityPack.dll
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\bin\Debug\Infolancers.iMailer.pdb
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.ContactControl.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditorControl.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Controls.ImportControl.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeLib.Properties.Resources.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.FrmMain.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeTest.Properties.Resources.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.DatabaseSettingsControl.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.FieldMapping.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.HTMLEditor.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmExport.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmImport.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Editor.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Main.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditor.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.LinkDialog.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.SearchDialog.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.TextInsertForm.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Properties.Resources.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Resource1.resources
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\GP\Infolancers\SVN\Utilities\CommonBin\iMailer.mdb
+E:\GP\Infolancers\SVN\Utilities\CommonBin\Infolancers.iMailer.exe.config
+E:\GP\Infolancers\SVN\Utilities\CommonBin\Infolancers.iMailer.exe
+E:\GP\Infolancers\SVN\Utilities\CommonBin\Infolancers.iMailer.pdb
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.exe
+E:\GP\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.pdb
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.ContactControl.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditorControl.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Controls.ImportControl.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.ScheduleEmail.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeLib.Properties.Resources.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.FrmMain.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeTest.Properties.Resources.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.DatabaseSettingsControl.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.FieldMapping.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.HTMLEditor.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmExport.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmImport.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Editor.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Main.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditor.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.LinkDialog.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.SearchDialog.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.TextInsertForm.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Properties.Resources.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Resource1.resources
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\GP Home\Infolancers\SVN\Utilities\CommonBin\iMailer.mdb
+C:\GP Home\Infolancers\SVN\Utilities\CommonBin\Infolancers.iMailer.exe.config
+C:\GP Home\Infolancers\SVN\Utilities\CommonBin\Infolancers.iMailer.exe
+C:\GP Home\Infolancers\SVN\Utilities\CommonBin\Infolancers.iMailer.pdb
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.exe
+C:\GP Home\Infolancers\SVN\Utilities\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.pdb
+D:\Workspace\Projects\iMailer\CommonBin\iMailer.mdb
+D:\Workspace\Projects\iMailer\CommonBin\Infolancers.iMailer.exe.config
+D:\Workspace\Projects\iMailer\CommonBin\Infolancers.iMailer.exe
+D:\Workspace\Projects\iMailer\CommonBin\Infolancers.iMailer.pdb
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.ContactControl.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditorControl.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Controls.ImportControl.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.ScheduleEmail.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeLib.Properties.Resources.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.FrmMain.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeTest.Properties.Resources.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.DatabaseSettingsControl.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.FieldMapping.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.HTMLEditor.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.frmExport.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.frmImport.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Editor.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Main.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditor.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.LinkDialog.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.SearchDialog.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.TextInsertForm.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Properties.Resources.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.Resource1.resources
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.exe
+D:\Workspace\Projects\iMailer\code\iMailer\obj\x86\Debug\Infolancers.iMailer.pdb
+D:\Workspace\Projects\CommonBin\iMailer.mdb
+D:\Workspace\Projects\CommonBin\Infolancers.iMailer.exe.config
+D:\Workspace\Projects\CommonBin\Infolancers.iMailer.exe
+D:\Workspace\Projects\CommonBin\Infolancers.iMailer.pdb
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.ContactControl.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditorControl.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Controls.ImportControl.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.ScheduleEmail.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeLib.Properties.Resources.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.FrmMain.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Emailer.MailMergeTest.Properties.Resources.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.DatabaseSettingsControl.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.FieldMapping.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.HTMLEditor.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmExport.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.frmImport.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Editor.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Main.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.EmailTemplateEditor.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.LinkDialog.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.SearchDialog.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.TextInsertForm.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Properties.Resources.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.Resource1.resources
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.exe
+D:\Workspace\Projects\iMailer\iMailer\obj\x86\Debug\Infolancers.iMailer.pdb

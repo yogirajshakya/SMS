@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>SendBlaster</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css"></head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Composer un message </p>
+<p class="item">La fenêtre pour la composition du message permet de créer un message qui sera envoyé à une liste de diffusion.</p>
+<p class="item">La composition du message est semblable à la
+composition d'un message dans un client de courriel électronique
+traditionnel: saisir l'<span class="itemelement">Objet </span>du message, ajouter les éventuelles&nbsp;<span class="itemelement">Pièces Jointes</span>*, spécifiez un destinataire de courrier électronique (utilisé uniquement
+pour la fonction de prévisualisation du courriel) et tapez le texte du
+message. Si  nécessaire, vous pouvez utiliser des alphabets spéciaux (cyrillique, grec, etc...) en spécifiant un <span class="itemelement">Encodage</span> particulier (vous pouvez définir l'encodage prédéfini dans la fenêtre <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Paramètres des Champs</span></a>).</p>
+<blockquote>
+  <p class="item">Les <span class="itemelement">Étiquettes</span> peuvent être insérées et utilisées en appuyant sur les boutons d'étiquettes (#) à côté des champs <span class="itemelement">Sujet</span> et&nbsp;<span class="itemelement">Destinataire</span>  afin d'envoyer des en-têtes de courriers personnalisés.</p>
+  <p class="item"><font color="#ff0000">Attention:</font> pour un affichage correct du message, il est important de définir l'encodage <strong>avant</strong> de commencer la composition de votre texte. Dans le cas contraire, le texte que vous avez composé sera illisible.</p>
+
+</blockquote>
+L'écran affiche deux zones de texte:
+<ul>
+  <li class="item">la zone principale, caractérisée par une barre
+d'outils, permet de formater du texte au format HTML. Vous avez la
+possibilité d'ajouter des images et des liens. Vous pouvez à tout
+moment contrôler (et modifier) votre code HTML généré automatiquement
+en cliquant le bouton <span class="itemelement">Afficher le code </span> 
+    présent dans la barre supérieure.<br>
+    &nbsp; </li>
+  <li class="item">Dans la zone <span class="itemelement">Texte pur</span>,
+vous pouvez saisir le contenu du message au format texte. Certains
+destinataires pourraient ne pas être en mesure de lire les messages
+HTML et il est bon de fournir une version alternative du contenu, sans
+images et/ou liens. Le texte pur peut être généré automatiquement à
+partir du texte mis en forme en cliquant le bouton <span class="itemelement">HTML &gt; Texte </span> lorsque la composition du message est terminée. </li>
+</ul>
+<p class="item">Pour envoyer non pas un message général mais un message
+personnalisé, dans l'Objet et le corps du message (aussi bien dans la
+zone HTML que dans la zone texte pur), vous pouvez utiliser les
+étiquettes. Chaque étiquette correspond à un champ: lorsque le message
+sera envoyé, l'étiquette sera remplacée par le texte qui se trouve dans
+le champ correspondant pour chaque destinataire. Supposons que la liste
+possède un champ "Société" et un champ "Adresse" (sans oublier que <a href="sendblaster_settings_fields.htm" class="itemlink">le nom des champs peut être modifié</a>). Un message qui contient le texte</p>
+<blockquote>
+  <p class="valore"> #Société#<br>
+    #Adresse#</p>
+</blockquote>
+<p class="item">parviendra personnalisé aux destinataires, comme dans cet exemple:</p>
+<blockquote>
+  <p class="valore">eDisplay srl<br>
+  via Wildt 19/3</p>
+</blockquote>
+<p class="item">Puisque le nom des champs peut être modifié, vous
+pouvez avoir recours aux étiquettes "de réparation", qui indépendamment
+du nom du champ se réfèrent à sa position (#1#, #2#, et ainsi de suite
+jusqu'à #10#) - consultez la position des champs dans la fenêtre <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Paramètres des Champs</span></a>. Il existe aussi des étiquettes spéciales: <span class="itemelement">#nomdelaliste#</span> 
+  est remplacé par le nom de la liste de diffusion; 
+  <span class="itemelement">#baldegestion#</span>
+par l'adresse utilisée pour la gestion des abonnements/désabonnements à
+la liste, que vous avez définie dans le zone Gérer les inscriptions.
+Cela vous permet en toute simplicité de poser un lien qui permette au
+destinataire de se désabonner de la liste. Enfin&nbsp;<span class="itemelement">#datesysteme#</span> qui est remplacée par la date actuelle formatée selon les paramètres de Windows.<br>
+ </p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody><tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="item" bgcolor="#ffff99" width="100%"> <p><font color="#009900"><strong>Poser un lien pour permettre au destinataire de se désabonner </strong></font></p>
+      <p>SendBlaster
+peut gérer vos listes de diffusion en téléchargeant les messages
+directement d'une adresse de courriel dédiée, différente pour chaque
+liste (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Gérer les inscriptions</span></a>). Utiliser les étiquettes pour inclure dans le code HTML un lien qui permet de se désabonner est extrêmement simple:</p>
+      <blockquote>
+        <p class="valore">&lt;a href="mailto:#gestioncourriel#?Subject=Unsubscribe"&gt;Se désabonner &lt;/a&gt;</p>
+      </blockquote>
+      <p>Ce code HTML peut être facilement inclus dans le message HTML en utilisant le bouton&nbsp;<span class="itemelement">Insérer du</span> <span class="itemelement">lien de désabonnement</span> de la barre des boutons, qui permet également de spécifier le texte qui sera lié à l'URL de suppression.</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody></table>
+<p class="item">Vous pouvez enregistrer le message courant au format
+.eml (un format que la plupart des clients de courriel sont capable
+d'interpréter) en utilisant le bouton <span class="itemelement">Enregistrer</span>.</p>
+<p class="item">Pour créer un message, vous pouvez partir de rien (bouton <span class="itemelement">Nouveau</span> ou&nbsp;<span class="itemelement">Choisir un modèle</span>) ou, en utilisant le bouton <span class="itemelement">Ouvrir</span>, ouvrez un message enregistré précédemment:</p>
+<ul>
+  
+  <li class="item"><span class="itemelement"> </span>importer un fichier  .eml (enregistré avec Outlook par ex.) en choisissant
+    <span class="itemelement">Importation</span> / <span class="itemelement">Importer 
+    courriel .eml</span></li>
+  <li class="item">récupérer un courriel que vous avez déjà envoyé avec <span class="itemelement">Importation</span> 
+    / <span class="itemelement">Importer courriel du Journal</span></li>
+  <li class="item">importer le texte formaté d'une page HTML se trouvant sur votre disque dur et qui inclut éventuellement des images avec  <span class="itemelement">Importation</span> 
+    / <span class="itemelement">Importer fichier HTML</span></li>
+  <li class="item">importer du texte pur d'un fichier externe avec <span class="itemelement">Importation</span> 
+    / <span class="itemelement">Importer du texte pur<br>
+ </span></li>
+</ul>
+<p class="item">Le bouton <span class="itemelement">HTML &gt; Texte </span>
+permet d'obtenir automatiquement du texte pur venant d'un texte
+formatté HTML; à utiliser lorsque la composition du message est
+terminée.</p>
+<p class="item">Les fonctionnalités de suivi de courriel peuvent être ajoutées au message par l'utilisation de <span class="itemelement">Google Analytics</span> et / ou des boutons <span class="itemelement">TrackReports</span>
+dans le panneau de l'HTML; les liens dans le message sont
+automatiquement modifiés selon le système choisi de suivi et le code
+nécessaire est alors ajouté. L'ajout du code de <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a> ou de <a href="sendblaster_messages_trackreports.htm" class="itemlink">TrackReports</a>
+doit toujours être la dernière opération effectuée sur le message - les
+deux méthodes modifient le code final; donc les utilisateurs doivent
+premièrement avoir terminés de composer le message. Le suivi du message
+en utilisant les deux systèmes est possibles: dans ce cas,
+l'utilisateur doit ajouter premièrement le suivi de Google Analytics.</p>
+ 
+<p class="item">Avant
+d'envoyer le message, il est possible (et fortement recommandé) de
+vérifier comment le message sera affiché dans les clients de courriel,
+en utilisant le bouton <span class="itemelement">Prévisualisation du Courriel</span>. La fonction de prévisualisation du courriel utilisera un prélèvement des données de l'expéditeur défini dans la section <span class="itemelement">Mes données personnelles</span> dans l'écran <a href="sendblaster_settings_fields.htm" class="itemlink">Paramètres des Champs</a>. </p>
+ 
+<p class="item">Il
+est possible d'effectuer une vérification du score de pourriel sur le
+moment; lors de l'édition du message en utilisant le bouton à <span class="itemelement">Vérifier Pourriel</span>, la vérification du score de pourriel est basée sur le populaire <b>moteur SpamAssassin</b>,
+c'est l'un des filtres anti-pourriel le plus commun dans les serveurs
+de courriels. En utilisant cette fonctionnalité avancée de SendBlaster,
+vous éviterez à votre message d'être considéré comme un pourriel par
+erreur.<br>
+</p>
+
+<hr noshade="noshade" size="1">
+<p class="item">*La gestion des pièces jointes n'est possible qu'avec la version Pro</p>
+</body></html>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>SendBlaster</title>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css"></head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title"> Gérer les abonnements</p>
+<p class="item">SendBlaster peut gérer automatiquement les abonnements (et
+désabonnements) à des listes de distribution. Chaque liste peut être
+associé à une adresse de courriel: quand un message avec "Abonnement"
+dans la ligne de sujet est envoyé à cette adresse de courriel,
+l'expéditeur est ajoutée à la liste. Si le sujet est plutôt
+"Désabonnement", l'expéditeur est supprimé (au cas où il / elle a déjà
+été abonné). SendBlaster va télécharger les nouveaux messages du compte
+POP3, va vérifier le sujet et mettre à jour la liste de distribution
+reliée.<br>
+</p>
+<blockquote> 
+  <p class="item"><font color="#ff0000">Attention:</font> L'adresse choisie pour gérer
+les abonnements doit permettre aux messages POP3 de se télécharger (le
+même protocole utilisé par les clients standard de courriel). Il n'est
+pas possible d'utiliser des adresses qui ne peuvent être gérés que par
+le Web (par exemple les services Hotmail).</p>
+</blockquote>
+<p class="item">Normalement, chaque liste se verra attribuer un courriel dédié.
+Toutefois, il est possible d'attribuer la même adresse de courriel à
+plus d'une liste. Dans ce cas, quand une liste est mise à jour, toutes
+les autres listes qui utilisent la même adresse d'
+Abonnement/Désabonnement seront également mises à jour. Par exemple, si
+vous créez 2 listes nommées «Liste 1» et «Liste 2» et elles sont toutes
+deux liées à la gestion de la même adresse de courriel, en
+téléchargeant les messages pour mettre à jour la «Liste 1», la «Liste
+2» sera également mise à jour.</p>
+<p class="item">Chaque adresse de gestion de chaque liste est établie en entrant les
+paramètres corrects pour accéder au compte POP3, comme dans un logiciel
+client de courriel: en plus de l'adresse <span class="itemelement">(Courriel),</span> vous devez spécifier le serveur de réception <span class="itemelement">(Serveur POP3),</span> qui, si nécessaire, pourrait inclure le numéro de port du le serveur dans le format "serveur:port", le<span class="itemelement"></span> <span class="itemelement">Nom d'Utilisateur </span>ainsi que le <span class="itemelement">Mot de Passe.</span> La case à cocher <span class="itemelement">SSL</span>
+permet la communication SSL, qui pourrait être nécessaire à certains
+serveurs POP3 (un exemple typique est le serveur de Gmail). Dans le
+champ <span class="itemelement">Temps sans réponse</span> vous pouvez
+taper le nombre de secondes d'inactivité après laquelle la connexion
+sera fermée. Pour vérifier les paramètres, il suffit de cliquer sur le bouton<span class="itemelement"></span><span style="font-style: italic;"><span style="font-weight: bold;"> </span></span><span class="itemelement">Tester la connexion</span> (aucun message ne sera téléchargée).<br>
+</p>
+<p class="item">En cochant <span class="itemelement">Conservez une copie des messages sur le serveur,</span>
+SendBlaster va télécharger les nouveaux messages sans les supprimer du
+serveur. Les messages seront ensuite disponibles pour des utilisations
+futures. Les nouveaux messages seront ignorées.</p>
+
+<p class="item"></p>
+<p class="item"><span class="itemelement">Mise à jour de tous les champs</span>
+est une option extrêmement puissante: si activé, non seulement l'objet
+mais le corps du message entier sera transformé; si le corps du message
+contient les lignes <em>nom de champ:valeur</em>, l'enregistrement de l'adresse de courriel du contact ainsi que d'autres champs seront mis à jour en conséquence <a href="../../../George/AppData/Local/Temp/sendblaster_lists_subscribe.html#updateallfields">(voir encadré ci-dessous).</a></p>
+
+<p class="item"><span class="itemelement"></span>L'inconvénient est que le téléchargement des messages et le traitement
+sera beaucoup plus lent, c'est pourquoi il est fortement recommandé que
+cette <span class="itemelement">Mise à jour de tous les champs</span>
+ne soit sélectionnée que lorsque vraiment nécessaire, ce qui signifie
+que lorsque votre site génère des courriels d'abonnement contenant non
+seulement des adresses mais aussi d'autres champs.</p>
+<p class="item">En cliquant sur le bouton <span class="itemelement">Télécharger</span>,
+les nouveaux messages seront téléchargés et la liste de diffusion
+sélectionnée sera mise à jour (ainsi que toutes les autres listes qui
+utilisent la même adresse de courriel).</p>
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody><tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="item" bgcolor="#ffff99" width="100%"> 
+      <p><font color="#009900"><strong>Quelle adresse devrais-je utiliser?</strong></font></p>
+ 
+      <p>Il
+est conseillé de dédier une autre adresse courriel pour vous abonner/
+désabonner pour chaque liste de diffusion. C'est à dire une adresse qui
+n'est pas utilisée pour quelconque envoi standard de courriel ni pour
+la réception. Cela permettrait de minimiser le risque de recevoir du
+pourriel (qui sera ignoré) et il sera facile de gérer les listes. Dans
+un environnement de ce type, il ne sera pas nécessaire d'activer l'option <span class="itemelement">Conservez une copie des messages sur le serveur</span>
+car les courriels n'auront pas à être lu par d'autres logiciels. De
+cette façon, le téléchargement de message sera plus rapide et, surtout,
+l'espace du compte sera préservé. Certains services ont une limite sur
+la quantité totale d'espace que les messages peuvent occuper, et si
+l'espace donné est rempli, aucun autre message ne sera livré.</p>
+ 
+      <p>Il
+est également possible, mais souhaitable, d'utiliser une adresse
+"standard", également utilisée sur un autre client de messagerie
+électronique pour envoyer et recevoir des messages. De cette façon, il
+est absolument nécessaire d'activer l'option <span class="itemelement">Conservez une copie des messages sur le serveur</span>
+(ou bien, une fois que les messages sont téléchargés, ils sont alors
+retirés du serveur). Et encore plus important, c'est que même le client
+de courriel normal est configuré en conséquence, afin de permettre à
+SendBlaster de lire les messages (dans Outlook Express, après avoir
+sélectionné un compte Choisissez <em>Propriétés / Paramètres avancés / Conservez une copie des messages sur le serveur)</em> .</p>
+      
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody></table>
+<blockquote> 
+  <p class="item"><font color="#ff0000">Attention:</font> si le téléchargement de
+nouveaux messages semble être plutôt lent, cela pourrait indiquer que,
+sur le serveur de courriel, plusieurs messages sont entassés:
+désactivez l'option <span class="itemelement">Conservez une copie des messages sur le serveur</span> et cliquez sur <span class="itemelement">Télécharger</span>
+(ou exécutez le téléchargement sur votre client de courriel standard).
+Les messages, une fois téléchargés, seront supprimés du serveur et les
+téléchargements suivants seront plus rapides.</p>
+</blockquote>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody><tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="item" bgcolor="#ffff99" width="100%"> <p><font color="#009900"><strong><a name="updateallfields"></a></strong></font><font color="#009900"><strong>Comment fonctionne "Mise à jour de tous les champs"</strong></font> </p>
+      <p>Alors que le traitement "normal" fait que SendBlaster télécharge et traite seulement les sujets des messages, l'option <span class="itemelement">Mettre à jour tous les champs</span> permettra à SendBlaster de télécharger le corps du message ainsi que de le traiter, cherchez les lignes du format <em>nom de champ:valeur</em> à l'intérieur du corps du message, et faites en conséquence la mise à jour des champs.</p>
+ 
+      <p>Supposons
+que vous ayez deux champs nommés "Nom de famille" et "Ville"; si un
+message est reçu de "aaa@aaa.com" avec "Abonnement" comme sujet et le
+corps suivant (s'il vous plaît notez que chaque ligne contient un champ
+différent):</p>
+ 
+      <p>Nom: Smith<br> Ville: New York</p>
+ 
+      <p>un nouveau contact "aaa@aaa.com" est ajouté à la liste, avec "Smith" comme "Nom" et "New York" comme "Ville".</p>
+ 
+      <p>Certains formats de syntaxe du langage, utilisant les mêmes <span class="itemelement">Étiquettes</span> que dans <a href="../../../George/AppData/Local/Temp/sendblaster_messages_compose.htm">composer un message</a>, sont également possibles: <em>#étiquette#: valeur</em> et <em>#numéro de champ#: valeur</em> comme dans les exemples suivants:</p>
+ 
+      <p>#nom de famille#: Smith<br> #ville#: New York</p>
+ 
+      <p>et</p>
+ 
+      <p># 2 #: Smith<br> # 3 #: New York</p>
+</td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody></table>
+<p class="item">&nbsp;</p>
+</body></html>

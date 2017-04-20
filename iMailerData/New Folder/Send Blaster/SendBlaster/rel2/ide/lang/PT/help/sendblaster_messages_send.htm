@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+    <p class="title">
+        Enviar mensagens</p>
+    <p class="item">
+        Para poder enviar uma mensagem, &eacute; necess&aacute;rio que primeiro especifique
+        os destinat&aacute;rios e o remetente.</p>
+    <p class="item">
+        A lista das listas de distribui&ccedil;&atilde;o (definida em <a href="sendblaster_lists_managing.htm"
+            class="itemelement">Gerir listas</a>) &eacute; exibida no campo <span class="itemelement">
+                Seleccionar lista de distribui&ccedil;&atilde;o</span>. Seleccione uma lista
+        e os endere&ccedil;os da lista ser&atilde;o os destinat&aacute;rios. Cada contacto
+        ir&aacute; receber uma mensagem pessoal.</p>
+    <p class="item">
+        O remetente da mensagem ser&aacute; especificado nos campos <span class="itemelement">
+            Endere&ccedil;o de e-mail do remetente</span> e <span class="itemelement">Nome do remetente</span>.
+        Voc&ecirc; pode editar livremente esses campos ou escolher um endere&ccedil;o e
+        um nome a partir das caixas de combina&ccedil;&otilde;es, que apresentam os &uacute;ltimos
+        10 nomes e endere&ccedil;os utilizados nas opera&ccedil;&otilde;es de envio (as
+        listas estar&atilde;o vazias caso nunca tenha sido enviada nenhuma mensagem). Se
+        um endere&ccedil;o de subscri&ccedil;&atilde;o/cancelamento tiver sido fornecido
+        para a lista de distribui&ccedil;&atilde;o seleccionada, ele ser&aacute; automaticamente
+        exibido como endere&ccedil;o do remetente. Embora este seja o comportamento padr&atilde;o,
+        o endere&ccedil;o e/ou o nome podem ser alterados manualmente.<br>
+        Opcionalmente, voc&ecirc; tamb&eacute;m pode especificar um <span class="itemelement">
+            Endere&ccedil;o de resposta</span>: este &eacute; o endere&ccedil;o para o qual
+        as respostas ser&atilde;o enviadas. Se foi deixado em branco, as respostas ser&atilde;o
+        enviadas para o endere&ccedil;o do remetente (o comportamento padr&atilde;o para
+        mensagens de e-mail pessoais).</p>
+    <p class="item">
+        Para enviar a mensagem, clique no bot&atilde;o <span class="itemelement">Enviar</span>.
+        &Eacute; &oacute;bvio que se for a primeira opera&ccedil;&atilde;o de envio ou se
+        as configura&ccedil;&otilde;es de conex&atilde;o tiverem sido alteradas, ser&aacute;
+        necess&aacute;rio que primeiro configure as <span class="itemelement">Configura&ccedil;&otilde;es
+            de envio</span>, caso contr&aacute;rio a mensagem n&atilde;o ser&aacute; enviada.</p>
+    <p class="item">
+        Est&atilde;o dispon&iacute;veis 2 <span class="itemelement">Modos de envio</span>:<span
+            class="itemelement"> Envio directo</span> e <span class="itemelement">Usar servidor
+                SMTP.</span></p>
+    <ul>
+        <li class="item">Se seleccionar a op&ccedil;&atilde;o <span class="itemelement">Utilizar
+            servidor SMTP</span>, os e-mails ser&atilde;o enviados tal como com um cliente de
+            e-mail normal, isto &eacute;, entregando as mensagens para o servidor de SMTP do
+            remetente. &Eacute; portanto necess&aacute;rio especificar o nome do <span class="itemelement">
+                servidor de SMTP</span>, a porta onde o serviço é oferecido (caso não seja indicada,
+            o número da porta por defeito é 25), e caso a autentica&ccedil;&atilde;o de utilizador
+            seja necess&aacute;ria, seleccionar a op&ccedil;&atilde;o <span class="itemelement">
+                Autentica&ccedil;&atilde;o necess&aacute;ria </span>e especificar<span class="itemelement">
+                    Utilizador</span> e <span class="itemelement">Senha</span>. Estes par&acirc;metros
+            s&atilde;o os mesmos utilizados pelo seu software de cliente de e-mail, portanto
+            bastar&aacute; &quot;copi&aacute;-los&quot; a partir de uma conta de e-mail funcional
+            (para se certificar que o servidor SMTP est&aacute; dispon&iacute;vel clique no
+            bot&atilde;o <span class="itemelement">Testar conex&atilde;o</span>). A caixa de
+            verifica&ccedil;&atilde;o <span class="itemelement">SSL</span> activa a comunica&ccedil;&atilde;o
+            SSL, que pode ser necess&aacute;ria para alguns servidores SMTP (um exemplo t&iacute;pico
+            &eacute; o servidor SMTO do Gmail).<br>
+            <blockquote>
+                <p class="item">
+                    <font color="#FF0000">Dica:</font> O botão <span class="itemelement">Perfis</span>
+                    permite gerir várias contas SMTP. As informações da conta podem ser guardadas para
+                    diferentes perfis. Portanto, todas as configurações SMTP são guardadas/carregadas
+                    com um par de cliques. Esta funcionalidade é especialmente útil quando envia mensagens
+                    em nome de outra pessoa.
+                    <br />
+                    <br />
+                </p>
+            </blockquote>
+            Ao activar a op&ccedil;&atilde;o <span class="itemelement">Tentar com envio directo
+                em caso de erro</span>, caso a mensagem n&atilde;o seja aceite pelo servidor
+            de SMTP, o software ir&aacute; tentar entregar a mensagem directamente ao servidor
+            de e-mail do destinat&aacute;rio, utilizando as configura&ccedil;&otilde;es do <span
+                class="itemelement">Envio directo</span>.<br />
+            <br />
+        </li>
+        <li class="item">Ao seleccionar o <span class="itemelement">Envio directo</span>, o
+            software ir&aacute; procurar qual o servidor de e-mail do destinat&aacute;rio e
+            conectar-se directamente a ele, &quot;pulando&quot; o servidor SMTP que n&atilde;o
+            ser&aacute; necess&aacute;rio. Tenha em mente que alguns dom&iacute;nios de e-mail
+            (por exemplo, o hotmail) n&atilde;o permitem envios directos: a mensagem &eacute;
+            rejeitada se n&atilde;o for proveniente de um servidor SMTP p&uacute;blico.<br>
+            Se activar a op&ccedil;&atilde;o <span class="itemelement">Tentar com SMTP em caso de
+                erro</span>, se a mensagem n&atilde;o for aceite pelo servidor de e-mail do
+            destinat&aacute;rio, o software ir&aacute; tentar entregar a mensagem ao servidor
+            SMTP, utilizando as configura&ccedil;&otilde;es de <span class="itemelement">Utilizar
+                servidor SMTP</span>.<br>
+            &nbsp; </li>
+    </ul>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <strong><font color="#009900">Utilizar o envio directo ou o servidor SMTP?</font></strong></p>
+                <p>
+                    Antes de mais, a escolha depende da disponibilidade de um bom servidor SMTP. Se
+                    o servidor de SMTP do seu ISP for capaz de tratar v&aacute;rias mensagens numa sequ&ecirc;ncia
+                    r&aacute;pida ou for capaz de enviar v&aacute;rias mensagens em simult&acirc;neo,
+                    a utiliza&ccedil;&atilde;o do servidor de SMTP ser&aacute; mais r&aacute;pida e
+                    de mais confian&ccedil;a, uma vez que o seu servidor SMTP est&aacute; &quot;mais
+                    perto&quot; do seu computador do que o servidor de e-mail dos destinat&aacute;rios.</p>
+                <p>
+                    Contudo, alguns servidores, para impedir que os seus utilizadores utilizem o servidor
+                    com o intuito de enviar spam, imp&otilde;em restri&ccedil;&otilde;es ao n&uacute;mero
+                    de mensagens que podem ser enviadas durante um intervalo de tempo e o n&uacute;mero
+                    de mensagens que podem ser enviadas em simult&acirc;neo (por exemplo, um servidor
+                    SMTP pode n&atilde;o aceitar mais do que uma mensagem a cada 5 segundos e n&atilde;o
+                    permitir mais do que 2 mensagens de cada vez). Todas as mensagens que ultrapassem
+                    estas restri&ccedil;&otilde;es sejam rejeitadas com um erro. Isto n&atilde;o significa
+                    que o servidor ou o software n&atilde;o estejam a funcionar correctamente, mas sim
+                    que &eacute; necess&aacute;rio ajustar os tempos na sec&ccedil;&atilde;o das <span
+                        class="itemelement">Configura&ccedil;&otilde;es avan&ccedil;adas</span>.</p>
+                <p>
+                    Nesses casos, poder&aacute; ser mais r&aacute;pido e mais conveniente utilizar o
+                    envio directo. O envio directo requer um pouco mais de tempo para entregar cada
+                    mensagem (uma vez que precisa de fazer um pedido ao servidor DNS e o servidor de
+                    e-mail pode estar &quot;muito longe&quot; do PC do remetente), mas este aumento
+                    de tempo &eacute; compensado pela possibilidade de enviar mais mensagens em simult&acirc;neo
+                    sem a necessidade de pausas entre mensagens.</p>
+                <p>
+                    O envio directo tamb&eacute;m &eacute; &uacute;til quando a opera&ccedil;&atilde;o
+                    de envio tiver de ser efectuada utilizando uma liga&ccedil;&atilde;o sem conhecer
+                    o servidor SMTP (tipicamente no caso de utilizar um notebook fora de casa ou do
+                    escrit&oacute;rio - comum no caso do acesso a uma rede wireless p&uacute;blica).</p>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p class="item">
+        A sec&ccedil;&atilde;o das <span class="itemelement">Configura&ccedil;&otilde;es avan&ccedil;adas</span>
+        permite afinar os tempos da opera&ccedil;&atilde;o de envio. Deste modo a opera&ccedil;&atilde;o
+        de envio ser&aacute; feita com a m&aacute;xima velocidade poss&iacute;vel que as
+        restri&ccedil;&otilde;es de antispam do servidor SMTP permitem. Segue-se o significado
+        de cada uma das op&ccedil;&otilde;es:</p>
+    <p class="itemelement">
+        Aba Tempo
+    </p>
+    <ul class="item">
+        <li><span class="itemelement">Pausa entre mensagens</span>: o n&uacute;mero de segundos
+            entre o envio de mensagens.</li>
+        <li><span class="itemelement">Pausa entre blocos</span>: o n&uacute;mero de segundos
+            entre cada bloco de mensagens.</li>
+        <li><span class="itemelement">Mensagens por bloco</span>: o n&uacute;mero de mensagens
+            enviadas em cada bloco</li>
+        <li><span class="itemelement">Tempo de expira&ccedil;&atilde;o</span>: o n&uacute;mero
+            m&aacute;ximo de segundos ap&oacute;s o qual a opera&ccedil;&atilde;o de envio &eacute;
+            abortada</li>
+        <li><span class="itemelement">Conex&otilde;es</span>: o n&uacute;mero m&aacute;ximo
+            de conex&otilde;es simult&acirc;neas, isto &eacute;, o n&uacute;mero m&aacute;ximo
+            de mensagens enviadas em simult&acirc;neo*.</li>
+        <li><span class="itemelement">N&uacute;mero de tentativas em caso de erro</span>: Se
+            o servidor SMTP ou o servidor do destinat&aacute;rio (no caso de envio directo)
+            n&atilde;o aceitar a mensagem, o software pode esperar alguns segundos e tentar
+            enviar a mensagem uma ou mais vezes.</li>
+        <li><span class="itemelement">Pausa entre tentativas</span>: o n&uacute;mero de segundos
+            do atraso antes de tentar novamente o envio de uma mensagem n&atilde;o aceite.</li>
+    </ul>
+    <p class="item">
+        A configura&ccedil;&atilde;o ideal s&oacute; pode ser obtida depois de algumas tentativas,
+        verificando o n&uacute;mero de mensagens que foram realmente entregues. Para simplificar
+        as configura&ccedil;&otilde;es, est&atilde;o dispon&iacute;veis algumas <span class="itemelement">
+            Configura&ccedil;&otilde;es sugeridas</span>. Elas podem n&atilde;o estar optimizadas
+        para a sua liga&ccedil;&atilde;o, mas podem ser um bom ponto de come&ccedil;o para
+        obter a melhor configura&ccedil;&atilde;o.</p>
+    <p class="item">
+        <strong><font color="#FF0000">Aviso:</font></strong> As listas de distribui&ccedil;&atilde;o
+        podem obter endere&ccedil;os de e-mail incorrectos ou alguns endere&ccedil;os de
+        e-mail podem estar temporariamente inactivos. Portanto, ao utilizar listas que cont&ecirc;m
+        um grande n&uacute;mero de endere&ccedil;os, &eacute; normal e inevit&aacute;vel
+        que, apesar do tipo de envio e configura&ccedil;&otilde;es seleccionados, nem todas
+        as mensagens sejam entregues e que haja uma determinada percentagem de erros. Nesse
+        caso &eacute; poss&iacute;vel tentar concluir a opera&ccedil;&atilde;o de envio
+        mais tarde atrav&eacute;s das fun&ccedil;&otilde;es do <a href="sendblaster_messages_history.htm">
+            hist&oacute;rico</a>.</p>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <font color="#009900"><strong>Como posso obter as configura&ccedil;&otilde;es avan&ccedil;adas
+                        ideais?</strong></font></p>
+                <p>
+                    Para obter as configura&ccedil;&otilde;es avan&ccedil;adas ideais &eacute; necess&aacute;rio
+                    tentar combina&ccedil;&otilde;es diferentes (normalmente uma lista com cerca de
+                    10 endere&ccedil;os &eacute; suficiente) e verificar quantas mensagens s&atilde;o
+                    realmente entregues (esta informa&ccedil;&atilde;o &eacute; obtida no fim da opera&ccedil;&atilde;o
+                    de envio, quando tamb&eacute;m &eacute; poss&iacute;vel consultar os registos).
+                    Os utilizadores conectados a um servidor SMTP &quot;tolerante&quot; provavelmente
+                    n&atilde;o ir&atilde;o experimentar muitos problemas, independentemente das configura&ccedil;&otilde;es
+                    indicadas que apenas ir&atilde;o afectar a velocidade de envio.<br>
+                    Por outro lado, se o seu servidor de SMTP for muito r&iacute;gido, para conseguir
+                    entregar um grande n&uacute;mero de mensagens, poder&aacute; ser necess&aacute;rio
+                    diminuir a velocidade de envio e evitar enviar mensagens em simult&acirc;neo.
+                </p>
+                <p>
+                    Seguem algumas regras simples que vale a pensa ter em considera&ccedil;&atilde;o:</p>
+                <ul>
+                    <li>Um servidor SMTP tolerante permite um envio r&aacute;pido e sem pausas (ou mesmo
+                        com pausas limitadas). Nos servidores de SMTP r&iacute;gidos que utilizam v&aacute;rios
+                        filtros de antispam, aumente as pausas e diminua o n&uacute;mero de conex&otilde;es
+                        simult&acirc;neas.</li>
+                    <li>Normalmente, os servidores SMTP n&atilde;o permitem o envio de muitas mensagens
+                        em simult&acirc;neo, portanto quando utilizar o modo SMTP o n&uacute;mero de conex&otilde;es
+                        dever&aacute; ser baixo ou, em determinadas situa&ccedil;&otilde;es, igual a 1 (sem
+                        conex&otilde;es simult&acirc;neas). Se o servidor SMTP estiver equipado com mecanismos
+                        restritivos de antispam, poder&aacute; ser necess&aacute;rio diminuir o envio das
+                        mensagens, definindo uma pausa de alguns segundos entre cada envio e definindo uma
+                        pausa maior entre os blocos de mensagens. Para al&eacute;m disso, os blocos n&atilde;o
+                        dever&atilde;o conter mais do que poucas d&uacute;zias de mensagens.</li>
+                    <li>No caso do envio directo, com uma lista de distribui&ccedil;&atilde;o standard contendo
+                        endere&ccedil;os pertencentes a dom&iacute;nios diferentes, as mensagens ser&atilde;o
+                        enviadas para uma grande variedade de servidores diferentes: &eacute; ent&atilde;o
+                        poss&iacute;vel definir um n&uacute;mero grande de conex&otilde;es* e pausas limitadas
+                        (ou mesmo nenhumas) entre mensagens e blocos.</li>
+                    <li>O aumentar do n&uacute;mero de tentativas em caso de erro pode aumentar a percentagem
+                        de sucesso, mas ir&aacute; diminuir a velocidade do envio, principalmente se o n&uacute;mero
+                        de conex&otilde;es simult&acirc;neas for baixo. Terminar a opera&ccedil;&atilde;o
+                        de envio mais tarde a partir da janela do <a href="sendblaster_messages_history.htm">
+                            hist&oacute;rico</a> (depois de ter esperado alguns minutos) pode ser considerado
+                        uma boa pr&aacute;tica.</li>
+                </ul>
+            </td>
+            <td width="7%">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p class="itemelement">
+        Aba Extra
+    </p>
+    <ul class="item">
+        <li><span class="itemelement">Notificação de Entrega</span>: permite receber uma confirmação
+            sempre que um email é entregue ou o utilizador abre-o para ler.</li>
+        <li><span class="itemelement">Prioridade Alta</span>: permitir notificar o leitor que
+            a mensagem deve ser lida logo que possível.</li>
+        <li><span class="itemelement">Codificação</span>: escolha entre <span class="itemelement">
+            quoted-printable</span> e <span class="itemelement">base64</span>. O conte&uacute;do
+            do cabe&ccedil;alho exibe qual foi o software que gerou a mensagem.</li>
+        <li><span class="itemelement">Texto Xmailer</span>: se utilizar a configura&ccedil;&atilde;o
+            <span class="itemelement">Padr&atilde;o</span> o cabe&ccedil;alho ir&aacute; incluir
+            o nome SendBlaster e a sua vers&atilde;o. Caso contr&aacute;rio, poder&aacute; digitar
+            texto livre, para simular o envio atrav&eacute;s de um cliente de e-mail diferente
+            ou escolher a op&ccedil;&atilde;o <span class="itemelement">Nenhum</span> para evitar
+            que seja adicionado um cabe&ccedil;alho &agrave; mensagem. </li>
+        <li><span class="itemelement">Domínio</span>: permite personalizar o nome da m&aacute;quina
+            utilizada pelo software para se ligar ao servidor SMTP ou aos servidores de e-mail
+            dos destinat&aacute;rios. Isto pode ser &uacute;til ao utilizar o <span class="itemelement">
+                Envio directo</span>: alguns servidores verificam o nome do dom&iacute;nio antes
+            de aceitarem mensagens; eles precisam que o nome do dom&iacute;nio corresponda ao
+            <em>hostname</em> p&uacute;blico na rede e antes de aceitarem mensagens, efectuam
+            um <em>ping</em> (ou uma opera&ccedil;&atilde;o similar) de modo a verificar que
+            o nome do dom&iacute;nio corresponde ao endere&ccedil;o IP da m&aacute;quina que
+            solicitou a liga&ccedil;&atilde;o. Neste caso, se escolher a op&ccedil;&atilde;o
+            <span class="itemelement">Endere&ccedil;o de internet </span>pode diminuir as mensagens
+            recusadas. Sugerimos que utilize as configura&ccedil;&otilde;es padr&atilde;o ou
+            que utilize a op&ccedil;&atilde;o <span class="itemelement">Endere&ccedil;o de internet</span>
+            ao fazer envio directo e <span class="itemelement">Nome local do PC </span>no modo
+            SMTP (os servidores SMTP normalmente n&atilde;o efectuam qualquer tipo de verifica&ccedil;&atilde;o
+            do nome do dom&iacute;nio).<br />
+            O SendBlaster verifica qual &eacute; o endere&ccedil;o p&uacute;blico da m&aacute;quina
+            sempre que &eacute; iniciado; se a liga&ccedil;&atilde;o &agrave; internet n&atilde;o
+            estiver dispon&iacute;vel durante o in&iacute;cio do programa, o endere&ccedil;o
+            p&uacute;blico poder&aacute; ficar em branco e ser&aacute; utilizado o Nome local
+            do PC. Se estiver dispon&iacute;vel um endere&ccedil;os de IP p&uacute;blico fixo,
+            os utilizadores avan&ccedil;ados poder&atilde;o seleccionar <span class="itemelement">
+                Definido pelo utilizador...</span> e introduzir um valor fixo (note que &eacute;
+            necess&aacute;rio um <em>hostname</em> - e n&atilde;o um endere&ccedil;o IP) - mas
+            tenha em mente que uma configura&ccedil;&atilde;o errada pode comprometer o sucesso
+            dos envios.</li>
+        <li><span class="itemelement">Alteração manual do Servidor DNS</span>: O SendBlaster
+            utiliza o servidor DNS seleccionado por defeito, mas é também possível (e por vezes
+            necessário) alterá-lo manualmente para um diferente, por activar esta opção e introduzir
+            o endereço de IP correcto. </li>
+        <li><span class="itemelement">Ignorar Erros de Socket</span>: se existir algum problema
+            com a ligação à Internet, devido a problemas de hardware ou de software, o SendBlaster
+            irá parar o envio, alertar o utilizador e aguardar pelas suas instruções 
+            - na maioria dos casos, uma intervenção humana é necessária (i.e. pode ser necessário
+            reiniciar o seu hardware de rede, etc). Se preferir que o envio seja interrompido
+            e que o SendBlaster ignore simplesmente os erros, escolha esta opção (tome
+            nota que se não existir ligação à Internet, o envio poderá falhar). Isto é útil
+            quando a sua ligação à Internet por vezes cai por alguma razão (i.e. problemas wifi)
+            mas é automaticamente restabelecida num curto período de tempo. </li>
+    </ul>
+    <p class="itemelement">
+        Aba Adicional de Cabeçalhos
+    </p>
+    <blockquote>
+        <p class="item">
+            Em alguns casos, utilizadores avançados podem querer adicionar cabeçalhos personalidados
+            às suas mensagens, usados para efectuar tarefas específicas (monitoramento, sinalização,
+            etc). O SendBlaster permite ao utilizador adicionar até 10 cabeçalhos por mensagem.
+        </p>
+    </blockquote>
+    <hr size="1" noshade>
+    <p class="item">
+        *Na edi&ccedil;&atilde;o gr&aacute;tis o n&uacute;mero m&aacute;ximo de conex&otilde;es
+        &eacute; 2, mesmo que seja especificado um n&uacute;mero maior.</p>
+</body>
+</html>

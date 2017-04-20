@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Bericht samenstellen</p>
+<p class="item">Het bericht samenstellen scherm laat u een bericht maken dat verstuurd kan worden.</p>
+<p class="item">Het samenstellen wordt gedaan net als in elke andere standaard e-mail client: typ het <span class="itemelement">Onderwerp</span>, voeg als het nodig is <span class="itemelement">Bijlages </span>toe*, typ de tekst voor in het bericht. 
+  Als de tekst een speciaal alfabet nodig heeft (niet op latijns gebaseerd), moet u eerst de <span class="itemelement">Encoding </span>instellen (standaard encoding kan aangepast worden in het <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Velden en uiterlijk</span></a> scherm).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Waarschuwing:</font> De encoding voor de berichten moet ingsteld worden <strong>voordat </strong> u het bericht typt om de goede resultaten te krijgen. Als u de encoding niet van te voren instelt kan het zijn dat de tekst niet te lezen is.</p>
+</blockquote>
+<p class="item">Er zijn twee gebieden op de pagina:</p>
+<ul>
+  <li class="item">In het hoofdgebied, waar de lange toolbar staat, kan u tekst invoeren om een HTML bericht te maken. Ook kan u afbeeldingen en links toevoegen, en u kan de HTML code controleren (en aanpassen) wanneer u maar wilt door op de <span class="itemelement">Laat code zien </span>knop te klikken in de bovenste balk .<br>
+    &nbsp; </li>
+  <li class="item">In het <span class="itemelement">Gewone tekst </span>gebied, kan u een bericht typen in het gewone tekst formaat. Sommige ontvanger kunnen misschien geen HTML bekijken, daarom is het belangrijk om een alternatief aan te bieden, zonder afbeeldingen en/of links. Gewone tekst kan automatisch gegenereerd worden van HTML tekst door op de <span class="itemelement">Tekst van HTML </span>knop te kliken als u klaar bent met het typen van uw bericht.</li>
+</ul>
+<p class="item">Om aangepaste berichten te versturen (in plaats van algemene berichten), kan u in het onderwerp en gewone bericht (zowel in de gewone tekst als in de HTML) <span class="itemelement">Labels</span> invoegen. Elk label is eigenlijk een referentie naar een veld: als het bericht verzonden wordt elk label vervangen met een waarde die uitgelezen wordt uit de info van de ontvanger in het specifieke veld. Bijvoorbeeld, als de lijst een Bedrijfsnaam veld en een Adres veld heeft (<a href="sendblaster_settings_fields.htm" class="itemlink">veld namen kunnen aangepast worden</a>), door tekst te typen in het bericht zoals hieronder:</p>
+<blockquote>
+  <p class="valore">Messrs. #Bedrijfsnaam#<br>
+    #adress#</p>
+</blockquote>
+<p class="item">de ontvangers zullen een aangepast bericht ontvangen zoals(voorbeeld):</p>
+<blockquote> 
+  <p class="valore">Messrs. The Coca Cola Company<br>
+    Atlanta, GA</p>
+</blockquote>
+<p class="item">Aangezien veldnamen aangespast kunnen worden, is het ook mogelijk om 'fix' labels te gebruiken (labels die onafhankelijk zijn van de veldnaam) die naar een verld nummer verwijzen (#1# #2# enz. tot #10#). Veld nummer kunnen gevonden worden in het <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Velden en uiterlijk</span></a> scherm. Drie speciale labels zijn er gegeben: <span class="itemelement">#lijstnaam#</span> 
+  die vervangen wordt door de naam van de lijst waar het bericht bij hoort; <span class="itemelement">#managingemail#</span> 
+  wat vervangen wordt door het e-mailadres waar de In/Uitschrijvingen heen worden gestuurd (dit laat ontvanger makkelijk hun adressen verwijderen van de lijst); en <span class="itemelement">#systeemdatum#</span> wat vervangen wordt door de huidige datum.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hoe maak je een Uitschrijf link</strong></font></p>
+      <p>SendBlaster kan distibutie lijsten onderhouden door berichten te downloaden van een e-mail adres dat speciaal daarvoor is, wat anders is voor elke lijst anders is (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Onderhoud inschrijvingen</span></a>). Daarom is het makkelijk om labels toe te voegen aan de HTML code met een uitschrijf link:</p>
+      <blockquote>
+        <p class="valore">&lt;a href=&quot;mailto:#managingemail#?Subject=Uitschrijven&quot;&gt;Verwijder&lt;/a&gt;</p>
+      </blockquote>
+      <p>Deze HTML code kan worden toegevoegd aan het HTML bericht door op <span class="itemelement">Show 
+        Code </span>te klikken, of het kan worden toegevoegd door de <span class="itemelement">Link</span> 
+        knop te gebruiken in de formaat toolbar (in dat geval moet u de waarde <em><strong>mailto:#managingemail#?Subject=Uitschrijven</strong></em> 
+        specificeren in het link scherm en, als de link is aangemaakt, de tekst 'Verwijderen' (of iets soort gelijks) typen om de tekst die er staat te vervangen).</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Het gewijzigde bericht kan opgeslagen worden in het .elm formaat (kan gebruikt worden door de meeste e-mail clients) door op de <span class="itemelement">Opslaan </span>knop te klikken.</p>
+<p class="item">Om nieuwe berichten vanaf het begin te maken (met de<span class="itemelement"> Nieuw</span> 
+  of <span class="itemelement">Kies template </span>knoppen) of, gebruik de <span class="itemelement">Open</span> 
+  knop, om een eerder opgeslagen bericht te openen:</p>
+<ul>
+  <li class="item">Importeer een .eml bestand(bijvoorbeeld gemaakt met Outlook) met <span class="itemelement">Open</span> / <span class="itemelement">Open .eml 
+    bestand</span></li>
+  <li class="item">Laad een eerder verstuurd bericht met <span class="itemelement">Open</span> 
+    / <span class="itemelement">Open e-mail van Geschiedenis</span></li>
+  <li class="item">Importeer tekst van een HTML pagina van de lokale harde schijf, samen met afbeeldingen, met <span class="itemelement">Open</span> / <span class="itemelement">Importeer 
+    HTML van bestand</span></li>
+  <li class="item">Importeer gewone tekst met <span class="itemelement">Open</span> 
+    / <span class="itemelement">Importeer gewone tekst van extern bestand</span></li>
+</ul>
+<p class="item">De knop <span class="itemelement">Tekst van HTML </span>laat u gewone tekst van HTML maken. Het is daarom aan te raden om het te gebruiken nadat u het bericht hebt samen gesteld.</p>
+<p class="item">Voordat u het bericht verstuurd, is het mogelijk (en aangeraden) om te controleren hoe het bericht eruit ziet in de e-mail client, met de <span class="itemelement">E-mail 
+  preview</span> knop. </p>
+<hr size="1" noshade>
+<p class="item">*Bijlage functies zijn beschikbaar in de Pro versie.</p>
+</body>
+</html>

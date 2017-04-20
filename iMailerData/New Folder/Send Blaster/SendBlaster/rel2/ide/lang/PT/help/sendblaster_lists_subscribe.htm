@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+    <p class="title">
+        Gerir subscri&ccedil;&otilde;es</p>
+    <p class="item">
+        O SendBlaster pode gerir subscri&ccedil;&otilde;es (e cancelamentos) das listas
+        de distribui&ccedil;&atilde;o. Cada lista pode ser associada a um endere&ccedil;o
+        de e-mail: quando &eacute; enviada para esse endere&ccedil;o de e-mail uma mensagem
+        com &quot;Subscrever&quot; na linha do assunto, o remetente &eacute; adicionado
+        &agrave; lista. Se o assunto for &quot;Cancelamento&quot;, o remetente &eacute;
+        removido (caso antes se encontrasse subscrito). O SendBlaster descarrega as novas
+        mensagens da conta POP3, verifica o assunto e actualiza a respectiva lista de distribui&ccedil;&atilde;o.</p>
+    <blockquote>
+        <p class="item">
+            <font color="#FF0000">Nota:</font> O assunto padrão (&quot;Subescrever&quot; para
+            subscrições, e &quot;Cancelar Subscrição&quot; para cancelamentos) podem ser mudadas
+            na janela <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Configurações
+                Avançadas</a>.</p>
+    </blockquote>
+    <blockquote>
+        <p class="item">
+            <font color="#FF0000">Aviso</font><font color="#FF0000">:</font> O endere&ccedil;o
+            escolhido para gerir as subscri&ccedil;&otilde;es dever&aacute; permitir o descarregar
+            de mensagens atrav&eacute;s de POP3 (o mesmo protocolo utilizado pelos clientes
+            de e-mail comuns). N&atilde;o &eacute; poss&iacute;vel utilizar endere&ccedil;os
+            que apenas podem ser geridos atrav&eacute;s da web (por exemplo, um e-mail do Hotmail).</p>
+    </blockquote>
+    <p class="item">
+        Normalmente a cada lista ser&aacute; atribu&iacute;do um endere&ccedil;o de e-mail
+        dedicado. Contudo, &eacute; poss&iacute;vel atribuir o mesmo endere&ccedil;o de
+        e-mail a mais do que uma lista. Neste caso, quando uma lista for actualizada, todas
+        as outras listas que utilizarem o mesmo endere&ccedil;o de subscri&ccedil;&atilde;o/cancelamento
+        ser&atilde;o actualizadas. Por exemplo, se voc&ecirc; criar 2 listas chamadas &quot;Lista
+        1&quot;e &quot;Lista 2&quot; e ambas forem geridas atrav&eacute;s do mesmo endere&ccedil;o
+        de e-mail, ao descarregar as mensagens para actualizar a &quot;Lista 1&quot;, a&quot;Lista
+        2&quot; tamb&eacute;m seria actualizada.</p>
+    <p class="item">
+        O endere&ccedil;o de gest&atilde;o de cada lista &eacute; definido digitando os
+        par&acirc;metros correctos para aceder &agrave; conta POP3, tal como num software
+        cliente de e-mail: para al&eacute;m de especificar o endere&ccedil;o (<span class="itemelement">E-mail</span>)
+        ter&aacute; tamb&eacute;m de especificar o servidor de entrada (<span class="itemelement">servidor
+            POP3</span>), o n&uacute;mero de porta (se nenhuma for especificada, a porta
+        utilizada será a com o número 110), o <span class="itemelement">Utilizador</span>
+        e a <span class="itemelement">Senha</span>. A caixa de verifica&ccedil;&atilde;o
+        <span class="itemelement">SSL</span> activa a comunica&ccedil;&atilde;o SSL, que
+        pode ser necess&aacute;ria para alguns servidores pop3 (um exemplo t&iacute;pico
+        disso &eacute; o servidor do Gmail). No campo <span class="itemelement">Tempo de expira&ccedil;&atilde;o</span>
+        voc&ecirc; pode digitar o n&uacute;mero de segundos e inactividade ap&oacute;s os
+        quais a conex&atilde;o ser&aacute; terminada. Para verificar os par&acirc;metros,
+        clique no bot&atilde;o <span class="itemelement">Testar conex&atilde;o</span> (nenhuma
+        mensagem ser&aacute; descarregada).</p>
+    <p class="item">
+        Sob determinadas circunstâncias, díficeis de prever, o seu servidor POP3 server
+        poderá precisar de abrandar o ritmo de descarregamento de mensagens; se estiver
+        com dificuldades, pode tentar activar a opção <span class="itemelement">Slower</span>
+        (não há um caminho recorrente aqui, tente os dois métodos e ver qual deles funciona
+        melhor).
+    </p>
+    <blockquote>
+        <p class="item">
+            <font color="#FF0000">Dica:</font> O botão <span class="itemelement">Perfis</span>
+            permite gerir diferentes contas POP3. A informação de cada conta pode ser guardada
+            para vários perfis. Portanto, todas as configurações POP3 são guardadas/carregadas
+            com um par de cliques. Esta funcionalidade é especialmente útil quando envia mensagens
+            em nome de alguém; ou apenas para rapidamente guardar um perfil para usar mais tarde
+            na mesma lista, ou com outra.</p>
+    </blockquote>
+    <p class="item">
+        Se assinalar a op&ccedil;&atilde;o <span class="itemelement">Manter c&oacute;pia das
+            mensagens no servidor</span>, o SendBlaster ir&aacute; descarregar as novas
+        mensagens sem as apagar do servidor. As mensagens ficar&atilde;o dispon&iacute;veis
+        para usos futuros. As novas mensagens ser&atilde;o ignoradas.</p>
+    <p class="item">
+        Se assinalar a op&ccedil;&atilde;o <span class="itemelement">Apenas eliminar novas mensagens
+            de subscrição e cancelamento</span>, o SendBlaster irá eliminar apenas as mensagens
+        reconhecidas como subscrições ou cancelamento; esta opção é realmente útil se utiliza
+        o mesmo endereço de email para receber emails que não são de gestão, tais como respostas
+        de leitores e outras mensagens.</p>
+    <p class="item">
+        A op&ccedil;&atilde;o <span class="itemelement">Actualizar todos os campos</span>
+        &eacute; extremamente poderosa: quando assinalada, n&atilde;o s&oacute; o assunto
+        mas tamb&eacute;m o corpo da mensagem ser&aacute; processado; se o corpo da mensagem
+        contiver linhas de <em>nomedecampo: valor</em>, n&atilde;o s&oacute; o endere&ccedil;o
+        de e-mail, mas tamb&eacute;m os outros campos ser&atilde;o actualizados (<a href="#updateallfields">ver
+            caixa abaixo</a>).</p>
+    <p class="item">
+        A desvantagem &eacute; que o descarregar das mensagens e o seu processamento ficar&aacute;
+        significativamente mais lento; por isso, sugerimos que a op&ccedil;&atilde;o <span
+            class="itemelement">Actualizar todos os campos</span> apenas seja assinalada
+        quando for realmente necess&aacute;ria, isto &eacute;, quando o ser website gerar
+        e-mails de subscri&ccedil;&atilde;o que contenham n&atilde;o s&oacute; endere&ccedil;os,
+        mas tamb&eacute;m outros campos.</p>
+    <p class="item">
+        Ao clicar no bot&atilde;o <span class="itemelement">Descarregar</span>, as novas
+        mensagens ser&atilde;o descarregadas e a lista de distribui&ccedil;&atilde;o seleccionada
+        ser&aacute; actualizada (assim como as outras listas que utilizem o mesmo endere&ccedil;o
+        de e-mail de gest&atilde;o).</p>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <font color="#009900"><strong>Que endere&ccedil;o deverei usar?</strong></font></p>
+                <p>
+                    Aconselhamos que dedique um diferente endere&ccedil;o de e-mail de subscri&ccedil;&atilde;o/cancelamento
+                    para cada lista de distribui&ccedil;&atilde;o, isto &eacute;, um endere&ccedil;o
+                    que n&atilde;o seja usado para outros fins. Isto ir&aacute; minimizar o risco de
+                    receber spam (que ser&aacute; ignorado) e tornar&aacute; a gest&atilde;o das listas
+                    mais f&aacute;cil. Num ambiente deste g&eacute;nero n&atilde;o seria necess&aacute;rio
+                    activar a op&ccedil;&atilde;o <span class="itemelement">Manter c&oacute;pia das mensagens
+                        no servidor</span>, uma vez que os e-mails n&atilde;o seriam lidos por outros
+                    softwares. Desta forma, o descarregar das mensagens ser&aacute; mais r&aacute;pido
+                    e o espa&ccedil;o da conta ser&aacute; preservado. Alguns servi&ccedil;os possuem
+                    um limite para o espa&ccedil;o que as mensagens podem ocupar e se a quota for ultrapassada,
+                    n&atilde;o ser&atilde;o entregues mais mensagens.</p>
+                <p>
+                    Tamb&eacute;m &eacute; poss&iacute;vel, mas n&atilde;o aconselh&aacute;vel, utilizar
+                    um endere&ccedil;o &quot;standard&quot;, tamb&eacute;m utilizado por outro cliente
+                    de e-mail para enviar e receber mensagens. Desta forma, &eacute; absolutamente necess&aacute;rio
+                    activar a op&ccedil;&atilde;o <span class="itemelement">Manter c&oacute;pia das mensagens
+                        no servidor</span> ou a opção <span class="itemelement">Apenas eliminar novas mensagens
+                            de subscrição e cancelamento</span> (caso contr&aacute;rio, assim que as
+                    mensagens forem descarregadas elas ser&atilde;o eliminadas do servidor). E ainda
+                    mais importante &eacute; que se o software de cliente de e-mail n&atilde;o for configurado
+                    correctamente, de modo a permitir que o SendBlaster leia as mensagens (no Outlook
+                    Express, depois de seleccionar uma conta, escolha <em>Propriedades / Configura&ccedil;&otilde;es
+                        avan&ccedil;adas / Manter c&oacute;pia das mensagens no servidor</em>).</p>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    <blockquote>
+        <p class="item">
+            <font color="#FF0000">Aviso:</font> se o descarregar das novas mensagens parecer
+            lento, pode ser sinal que o servidor de e-mail possui muitas mensagens em fila de
+            espera: desactive a op&ccedil;&atilde;o <span class="itemelement">Manter c&oacute;pia
+                das mensagens no servidor</span> e clique em <span class="itemelement">Descarregar</span>
+            (ou descarregue-as no seu cliente de e-mail). As mensagens, assim que descarregadas,
+            ser&atilde;o removidas do servidor e os futuros descarregamentos ser&atilde;o mais
+            r&aacute;pidos.</p>
+    </blockquote>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <font color="#009900"><strong><a name="updateallfields"></a>Como funciona a op&ccedil;&atilde;o
+                        &quot;Actualizar todos os campos&quot;</strong></font></p>
+                <p>
+                    O procedimento &quot;normal&quot; faz com que o SendBlaster apenas descarregue e
+                    processe os assuntos das mensagens, enquanto que a op&ccedil;&atilde;o <span class="itemelement">
+                        Actualizar todos os campos</span> ir&aacute; permitir que o SendBlaster descarregue
+                    e processe os corpos das mensagens, procure linhas no formato <em>nomedecampo: valor</em>
+                    e actualize os campos correspondentes.</p>
+                <p>
+                    Suponha que possui dois campos chamados &quot;Apelido&quot; e &quot;Cidade&quot;;
+                    se uma mensagem for recebida de &quot;aaa@aaa.com&quot; com &quot;Subscrever&quot;
+                    no assunto e o seguinte corpo de mensagem (note que cada linha cont&eacute;m um
+                    campo diferente):</p>
+                <p>
+                    Apelido: Correia<br>
+                    Cidade: Porto</p>
+                <p>
+                    ser&aacute; adicionado &agrave; lista o novo contacto &quot;aaa@aaa.com&quot; com
+                    o Apelido &quot;Correia&quot; e &quot;Porto&quot; como &quot;Cidade&quot;.</p>
+                <p>
+                    Tamb&eacute;m s&atilde;o permitidos outros formatos de sintaxe, utilizando as mesmas
+                    <span class="itemelement">Tags</span> tal como na <a href="sendblaster_messages_compose.htm">
+                        escrita de mensagens</a>: <em>#tag#: valor</em> e <em>#fieldnumber#: valor</em>
+                    tal como nos seguintes exemplo:</p>
+                <p>
+                    #apelido#: Correia<br>
+                    #cidade#: Porto</p>
+                <p>
+                    e</p>
+                <p>
+                    #2#: Correia<br>
+                    #3# : Porto</p>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p class="item">
+        &nbsp;</p>
+</body>
+</html>

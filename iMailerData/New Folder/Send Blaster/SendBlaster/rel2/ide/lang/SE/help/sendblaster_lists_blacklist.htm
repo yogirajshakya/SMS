@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Sp&auml;rrlista</p>
+<p class="item">En <span class="itemelement">Sp&auml;rrlista</span> &auml;r ett 
+  filter som f&ouml;rhindrar att vissa mailadresser eller dom&auml;ner f&aring;r 
+  mailutskicken, &auml;ven om de har prenumererat. </p>
+<p class="item">N&auml;r du skickar ett meddelande till en viss lista, kontrollerar 
+  SendBlaster om adressen finns med p&aring; denna Sp&auml;rrlista innan varje 
+  mail skickas. Om s&aring; &auml;r fallet skickas inte mailet (Ett <em>&quot;&lt;address&gt;: 
+  blacklisted</em>&quot; meddelande visas i loggen).</p>
+<p class="item">Sendblaster st&ouml;djer tv&aring; typer av sp&auml;rrlistor:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adresser</span>t: Skriv in den mailadress 
+    som inte skall f&aring; utskick.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Dom&auml;ner</span>*: I st&auml;llet 
+    f&ouml;r en enstaka mailadress kan du ange hela dom&auml;ner (en dom&auml;n 
+    &auml;r den del av adressen som &auml;r efter &quot;@&quot; : ta inte med 
+    www eller annan subdom&auml;n). N&auml;r dom&auml;nen &auml;r dom&auml;nen 
+    &auml;r sp&auml;rrad kommer ingen adress som tillh&ouml;r den dom&auml;nen 
+    att f&aring; meddelanden.</li>
+</ul>
+<p class="item">Varje rad skall inneh&aring;lla en adress respektive dom&auml;n 
+  (och inga extra tecken). Du kan kopiera/klistra in adresser fr&aring;n andra 
+  program, eller klicka p&aring; knappen <span class="itemelement">Redigera med 
+  Anteckningar</span> f&ouml;r att &ouml;ppna listan i programmet Anteckningar.</p>
+<form>
+  <p class="item">H&auml;r &auml;r ett exempel p&aring; sp&auml;rrlista med <span class="itemelement">adresser</span>:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">och sp&auml;rrlista med <span class="itemelement">dom&auml;ner</span>:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>F&ouml;ljande lista &auml;r felaktig</strong></font> 
+    d&auml;rf&ouml;r att den inneh&aring;ller (<em>&quot;*</em>&quot;) och en 
+    subdom&auml;n (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Endast Pro Versionen</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

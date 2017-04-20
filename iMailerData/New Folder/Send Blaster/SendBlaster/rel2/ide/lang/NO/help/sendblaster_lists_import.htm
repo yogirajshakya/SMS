@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Importering</p>
+<p class="item">Du kan importere data fra en ekstern kilde inn i den valgte listen. 
+   Det er fire aksepterte kilder:</p>
+<ul>
+  <li class="item"> Du kan importere data fra en formatert tekstfil (.csv, .txt), 
+    som ligger p&aring; den lokale maskin eller p&aring; det lokale nettverk, ved &aring; velge 
+    <span class="itemelement">Importer 
+    fra ekstern tekstfil</span>. &#8220;Formatert tekst&#8221; er et utvekslingsformat
+    som er mye i bruk av regneark og databasesoftware: de fleste programmer som faller
+    i denne kategorien er i stand til &aring; eksportere i dette formatet.<br>
+    &nbsp; </li>
+  <li class="item">Du kan importere data fra et web-omr&aring;de ved &aring; velge<span class="itemelement"> 
+    Importer fra web-omr&aring;de via http://</span>. Prosessen er veldig lik 
+    formatert tekst-metoden, bortsett fra at filen som skal importeres ikke ligger
+    p&aring; den lokale maskinen eller p&aring; det lokale nettverket, men kan n&aring;s via HTTP-protokollen. 
+    Dataene som skal importeres kan ogs&aring; v&aelig;re dynamisk genererte av et script 
+    (for eksempel ASP eller PHP). Denne metoden lar deg importere
+    innholdet av en on-line database som tilbyr et eksportering-script.Web-linken
+    spesifiseres som datakilde.<br>
+    &nbsp; </li>
+  <li class="item">Du kan importere data fra hurtigbufferet (Windows Clipboard) etter &aring; ha kopiert
+    data fra et annet program, ved &aring; velge <span class="itemelement">Importer 
+    fra hurtigbuffer</span>.<br>
+    &nbsp; </li>
+  <li class="item">Du kan importere data fra Outlook Express' Adressebok (ogs&aring; kalt
+    Windows Adressebok), ved &aring; velge <span class="itemelement">Importer fra 
+    Outlook Express</span>.</li>
+</ul>
+<p class="item">Data lastet fra en ekstern kilde kan brukes til en av de f&oslash;lgende operasjoner:</p>
+<ul>
+  <li class="item">De kan legges til valgte liste ved &aring; velge <span class="itemelement">Legg 
+    til liste og abonner nye adresser</span>.<br>
+    &nbsp; </li>
+  <li class="item">De kan fjernes fra den valgte listen ved &aring; velge 
+    <span class="itemelement">Fjern nye adresser fra listen</span>. Alle adressene
+    inkludert i datakilden blir fjernet, dersom de eksisterer i listen.<br>
+    &nbsp; </li>
+  <li class="item">De kan ble av-abonnert fra listen (uten &aring; slette oppf&oslash;ringene,
+    dvs at dataene beholdes) ved &aring; velge <span class="itemelement">Av-abonner
+    nye adresser</span>-opsjonen. Denne operasjonen er tilsvarende som den beskrevet
+    rett over, men adressene blir ikke fjernet fra listen, de blir kun markert som
+    av-abonnert. Denne metoden lar deg vedlikeholde dataene i listen, mens du unng&aring;r
+    &aring; inkludere adressene i sendeoperasjoner.</li>
+</ul>
+<p class="item">Etter at du har valgt liste, datakilde og operasjon, klikk p&aring; 
+  <span class="itemelement">Importer</span>-knappen. Et wizard-lignende vindu
+  vil bli vist, som lar deg spesifisere noen f&aring; n&oslash;dvendige opsjoner for &aring; fullf&oslash;re 
+  import-operasjonen:</p>
+<ul>
+  <li class="item"><span class="itemelement">Import-filmappe</span>, eller
+    <span class="itemelement">Import-fil URL</span> i tilfelle importering fra web
+    (importering fra hurtigbuffer eller fra Outlook Express krever ingen filbane).<br>
+    &nbsp; </li>
+  <li class="item">Data-<span class="itemelement">Format</span> (ikke n&oslash;dvendig ved
+    import fra Outlook Express): hvis du velger <span class="itemelement">Delimitert</span> 
+    m&aring; du ogs&aring; spesifisere <span class="itemelement">Feltseparator</span> 
+    og om <span class="itemelement">F&oslash;rste rad inneholder feltnavn</span>. 
+    Ved &aring; velge <span class="itemelement">Fri</span>-format vil kun e-postadressene
+    bli importert (autodetektert) og dataformat-spesifikasjon vil v&aelig;re un&oslash;dvendig.<br>
+    &nbsp; </li>
+  <li class="item">Hvis du utf&oslash;rer en typisk import-operasjon (f.eks legge til data
+    eller <span class="itemelement">Legg til liste og abonner nye adresser
+    </span>-operasjonen), vil to ekstra opsjoner v&aelig;re tilgjengelige for &aring; indikere
+    hva som skal gj&oslash;res dersom en ekstern adresse (funnet i dataene som skal importeres)
+    allerede ligger i m&aring;l-listen: ved &aring; velge <span class="itemelement">Ikke
+    legg til adresser som er duplisert eller allerede finnes i listen</span>-opsjonen, 
+    vil disse adressene bli ignorert (hvis ikke vil de bli lagt til som duplikater); 
+    ved &aring; velge <span class="itemelement">Abonner adresser som allerede finnes i listen
+    </span>-opsjonen vil adresser som allerede finnes i m&aring;l-listen men som ikke er abonnert
+    (se <a href="sendblaster_lists_managing.htm" class="itemelement">Administrere 
+    lister</a>), ikke komme inn med nye data, men adressene vil bli markerte som abonnerte.<br>
+    &nbsp; </li>
+  <li class="item">I neste skritt blir du tilslutt bedt om &aring; definere korrespondanse 
+    mellom ekstern datakilde og SendBlaster felter, og ved &aring; trykke p&aring; 
+    <span class="itemelement">Neste</span>-knappen vil import-operasjonen starte.</li>
+</ul>
+<p><span class="item"><a href="sendblaster_snapshots.htm" class="itemelement">Snapshots</a> er spesielt hendige ved importering: hvis du har lyktes med &aring; importere en fil, ta et snapshot av konfigurasjonen din for &aring; lagre innstillingene du brukte; dermed kan du gjenbruke dem senere bare med et par klikk!</span></p>
+<p class="item"><strong><font color="#FF0000">Advarsel:</font></strong> korrekt
+  identifisering av feltene i ekstern datakilde som inneholder e-postadresser er 
+  spesielt viktig fordi:</p>
+<ol>
+  <li class="item"><strong>alle eksterne oppf&oslash;ringer som ikke inneholder
+    en formelt gyldig e-postadresse i valgt felt vil bli ignorert</strong>. 
+    Dersom feil felt blir spesifisert vil derfor ingen oppf&oslash;ringer inneholde en gyldig
+    e-postadresse, og samtlige eksterne data vil bli ignorert.</li>
+  <li class="item">sammenligningsoperasjonen mellom eksterne data og
+    data i listen, for &aring; verifisere om en adresse allerede er inkludert, blir
+    faktisk utf&oslash;rt ved &aring; sammenligne e-postadressene funnet i det spesifiserte feltet.</li>
+</ol>
+</body>
+</html>

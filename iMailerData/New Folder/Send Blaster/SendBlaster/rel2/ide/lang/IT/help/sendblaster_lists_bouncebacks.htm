@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Gestione bounceback</p>
+<p class="item">Per <em>bounceback</em> si intende un messaggio tornato indietro, 
+  ad indicare che il messaggio originale non &egrave; stato recapitato. Tipicamente 
+  succede quando si utilizza un server Smtp: se l'indirizzo di destinazione non 
+  &egrave; attivo il server Smtp accetta comunque il messaggio (non avendo modo 
+  di sapere che l'indirizzo non &egrave; valido) e si ricever&agrave; successivamente 
+  un bounceback.</p>
+<p class="item">I<em> </em>bounceback sono normalmente divisi in due categorie:</p>
+<ul>
+  <li class="item"><em>Hard bounces</em>: il messaggio non &egrave; stato recapitato 
+    a causa di un errore definitivo (es. indirizzo non esistente)</li>
+  <li class="item"><em>Soft bounces</em>: il mancato recapito &egrave; dovuto 
+    ad un problema temporaneo (es. mailbox piena o server di posta occupato)</li>
+</ul>
+<p class="item">SendBlaster pu&ograve; riconoscere automaticamente la maggior 
+  parte dei messaggi di bounceback e disiscrivere o cancellare i corrispondenti 
+  indirizzi nella lista selezionata.</p>
+<p class="item">I messaggi di bounceback sono reinviati al mittente del mailing, 
+  che non necessariamente coincide con l'indirizzo utilizzato per la gestione 
+  di iscrizioni e cancellazioni (vedere <span class="itemlink"><a href="sendblaster_lists_subscribe.htm" class="itemelement">Gestione 
+  iscrizioni</a></span>); ogni mailing pu&ograve; inoltre avere un diverso mittente. 
+  Pertanto &egrave; necessario indicare al programma quale indirizzo debba essere 
+  controllato alla ricerca di eventuali bounceback.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Quale 
+        indirizzo devo inserire?</strong></font></p>
+      <p>E' necessario tener presente che i messaggi di bounceback sono reinviati 
+        al mittente, non all'indirizzo usato per gestire le iscrizioni. Supponendo 
+        di aver scelto l'indirizzo &quot;iscrizioni@miosito.com&quot; come indirizzo 
+        di gestione della Lista 1, e di aver poi inviato una newsletter con &quot;newsletter@miosito.com&quot; 
+        come mittente, i bounceback saranno inviati a &quot;newsletter@miosito.com&quot;, 
+        e questo &egrave; l'indirizzo da configurare in <span class="itemelement">Gestione 
+        bounceback</span> per la Lista 1.</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">L'indirizzo su cui verificare i bounceback viene impostato inserendo 
+  i corretti parametri per l'accesso all'account POP3, gli stessi utilizzati nel 
+  proprio client di posta elettronica: oltre all'indirizzo (<span class="itemelement">E-mail</span>) 
+  &egrave; necessario indicare il server di ricezione (<span class="itemelement">Server 
+  POP3</span>), il nome utente (<span class="itemelement">Username</span>) e la 
+  <span class="itemelement">Password</span>. La casella <span class="itemelement">SSL</span> 
+  abilita la comunicazione in modalit&agrave; SSL, che pu&ograve; essere richiesta 
+  da alcuni server (un esempio tipico &egrave; il servizio di GMail). Nel campo 
+  <span class="itemelement">Timeout</span> si imposter&agrave; inoltre il numero 
+  di secondi di inattivit&agrave; trascorsi i quali la connessione viene interrotta. 
+  Per verificare di aver inserito i parametri corretti &egrave; sufficiente eseguire 
+  una prova di connessione premendo su <span class="itemelement">Test connessione</span> 
+  (non verr&agrave; scaricato alcun messaggio).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Suggerimento:</font> il pulsante <span class="itemelement">Profili</span> permette di gestire pi&ugrave; configurazioni POP3. I dati degli account POP3 possono essere salvati in pi&ugrave; profili e poi ricaricati con pochissimi click. Questa funzionalit&agrave; &egrave; utile in particolare quando si inviano mailing per conto terzi; o semplicemente per salvare velocemente un profilo da utilizzare anche per un'altra lista.</p>
+</blockquote>
+<p class="item">Abilitando la casella <span class="itemelement">Conserva sul server 
+  una copia dei messaggi</span>, SendBlaster scaricher&agrave; i nuovi messaggi 
+  senza cancellarli dal server; i messaggi potranno quindi essere letti successivamente 
+  anche con un altro client di posta. I messaggi gi&agrave; scaricati saranno 
+  ignorati.</p>
+<p class="item">Abilitando <span class="itemelement">Elimina solo i nuovi messaggi di bounce-back </span> SendBlaster canceller&agrave; dal server di posta solo i messaggi che sono stati riconosciuti come bounce-back, lasciando gli altri messaggi sul server.</p>
+<p class="item"> Se l'opzione <span class="itemelement">Cancella gli indirizzi 
+  che inviano il bounceback </span>&egrave; attiva, gli indirizzi saranno cancellati 
+  dalla lista. In caso contrario saranno semplicemente disiscritti.</p>
+<p class="item">Abilitando <span class="itemelement">Controlla hard bounces</span> 
+  e <span class="itemelement">Controlla soft bounces </span> &egrave; possibile 
+  scegliere quali tipi di bounceback controllare (vedi sopra); naturalmente se 
+  nessuna delle opzioni &egrave; abilitata non avr&agrave; luogo alcun controllo.</p>
+<p class="item">Premendo il pulsante <span class="itemelement">Scarica</span> 
+  verranno ricevuti i nuovi messaggi e sar&agrave; aggiornata la lista selezionata 
+  (e le eventuali altre liste che utilizzino lo stesso indirizzo).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Nota:</font> se il download dei nuovi 
+    messaggi appare particolarmente lento, questo pu&ograve; significare che sul 
+    server di posta si sono accumulati molti messaggi: deselezionare <span class="itemelement">Conserva 
+    sul server una copia dei messaggi</span> e premere <span class="itemelement">Scarica</span> 
+    (oppure eseguire le operazioni equivalenti sul proprio &quot;normale&quot; 
+    client di posta); i messaggi, una volta scaricati, verranno cancellati ed 
+    i successivi download saranno pi&ugrave; veloci.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+</body>
+</html>

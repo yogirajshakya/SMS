@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<title>SendBlaster</title>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body"> 
+  <p class="title">FAQ</p>
+  
+<p class="item"><strong>När jag skickar ett meddelande till många användare, 
+  kan de då se alla andras mailadresser?</strong></p>
+  <blockquote> 
+    
+  <p class="item">Nej, SendBlaster skickar varje meddelande som ett separat mail. 
+    Att använda SendBlaster för att hantera utskick är därför 
+    ett bra sätt att förhindra att mottagaren ser andra människors 
+    mailadresser.<br>
+      &nbsp; </p>
+  </blockquote>
+  
+<p class="item"><strong>Hur kan jag filtrera en lista?</strong></p>
+  <blockquote> 
+    
+  <p class="item">Genom att använda sorterings- och grupperings-funktionerna 
+    i listhanteraren, och tillfälligt aktivera eller stänga av en grupp 
+    adresser kan man göra utskick till en grupp av adresserna på listan.</p>
+  </blockquote>
+  
+<p class="item"><strong>Hur kan jag sätta in en länk i meddelandet för 
+  att avbeställa prenumerationen?</strong></p>
+  
+<blockquote> 
+  <p class="item">SendBlaster kan hantera sina adresslistor genom att hämta 
+    mail från en speciell mailadress, olika för varje lista (se <a class="itemelement" href="sendblaster_lists_subscribe.htm">Hantera 
+    prenumerationer</a>). Därför är det enkelt att lägga in 
+    prenumerationslänkar i HTML-koden:</p>
+    <blockquote> 
+      
+    <p class="valore">&lt;a href="mailto:#managingemail#?Subject=Unsubscribe"&gt;Unsubscribe&lt;/a&gt;</p>
+    </blockquote>
+    
+  <p class="item">HTML-koden kommer att läggas in i HTML-sektionen av
+    meddelandet, du kan granska/redigera den genom att klicka på <span class="itemelement">Granska kod</span>.</p>
+  </blockquote>
+  
+<p class="item"><strong>När jag skickar ett meddelande enligt en adresslista 
+  kommer en del tillbaka med ett felmeddelande.</strong></p>
+  <blockquote> 
+    
+  <p class="item">När man skickar till många adresser är detta ganska 
+    vanligt. En del adresser har kanske upphört, eller något tillfälligt 
+    fel gör att mailet inte når fram. </p>
+    
+    
+  <p class="item">Om det däremot är en stor andel som inte går att 
+    leverera kan det vara nödvändigt att kontrollera <a class="itemlink" href="sendblaster_messages_send.htm">Sändningsinstälningar</a>.</p>
+    
+    
+  <p class="item">Det kanske blir nödvändigt att ändra sändläget (direkt
+    eller genom SMTP) och, om din SMTP använder antispam-filter, sänka
+    antalet anslutningar och öka pausen mellan meddelanden. SMTP-servern
+		kan ha restriktioner som hindrar dig från att skicka mer än ett specifikt
+		antal meddelanden under ett speciellt tidsintervall (till exempel kanske en given server
+		inte tillåter att du skickar mer än 50 meddelanden per timme); i så fall kommer operationen
+		att avslutas vid ett senare tillfälla med hjälp av
+    <a class="itemelement" href="sendblaster_messages_history.htm">Historie</a>-funktionen.</p>
+    
+  <p class="item">Om SMTP-serverns antispam-restriktioner inte kan skrivas över
+    och sändelserna går väldigt långsamt, kan du
+    prova att använda direktskick eller en “mer tolerant” SMTP-server
+    (på Internet finns möjligheten att, till ett lågt pris, köpa
+    effektiva SMTP-tjänster).</p>
+    <p class="item">Om problemet uppstår när du använder direktskicksläget, kan du tvingas
+      att manuellt specificera IP-adressen för DNS-servern.<br>
+      &nbsp; </p>
+    </blockquote>
+  
+<p class="item"><strong>Jag har tappat bort lösenordet och kan inte använda 
+  programmet. Vad gör jag?</strong></p>
+  <blockquote> 
+    
+  <p class="item">Det går inte att återskapa data som förloras. 
+    Följande procedur är enda sättet att få tillgång 
+    till programmet igen.</p>
+    
+  <p class="item">1. Ta bort SendBlaster via Kontrollpanelen </p>
+    
+  <p class="item">2. Tag bort installationsmappen (tex <i>C.\Program files\SendBlaster</i>), 
+    och alla undermappar till denna. Av säkerhetsskäl tas inte databasen 
+    bort automatiskt om du råkar ta bort programmet (men i detta fall måste 
+    du ta bort den manuellt).</p>
+    
+  <p class="item">3. Installera programmet igen.</p>
+  </blockquote>
+</body>
+</html>

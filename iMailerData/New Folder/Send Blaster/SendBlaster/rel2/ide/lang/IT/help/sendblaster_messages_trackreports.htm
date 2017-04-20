@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">TrackReports</p>
+<p class="item">Questo pannello consente di navigare sul sito di <strong>TrackReports</strong> senza aprire un browser esterno. I pulsanti di navigazione sono nascosti per default, al fine di risparmiare spazio, ma li si pu&ograve; rendere visibili cliccando sulla linguetta <span class="itemelement">Navigazione</span>; apparir&agrave; una barra con i pulsanti <span class="itemelement">Indietro</span>, <span class="itemelement">Avanti</span>, <span class="itemelement">Home</span>, <span class="itemelement">Ricarica</span> e <span class="itemelement">Stop</span>. </p>
+<p class="item">TrackReports &egrave; un servizio online che consente di monitorare le proprie campagne e-mail: quante persone hanno aperto la newsletter, quante hanno cliccato sui link, e cos&igrave; via; i dati raccolti sono visualizzati in forma grafica. Per iniziare a monitorare la campagna e-mail selezionare il pulsante <span class="itemelement">TrackReports</span> nel <a href="sendblaster_messages_compose.htm" class="itemlink">pannello di composizione del messaggio</a> di SendBlaster:</p>
+<ol class="item">
+  <li>Comporre il messaggio </li>
+  <li>Una volta terminata la composizione, connettersi ad Internet (se non si &egrave; gi&agrave; connessi) e fare click sul pulsante <span class="itemelement">TrackReports</span></li>
+  <li>Inserire i dati del proprio account TrackReports (&egrave; necessario registrarsi preventivamente) </li>
+  <li>Inserire un titolo univoco per il mailing oppure selezionarne uno fra quelli esistenti (consultare il sito di TrackReports per maggiori informazioni)</li>
+</ol>
+<p class="item">Tutti i link contenuti nel messaggio sono automaticamente modificati in modo da includere il codice per il ridirezionamento che consente il monitoraggio; al messaggio viene inoltre aggiunta una &quot;immagine di tracciamento&quot;. Dato che il codice HTML finale viene modificato, &egrave; necessario aver finito di comporre il messaggio prima di inserire il codice di monitoraggio (in altre parole, questa deve essere l'ultima operazione da eseguire prima dell'invio)*.</p>
+<p class="item">Per poter inserire i codici di monitoraggio di TrackReports &egrave; necessario essere online, dato che l'operazione richiede di collegarsi all'API online di TrackReports. </p>
+<p class="item">Attualmente TrackReports &egrave; in beta, e perci&ograve;, al momento di scrivere, offerto come servizio gratuito agli utenti di SendBlaster. Tuttavia, si tratta di un servizio separato: SendBlaster &egrave; integrato con il servizio, ma <strong>TrackReports non fa parte del software SendBlaster</strong> e in futuro potrebbe essere sospeso o fornito a pagamento.</p>
+<p class="item"><font color="#FF0000">Attenzione:</font> TrackReports usa un sistema di ridirezionamento (simile ai servizi che abbreviano le url); in caso il server di TrackReports' diventi non disponibile, ad esempio per problemi tecnici del server, tutti i link tracciati saranno irraggiungibili (i destinatari non potranno seguire i link). Consigliamo pertanto di non usare TrackReports o altri sistemi di ridirezionamento nelle comunicazioni critiche. </p>
+<hr size="1" noshade>
+<p class="item">**Tranne che quando si desidera non monitorare alcuni dei link presenti nel messaggio: in questo caso, i link non monitorati devono essere aggiunti solo dopo che il codice per TrackReports &egrave; stato gi&agrave; inserito nel messaggio. Inoltre,  volendo usare sia <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a> che TrackReports, aggiungere Google Analytics per primo e TrackReports per ultimo (dato che quest'ultimo utilizza un servizio di ridirezionamento).</p>
+</body>
+</html>

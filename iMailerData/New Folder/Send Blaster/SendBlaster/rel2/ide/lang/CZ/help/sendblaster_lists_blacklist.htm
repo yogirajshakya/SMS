@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">&#268;erná listina</p>
+<p class="item"><span class="itemelement">&#268;erná listina</span> je filtr,
+který zabra&#328;uje tomu, aby se na n&#283;které adresy &#269;i domény rozesílaly
+e-maily, bez ohledu na to, že jsou tyto adresy/domény <a href="file:///C:/Program%20Files/SendBlaster/rel2/ide/lang/CZ/help/sendblaster_lists_managing.htm">p&#345;ihlášené
+a povolené</a>.</p>
+<p class="item">Když pošlete zprávu n&#283;kterému svému klientu ze
+seznamu, SendBlaster kontroluje p&#345;ed rozesíláním každého adresáta a
+zjiš&#357;uje, jestli není jeho adresa &#269;i doména na &#269;erné listin&#283;.
+Pokud na ní je, adresáta p&#345;esko&#269;í (zobrazí se zpráva <em>&quot;&lt;adresa&gt;:
+blacklisted</em>&quot; v panelu protokolu).</p>
+<p class="item">Sendblaster podporuje dva typy &#269;erných listin:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adresy &#269;erných listin</span>:
+    napište sem adresy, kam nikdy nechcete posílat žádné zprávy.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Domény &#269;erných listin*</span>:
+    místo jednotlivých adres m&#367;žete ur&#269;it celé domény (doména e-mailové
+    adresy je ta &#269;ást, která následuje po znaku &quot;@&quot;: dávejte
+    pozor, aby nebylo zahrnuto <em>&quot;www.</em>&quot; ani žádný jiný název
+    domény t&#345;etího &#345;ádu). Když je doména na &#269;erné listin&#283;,
+    žádná adresa v této domén&#283; nedostane nikdy zprávu.</li>
+</ul>
+<p class="item">Položky m&#367;žete zadávat ru&#269;n&#283;. Každý &#345;ádek
+musí obsahovat jednu adresu/doménu (a žádné znaky navíc: není možné používat
+zástupné znaky). M&#367;žete zpracovávat &#269;erné listiny v programech t&#345;etích
+stran díky podpo&#345;e schránky Windows nebo m&#367;žete používat Poznámkový
+blok ve Windows: kliknutím tla&#269;ítko <span class="itemelement">Upravit v
+Poznámkovém bloku</span> otev&#345;ete Poznámkový blok (program SendBlaster
+pak po&#269;ká na dokon&#269;ení editace a uzav&#345;ení Poznámkového
+bloku).</p>
+<form>
+  <p class="item">Zde je p&#345;íklad platných <span class="itemelement">adres
+  </span>&#269;erné listiny:</p>
+  <p> 
+    <textarea name="addresses" rows="1" cols="20">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">a platné &#269;erné listiny <span class="itemelement">domén</span>:</p>
+  <p> 
+    <textarea name="domains" rows="1" cols="20">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#ff0000"><strong>Následující &#269;erná
+  listina je naopak neplatná</strong></font> protože obsahuje zástupné znaky
+  (<em>&quot;*</em>&quot;) a doménová jména t&#345;etího &#345;ádu (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong" rows="1" cols="20">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p class="item"><font face="Times New Roman" size="2">Prosím všimn&#283;te
+  si že &#269;erné listiny mají velikostní limit, a supluji
+  &quot;nahrazuji&quot; neindexované úkoly. Všeobecn&#283;, oni m&#283;li by
+  být použité pro &quot;záchranu&quot; nebo zvláštní úkoly (totiž kdy n&#283;kdo
+  explicitn&#283; odmítá p&#345;ijmout libovolnou zprávu od vás a k tomu
+  dokonce i&nbsp; p&#345;edplatné; nebo když chcete se ujistit zda vaše
+  konkurenty odmítají informa&#269;ní letáky od vás).</font></p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Dostupné jen v Pro Edition verze</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

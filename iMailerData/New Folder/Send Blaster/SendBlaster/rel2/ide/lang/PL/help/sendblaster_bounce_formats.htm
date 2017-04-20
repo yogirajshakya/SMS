@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Dostosowywanie formatu zwrotów </p>
+<p class="item">Format zwrotów emaili by&#322; oryginalnie zaprojektowany do czytanie 
+przez ludzi, a nie maszyny, dodatkowo nie ma standardowego formatu lub zasady. SendBlaster 
+mo&#380;e przetwarza&#263; wi&#281;kszo&#347;&#263; z formatów zwrotów korzystaj&#261;c z wewn&#281;trznej bazy, 
+ale mo&#380;esz te&#380; napotka&#263; jakie&#347; formaty, które s&#261; nierozpoznawane przez program. 
+Je&#380;eli taka sytuacja b&#281;dzie mia&#322;a miejsce mo&#380;esz r&#281;cznie doda&#263; nowy, w&#322;asny 
+format do bazy zwrotów SendBlaster.</p>
+<p class="item">W&#322;asny format podlega pewnym regu&#322;om; wszystkie musz&#261; by&#263; 
+spe&#322;nione, aby wiadomo&#347;&#263; mog&#322;a by&#263; potraktowana jak zwrot (inaczej mówi&#261;c 
+operatorem logicznym zasady jest AND). </p>
+<p class="item">Je&#380;eli chcesz doda&#263; <span class="itemelement">Nowy format</span>, 
+najpierw musisz zidentyfikowa&#263; wzorzec w temacie lub innych nag&#322;ówkach, które w 
+sposób unikalny identyfikuj&#261; wiadomo&#347;&#263; jako zwrot (<span class="itemelement">Ci&#281;&#380;ki 
+zwrot</span>, je&#380;eli zaznaczysz checkbox, lub lekki je&#380;eli ten po lewej 
+stronie jest niezaznaczony). Lista rozwijana nag&#322;ówków pokazuje jedynie przyk&#322;ady, mo&#380;esz doda&#263; 
+r&#281;cznie specyficzny nag&#322;ówek wprowadzaj&#261;c jego nazw&#281; w pulu
+<span class="itemelement">Nag&#322;ówek</span> oraz wzorzec w polu
+<span class="itemelement">Warto&#347;&#263;</span>.</p>
+<p class="item"><span class="itemelement">Wzorzec</span> zazwyczaj posiada kilka 
+ogólnych znaków (symbol &quot;*&quot; oznacza &quot;dowolny znak&quot;): na przyk&#322;ad, 
+je&#380;eli wprowadzisz &quot;*delivery*notification*&quot; jako wzorzec tematu, 
+jakakolwiek wiadomo&#347;&#263; zawieraj&#261;ca s&#322;owa &quot;delivery&quot; oraz &quot;notification&quot;  
+w temacie - np. &quot;delivery to xxx@yyy.com notification failure&quot; - b&#281;dzie 
+uznana za zwrot, potwierdzony dodatkowo jeszcze przez inne zasady, które mo&#380;esz 
+zdefiniowa&#263;. Je&#380;eli u&#380;yjesz &quot;delivery notification&quot;, bez symbolu 
+wieloznaczno&#347;ci, tylko wiadomo&#347;ci zawieraj&#261;ce dok&#322;adnie &quot;delivery notification&quot; 
+jako ich temat b&#281;d&#261; uznane jako zwrot - &quot;delivery to xxx@yyy.com notification failure&quot; 
+nie spe&#322;nia ju&#380; kryteriów.</p>
+<p class="item">Mo&#380;esz równie&#380; wprowadzi&#263; kilka specyficznych s&#322;ów (oddzielonych 
+przecinkiem), które musz&#261; zosta&#263; znalezione w g&#322;ównej cz&#281;&#347;ci wiadomo&#347;ci: je&#380;eli 
+&#380;adne ze s&#322;ów nie zostanie znalezione, wiadomo&#347;&#263; nie zostanie uznana za zwrot. 
+Na przyk&#322;ad, wi&#281;kszo&#347;&#263; zwrotów zawiera s&#322;owo &quot;reason&quot; (wraz z tekstem, 
+który wyja&#347;nia powód nie dostarczenia). Nale&#380;y pami&#281;ta&#263;, &#380;e lista s&#322;ów nie jest 
+wzorcem (nie mo&#380;esz u&#380;y&#263; symboli ogólnych), a operatorem logicznym tej listy 
+jest OR. </p>
+<p class="item">Je&#380;eli okre&#347;lona wiadomo&#347;&#263; spe&#322;nia wszystkie zdefiniowane przez 
+Ciebie warunki b&#281;dzie uznana za zwrot, a wszystkie adresy email znalezione w 
+wiadomo&#347;ci b&#281;d&#261; usuni&#281;te z subskrypcji, je&#380;eli zostan&#261; znalezione w li&#347;cie, dla 
+której przetwarza&#322;e&#347; zwroty. Mo&#380;esz równie&#380; wy&#322;&#261;czy&#263; typowy adres nadawcy, 
+korzystaj&#261;c ze wzorca.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong>
+	<font color="#009900">Przyk&#322;ad </font></strong></p>
+        <p class="item">Powiedzmy, &#380;e chcesz przetworzy&#263; wiadomo&#347;ci jako zwroty 
+		gdy:</p>
+        <p class="item">a) zawieraj&#261; s&#322;owa &quot;undeliverable&quot; i &quot;message&quot; 
+		w temacie;<br>
+          b) s&#261; z adresu &quot;postmaster@...&quot; ;<br>
+          c) ich typ zawarto&#347;ci nag&#322;ówka jest &quot;delivery notification&quot; 
+		lub &quot;delivery failure notification&quot;<br>
+          d)  zawiera s&#322;owo &quot;reason&quot; lub &quot;error&quot; w g&#322;ównej 
+		cz&#281;&#347;ci </p>
+        <p class="item">i zazwyczaj nie chcesz adresu nadawcy (&quot;postmaster@...&quot;) 
+		usun&#261;&#263; z subskrypcji, jako &#380;e prawdziwy adres na który nie zosta&#322;a 
+		dostarczona wiadomo&#347;&#263; jest gdzie&#347; w g&#322;ównej cz&#281;&#347;ci wiadomo&#347;ci. </p>
+        <p class="item">Oto przyk&#322;ad jak taki format mo&#380;e wygl&#261;da&#263;:&nbsp; </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Ci&#281;&#380;ki zwrot :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(zaznaczony)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Wzór tematu:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Nag&#322;ówek:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">From</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Warto&#347;&#263;:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Nag&#322;ówek:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Warto&#347;&#263;:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*delivery*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Cz&#281;&#347;&#263; g&#322;ówna zawiera:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reason, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Wy&#322;&#261;cz :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>A tu jest prostszy format, która pozwala na przetwarzanie wiadomo&#347;ci 
+	maj&#261;ce s&#322;owo &quot;undeliverable&quot; w ich temacie (i wy&#322;&#261;czone adresy 
+	postmaster@... i majordomo@... ):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Ci&#281;&#380;ki zwrot :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(zaznaczony)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Wzór tematu:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*undeliverable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Nag&#322;ówek:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(pusty)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Warto&#347;&#263;:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(pusty)</em></td>
+      </tr>
+      <tr>
+        <td class="item" style="height: 17px"><strong>2.</strong></td>
+        <td class="item" style="height: 17px"><strong>Nag&#322;ówek:</strong></td>
+        <td class="item" style="height: 17px"></td>
+        <td class="item" style="height: 17px"><em>(pusty)</em></td>
+      </tr>
+      <tr>
+        <td class="item" style="height: 17px"></td>
+        <td class="item" style="height: 17px"><strong>Warto&#347;&#263;:</strong></td>
+        <td class="item" style="height: 17px"></td>
+        <td class="item" style="height: 17px"><em>(pusty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Cz&#281;&#347;&#263; g&#322;ówna zawiera:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(pusty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Wy&#322;&#261;cz :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

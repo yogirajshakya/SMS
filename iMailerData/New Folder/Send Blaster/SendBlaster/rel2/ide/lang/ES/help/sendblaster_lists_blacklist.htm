@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Listas Negras</p>
+<p class="item">Una <span class="itemelement">lista negra</span> es un filtro que previene
+que ciertas direcciones de e-mail o dominios reciban correos, independientemente de su
+ <a href="sendblaster_lists_managing.htm">estado de suscripci&oacute;n/activaci&oacute;n</a>.</p>
+<p class="item">Cuando usted env&iacute;a un mensaje a una lista determinada, antes de que cada
+correo sea enviado realmente, SendBlaster verifica si la direcci&oacute;n del destinatario o su dominio
+se encuentran incluidos en la lista negra: en caso afirmativo, la direcci&oacute;n de correo
+es saltada (un mensaje de <em>&quot;direcci&oacute;n bloqueada&quot;</em> ser&aacute; mostrado en el panel de Log).</p>
+<p class="item">SendBlaster soporta dos tipos diferentes de listas negras:</p>
+<ul>
+  <li class="item">Lista negra de <span class="itemelement">direcciones</span>:
+  ingrese aqu&iacute; las direcciones de e-mail a las cuales no desea que los
+  mensajes sean enviados.<br>
+    &nbsp; </li>
+  <li class="item">Lista negra de <span class="itemelement">dominios</span>*:
+  en lugar de direcciones &uacute;nicas, usted puede especificar dominios completos
+  (un dominio de e-mail es la parte que sigue al signo &quot;@&quot; en las direcciones de e-mail:
+  tenga cuidado de no incluir <em>&quot;www.</em>&quot; o cualquier otro nombre de dominio de tercer nivel).
+  Cuando un dominio se encuentre en una lista negra, ninguna direcci&oacute;n perteneciente al dominio
+  recibir&aacute; un mensaje.</li>
+</ul>
+<p class="item">Puede ingresar los &iacute;tems como texto libre; cada fila debe contener una direcci&oacute;n / dominio
+(sin caracteres extra: no es posible utilizar comodines). Puede copiar al portapapeles, o pegar desde el,
+para manipular las listas negras con software de terceros; o presionar el bot&oacute;n
+ <span class="itemelement">Editar con Block de Notas</span> para abrir
+ una lista negra con el editor de texto por defecto de Windows (La ejecuci&oacute;n del programa
+ se detiene hasta que usted finalice la edici&oacute;n y cierre el Block de Notas).</p>
+<form>
+  <p class="item">Este es un ejemplo de una lista negra de <span class="itemelement">direcciones</span>
+  v&aacute;lida:</p>
+  <p>
+    <textarea name="addresses">direccion1@dominio.com
+prueba2@sitio.biz
+</textarea>
+  </p>
+  <p class="item">y una lista negra de <span class="itemelement">dominios</span> v&aacute;lida:</p>
+  <p>
+    <textarea name="domains">dominio.com
+sitio.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>La lista negra siguiente es incorrecta</strong></font>
+  debido a que incluye comodines (<em>&quot;*</em>&quot;) y nombres de dominio de tercer nivel (&quot;<em>www.&quot;</em>):</p>
+  <p>
+    <textarea name="wrong" id="wrong">www.dominio.com
+*@sitio.biz
+</textarea>
+  </p>
+  <p class="item">Por favor tenga en cuenta que las listas negras poseen un l&iacute;mite, y no pretenden reemplazar a las tareas
+  propias de las desuscripciones. Como regla general, deber&iacute;an ser utilizadas s&oacute;lo en caso de &quot;emergencia&quot; o en casos
+  especiales (por ejemplo, cuando alguien solicita expl&iacute;citamente no recibir un mensaje en el futuro, o cuando usted desea asegurarse de que sus
+  competidores no reciban newsletters suyas).</p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*S&oacute;lo disponible en la Edici&oacute;n Pro.</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

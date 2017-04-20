@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">History</p>
+<p class="item">This window allows you to see the list of all sent messages. In 
+  case a mailing operation was not completed (for example if your SMTP server 
+  won't allow sending more than a certain number of e-mails in a short period 
+  of time) it is possible to resume sending from the point where it was interrupted, 
+  sending the message to all the recipients not included in the original sending 
+  operation. </p>
+<p class="item">Each mailing operation gets marked with the send date, the list 
+  name to which the message was sent and the subject.</p>
+<p class="item">Click on the <span class="itemelement">E-mail preview</span> button 
+  (or select the corresponding command with a right mouse click) to show the message 
+  sent for the selected entry.</p>
+<p class="item">The <span class="itemelement">Address list </span>allows you to 
+  see a list of all addresses to which the message was sent. All addresses to 
+  which the message was successfully sent are shown in green, while addresses 
+  shown in red are the ones to which delivery failed.</p>
+<p class="item">The <span class="itemelement">Log</span> button shows the send 
+  log, which is the <em>dialog </em>that took place with the SMTP server (or with 
+  the destination servers in case of a direct send).</p>
+<p class="item">In case one or more addresses were not included in the mailing
+   operation, the last column of the list (for incomplete entries) will show
+  the 
+  button <img src="img/sendblaster_messages_history_1.gif" width="16" height="16">.
+   Clicking it will enable you to complete the sending operation using the current
+  
+  sending options, as specified in then <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Send</span></a> 
+  tab. The message will then be sent to all recipients that did not yet receive
+   it (the red addresses in the Address list window).</p>
+<p class="item">History items can be deleted by selecting them (use the <em>Ctrl</em> 
+  key on the keyboard to select multiple elements or use <em>Shift </em>to select 
+  a group) and by clicking on the <span class="itemelement">Delete items</span> 
+  button.</p>
+<p class="item">Delivered and undelivered addresses can be exported as a text 
+  file using <span class="itemelement">Export delivered</span> and <span class="itemelement">Export 
+  undelivered</span> buttons. Exporting undelivered addresses may also be useful 
+  when you want to purge lists from bad addresses: you can later <a href="sendblaster_lists_import.htm" class="itemlink">import 
+  the file</a> selecting remove or unsubscribe options.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><strong><font color="#009900">When 
+        is it useful to use the History functionalities? </font></strong></p>
+      <p>Completing a message sending operation through the History functionalities 
+        is a great way to work around SMTP server restrictions that wouldn't otherwise 
+        allow sending several messages in a short time span. SMTP server restrictions 
+        could be such that, despite settings in <span class="itemelement">Advance 
+        settings</span> of the <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Send</span></a> 
+        tab, won't allow completion of a sending operation in a single step. For 
+        instance, in a situation where you have a server that won't allow sending 
+        more than 50 messages per hour and a distribution list with 100 addresses, 
+        only the first half will go through during the first attempt. After a 
+        one-hour wait the operation can be completed from the History window.</p>
+      <p>Exporting undelivered (red) addresses may also be useful when you want 
+        to purge lists from bad addresses.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

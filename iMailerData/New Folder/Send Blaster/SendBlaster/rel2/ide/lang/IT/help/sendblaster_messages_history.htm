@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Cronologia</p>
+<p class="item">In questa schermata &egrave; possibile vedere l'elenco dei messaggi 
+  precedentemente inviati. Qualora non sia stato possibile completare il mailing 
+  (ad esempio perch&eacute; il proprio server SMTP non consente di inviare pi&ugrave; 
+  di un certo numero di messaggi in un determinato arco di tempo) &egrave; possibile 
+  riprendere un invio dal punto in cui era stato interrotto, inviando il messaggio 
+  originale agli indirizzi a cui non &egrave; stato recapitato.</p>
+<p class="item">Di ogni mailing vengono indicati la data di invio, la lista a 
+  cui &egrave; stato inviato il mailing e l'oggetto.</p>
+<p class="item">Per visualizzare il messaggio inviato cliccare sul tasto <span class="itemelement">Anteprima 
+  mail</span> (oppure selezionare il corrispondente comando con il tasto destro 
+  del mouse).</p>
+<p class="item">Il pulsante <span class="itemelement">Elenco indirizzi</span> 
+  permette di vedere l'elenco di indirizzi e-mail a cui era destinato il mailing; 
+  gli indirizzi a cui il messaggio &egrave; stato recapitato sono indicati in 
+  verde, mentre gli indirizzi che non &egrave; stato possibile raggiungere sono 
+  visualizzati con il colore rosso.</p>
+<p class="item">Il tasto <span class="itemelement">Log</span> visualizza il log 
+  dell'invio, cio&egrave; il dialogo avvenuto con il server SMTP (o con i server 
+  di destinazione in caso di invio diretto).</p>
+<p class="item">Se non &egrave; stato possibile recapitare il messaggio ad alcuni 
+  indirizzi, nell'ultima colonna della lista, in corrispondenza di ogni mailing 
+  non completato, appare il tasto verde <img src="img/sendblaster_messages_history_1.gif" width="16" height="16">, 
+  cliccando sul quale &egrave; possibile completare l'invio del mailing selezionato 
+  usando le impostazioni attuali della scheda <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Invia</span></a>. 
+  Il messaggio sar&agrave; quindi inviato a tutti i destinatari che non l'hanno 
+  gi&agrave; ricevuto (cio&egrave; agli indirizzi indicati in rosso nella finestra 
+  che appare scegliendo <span class="itemelement">Elenco indirizzi</span>).</p>
+<p class="item">E' possibile cancellare uno o pi&ugrave; elementi dalla cronologia 
+  selezionandoli (premere il tasto <em>Ctrl</em> sulla tastiera per selezionare 
+  pi&ugrave; elementi oppure <em>Shift/Maiusc</em> per selezionare un gruppo) 
+  e cliccando sul pulsante <span class="itemelement">Elimina voci</span>.</p>
+<p class="item">Gli indirizzi a cui il messaggio &egrave; stato oppure non &egrave; 
+  stato recapitato (&quot;verdi&quot; o &quot;rossi&quot;) possono essere esportati 
+  come file di testo usando i pulsanti <span class="itemelement">Esporta consegnati</span> 
+  e <span class="itemelement">Esporta non consegnati</span>. Quest'ultima funzione 
+  &egrave; particolarmente utile quando si desidera ripulire le liste dagli indirizzi 
+  non funzionanti: dopo aver esportato gli indirizzi a cui non &egrave; stato 
+  possibile recapitare il messaggio, si potr&agrave; successivamente <a href="sendblaster_lists_import.htm">importare 
+  il file in una delle liste</a> in modalit&agrave; cancellazione (scegliendo 
+  cio&egrave; le opzioni <span class="itemelement">Elimina i nuovi indirizzi dalla 
+  lista</span> o <span class="itemelement">Disiscrivi i nuovi indirizzi</span>).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>In 
+        quali situazioni &egrave; utile il completamento dei mailing?</strong></font></p>
+      <p>Il completamento dei mailing dalla cronologia &egrave; un ottimo modo 
+        per aggirare le limitazioni di un server SMTP che non consenta l'invio 
+        di molti messaggi in un dato intervallo temporale. Le limitazioni del 
+        server SMTP, infatti, potrebbero essere tali che, comunque siano definite 
+        le <span class="itemelement">Impostazioni avanzate</span> della scheda 
+        <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Invia</span></a>, 
+        non sia possibile completare un mailing in un solo passaggio: si pensi 
+        ad esempio ad un server SMTP che non consenta di inviare pi&ugrave; di 
+        50 messaggi in un'ora, a fronte di una lista di distribuzione di 100 messaggi. 
+        In una situazione di questo tipo, il primo invio andr&agrave; a buon fine 
+        solo per i primi 50 indirizzi; si attender&agrave; quindi almeno un'ora 
+        e si completer&agrave; il mailing dalla cronologia.</p>
+      <p>L'esportazione degli indirizzi a cui non &egrave; stato recapitato il 
+        messaggio (indirizzi &quot;rossi&quot;) &egrave; utile per ripulire le 
+        liste dagli indirizzi non funzionanti.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

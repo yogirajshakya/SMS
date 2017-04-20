@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Zwarte lijst</p>
+<p class="title"><span class="item">Een <span class="itemelement">zwarte lijst </span>is een filter die voorkomt dat bepaalde e-mail adressen of domeinen e-mial ontvangen, onafhankelijk van de <a href="sendblaster_lists_managing.htm">inschrijvings/activatie status</a>.</span></p>
+<p class="item">Als u een bericht stuurd naar een lijst, wordt voordat het bericht verstuurd door SendBlaster voor elk e-mail adres apart gecontroleerd of het e-mail adres of het domein in een zwarte lijst staat: als dat zo is, dan wordt de mail overgeslagen (zal &lt;adres&gt; &quot;blacklisted&quot; te zien zijn in het logboek).</p>
+<p class="item">Sendblaster ondersteund twee soorten zwarte lijsten:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adressen</span> zwarte lijst: vul hier de e-mail adressen in waar u nooit meer e-mail naar wilt sturen.<br>
+    &nbsp; 
+    <ul>
+      <li><span class="itemelement">Domeienen </span>zwarte lijst*: in plaats van enkele adressen, kan u ook hele domeinen blokkeren (een domein is het gedeelte wat achter de @ staat in een e-mail adres: denk eraan dat u het &quot;www.&quot; er niet in zet, of iets soort gelijks). Als een domein op de zwarte lijst staat zal naar geen van de adressen op dat domein een e-mail verzonden worden.</li>
+    </ul>
+  </li>
+</ul>
+<p class="item">U kan gewone tekst invullen; elke rij moet een adres/domein bevatten (geen extra karacters: u kan geen wildcards gebruiken). U kan plakken van het klembord, om de zwarte lijst aan te passen met andere programma's; of druk op de <span class="itemelement">Aanpassen met Kladblok </span>knop om een zwarte lijst te openen met de text editor van Windows (het programma stopt totdat u Kladblok sluit).</p>
+<form>
+  <p class="item">Hier is een voorbeeld van een geldige <span class="itemelement">adressen</span> 
+    zwarte lijst:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">en een geldige <span class="itemelement">domeinen </span>zwarte lijst:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>De volgende zwarte lijst is fout </strong></font>omdat het wildcards (&quot;*&quot;) bevat en third level domein namen (&quot;www.&quot;): </p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Alleen beschikbaar in de Pro versie</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

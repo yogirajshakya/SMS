@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Domande e soluzioni</p>
+<p class="item"><strong>Quando invio un messaggio a pi&ugrave; indirizzi, il destinatario 
+  pu&ograve; vedere anche gli altri indirizzi a cui &egrave; stato inviato?</strong></p>
+<blockquote> 
+  <p class="item">No, SendBlaster invia ogni messaggio separatamente: la privacy 
+    dei destinatari &egrave; protetta. Usare SendBlaster per gestire l'invio a 
+    pi&ugrave; destinatari serve quindi anche a tutelarsi dal rivelare accidentalmente 
+    gli indirizzi e-mail di altre persone, cosa che costituirebbe una violazione della privacy.<br>
+    &nbsp; </p>
+</blockquote>
+<p class="item"><strong>Come si possono filtrare le liste?</strong></p>
+<blockquote> 
+  <p class="item">Utilizzando le funzioni di ordinamento e di raggruppamento della 
+    schermata <a href="sendblaster_lists_managing.htm" class="itemlink"><span class="itemelement">Gestione 
+    liste</span></a>, ed attivando o disattivando temporaneamente un gruppo di 
+    indirizzi, &egrave; possibile inviare un mailing solo ad un sottoinsieme degli 
+    indirizzi della lista corrente.&nbsp; </p>
+  </blockquote>
+<p class="item"><strong>Come si pu&ograve; inserire nel corpo di un messaggio 
+  un link per cancellarsi dalla mailing list?</strong></p>
+<blockquote> 
+  <p class="item">SendBlaster pu&ograve; gestire le liste di distribuzione scaricando 
+    i messaggi da una casella di posta elettronica appositamente dedicata, diversa 
+    per ogni lista (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Gestione 
+    iscrizioni</span></a>). Pertanto usando i marcatori &egrave; semplice inserire 
+    nel codice HTML del messaggio un link per le cancellazioni:</p>
+  <blockquote> 
+    <p class="valore">&lt;a href=&quot;mailto:#emailgestione#?Subject=Unsubscribe&quot;&gt;Cancellati&lt;/a&gt;</p>
+  </blockquote>
+  <p class="item">Il codice HTML andr&agrave; inserito direttamente nella parte 
+    HTML del messaggio, premendo <span class="itemelement">Visualizza codice</span>, 
+    oppure potr&agrave; essere inserito come link usando il pulsante <span class="itemelement">Collegamento</span> 
+    della barra di formattazione del messaggio (in questo secondo caso si inserir&agrave; 
+    il valore <em><strong>mailto:#emailgestione#?Subject=Unsubscribe</strong></em> 
+    nella finestra del collegamento e, una volta creato il link, si modificher&agrave; 
+    in &quot;Cancellati&quot; - o una dicitura simile - il testo visualizzato).</p>
+</blockquote>
+<p class="item"><strong>Quando invio un mailing, alcuni messaggi non vengono inviati 
+  e restituiscono un errore</strong></p>
+<blockquote> 
+  <p class="item">In un mailing &quot;corposo&quot; &egrave; normale che non tutti 
+    i messaggi vadano a buon fine: alcuni indirizzi potrebbero non essere pi&ugrave; 
+    attivi o essere temporaneamente intasati, alcuni server di posta potrebbero 
+    essere in sovraccarico, la connessione potrebbe essere momentaneamente interrotta 
+    o rallentata.</p>
+  <p class="item">Se per&ograve; la percentuale di messaggi inviati &egrave; molto 
+    bassa, o addirittura non viene inviato alcun messaggio, &egrave; necessario 
+    verificare le <a href="sendblaster_messages_send.htm" class="itemlink">impostazioni 
+    di invio</a>.</p>
+  <p class="item">In particolare, potrebbe essere necessario cambiare la modalit&agrave; 
+    di invio (diretto o tramite SMTP) e, se il proprio server SMTP usa filtri 
+    antispam, diminuire il numero di connessioni ed aumentare le pause fra i messaggi. 
+    Il server SMTP potrebbe avere limitazioni tali che non sia comunque possibile 
+    inviare pi&ugrave; di un certo numero di messaggi in un dato intervallo temporale 
+    (si pensi ad un server che non consenta di inviare pi&ugrave; di 50 mail in 
+    un'ora); in questo caso dopo un primo invio si completer&agrave; il mailing 
+    in un momento successivo utilizzando le funzionalit&agrave; della <a href="sendblaster_messages_history.htm" class="itemlink"><span class="itemelement">Cronologia</span></a>.</p>
+  <p class="item">Non essendo possibile aggirare le impostazioni antispam del 
+    server SMTP, se l'invio va a buon fine solo con impostazioni molto lente si 
+    pu&ograve; provare l'invio diretto oppure servirsi di un server SMTP pi&ugrave; 
+    &quot;tollerante&quot; (su Internet &egrave; possibile abbonarsi, anche a 
+    costo contenuto, a servizi SMTP particolarmente efficienti).</p>
+  <p class="item">Se il problema si manifesta usando la modalit&agrave; di invio 
+    diretto pu&ograve; essere necessario specificare manualmente l'indirizzo IP 
+    del server DNS.<br>
+    &nbsp; </p>
+</blockquote>
+<p class="item"><strong>Ho perso la password e non riesco pi&ugrave; ad accedere 
+  al programma. Cosa posso fare?</strong></p>
+<blockquote>
+  <p class="item">E' bene essere consapevoli che non sar&agrave; possibile recuperare 
+    i dati. La procedura che segue consente per&ograve; di ripristinare il funzionamento 
+    del programma.</p>
+  <p class="item">1. Disinstallare il programma dal Pannello di controllo di Windows.</p>
+  <p class="item">2. Cancellare manualmente la cartella in cui era installato 
+    il programma (es. <em>C:\Programmi\eDisplay\SendBlaster</em>), comprese tutte le sottocartelle; 
+    per ragioni di sicurezza, infatti, anche in caso di disinstallazione il database 
+    non viene eliminato automaticamente (ed &egrave; in questo caso necessario 
+    eliminarlo manualmente).</p>
+  <p class="item">3. Reinstallare il programma.</p>
+</blockquote>
+</body>
+</html>

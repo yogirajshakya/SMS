@@ -1,0 +1,317 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+  <title>SendBlaster</title>
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+
+</head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Envoyer</p>
+
+<p class="item">Avant d'envoyer le message courant, il est nécessaire
+que vous indiquiez les destinataires et l'expéditeur.</p>
+
+<p class="item">Dans le champ <span class="itemelement">Sélectionner
+une liste pour l'envoi </span>se trouve les listes de diffusion (qui
+ont été définies dans <a href="sendblaster_lists_managing.htm" class="itemlink">Gérer les listes</a>) Il faut absolument en
+sélectionner une, dont les adresses deviendront les destinataires du
+message. Chaque contact recevra un message personnalisé.</p>
+
+<p class="item">L'expéditeur du message est indiqué dans le champ <span class="itemelement">Adresse électronique de l'expéditeur </span> et <span class="itemelement">Expéditeur</span>. Dans ces champs, vous pouvez
+saisir librement les données ou sélectionnez une adresse et un nom
+parmi le menu déroulant qui conserve les dix derniers noms et adresses
+des précédents envois (si aucun envoi n'a été fait, ces listes seront
+vides). Si vous avez défini une adresse pour l'abonnement/désabonnement
+à la liste sélectionnée de diffusion, cette adresse sera
+automatiquement proposée comme adresse de l'expéditeur. Toutefois il ne
+s'agit effectivement que d'une suggestion; l'adresse et/ou le nom peut
+être manuellement modifié.<br>
+Vous pouvez optionnellement spécifier une <span class="itemelement">Adresse
+de Retour</span><span class="itemelement"></span>: c'est l'adresse où
+les réponses seront envoyées. Si laissée vide, les réponses seront
+envoyées à l'adresse de l'expéditeur. C'est le comportement par défaut
+pour les courriels personnels).</p>
+
+<p class="item">Pour envoyer votre message, il sera suffisant de
+cliquer <span class="itemelement">Envoyer</span>; bien entendu s'il
+s'agit du premier envoi ou si les paramètres de la connexion ont
+changé, vous devrez auparavant <span class="itemelement">Paramètrer
+l'envoi</span>, sans quoi le message ne pourra être remis.</p>
+
+<p class="item">Comme alternative à l'envoi de messages, il est
+possible de <b>planifier</b> l'opération d'envoi et laisser à
+SendBlaster
+le soin de l'envoyer plus tard automatiquement, à un jour et une heure
+donnée, ou même de&nbsp;<b> "stationner"</b> l'opération d'envoi afin
+d'être manuellement lancée plus tard; afin de démarrer l'opération
+d'envoi, simplment cliquer sur le bouton <span class="itemelement">Envoyer
+plus tard...</span>.<br>
+</p>
+
+<p class="item">Deux <span class="itemelement">Modalités d'envoi </span>sont
+possibles : l' <span class="itemelement">Envoi direct </span> et <span class="itemelement">Utiliser un serveur SMTP</span>.</p>
+
+<ul>
+  <li class="item">Si vous sélectionnez <span class="itemelement">Utiliser
+un serveur SMTP</span>,
+la remise du message se fera tel un client de courriel traditionnel,
+c'est-à-dire en le remettant au serveur SMTP de votre
+fournisseur d'accès. Vous devrez donc indiquer le nom du <span class="itemelement">Serveur SMTP</span>, le port où le service smtp
+est offert (s'il n'est pas spécifié, le port par défaut 25 sera
+utilisé). Si l'authentification d'un utilisateur est nécessaire,
+sélectionner <span class="itemelement">Authentification nécessaire </span>
+et saisir votre nom d'<span class="itemelement">Utilisateur</span> et
+votre <span class="itemelement">Mot de passe</span>.
+Ces paramètres sont les mêmes que ceux utilisés par votre logiciel de
+courriel électronique. Il sera suffisant de copier la configuration
+d'un compte de courriel fonctionnant (pour vous assurer qu'il est
+possible de joindre
+le serveur SMTP, cliquez simplement le bouton <span class="itemelement">Test
+connexion</span>). Vous pouvez abiliter la communication SSL en
+activant <span class="itemelement">SSL</span>, ceci peut etre requis
+par quelques serveurs SMTP (le serveur SMTP de Gmail est un bon
+exemple).
+  
+    <blockquote>
+    <li class="item"><font color="#ff0000">Notez bien:</font> le bouton <span class="itemelement">Profiles</span>
+permet de gérer plusieurs configurations SMTP. L'information de compte
+de plusieurs profiles peut être enregistrée,
+donc toutes les configurations SMTP sont sauvegardées/téléchargées à
+l'aide de quelques clics. Cette caractéristique est particulièrement
+utile lorsque vous envoyez des courriels au nom d'autrui. </li></blockquote>
+
+  </li>
+  <li class="item">Si vous sélectionnez <span class="itemelement">En cas d'erreurs,
+tenter l'envoi direct</span>,
+si la remise d'un message est refusée par le serveur SMTP, le logiciel
+tentera de remettre directement le message au serveur SMTP du
+destinataire en utilisant les paramètres définis dans le cadre <span class="itemelement">Envoi direct</span>.</li>
+  <br>
+
+  
+  
+  <li class="item">Si <span class="itemelement">Envoi direct</span>
+est sélectionné, le logiciel cherchera le serveur de courriel de chaque
+destinataire et le joindra directement, en "sautant" le serveur SMTP,
+qu'il n'est donc pas nécessaire de définir. <br>
+
+Il faut se souvenir que certains domaines refusent les connexions
+directes (c'est le cas de hotmail par exemple) et les messages qui ne
+proviennent pas d'un serveur SMTP public seront refusés.<br>
+
+Si vous cochez <span class="itemelement">En cas d'erreur, tente aussi
+l'envoi SMTP</span>, si l'envoi direct n'est pas accepté par le serveur
+de poste du destinataire, le logiciel tentera de remettre le message au
+serveur SMTP, en utilisant les paramètres définis dans la section <span class="itemelement">Utiliser un serveur SMTP</span>.<br>
+
+  </li>
+
+</ul>
+<span class="itemelement"></span><br>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong>Envoi direct ou serveur SMTP?</strong></font></p>
+      <p>Le choix dépend surtout de la disponibilité d'un bon serveur
+SMTP. Si le serveur SMTP fourni par votre f.a.i. est en mesure
+d'accepter de nombreux messages en rapide succession, ou l'envoi de
+messages simultanés, l'utilisation d'un serveur SMTP est plus sûre et
+plus rapide parce que le serveur SMTP est plus "proche" de votre
+ordinateur que du serveur de la poste des destinataires.</p>
+      <p>Toutefois certains fournisseurs, afin d'éviter que leurs
+utilisateurs ne s'adonne à l'envoi de pourriels (spamming), limitent le
+nombre de messages que l'utilisateur peut envoyer simultanément ou en
+succession rapide. Un serveur peut être configuré pour n'accepter qu'un
+message toutes les cinq secondes et n'accepter que deux messages
+simultanés. Les messages excédentaires sont refusés et restituent un
+message d'erreur. Cela ne veut pas dire que le serveur ou le logiciel
+ne fonctionnent pas. Cela signifie simplement qu'il faudra régler de
+façon différente les paramètres d'envoi dans la section <span class="itemelement">Avancé</span>. </p>
+      <p>Dans ce cas précis, il pourrait être plus judicieux et plus
+rapide de procéder à l'envoi direct des messages. L'envoi direct
+nécessite un peu plus de temps pour la remise de chaque message (car
+pour chaque message, le logiciel doit faire une requête au DNS et
+contacter un serveur de poste qui pourrait se trouver très loin du PC
+de l'utilisateur). Cette perte de temps est compensée par la
+possibilité de procéder à des remises simultanées sans devoir allonger
+la pause entre un message et l'autre.</p>
+      <p>Le second cas où l'envoi direct est conseillé est lorsque vous
+devez envoyer un emailing en utilisant une connexion dont vous ignorez
+le nom du serveur SMTP. C'est le cas de la personne qui utilise un
+portable sur un réseau extérieur (il n'est ni chez lui ni au bureau) ou
+un réseau public sans fil. </p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="item">Le cadre <span class="itemelement">Avancé</span>
+permet de configurer avec précision la temporisation de l'envoi, ce qui
+est utile afin de travailler à la vitesse maximale consentie par le
+serveur SMTP dans sa lutte contre le spam. Voici ce que chaque option
+signifie:</p>
+
+<ul class="item">
+
+  <li><span class="itemelement">Pause entre les messages </span>: le
+nombre de secondes qui s'écoulent entre la remise d'un message et le
+suivant</li>
+  <li><span class="itemelement">Pause entre les blocs</span>: le nombre
+de secondes d'attente entre un bloc de message et l'autre</li>
+  <li><span class="itemelement">Messages par bloc</span>: le nombre de
+messages que contient chaque bloc</li>
+  <li><span class="itemelement">Temps sans réponse</span>: le nombre de secondes
+qui s'écoule sans réponse du serveur avant d'interrompre l'envoi</li>
+  <li><span class="itemelement">Connexions</span>: le nombre de
+connexions simultanées, c'est-à-dire de messages envoyés simultanément*</li>
+  <li><span class="itemelement">Réessayer en cas d'erreur </span>: si
+le serveur SMTP ou le serveur de la poste du destinataire (en cas
+d'envoi direct) refusent un message, le logiciel peut attendre un
+certain nombre de secondes avant de retenter une ou plusieurs fois.</li>
+  <li><span class="itemelement">Pause entre les tentatives </span>: le
+nombre de secondes au bout duquel le logiciel tentera de nouveau
+l'envoi d'un message refusé.</li>
+</ul>
+
+<p class="item">Il est impossible de déterminer a priori quelle est la
+configuration exacte et il arrive que celle-ci ne puisse être
+déterminée qu'au terme de plusieurs tentatives, après avoir
+vérifiécombien de messages sont effectivement remis. Pour simplifier ce
+réglage, nous vous proposons un certain nombre de <span class="itemelement">Configuration suggérée</span>. Rien ne dit
+qu'elles soient optimales pour votre connexion mais elles peuvent être
+un bon point de départ pour une configuration manuelle.</p>
+
+<p class="item"><strong><font color="#ff0000">Attention:</font></strong>
+la liste de diffusion peut contenir des adresses qui ne sont pas
+valables, ou encore un serveur de poste peut momentanément être
+inactif. Il est donc inévitable que dans le cas de liste de diffusion
+qui contiennent de nombreuses adresses, tous les messages ne soient pas
+remis et qu'un pourcentage d'entre eux restitue une erreur,
+indépendamment de la configuration utilisée et de la modalité
+sélectionnée. Vous pourrez compléter l'envoi plus tard en vous servant
+de la fonction <a href="sendblaster_messages_history.htm">Historique</a>.</p>
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong>Quelle configuration avancée ?</strong></font></p>
+      <p>Pour trouver la juste configuration avancée, il vous faudra
+faire quelques tentatives (à cet effet, utiliser une liste contenant
+une dizaine d'adresses) et vérifier combien de messages sont
+effectivement remis (cette information vous est fournie à la fin de
+l'envoi ou vous pouvez consulter le fichier log). Les utilisateurs qui
+ont à disposition un serveur SMTP suffisamment tolérant n'auront
+probablement aucun problème indépendamment de la configuration choisie,
+qui n'affectera que la rapidité de l'opération.</p>
+      <p>Au contraire, les utilisateurs qui disposent d'un serveur SMTP
+"sévère" réussiront à remettre plus de messages en ralentissant l'envoi
+ou s'ils renoncent à envoyer des messages simultanés.</p>
+      <p>Voici quelques considérations d'ordre général :</p>
+      <ul>
+        <li>Un serveur SMTP tolérant permet des envois rapides et sans
+pause (ou avec des pauses limitées); sur un serveur SMTP qui utilise de
+nombreuses barrières anti-spam, si vous rencontrez des problèmes, il y
+a a lieu d'allonger la pause et de réduire le nombre de connexions. </li>
+        <li>Les serveurs SMTP ne permettent généralement pas de
+nombreux envois simultanés, par conséquent si vous utilisez la modalité
+SMTP, vous devez indiquer un nombre de connexions inférieur, et dans
+les pires des cas le ramener à 1 (pas de connexions simultanées). Si le
+serveur utilise des règles anti-spam, ralentir l'envoi en définissant
+une pause de quelques secondes entre un envoi et l'autre et allonger la
+pause entre l'envoi d'un bloc et l'autre. Les blocs eux-mêmes ne
+pourront contenir que quelques messages (pas plus d'une dizaine).</li>
+        <li>En cas d'envoi direct à une liste type qui contient des
+adresses appartenant à des domaines différents, les serveurs de
+destination sont de toute façon différents, il est donc possible de
+définir un nombre de connexions élevé* et des pauses brèves (ou pas de
+pause du tout) entre un message et l'autre ou entre les blocs.</li>
+        <li>Augmenter le nombre de tentatives en cas d'erreurs peut
+améliorer le pourcentage de succès, mais ralentira l'envoi de
+l'emailing, surtout en présence de connexions simultanées peu
+nombreuses. La stratégie alternative consiste à compléter l'envoi dans
+un second moment (en espaçant l'envoi de quelques dizaines de minutes
+ou de quelques heures) dans la fenêtre <a href="sendblaster_messages_history.htm">Historique</a>.</li>
+      </ul>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="itemelement">Onglet Extra
+  </p>
+
+<ul class="item">
+<li><span class="itemelement">Notification de livraison</span>: permet d'obtenir une confirmation chaque fois qu'un courriel est délivré, ou lorsque le destinataire l'ouvre.</li><li><span class="itemelement">Priorité élevée</span>: permet d'aviser le destinataire que le message doit être lu aussi tôt que possible.</li><li><span class="itemelement">Encodage</span>: choisir entre <span class="itemelement">imprimable</span> et <span class="itemelement">base64</span>.
+  Le contenu de l'en-tête montre le logiciel qui a généré le message.</li><li><span class="itemelement">Texte Xmailer</span>: en utilisant la configuration par <span class="itemelement">Défaut</span>
+, l'en-tête contiendra le nom SendBlaster et sa date de sortie. Par
+contre, vous pouvez saisir tout texte quelconque, pour simuler l'envoi
+par le biais d'un client de courriel différent ou choisir l'option <span class="itemelement">Aucun</span> pour éviter d'avoir un en-tête de rajouté au message.  </li><li><span id="result_box" class="long_text"><span style="background-color: rgb(255, 255, 255);" title="Domain: allows for customizing the machine name used by the software for connecting to SMTP server or recipients' email servers."><span class="itemelement">Domaine</span>:
+permet de personnaliser le nom de la machine utilisée par le logiciel
+pour la connexion au serveur SMTP ou aux serveurs de messagerie des
+destinataires. </span><span style="background-color: rgb(255, 255, 255);" title="This can be useful when using Direct send: some servers verify domain name before accepting messages; they require that domain name corresponds to the public hostname on the network, and before accepting messages they perform a ping (or similar operation) in order to verify that">Cela
+peut être utile lors de l'utilisation de l'<span class="itemelement">Envoi Direct</span>: certains
+serveurs vérifient le nom de domaine avant d'accepter des messages,
+ils exigent que le nom de domaine correspond au nom de l'hôte public sur
+le réseau, et avant d'accepter des messages, ils exécutent un ping
+(ou opération similaire) afin de vérifier que le </span><span style="background-color: rgb(255, 255, 255);" title="domain name corresponds to the IP address of the machine requesting connection.">nom de domaine correspond à l'adresse IP de la machine demandant la connexion. </span><span style="background-color: rgb(255, 255, 255);" title="Should this be the case, selecting Internet address may lower refused messages.">Si tel est le cas, sélectionnez&nbsp;<span class="itemelement">Adresse Internet</span> pourrait abaisser le nombre de messages refusés. </span><span style="background-color: rgb(255, 255, 255);" title="We suggest using default settings, or using Internet address when direct sending and PC local name when using SMTP (SMTP servers usually don't perform any particular check on domain name).">Nous
+vous suggérons d'utiliser les réglages par défaut, ou d'utiliser
+l'<span class="itemelement">Adresse Internet</span> lors d'envoi direct et le&nbsp;<span class="itemelement">Nom du PC local</span> lors de l'utilisation du SMTP (les serveurs SMTP ne font généralement pas de contrôle
+particulier sur le nom de domaine).<br></span><span style="background-color: rgb(255, 255, 255);" title="SendBlaster checks your machine's public address each time it is started; should Internet connection not be available when starting, public address may be left empty and PC local name will be used instead.">SendBlaster
+contrôle votre adresse publique d'ordinateur chaque fois qu'il débute;
+si la connexion Internet ne devrait pas être disponible lors du
+démarrage, l'adresse publique peut être laissée vide et le nom du PC
+local sera utilisé à la place. </span><span style="background-color: rgb(255, 255, 255);" title="If a fixed public IP is available, experienced users will select User defined...">Si une adresse IP publique fixe est disponible, les utilisateurs expérimentés sélectionneront&nbsp;<span class="itemelement">Défini par l'utilisateur</span> ... </span><span style="background-color: rgb(255, 255, 255);" title="and enter a fixed value (please note that a hostname is needed - not an IP address) - but keep in mind that a wrong setting could compromise successful sending.">et
+entreront une valeur fixe (s'il vous plaît notez que le nom de l'hôte est
+nécessaire - pas une adresse IP) - mais gardez à l'esprit qu'un mauvais
+réglage pourrait compromettre la réussite de l'envoi.</span></span><br>
+<span class="itemelement"></span></li><li><span id="result_box" class="long_text"><span style="background-color: rgb(255, 255, 255);" title="Manually set DNS Server: SendBlaster will use the currently selected default connection DNS, but it is also possible (and sometimes needed) to manually set a different DNS, by enabling this option and typing the correct IP address."><span class="itemelement">Définir manuellement le serveur DNS</span>: SendBlaster utilisera la connexion DNS par défaut
+actuellement sélectionnée mais il est également possible (et
+parfois nécessaire) de configurer manuellement un DNS différent, par
+l'activation de cette option et en tapant l'adresse IP correcte.</span></span></li><li><span id="result_box" class="long_text"><span style="background-color: rgb(255, 255, 255);" title="Ignore Socket Errors: if there is any problem with the connection to the Internet, either due to hardware or software problems, SendBlaster will pause the mailing, alert the user and wait for user instructions - in most cases, a human intervention is in fact required"><span class="itemelement">Ignorer les erreurs de connexion</span>: S'il y a un problème avec la connexion Internet, soit en raison de problèmes matériels ou logiciels,
+SendBlaster mettra en pause la diffusion, alertera l'utilisateur et
+attendra les instructions de la part de l'utilisateur - dans la plupart des cas,
+une intervention humaine est en effet nécessaire </span><span style="background-color: rgb(255, 255, 255);" title="(ie you may need to reset your network hardware, etc).">(ie vous pourriez avoir besoin de réinitialiser votre matériel réseau, etc.) </span><span style="background-color: rgb(255, 255, 255);" title="If you don't want the mailing to be paused, and prefer SendBlaster to simply ignore the errors, check this option (be warned that, if there is no connection to the Internet, the mailing could fail).">Si
+vous ne souhaitez pas que l'envoi soit mis en pause, et préfèrez que
+SendBlaster ignore simplement les erreurs, cochez cette option
+(soyez averti que s'il n'y a pas de connexion à l'Internet, l'envoi
+pourrait échouer). </span><span style="background-color: rgb(255, 255, 255);" title="This is useful when your Internet connection sometimes goes down for any reason (ie wifi problems) but it is automatically restored in a short time.">Cela
+est utile si votre connexion Internet tombe parfois pour une quelconque
+raison (par exemple problèmes de Wi-Fi) mais si elle est
+automatiquement
+restaurée en un court laps de temps.</span></span><br>
+<span class="itemelement"></span></li>
+</ul>
+
+  
+<p class="itemelement">Onglet Additionnel de l'En-Tête
+  </p>
+
+  
+<blockquote>
+    <p class="item">Dans la plupart des cas, les
+utilisateurs avancés pourraient avoir de besoin d'ajouter des en-têtes
+personalisés à leur message, cela est utilisé pour faire des tâches
+spéciales (i.e. suivi, enregistrement,
+etc). SendBlaster permet aux utilisateurs de rajouter jusqu'à 10
+en-têtes au message.
+</p>
+</blockquote>
+<p class="item"></p>
+<hr noshade="noshade" size="1">
+<p class="item">*Avec l'édition Gratuite, le nombre maximum de
+connexion simultanée est 2, indépendamment du fait que vous indiquiez
+un nombre supérieur.</p>
+
+</body></html>

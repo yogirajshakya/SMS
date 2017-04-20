@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Черен списък</p>
+<p class="item"><span class="itemelement">Черният списък</span> е филтър, който 
+  предотвратява доставянето на писма до определени email адреси или домейни, независимо 
+  от техния <a href="sendblaster_lists_managing.htm">статус абонамент/активиране 
+  </a>.</p>
+<p class="item">Когато изпращате съобщение до даден списък, преди реално да изпрати всяко писмо, 
+  Sendblaster проверява дали адресът или домейнът на получателя е включен 
+  в черния списък: ако е, писмото се пропуска (съобщение <em>&quot;&lt;адрес&gt;: 
+  в черен списък</em>&quot; ще се покаже в панела дневник).</p>
+<p class="item">Sendblaster поддържа два различни черни списъка:</p>
+<ul>
+  <li class="item"><span class="itemelement">Черен списък на адреси</span> : тук 
+    въвеждате email адреси, които не искате да получават съобщения.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Черен списък на домейни*</span> : вместо 
+    единични адреси, може да посочите цели домейни (домейнът на пощата е частта 
+    след знака &quot;@&quot; в email адреса: внимавайте да не 
+    включите <em>&quot;www.</em>&quot; или някакво друго третостепенно име на домейн). 
+    Когато един домейн е в черния списък, на нито един адрес, принадлежащ към този домейн, 
+    няма да се изпрати съобщение.</li>
+</ul>
+<p class="item">Може да въвеждате информацията като свободен текст; всяка редица трябва да съдържа един адрес 
+  / домейн (без излишни знаци: не може да използвате жокери). Може да копирате 
+  / поставяте от клипборда, за да манипулирате черни списъци с външна програма; 
+  или да натиснете бутона <span class="itemelement">Редактирай с Notepad</span> ,  
+  за да отворите черен списък с вградената програма за редактиране на Windows (програмата спира, 
+  когато свършите с редактирането и затворите Notepad).</p>
+<form>
+  <p class="item">Ето един пример за валиден <span class="itemelement">черен списък на адреси</span> 
+    :</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">и валиден <span class="itemelement">черен списък на домейни</span> :</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>Следният черен списък не е правилен,</strong></font> 
+    тъй като съдържа жокери (<em>&quot;*</em>&quot;) и третостепенни имена
+    на домейни (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p class="item">Обърнете внимание, че черните списъци имат ограничение за размер и не са предназначени да заместват &quot;обичайните&quot; задачи за отписване. Като цяло, те трябва да се използват само в &quot;спешни случаи&quot; или за специални задачи (т.е. когато някой изрично помоли да не получава повече съобщения от вас, дори и след абонамент; или когато искате да сте сигурни, че конкурентите ви не получават вашите бюлетини).</p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Достъпно само в Pro изданието</p>
+<p class="item">&nbsp;</p>
+<p align="center"><a href="http://blog.sendblaster.com" target="_blank"><img src="welcome/blog_logo_header2.png" width="90" height="27" border="0"></a>&nbsp;&nbsp;<a href="http://facebook.sendblaster.com" target="_blank"><img src="welcome/facebook_logo_header2.png" width="112" height="27" border="0"></a> &nbsp;&nbsp;<a href="http://twitter.sendblaster.com" target="_blank"><img src="welcome/twitter_logo_header2.png" width="116" height="27" border="0"></a></p>
+</body>
+</html>

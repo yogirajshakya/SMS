@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+
+
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Συνήθεις μορφές Bounce-backs </p>
+<p class="item">Οι Bounce-back μορφές ηλέκτρονικού ταχυδρομείου έχουν
+αρχικά σχεδιαστεί για να διαβάζονται απο ανθρώπους, και όχι απο
+μηχανές, και έτσι δεν υπάρχει μια τυποποιημένη μορφή ή κανόνας. Το
+SendBlaster μπορεί να επεξεργαστεί τις πιο κοινές μορφές bounce-back
+χρησιμοποιώντας την εσωτερική βάση δεδομένων του, αλλά μπορεί να
+αντιμετωπίσετε κάποιες μορφές που δεν αναγνωρίζονται από το λογισμικό.
+Αν συμβεί αυτό, μπορείτε να προσθέσετε μια καινούρια χειροκίνητα,
+συνήθη μορφή στην bounce-backs βάση δεδομένων
+του SendBlaster.</p>
+<p class="item">Μια συνήθης μορφή αποτελείται απο κάποιους κανόνες, και
+πρέπει όλοι να πληρούνται για να θεωρηθεί ένα μήνυμα ως bounce-back (με
+άλλα λόγια, ο λογικός φορέας των κανόνων είναι AND). </p>
+<p class="item">Όταν θέλετε να προσθέσετε μια <span class="itemelement">Καινούρια μορφή</span>,
+πρώτα απ'όλα θα πρέπει να προσδιορίσετε κάποιο σχέδιο στο Θέμα ή σε
+άλλες κεφαλίδες, οι οποίες θα ανγνωρίζουν το μήνυμα μοναδικά ως
+bounce-back (ως <span class="itemelement">Hard bounce</span>, αν
+επιλέξετε το κουτάκι, ή ως soft αν δεν το επιλέξετε). H αναπτυσσόμενη
+λίστα των κεφαλίδων εξυπηρετεί μόνο ως παράδειγμα, μπορείτε χειροκίνητα
+να προσθέσετε μια συγκεκριμένη κεφαλίδα πληκτρολογώντας το όνομά της
+στο πεδίο <span class="itemelement">Header</span> και το επιθυμητό σχήμα στο πεδίο <span class="itemelement">Value</span> .</p>
+<p class="item">Ένα <span class="itemelement">σχήμα</span> συνήθως
+περιλαμβάνει ορισμένα σύμβολα υποκατάστασης (το σύμβολο "*" που
+σημαίνει "οποιονδήποτε χαρακτήρα"): για παράδειγμα, αν γράψετε
+"*γνωστοποίηση*παράδοσης*" σαν σχήμα Θέματος, οποιοδήποτε μήνυμα θα
+περιέχει τις λέξεις "παράδοση" και "γνωστοποίηση" στο θέμα του - π.χ.
+"γνωστοποίηση αποτυχίας παράδοσης στο xxx@yyy.com" - θα θεωρηθεί ως
+bounce-back, υπό τον όρο ότι επίσης ταιριάζει με τους άλλους κανόνες
+που έχετε καθορίσει. Αν χρησιμοποιείτε "γνωστοποίηση παράδοσης", χωρίς
+σύμβολα υποκατάστασης, μόνο τα μηνύματα που έχουν ακριβώς τις λέξεις
+"γνωστοποίηση παράδοσης" σαν θέμα τους, θα επεξεργάζονται ως
+bounce-backs - "αποτυχία παράδοσης στο xxx@yyy.com" δεν θα θεωρηθεί ως
+έγκυρο θέμα.</p>
+<p class="item">Μπορείτε επίσης να εισάγετε κάποιες συγκεκριμένες
+λέξεις (που να χωρίζονται με κόμμα) που θα πρέπει να βρίσκονται στο
+κεντρικό μήνυμα: αν δεν βρεθεί καμία απο αυτές τις λέξεις, το μήνυμα
+δεν θα θεωρείτε ως bounce-back. Για παράδειγμα, τα περισσότερα
+bounce-backs περιέχουν την λέξη "αιτία" (που ακολουθείται απο ένα
+επεξηγηματικό κείμενο για τον λόγο που δεν παραδόθηκε το μήνυμα).
+Σημειώστε οτι η λίστα των λέξεων δεν είναι σχήμα (δεν μπορείτε να
+χρησιμοποιήσετε σύμβολα υποκατάστασης) και ο λογικός φορέας των κανόνων
+είναι OR. </p>
+<p class="item">Αν ένα συγκεκριμένο μήνυμα πληροί όλους τους κανόνες
+που έχετε ορίσει, θα επεξεργαστεί ως bounce-back, και όλες οι
+διευθύνσεις ηλεκτρονικού ταχυδρομείου που θα βρεθούν μέσα στο μήνυμα θα
+διαγραφούν, ακόμη κι αν βρεθούν στη λίστα για την οποία λαμβάνετε
+τα bounces. Μπορεί να θέλετε να αποκλείσετε τις διευθύνσεις του τυπικού
+διαχειριστή συστήματος χρησιμοποιώντας κάποιο σχήμα.</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td class="item" bgcolor="#ffff99" width="100%"><p><strong><font color="#009900">Παράδειγμα </font></strong></p>
+        <p class="item">Ας πούμε οτι θέλετε τα μηνύματα να επεξεργάζονται ως bounce-backs όταν:</p>
+        <p class="item">α) έχουν τις λέξεις "ανεπίδοτο" και "μήνυμα" στο θέμα τους, <br>
+          β) είναι απο μια "postmaster@..." διεύθυνση,<br>
+          γ) ο τύπος περιεχομένου της κεφαλίδας τους είναι "γνωστοποίηση παράδοσης" ή "γνωστοποίηση αποτυχίας παράδοσης"<br>
+          δ)  περιέχουν την λέξη "αιτία" ή "σφάλμα" στο κεντρικό μήνυμα</p>
+        <p class="item">και
+προφανώς εσείς δεν θέλετε να διαγραφεί η διεύθυνση του αποστολέα
+("postmaster@...") , καθώς η πραγματική διεύθυνση βρίσκεται κάπου αλλού
+μέσα στο μήνυμα. </p>
+        <p class="item">Εδώ μπορείτε να δείτε πως θα είναι η κάθε μορφή: </p>
+        <table border="0" cellpadding="2" cellspacing="0">
+          <tbody><tr>
+            <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(ελεγμένο)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Σχήμα του θέματος:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*ανεπίδοτο*μήνυμα*</td>
+          </tr>
+          <tr>
+            <td class="item" width="0"><strong>1.</strong></td>
+            <td class="item"><strong>Κεφαλίδα:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Απο</td>
+          </tr>
+          <tr>
+            <td class="item" width="0">&nbsp;</td>
+            <td class="item"><strong>Αξία:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*διαχειριστής συστήματος*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Κεφαλίδα:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Τύπος περιεχομένου</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Αξία:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*γνωστοποίηση*παράδοσης*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Το κεντρικό μήνυμα περιέχει :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">αιτία, σφάλμα </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Αποκλεισμός :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </tbody></table>
+    <p>Και
+εδώ είναι μια πολύ πιο απλή μορφή, που θα επεξεργάζεται όλα τα μηνύματα
+που περιέχουν την λέξη "ανεπίδοτο" στο θέμα τους (και θα αποκλείει τις
+διευθύνσεις postmaster@... and majordomo@... ):</p>
+    <table border="0" cellpadding="2" cellspacing="0">
+      <tbody><tr>
+        <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(ελεγμένο)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Σχήμα του θέματος:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*ανεπίδοτο*</td>
+      </tr>
+      <tr>
+        <td class="item" width="0"><strong>1.</strong></td>
+        <td class="item"><strong>Κεφαλίδα:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(κενό)</em></td>
+      </tr>
+      <tr>
+        <td class="item" width="0">&nbsp;</td>
+        <td class="item"><strong>Αξία:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(Κενό)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Κεφαλίδα:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(κενό)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Αξία:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(κενό)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Το κεντρικό μήνυμα περιέχει :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(κενό)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Αποκλεισμός :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </tbody></table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</tbody></table>
+</body></html>

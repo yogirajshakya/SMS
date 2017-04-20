@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{337EDC55-29E3-476E-8C26-459C712AC152}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infolancers.iMailer</RootNamespace>
+    <AssemblyName>Infolancers.iMailer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\CommonBin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\AxInterop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HTMLEditorControl, Version=1.0.2377.20644, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\HTMLEditorControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Infolancers.iMailer, Version=1.0.4117.40541, Culture=neutral, PublicKeyToken=null">
+      <ExecutableExtension>.exe</ExecutableExtension>
+    </Reference>
+    <Reference Include="Interop.SHDocVw, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>References\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>References\Interop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SourceSafeTypeLib, Version=5.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>References\Interop.SourceSafeTypeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>References\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CommandExecutor.cs" />
+    <Compile Include="Controls\ContactControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ContactControl.Designer.cs">
+      <DependentUpon>ContactControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmailTemplateEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EmailTemplateEditorControl.Designer.cs">
+      <DependentUpon>EmailTemplateEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ImportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ImportControl.Designer.cs">
+      <DependentUpon>ImportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ScheduleEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ScheduleEmail.Designer.cs">
+      <DependentUpon>ScheduleEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Classes\AccessDataProvider.cs" />
+    <Compile Include="DataAccess\Classes\DataManager.cs" />
+    <Compile Include="DataAccess\Interfaces\IDataProvider.cs" />
+    <Compile Include="Emailer\MailMergeLib\AttachmentBuilder.cs" />
+    <Compile Include="Emailer\MailMergeLib\BodyBuilderBase.cs" />
+    <Compile Include="Emailer\MailMergeLib\Bugfixer.cs" />
+    <Compile Include="Emailer\MailMergeLib\FileAttachment.cs" />
+    <Compile Include="Emailer\MailMergeLib\HtmlBodyBuilder.cs" />
+    <Compile Include="Emailer\MailMergeLib\HtmlTagHelper.cs" />
+    <Compile Include="Emailer\MailMergeLib\IHtmlConverter.cs" />
+    <Compile Include="Emailer\MailMergeLib\MailMergeAddress.cs" />
+    <Compile Include="Emailer\MailMergeLib\MailMergeAddressCollection.cs" />
+    <Compile Include="Emailer\MailMergeLib\MailMergeMessage.cs" />
+    <Compile Include="Emailer\MailMergeLib\MailMergeMessage_Exception.cs" />
+    <Compile Include="Emailer\MailMergeLib\MailMergeSender.cs" />
+    <Compile Include="Emailer\MailMergeLib\MailMergeSender_EventArgs.cs" />
+    <Compile Include="Emailer\MailMergeLib\MimeTypes.cs" />
+    <Compile Include="Emailer\MailMergeLib\ParsingHtmlConverter.cs" />
+    <Compile Include="Emailer\MailMergeLib\PlainBodyBuilder.cs" />
+    <Compile Include="Emailer\MailMergeLib\Properties\Resources.Designer.cs" />
+    <Compile Include="Emailer\MailMergeLib\Properties\Settings.Designer.cs" />
+    <Compile Include="Emailer\MailMergeLib\QpEncoder.cs" />
+    <Compile Include="Emailer\MailMergeLib\RegExHtmlConverter.cs" />
+    <Compile Include="Emailer\MailMergeLib\StreamAttachment.cs" />
+    <Compile Include="Emailer\MailMergeLib\StringAttachment.cs" />
+    <Compile Include="Emailer\MailMergeLib\TextVariableManager.cs" />
+    <Compile Include="Emailer\MailMergeLib\Tools.cs" />
+    <Compile Include="Emailer\MailMergeTest\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emailer\MailMergeTest\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emailer\MailMergeTest\Properties\Resources.Designer.cs" />
+    <Compile Include="Emailer\MailMergeTest\Properties\Settings.Designer.cs" />
+    <Compile Include="Controls\DataGrid\CalendarCell.cs" />
+    <Compile Include="Controls\DataGrid\CalendarColumn.cs" />
+    <Compile Include="Controls\DataGrid\CalendarEditingControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DataGrid\DatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DatabaseSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DatabaseSettingsControl.Designer.cs">
+      <DependentUpon>DatabaseSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Database Settings\FieldMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\Database Settings\FieldMapping.Designer.cs">
+      <DependentUpon>FieldMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Controls\HTMLEditor\HTMLEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\HTMLEditor.designer.cs">
+      <DependentUpon>HTMLEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ImportExport\frmExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\ImportExport\frmExport.Designer.cs">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ImportExport\frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\ImportExport\frmImport.designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Logger\ErrorLog.cs" />
+    <Compile Include="Controls\HTMLEditor\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\Editor.designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ScheduleDataHelper.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmailTemplateEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmailTemplateEditor.designer.cs">
+      <DependentUpon>EmailTemplateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\LinkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\LinkDialog.designer.cs">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\SearchDialog.designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\TextInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\HTMLEditor\TextInsertForm.designer.cs">
+      <DependentUpon>TextInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Controls\ContactControl.resx">
+      <DependentUpon>ContactControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EmailTemplateEditorControl.resx">
+      <DependentUpon>EmailTemplateEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ImportControl.resx">
+      <DependentUpon>ImportControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ScheduleEmail.resx">
+      <DependentUpon>ScheduleEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emailer\MailMergeLib\obj\Debug\MailMergeLib.Properties.Resources.resources" />
+    <EmbeddedResource Include="Emailer\MailMergeLib\Properties\Resources.resx" />
+    <EmbeddedResource Include="Emailer\MailMergeTest\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emailer\MailMergeTest\obj\Debug\MailMergeTest.FrmMain.resources" />
+    <EmbeddedResource Include="Emailer\MailMergeTest\obj\Debug\MailMergeTest.Properties.Resources.resources" />
+    <EmbeddedResource Include="Emailer\MailMergeTest\Properties\Resources.resx" />
+    <EmbeddedResource Include="Controls\DatabaseSettingsControl.resx">
+      <DependentUpon>DatabaseSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\Database Settings\FieldMapping.resx">
+      <DependentUpon>FieldMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HTMLEditor\HTMLEditor.resx">
+      <DependentUpon>HTMLEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\ImportExport\frmExport.resx">
+      <DependentUpon>frmExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\ImportExport\frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HTMLEditor\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailTemplateEditor.resx">
+      <DependentUpon>EmailTemplateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HTMLEditor\LinkDialog.resx">
+      <DependentUpon>LinkDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HTMLEditor\SearchDialog.resx">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\HTMLEditor\TextInsertForm.resx">
+      <DependentUpon>TextInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Emailer\MailMergeLib\docs\MailMergeLib_4_Docs.chm" />
+    <None Include="Emailer\MailMergeLib\docs\MailMergeLib_4_Namespace .chm" />
+    <None Include="Emailer\MailMergeLib\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Emailer\MailMergeLib\obj\Debug\GenerateResource.read.1.tlog" />
+    <None Include="Emailer\MailMergeLib\obj\Debug\GenerateResource.write.1.tlog" />
+    <None Include="Emailer\MailMergeLib\obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="Emailer\MailMergeLib\Properties\Settings.settings" />
+    <None Include="Emailer\MailMergeTest\app.config" />
+    <None Include="Emailer\MailMergeTest\bin\Debug\MailMergeTest.exe.config" />
+    <None Include="Emailer\MailMergeTest\bin\Debug\MailMergeTest.vshost.exe.config" />
+    <None Include="Emailer\MailMergeTest\bin\Debug\MailMergeTest.vshost.exe.manifest" />
+    <None Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_logfile Harry.pdf" />
+    <None Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_logfile Jeff.pdf" />
+    <None Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_logfile Liz.pdf" />
+    <None Include="Emailer\MailMergeTest\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Emailer\MailMergeTest\obj\Debug\GenerateResource.read.1.tlog" />
+    <None Include="Emailer\MailMergeTest\obj\Debug\GenerateResource.write.1.tlog" />
+    <None Include="Emailer\MailMergeTest\obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="Emailer\MailMergeTest\Properties\Settings.settings" />
+    <None Include="LoggingStatus.Config" />
+    <None Include="iMailer.ldb" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Emailer\MailMergeLib\bin\Debug\HtmlAgilityPack.dll" />
+    <Content Include="Emailer\MailMergeLib\bin\Debug\MailMergeLib.dll" />
+    <Content Include="Emailer\MailMergeLib\bin\Debug\MailMergeLib.pdb" />
+    <Content Include="Emailer\MailMergeLib\bin\Release\HtmlAgilityPack.dll" />
+    <Content Include="Emailer\MailMergeLib\MailMergeLib.csproj" />
+    <Content Include="Emailer\MailMergeLib\obj\Debug\MailMergeLib.csproj.FileListAbsolute.txt" />
+    <Content Include="Emailer\MailMergeLib\obj\Debug\MailMergeLib.dll" />
+    <Content Include="Emailer\MailMergeLib\obj\Debug\MailMergeLib.pdb" />
+    <Content Include="Emailer\MailMergeTest\bin\Debug\HtmlAgilityPack.dll" />
+    <Content Include="Emailer\MailMergeTest\bin\Debug\MailMergeLib.dll" />
+    <Content Include="Emailer\MailMergeTest\bin\Debug\MailMergeLib.pdb" />
+    <Content Include="Emailer\MailMergeTest\bin\Debug\MailMergeTest.exe" />
+    <Content Include="Emailer\MailMergeTest\bin\Debug\MailMergeTest.pdb" />
+    <Content Include="Emailer\MailMergeTest\bin\Debug\MailMergeTest.vshost.exe" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_testmail.html" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_testmail.png" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_testmail2.html" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\cron_testmail_includefile.txt" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\blog_logo_header2.png" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\facebook_logo_header2.png" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\twitter_logo_header2.png" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_background.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_blacklist.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_bounces.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_compose.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_duplicates.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_export.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_fields.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_filter.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_google.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_history.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_import.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_lists.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_lock.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_play.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_plugin.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_pro.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_pro_back.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_reel.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_schedule.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_send.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_settings.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_subscriptions.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_tips.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_trackreports.gif" />
+    <Content Include="Emailer\MailMergeTest\bin\MailDemoFiles\welcome\W_video.gif" />
+    <Content Include="Emailer\MailMergeTest\MailMergeTest.csproj" />
+    <Content Include="Emailer\MailMergeTest\obj\Debug\MailMergeTest.csproj.FileListAbsolute.txt" />
+    <Content Include="Emailer\MailMergeTest\obj\Debug\MailMergeTest.exe" />
+    <Content Include="Emailer\MailMergeTest\obj\Debug\MailMergeTest.pdb" />
+    <Content Include="Emailer\MailMergeTest\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="iMailer.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Templates\Footer.htm" />
+    <Content Include="Resources\Templates\Header.htm" />
+    <Content Include="Resources\Templates\Home.htm" />
+    <Content Include="Resources\Templates\Options.htm" />
+    <Content Include="Resources\Templates\welcome\blog_logo_header2.png" />
+    <Content Include="Resources\Templates\welcome\facebook_logo_header2.png" />
+    <Content Include="Resources\Templates\welcome\twitter_logo_header2.png" />
+    <Content Include="Resources\Templates\welcome\W_background.gif" />
+    <Content Include="Resources\Templates\welcome\W_blacklist.gif" />
+    <Content Include="Resources\Templates\welcome\W_bounces.gif" />
+    <Content Include="Resources\Templates\welcome\W_compose.gif" />
+    <Content Include="Resources\Templates\welcome\W_duplicates.gif" />
+    <Content Include="Resources\Templates\welcome\W_export.gif" />
+    <Content Include="Resources\Templates\welcome\W_fields.gif" />
+    <Content Include="Resources\Templates\welcome\W_filter.gif" />
+    <Content Include="Resources\Templates\welcome\W_google.gif" />
+    <Content Include="Resources\Templates\welcome\W_history.gif" />
+    <Content Include="Resources\Templates\welcome\W_import.gif" />
+    <Content Include="Resources\Templates\welcome\W_lists.gif" />
+    <Content Include="Resources\Templates\welcome\W_lock.gif" />
+    <Content Include="Resources\Templates\welcome\W_play.gif" />
+    <Content Include="Resources\Templates\welcome\W_plugin.gif" />
+    <Content Include="Resources\Templates\welcome\W_pro.gif" />
+    <Content Include="Resources\Templates\welcome\W_pro_back.gif" />
+    <Content Include="Resources\Templates\welcome\W_reel.gif" />
+    <Content Include="Resources\Templates\welcome\W_schedule.gif" />
+    <Content Include="Resources\Templates\welcome\W_send.gif" />
+    <Content Include="Resources\Templates\welcome\W_settings.gif" />
+    <Content Include="Resources\Templates\welcome\W_subscriptions.gif" />
+    <Content Include="Resources\Templates\welcome\W_tips.gif" />
+    <Content Include="Resources\Templates\welcome\W_trackreports.gif" />
+    <Content Include="Resources\Templates\welcome\W_video.gif" />
+    <None Include="Resources\Images\second1.jpg" />
+    <None Include="Resources\Images\BackgroundImage.jpg" />
+    <Content Include="Resources\System\header.html" />
+    <Content Include="Resources\System\home.html" />
+    <Content Include="Resources\System\images\applicationSettings.png" />
+    <Content Include="Resources\System\images\background.jpg" />
+    <Content Include="Resources\System\images\contactsManagement.png" />
+    <Content Include="Resources\System\images\contactus.png" />
+    <Content Include="Resources\System\images\help.png" />
+    <Content Include="Resources\System\images\homepage.png" />
+    <Content Include="Resources\System\images\icons\advancedSettings.png" />
+    <Content Include="Resources\System\images\icons\databaseSettings.png" />
+    <Content Include="Resources\System\images\icons\eventManagement.png" />
+    <Content Include="Resources\System\images\icons\exportContacts.png" />
+    <Content Include="Resources\System\images\icons\importContacts.png" />
+    <Content Include="Resources\System\images\icons\manageContacts.png" />
+    <Content Include="Resources\System\images\icons\manageLists.png" />
+    <Content Include="Resources\System\images\icons\manageSchedules.png" />
+    <Content Include="Resources\System\images\icons\messageDrafts.png" />
+    <Content Include="Resources\System\images\icons\messageHistory.png" />
+    <Content Include="Resources\System\images\icons\securitySettings.png" />
+    <Content Include="Resources\System\images\icons\sendMessage.png" />
+    <Content Include="Resources\System\images\iMailer.jpg" />
+    <Content Include="Resources\System\images\messagesManagement.png" />
+    <Content Include="Resources\System\images\scheduleManagement.png" />
+    <Content Include="Resources\System\images\search_b.png" />
+    <Content Include="Resources\System\leftbar.html" />
+    <Content Include="Resources\System\Noname1.html" />
+    <Content Include="Resources\System\styles\style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Emailer\MailMergeLib\obj\Debug\TempPE\" />
+    <Folder Include="Emailer\MailMergeTest\bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

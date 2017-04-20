@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Opprett melding</p>
+<p class="item">Opprett melding-vinduet lar deg lage meldinger for sending til 
+   en distribusjonsliste.</p>
+<p class="item">Du kan opprette melding p&aring; akkurat samme m&aring;te som i en standard
+  e-postklient: skriv inn meldingens <span class="itemelement">Emne</span>, sett inn
+  n&oslash;dvendige <span class="itemelement">Vedlegg</span>*, skriv meldingsteksten. 
+  Dersom teksten trenger spesialtegn (ikke-Latin-basert), m&aring; du f&oslash;rst velge
+  <span class="itemelement">Enkoding </span>(default enkoding can 
+  kan endres i <a href="sendblaster_settings_fields.htm" class="itemlink">
+  <span class="itemelement">Felter og visninger</span></a>-vinduet).</p>
+<blockquote>
+<p class="item">
+  <span class="itemelement">Tags</span> kan settes inn og brukes ved &aring; trykke p&aring; 
+  tag-knappene (#) ved siden av <span class="itemelement">Emne</span>- og
+  <span class="itemelement">Til</span>-feltene, for &aring; sende personaliserte 
+  meldingshoder.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><font color="#FF0000">Advarsel:</font> Koding for meldingen
+    m&aring; spesifiseres <strong>f&oslash;r</strong> meldingen skrives, for &aring; gi korrekt
+    resultat. Dersom enkoding ikke settes p&aring; forh&aring;nd kan resultatet bli 
+    uleselig .</p>
+</blockquote>
+<p class="item">Siden inneholder to tekstomr&aring;der:</p>
+<ul>
+  <li class="item">I hovedomr&aring;det, der den lange verkt&oslash;ylinjen er plassert, kan
+    du sette inn formatert tekst for &aring; generere en melding i HTML-stil. Du kan ogs&aring;
+    sette inn bilder og linker, og du kan unders&oslash;ke (og endre) den auto-genererte
+    HTML-koden n&aring;r som helst ved &aring; klikke p&aring; <span class="itemelement">Vis 
+    kode</span>-knappen i &oslash;verste linje.<br>
+    &nbsp; </li>
+  <li class="item">I <span class="itemelement">Ren tekst</span>-omr&aring;det kan du
+    skrive inn meldingstekst i ren tekst-format. Enkelte mottakere er ikke i stand
+    til &aring; vise meldinger i HTML-format, derfor er det viktig &aring; tilby et alternativt
+    format for innholdet, uten bilder og/eller linker. Ren tekst kan auto-genereres
+    med utgangspunkt i den formaterte testen, ved &aring; klikke p&aring; 
+    <span class="itemelement">Tekst fra HTML</span>-knappen
+    n&aring;r du er ferdig med &aring; skrive inn teksten.</li>
+</ul>
+<p class="item">For &aring; sende tilpassede meldinger (i motsetning til generaliserte meldinger), 
+  kan du sette inn <span class="itemelement">Tags</span> i meldingens Emne-felt og i selve
+  meldingsteksten (b&aring;de i HTML-seksjonen og i ren tekst-seksjonen). Hver tag
+  er faktisk en felt-referanse: n&aring;r medingen sendes, blir tag'en erstattet med 
+  en verdi lest fra mottakerens tekst for det spesifiserte feltet. For eksempel,
+  hvis listen inkluderer et &quot;BusinessName&quot;-felt og et &quot;Adresse&quot;-felt
+  (<a href="sendblaster_settings_fields.htm" class="itemlink">field names 
+  can be modified</a>), s&aring; vil man ved &aring; skrive f&oslash;lgende i meldingsteksten:</p>
+<blockquote>
+  <p class="valore">Messrs. #businessname#<br>
+    #address#</p>
+</blockquote>
+<p class="item">generere f&oslash;lgende tilpassede melding til mottakeren (eksempel):</p>
+<blockquote> 
+  <p class="valore">Messrs. The Coca Cola Company<br>
+    Atlanta, GA</p>
+</blockquote>
+<p class="item">Siden feltnavn kan endres, er det ogs&aring; mulig &aring; bruke
+  &quot;fix&quot; tags (feltnavn-uavhengige tags) som refererer til feltnummer 
+  (#1# #2#, og videre opp til #10#). Feltnummer finner du i <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Felt 
+  og visninger</span></a>-vinduet. Tre spesial-tags er tilgjengelige: 
+  <span class="itemelement">#listname#</span> 
+  som erstattes med navnet p&aring; listen som meldingen sendes til; 
+  <span class="itemelement">#managingemail#</span> 
+  som erstattes med e-postadressen som abonnerings-/av-abonneringsmeldinger sendes til 
+  (dette gj&oslash;r at mottakere enkelt kan fjerne sin adresse fra listen); og<span class="itemelement"> 
+  #systemdate#</span> som erstattes med aktuell dato, formatert i henhold til instillingene 
+  i Windows.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hvordan 
+        lage en av-abonner-link</strong></font></p>
+      <p>SendBlaster kan administrere distribusjonslister ved &aring; laste ned meldinger fra en
+        dedikert e-postadresse, unik for hver liste 
+        (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Administrer 
+        abonneringer</span></a>). Derfor er det enkelt &aring; inkludere en av-abonneringslink i 
+        HTML-koden, ved hjelp av tags:</p>
+      <blockquote>
+        <p class="valore">&lt;a href=&quot;mailto:#managingemail#?Subject=Unsubscribe&quot;&gt;Fjern&lt;/a&gt;</p>
+      </blockquote>
+      <p>Denne HTML-koden kan inkluderes i HTML-meldingen ved &aring; klikke p&aring; <span class="itemelement">Vis 
+        kode</span>, eller kan settes in som link ved hjelp av 
+        <span class="itemelement">Link</span>-knappen i format-verkt&oslash;ylinjen 
+        (i dette tilfellet m&aring; verdien <em><strong>mailto:#managingemail#?Subject=Unsubscribe</strong></em> 
+        spesifiseres i link-vinduet, og s&aring; fort linken er opprettet kan teksten &quot;Fjern&quot; 
+        (eller lignende) skrives inn i steden for den viste teksten.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Den opprettede meldingen kan lagres i .eml-format (kompatibelt
+  med de fleste e-postklienter) ved &aring; klikke p&aring; <span class="itemelement">Lagre</span>-
+  knappen.</p>
+<p class="item">For &aring; opprette en ny melding kan du starte p&aring; scratch 
+  (ved hjelp av  <span class="itemelement">New</span>- eller 
+  <span class="itemelement">Velg template</span>-knappene) eller &aring;pne en tidligere lagret
+  melding ved hjelp av <span class="itemelement">&Aring;pne</span>-knappen:</p>
+<ul>
+  <li class="item">Importer en .eml-fil (for eksempel laget i Outlook) ved hjelp av 
+    <span class="itemelement">&Aring;pne</span> / <span class="itemelement">&Aring;pne 
+    .eml-fil</span></li>
+  <li class="item">Laste en tidligere sendt melding ved hjelp av 
+    <span class="itemelement">&Aring;pne</span> / <span class="itemelement">&Aring;pne 
+    e-post fra Historikk</span></li>
+  <li class="item">Importere formatert tekst fra en HTML-side fra lokal harddisk, 
+    inklusive bilder, ved hjelp av <span class="itemelement">&Aring;pne</span> / 
+    <span class="itemelement">Importer HTML fra fil</span></li>
+  <li class="item">Importer ren tekst ved hjelp av <span class="itemelement">&Aring;pne
+    </span> / <span class="itemelement">&Aring;pne ren tekst fra ekstern fil</span></li>
+</ul>
+<p class="item"><span class="itemelement">Tekst fra HTML</span>-knappen lar deg
+  ekstrahere ren tekst fra den formaterte HTML-teksten. Det anbefales &aring; bruke denne
+  etter at du er ferdig med &aring; opprette meldingen.</p>
+<p class="item">E-post sporingsfunksjonalitet kan legges til meldingen ved &aring; bruke 
+<span class="itemelement">Google Analytics</span> og/eller <span class="itemelement">TrackReports</span>- knappene i HTML-panelet;  linkene i meldingen blir automatisk modifisert i henhold til det valgte
+sporingssystemet, og n&oslash;dvendig kode blir lagt til. Innlegging av <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a>- eller <a href="sendblaster_messages_trackreports.htm" class="itemlink">TrackReports</a>-kode m&aring; alltid
+gj&oslash;res som siste operasjon for meldingen - begge metodene modifiserer endelig kode, derfor m&aring; 
+brukeren fullf&oslash;re editeringen f&oslash;rst. Sporing av meldingen ved hjelp av begge metodene er mulig; i dette tilfellet b&oslash;r Google Analytics-sporing legges til f&oslash;rst.</p>
+<p class="item">F&oslash;r meldingen sendes er det mulig (og sterkt anbefalt) 
+  &aring; verifisere hvordan e-posten vil se ut i forskjellige e-postklienter, ved &aring; bruke 
+  <span class="itemelement">E-post forh&aring;ndsvisning</span>-knappen. E-post forh&aring;ndsvisning vil bruke sender data definert i 
+  <span class="itemelement">Mine personlige data</span>-seksjonen i 
+  <a href="sendblaster_settings_fields.htm" target="mainframe" class="itemlink">Felter</a>-skjermen</p>
+<p class="item">Det er mulig &aring; utf&oslash;re l&oslash;pende spam score-test mens meldingen editeres, ved hjelp av <span class="itemelement">Spam
+  sjekk</span>-knappen, spam score-sjekking baseres p&aring; den popul&aelig;re <b>SpamAssassin motoren</b>,
+  en av de vanligst antispam-filtrene blant e-postservere. Ved hjelp av denne avanserte
+  SendBlaster-funksjonaliteten vil du unng&aring; at  dine meldinger feilaktig blir klassifisert som spam.</p>
+  
+<hr size="1" noshade>
+<p class="item">*Vedleggs-funksjonalitet er tilgjengelig i Pro edition.</p>
+</body>
+</html>

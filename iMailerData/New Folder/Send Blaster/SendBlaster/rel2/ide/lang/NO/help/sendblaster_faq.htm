@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<title>SendBlaster</title>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body"> 
+  <p class=title>FAQ</p>
+  <p class=item><strong>N&aring;r jeg sender en melding til mange mottakere, 
+    kan de se hverandres e-postadresser?</strong></p>
+  <blockquote> 
+    
+  <p class=item>Nei, SendBlaster sender hver melding separat: mottakernes
+    personvern er beskyttet. Bruk av SendBlaster til &aring; administrere multiple postinger
+    er derfor nyttig for &aring; unng&aring; &aring; vise andre personers e-postadresse ved et uhell,
+    som kan v&aelig;re brudd p&aring; personvernregler.<br>
+      &nbsp; </p>
+  </blockquote>
+  <p class=item><strong>Hvordan kan jeg filtrere en liste?</strong></p>
+  <blockquote> 
+    
+  <p class=item>Ved &aring; bruke sorterings-/grupperingsfunksjonene i 
+  <a href="sendblaster_lists_managing.htm" class="itemelement">Administrer 
+    lister</a>-seksjonen og midlertidig aktiver/deaktiver grupper adresser
+    kan du sende meldinger til undergrupper av adresser i den aktuelle listen.</p>
+  </blockquote>
+  <p class=item><strong>Hvordan kan jeg legge inn en link for av-abonnering 
+  fra mailinglisten i meldingsteksten?</strong></p>
+  
+<blockquote> 
+  <p class=item>SendBlaster kan h&aring;ndtere distribusjonslister ved &aring; laste ned meldinger fra
+    en dedikert e-postadresse, unik for hver liste (se 
+    <a href="sendblaster_lists_subscribe.htm" class="itemelement">Administrer 
+    abonnementer</a>). Derfor, ved &aring; bruke tags, er det enkelt &aring; legge inn en link i 
+    HTML-koden:</p>
+    <blockquote> 
+      
+    <p class=valore>&lt;a href=&quot;mailto:#managingemail#?Subject=Unsubscribe&quot;&gt;Unsubscribe&lt;/a&gt;</p>
+    </blockquote>
+    
+  <p class=item>HTML-koden m&aring; settes inn i HTML-seksjonen av meldingen, ved &aring; klikke p&aring; 
+    <span class="itemelement">Vis kode</span>, eller den kan settes inn som link ved &aring; bruke
+    <span class="itemelement">Link</span>-knappen i verkt&oslash;ylinjen for meldingsformatering.
+    (I dette tilfellet m&aring; teksten <strong><i>mailto:#managingemail#?Subject=Unsubscribe</i></strong> 
+    settes inn i link-vinduet, og visningsteksten kan endres s&aring; snart linken er opprettet, 
+    f.eks til &#8220;Unsubscribe&#8221; eller lignende).</p>
+  </blockquote>
+  <p class=item><strong>N&aring;r jeg sender en melding til en mailingliste, blir enkelte
+    av meldinene ikke levert og returnerer med en feilmelding.</strong></p>
+  <blockquote> 
+    
+  <p class=item>N&aring;r man sender til mange adresser er det normalt at ikke alle
+    meldingene kommer gjennom: noen av adresser kan ha blitt inaktivert eller
+    midlertidig blokkert, e-postservere kan v&aelig;re overbelastet, tilkoblingen kan
+    v&aelig;re brutt eller treg for &oslash;yeblikket.</p>
+    
+    <p class=item>Hvis andelen meldinger som blir sendt er veldig lav, eller overhode 
+    ingen meldinger sendes, er det n&oslash;dvendig &aring; unders&oslash;ke 
+    <a href="sendblaster_messages_send.htm" class="itemlink">Sende-innstillinger</a>.</p>
+    
+    
+  <p class=item>Faktisk kan det v&aelig;re n&oslash;dvendig &aring; bytte sende-modus
+    (direct send eller via SMTP) og, hvis din SMTP-server bruker antispam.filtre, 
+    redusere antall tilkoblinger og &oslash;ke pausen mellom meldinger. SMTP-serveren
+    kan ha begrensninger som hinderer deg fra &aring; sende mer enn et visst antall
+    meldinger innenfor et spesifisert tidsintervall (for eksempel en gitt server
+    tillater ikke sending av mer enn 50 e-poster pr time); i s&aring; fall m&aring; sendeoperasjonen
+    fullf&oslash;res p&aring; et senere tidspunkt ved hjelp av 
+    <a href="sendblaster_messages_history.htm" class="itemelement">Historikk</a> 
+    funksjoner.</p>
+    
+  <p class=item>Hvis SMTP-serverens antispam-restriksjoner ikke kan omg&aring;s og 
+    sendeoperasjoner bare g&aring;r igjennom med sv&aelig;rt langsomme instilliner, kan du 
+    fors&oslash;ke med direct send-modus, eller ved &aring; bruke en &#8220;mer tolerant&#8221;
+    SMTP-server (p&aring; Internet er det mulig &aring; abonnere p&aring; effektive og rimelige
+    SMTP-tjenester).</p>
+    <p class=item>Hvis problemet oppst&aring;r mens du bruker direct send-modus, kan det
+      v&aelig;re n&oslash;dvendig &aring; spesifisere IP-adressen til DNS-serveren.<br>
+      &nbsp; </p>
+  </blockquote>
+  <p class=item><strong>Jeg har mistet passordet og kan ikke bruke programmet lenger. 
+  Hva kan jeg gj&oslash;re?</strong></p>
+  <blockquote> 
+    
+  <p class=item>Du m&aring; v&aelig;re oppmerksom p&aring; at det ikke er mulig &aring; gjenopprette tapte data. 
+    F&oslash;lgende prosedyre vil kun gj&oslash;re deg i stand til &aring; aksessere programmet p&aring; nytt.</p>
+    
+  <p class=item>1. Avinstaller programmet via Windows Control Panel.</p>
+    
+  <p class=item>2. Fjern manuelt installasjonsmappen (f.eks. <i>C.\Program 
+    files\SendBlaster</i>), inklusive alle undermapper; for sikkerhetsskyld,
+    dersom programmet avinstallers blir databasen ikke automatisk fjernet
+    (derfor m&aring; du slette den manuelt).</p>
+    <p class=item>3. Installer programmet p&aring; nytt.</p>
+  </blockquote>
+</body>
+</html>

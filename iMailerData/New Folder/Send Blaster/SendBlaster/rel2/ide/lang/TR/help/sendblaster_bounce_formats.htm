@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">&Ouml;zel geri d&ouml;nen (Bounce-backs) mesaj bi&ccedil;imleri </p>
+<p class="item">Geri d&ouml;nen mesajlar temel olarak makinelerin de&#287;il insanlar&#305;n okumas&#305; i&ccedil;in tasarlanm&#305;&#351;t&#305;r ve bu nedenle bu t&uuml;r mesajlar i&ccedil;in standart bir bi&ccedil;im veya kural yoktur. SendBlaster, yayg&#305;n genel genel d&ouml;nen mesajlar&#305; kendi i&ccedil; veritaban&#305;na uygun olarak i&#351;ler fakat yaz&#305;l&#305;m taraf&#305;ndan tan&#305;nmayan baz&#305; bi&ccedil;imlerle kar&#351;&#305;la&#351;abilirsiniz. E&#287;er b&ouml;yle bir durum olursa, SendBlaster'&#305;n geri d&ouml;nen mesaj veritaban&#305;na &ouml;zel ve yeni bir bi&ccedil;im ekleyebilirsiniz.</p>
+<p class="item">Yeni bir bi&ccedil;im baz&#305; kurallardan olu&#351;ur; bir mesaj&#305;n geri d&ouml;nen mesaj olarak d&uuml;&#351;&uuml;n&uuml;lebilmesi i&ccedil;in t&uuml;m bu kurallar&#305;n kar&#351;&#305;lanmas&#305; gerekmektedir (di&#287;er bir deyi&#351;le kurallar&#305;n mant&#305;ksal i&#351;leyi&#351; operat&ouml;r&uuml; VE dir).</p>
+<p class="item"><span class="itemelement">Yeni bi&ccedil;im </span>eklemek istedi&#287;inizde, mesaj&#305; bir geni d&ouml;nen mesaj olarak (e&#287;er onay kutucu&#287;unu se&ccedil;erseniz  <span class="itemelement">Sert </span> veya se&ccedil;ilmezse yumu&#351;ak bir geri d&ouml;nen mesaj)tan&#305;mlamayacak bi&ccedil;imde Ba&#351;l&#305;k veya di&#287;er mesaj alanlar&#305; i&ccedil;erisine belirli paternler tan&#305;mlaman&#305;z gerekmektedir. A&ccedil;&#305;labilir liste i&ccedil;erisindeki ba&#351;l&#305;klar yaln&#305;zca &ouml;rnek i&ccedil;indir,<span class="itemelement"> Ba&#351;l&#305;k</span> alan&#305; i&ccedil;erisine spesifik bir ba&#351;l&#305;k, <span class="itemelement">De&#287;er </span>alan&#305; i&ccedil;erisinede paterni kendiniz ekleyebilirsiniz. </p>
+<p class="item">Bir  <span class="itemelement">patern</span> genel olarak baz&#305; genel karakterleri i&ccedil;erir (&quot;*&quot; karakteri &quot;herhangi bir karakter&quot; anlam&#305;na gelir):  &ouml;rne&#287;in, mesaj ba&#351;l&#305;k paterni olarak &quot;*da&#287;&#305;t&#305;m*uyar&#305;s&#305;*&quot; girerseniz, ba&#351;l&#305;&#287;&#305; i&ccedil;erisinde &quot;da&#287;&#305;t&#305;m&quot; ve &quot;uyar&#305;&quot; olan t&uuml;m mesajlar - &ouml;rne&#287;in &quot;xxx@yyy.com mesaj da&#287;&#305;t&#305;m&#305; ba&#351;ar&#305;s&#305;z uyar&#305;s&#305;&quot;, tan&#305;mlad&#305;&#287;&#305;n&#305;z di&#287;er kurallarada uymas&#305; durumunda geri d&ouml;nen mesaj olarak tan&#305;mlan&#305;r. E&#287;er genel karakterler kullanmadan sadece &quot;da&#287;&#305;t&#305;m uyar&#305;s&#305;&quot; girerseniz, yaln&#305;zca mesaj ba&#351;l&#305;&#287;&#305; &quot;da&#287;&#305;t&#305;m uyar&#305;s&#305;&quot; olan mesajlar geri d&ouml;nen mesaj olarak ele al&#305;n&#305;r - &quot;xxx@yyy.com mesaj da&#287;&#305;t&#305;m hatas&#305;&quot; ge&ccedil;erli bir ba&#351;l&#305;k olarak de&#287;erlendirilmez.</p>
+<p class="item">Mesaj&#305;n ana g&ouml;vdesi i&ccedil;erisinde bulanacak spefisik kelimeleride (virg&uuml;lle ayr&#305;lm&#305;&#351; olarak) girebilirsiniz: e&#287;er bu kelimelerin hepsi bulunmazsa mesaj geri d&ouml;nen bir mesaj olarak de&#287;erlendirilmez. &Ouml;rne&#287;in bir &ccedil;ok geri d&ouml;nen mesaj &quot;neden&quot; kelimesini (ard&#305;ndan mesaj&#305;n neden da&#287;&#305;t&#305;lmad&#305;&#287;&#305; ile ilgili a&ccedil;&#305;klama yapan bir metin bulunur). L&uuml;tfen kelime listesinin bir patern olmad&#305;&#287;&#305;n&#305; (genel karakterler kullanamazs&#305;n&#305;z) ve mant&#305;ksal operat&ouml;r&uuml;n VEYA (OR) oldu&#287;unu not edin. </p>
+<p class="item">E&#287;er bir mesaj tan&#305;mlad&#305;&#287;&#305;n&#305;z t&uuml;m kurallar&#305; kar&#351;&#305;larsa, mesaj geri d&ouml;nen bir mesaj olarak i&#351;lenir ve mesaj i&ccedil;erisinde bulunan t&uuml;m e-posta adresleri, e&#287;er adresler gerin d&ouml;nen mesaj listesi i&ccedil;erisinde de bulunuyorsa &uuml;yelikten &ccedil;&#305;kart&#305;l&#305;r. Tipik postmaster adreslerini bir patern kullanarak i&#351;lem d&#305;&#351;&#305; b&#305;rakabilirsiniz.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">&Ouml;rnek </font></strong></p>
+        <p class="item">A&#351;a&#287;&#305;daki &#351;artlar olu&#351;tu&#287;unda mesajlar&#305; geri d&ouml;nen mesaj olarak i&#351;lemek istedi&#287;iniz varsayal&#305;m:</p>
+        <p class="item">a) mesaj ba&#351;l&#305;&#287;&#305; i&ccedil;erisinde &quot;teslim edilemeyen&quot; ve &quot;mesaj&quot; kelimeleri bulunan;<br>
+          b) &quot;postmaster@....&quot; adresinden gelen;<br>
+          c) &#304;&ccedil;erik t&uuml;r&uuml; (Content-Type) ba&#351;l&#305;&#287;&#305; &quot;da&#287;&#305;t&#305;m uyar&#305;s&#305;&quot; veya &quot;da&#287;&#305;t&#305;m hata uyar&#305;s&#305;&quot; olan<br>
+          d)  mesaj g&ouml;vdesi i&ccedil;erisinde &quot;neden&quot; veya &quot;hata&quot; kelimesi olan</p>
+        <p class="item">ve tabiki (&quot;postmaster@...&quot;) adresini listeden &ccedil;&#305;kartmak istemiyorsunuz zira ger&ccedil;ek ula&#351;&#305;lamayan adres mesaj g&ouml;vdesinin i&ccedil;erisindedir.</p>
+        <p class="item">Bi&ccedil;imin i&ccedil;eri&#287;i a&#351;a&#287;&#305;daki gibi olacakt&#305;r:</p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Sert  bounce :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(i&#351;aretli)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Ba&#351;l&#305;k Paterni:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*teslim edilemiyen*mesaj*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Ba&#351;l&#305;k:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Kimden</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>De&#287;er:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Ba&#351;l&#305;k:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type (&#304;&ccedil;erik-T&uuml;r&uuml;)</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>De&#287;er:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*teslim*uyar&#305;s&#305;*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Mesaj g&ouml;vdesi i&ccedil;eri&#287;i :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">neden, hata </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>D&#305;&#351;la :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>&nbsp;</p>
+    <p>A&#351;a&#287;&#305;da ba&#351;l&#305;&#287;&#305;nda &quot;teslim edilemeyen&quot; kelimesi bulunan (ve postmaster@.. ve majordomo@... adreslerini d&#305;&#351;layan) &ccedil;ok daha basit bir bi&ccedil;im &ouml;rne&#287;i bulunmaktad&#305;r:</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Sert  bounce :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(i&#351;aretli)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Ba&#351;l&#305;k paterni:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*teslim edilemeyen*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Ba&#351;l&#305;k:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(bo&#351;)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>De&#287;er:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(bo&#351;)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Ba&#351;l&#305;k:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(bo&#351;)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>De&#287;er:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(bo&#351;)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Mesaj g&ouml;vdesi i&ccedil;eri&#287;i :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(bo&#351;)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>D&#305;&#351;la  :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

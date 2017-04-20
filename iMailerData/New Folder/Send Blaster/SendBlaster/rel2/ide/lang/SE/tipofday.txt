@@ -1,0 +1,30 @@
+Genom att tillfälligt aktivera/deaktivera en eller flera adresser i listan kan du göra utskick till en grupp. Genom att kombinera detta med funktionerna sortering/gruppering får du ett kraftfullt verktyg för olika urval.\r\rFör att enkelt skapa ett urval kan du först avaktivera alla adresser, och sedan gruppera och aktivera de du är intresserad av.
+En av de mest avancerade funktionerna i SendBlaster är användningen av flera grupper. Experimentera med att dra flera kolumnhuvuden till området ovanför listan och se vad som händer.
+Du behöver aldrig oroa dig för dubbletter: SendBlaster hanterar dem automatiskt i samband med utskicket.
+Om du samlar in fullständiga data från användarna, och inte bara mailadresser, kan du använda dessa data för att skicka personliga mail.
+Den inbyggda "Förhandsvisningen" använder ditt vanliga epostprogram. Ett annat sätt är att skapa en speciell testlista, med enbart din egen mailadress för att testa utskicket. Då kan du också öppna mailet med olika mailprogram för att testa.
+Du kan med jämna mellanrum städa din adresslista genom att välja "Hantera returnerade mail".\r\rDe felaktiga adresserna kommer då att raderas från listan.
+Du är inte bunden till våra mallar. En .html eller .eml fil kan enkelt bli en mall i två enkla steg genom att först importera den och sedan spara som ny mall.
+Mallar kan vara mer än enbart en grafisk layout. Om du skrivit en text som du vill återanvända i framtiden, spara den som en ny mall.
+Du kan importera adresser från alla program som kan exportera data i form av en formaterad textfil.\rFormaterad textfil kallas "kommaseparerad" och är ett vanligt format för att utbyta data mellan olika program.
+Det enklaste sättet att skapa en prenumerationslänk på din hemsida är att skapa en mail-länk till den adress du använder för prenumerationer med rubriken "Subscribe".\rOm du använder php eller asp finns färdiga exempel på vår hemsida.
+Det är bättre att använda en separat mailadress för att hantera prenumerationer (tex "subscriptions@mysite.com"), i stället för samma adress som du skickar från (tex"news@mysite.com"). Då blandas inte prenumerationer och andra svar och det går snabbare.
+Om du ställer in SendBlaster för att hämta mail från samma mailadress som du använder med ett annat epostprogram, måste du alltid aktivera "Behåll meddlanden på server" i både SendBlaster och det andra programmet, för att båda programmen skall kunna hämta alla mail.
+Gamla utskick sparas under "Historik". Du kan använda detta för att återanvända ett skickat meddelande, även om detta inte var sparat. Välj bara "Öppna/öppna mail från arkiv" under "Redigera"
+I stället för att lägga till en bilaga kan du ladda upp denna fil till din webserver och enbart lägga in en länk till denna fil i meddelandet.
+För att skicka snabbare och dessutom minska risken att fastna i olika spamfilter bör du undvika bilder i dina meddelanden.
+Olika mailprogram visar HTML-formaterade mail på olika sätt, så undvik komplicerad formatering och gör det så enkelt som möjligt.
+För att undvika problem med olika mailprogram bör du alltid lägga till en textdel med knappen "Text från HTML". Då kan även de med mailprogram som inte klarar html läsa det.
+Kom ihåg att alltid lägga till en länk för att avbeställa utskick i slutet av varje meddelande.
+SendBlaster skickar varje meddelande som ett separat mail. Det använder inte "Cc:" eller "Bcc:" så att mottagaren kan se alla  andra mailadresser som får det.
+Om du behöver en speciell teckenuppsättning måste du välja det innan du börjar skriva.
+Om du vill skicka ett meddelande med enbart text, dvs ingen HTML-del", skapa ett helt nytt meddelande och skriv i den nedre textrutan. Lämna den övre redigeringsrutan tom. SendBlaster kommer då att skicka ett vanligt textmail utan HTML.
+SendBlasters hastighet är helt beroende av hastigheten på din internetanslutning och din SMTP-server. För att hitta högsta användbara hastighet, börja med en låg hastighet, och öka sedan stegvis genom att tex minska pausen mellan varje meddelande.
+I stället för att enbart använda SMTP eller "Skicka direkt" kan man använda en båda genom att välja SMTP som standard och "Försök att skicka direkt vid fel" (Om din internetleverantör tillåter detta).
+Välj i första hand "Quoted printable" om dina meddelanden innehåller mest text. Välj "Base64" bara om det innehåller mycket bilder, eftersom meddelandets storlek då blir mindre, men en del spamfilter gillar inte detta.
+Adresslistan kan innehålla många fält, men om du inte använder alla kan du använda knappen "Synliga fält" för att gömma dem du inte använder.
+Ett avbrutet utskick kan fullbordas genom att använda funktionerna under "Historik". Med knappen "Avsluta utskick" kan man fortsätta och skicka ut det som misslyckades tidigare. SendBlaster ser till att det inte blir dubbletter.
+"importera" betyder inte endast att lägga till nya rader i adresslistan, det går att göra mycket mera. Tex om du har en fil med "felaktiga" adresser kan du importera denna så att dessa adresser tas bort från adresslistan.
+Användningen av spårrlistor är ett bra sätt att undvika att skicka till någon, eller förhindra oönskade prenumerationer. Tex förhindra att din konkurrent kan prenumerera på ditt nyhetsbrev.
+SendBlaster kan också lösenordsskydda dina data. För att ta bort ett lösenord, föll i det gamla lösenordet och lämna fältet "nytt lösenord" tomt. 
+Glöm inte att besöka vår websida ibland. Där hittar du uppdateringar och gratismaterial. Se till att du inte missar något!

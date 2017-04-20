@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Historial</p>
+<p class="item">
+Esta secci&oacute;n le permite observar un listado de todos los mensajes enviados.
+En caso de que una operaci&oacute;n de env&iacute;o no haya sido completada
+(por ejemplo si su servidor SMTP no permite enviar m&aacute;s que una cantidad determinada
+de e-mails en un corto per&iacute;odo de tiempo), es posible continuar el env&iacute;o
+desde el punto en que ha sido interrumpido, enviando el mensaje a todos aquellos destinatarios
+que no hayan sido incluidos en la operaci&oacute;n de env&iacute;o original. </p>
+<p class="item">
+Cada operaci&oacute;n de env&iacute;o es marcada con la fecha de env&iacute;o, el nombre de la lista
+a la cual el mensaje ha sido enviado y el asunto.</p>
+<p class="item">Presione el bot&oacute;n de <span class="itemelement">Vista Previa</span>
+(o seleccione la opci&oacute;n adecuada realizando click derecho con el mouse) para observar
+el mensaje enviado para la entrada seleccionada.</p>
+<p class="item">La <span class="itemelement">lista de direcciones</span>
+le permite observar un listado de todas las direcciones a las cuales el mensaje ha sido enviado.
+Todas las direcciones a las cu&aacute;les el mensaje ha sido enviado exitosamente, son mostradas
+en verde, mientras que las direcciones mostradas en rojo son aquellas en las que ha existido un error
+en la entrega del mensaje.</p>
+<p class="item">El bot&oacute;n de <span class="itemelement">Log</span>
+muestra el log de env&iacute;o, el cual representa al <em>di&aacute;logo</em>
+realizado con el servidor SMTP (o con los servidores de destino en caso de env&iacute;os directos).</p>
+<p class="item">
+En caso de que una o m&aacute;s direcciones no hayan sido incluidas en la operaci&oacute;n de env&iacute;o,
+la &uacute;ltima columna de la lista (para las entradas incompletas), mostrar&aacute;
+el bot&oacute;n<img src="img/sendblaster_messages_history_1.gif" width="16" height="16">.
+Presionando este bot&oacute;n, usted podr&aacute; completar la operaci&oacute;n de env&iacute;o, utilizando
+las opciones de env&iacute;o actuales, especificadas en la secci&oacute;n de <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Env&iacute;o</span></a>.
+El mensaje ser&aacute; enviado a todos los destinatarios que a&uacute;n no lo han recibido (las direcciones de la lista en rojo).</p>
+<p class="item">
+Los items del historial pueden ser eliminados seleccion&aacute;ndolos (utilice la tecla <em>Ctrl</em>
+del teclado para seleccionar elementos m&uacute;ltiples, o utilice <em>Shift</em>
+para seleccionar un grupo) y presione el bot&oacute;n <span class="itemelement">Eliminar &iacute;tems</span>.</p>
+<p class="item">Las direcciones entregadas y no entregadas pueden ser exportadas como archivo de texto, utilizando los botones
+<span class="itemelement">Exportar entregados</span> y <span class="itemelement">Exportar no entregados</span>.
+Exportar las direcciones no entregadas puede tambi&eacute;n ser &uacute;til cuando usted desea purgar las direcciones
+inv&aacute;lidas de sus listas, puede luego <a href="sendblaster_lists_import.htm" class="itemlink">
+importar el archivo</a> seleccionando las opciones de remover o desuscribir.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><strong><font color="#009900">
+    Cu&aacute;ndo es &uacute;til utilizar las funcionalidades del Historial? </font></strong></p>
+      <p>
+      La capacidad de completar el env&iacute;o e un mensaje mediante las funcionalidades
+      del historial, es una buena forma de evitar las restricciones de los servidores SMTP
+      que no permitir&iacute;an en caso contrario enviar muchos mensajes en un per&iacute;odo
+      de tiempo corto.
+      Las restricciones de servidor SMTP, podr&iacute;an ser tales, que sin importar la
+     <span class="itemelement">Configuraci&oacute;n avanzada</span> de la secci&oacute;n de
+     <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Env&iacute;o</span></a>
+     no permitan completar la operaci&oacute;n de env&iacute;o en un s&oacute;lo paso.
+     Por ejemplo, en una situaci&oacute;n en que su servidor no permita enviar m&aacute;s de 50
+     mensajes por hora y una lista de distribuci&oacute;n posea 100 direcciones, s&oacute;lo
+     la primera mitad ser&iacute;a entregada durante el primer intento. Luego de una espera de una hora,
+     la operaci&oacute;n puede ser completada desde la ventana de Historial.</p>
+      <p>Exportar las direcciones no entregadas (en rojo), tambi&eacute;n puede ser &uacute;til cuando
+      usted desea purgar las listas para que no contengan direcciones inv&aacute;lidas.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,85 @@
+CREATE TABLE MasterData(
+	DataType NVARCHAR(20) NOT NULL,
+	ParentValue NVARCHAR(20) NOT NULL,
+	Value NVARCHAR(20) NOT NULL
+);
+
+/* *** List of Indian States *** */
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Andhra Pradesh');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Arunachal Pradesh');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Assam');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Bihar');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Chhattisgarh');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Delhi');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Goa');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Gujarat');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Haryana');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Himachal Pradesh');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Jammu and Kashmir');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Jharkhand');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Karnataka');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Kerala');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Madhya Pradesh');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Maharashtra');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Manipur');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Meghalaya');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Mizoram');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Nagaland');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Orissa');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Punjab');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Rajasthan');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Sikkim');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Tamil Nadu');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Tripura');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Uttar Pradesh');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','Uttarakhand');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('State','India','West Bengal');
+
+/* *** List of Indian Cities *** */
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Delhi','New Delhi');
+
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Kanpur');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Allahabad');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Varanasi');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Agra');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Lucknow');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Noida');
+INSERT INTO MasterData (DataType, ParentValue, Value) Values ('City','Uttar Pradesh','Ghaziabad');
+
+CREATE TABLE CustomerInfo(
+	IsAdmin ENUM('Y','N') NOT NULL,
+	CustomerID INT NOT NULL AUTO_INCREMENT,
+	FullName NVARCHAR(50) NOT NULL,
+	AddressLine1 NVARCHAR(150) NOT NULL,
+	AddressLine2 NVARCHAR(150) NULL,
+	City NVARCHAR(20) NOT NULL,
+	State NVARCHAR(20) NOT NULL,
+	PIN NVARCHAR(6) NULL,
+	Country NVARCHAR(20) NOT NULL,
+	PrimaryContactNo NVARCHAR(10) NOT NULL,
+	SecondaryContactNo NVARCHAR(10) NULL,
+	PrimaryEmailId NVARCHAR(100) NOT NULL,
+	SecondaryEmailId NVARCHAR(100) NULL,
+	Website NVARCHAR(100) NULL,
+	ProductName NVARCHAR(10) NOT NULL,
+	ProductVersion NVARCHAR(5) NOT NULL,
+	ProductLicense NVARCHAR(30) NOT NULL,
+	PurchasedLicense NVARCHAR(10) NOT NULL,
+	ActivatedLicense NVARCHAR(10) NULL,
+	ActualPrice NVARCHAR(15) NOT NULL,
+	OfferedPrice NVARCHAR(15) NOT NULL,
+	AmountPaid NVARCHAR(15) NOT NULL,
+	LoginId NVARCHAR(20) NULL,
+	Password NVARCHAR(200) NULL,
+	CreationDateTime DATETIME NOT NULL,
+	LastModifiedDateTime DATETIME NULL,
+	PRIMARY KEY (CustomerID),
+	UNIQUE KEY (PrimaryEmailId)
+);
+
+CREATE TABLE RegisteredWorkstations(
+	PrimaryEmailId NVARCHAR(100) NOT NULL,
+	WorkstationName NVARCHAR(100) NULL,
+	IsActive ENUM('Y','N') NOT NULL,
+	UNIQUE KEY (PrimaryEmailId , WorkstationName)
+);

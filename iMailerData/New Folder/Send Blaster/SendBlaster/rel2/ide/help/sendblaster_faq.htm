@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<title>SendBlaster</title>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body"> 
+  <p class=title>FAQ</p>
+  <p class=item><strong>When I send a message to several recipients, can they 
+    all see everyone else&#8217;s address?</strong></p>
+  <blockquote> 
+
+  <p class=item>No, SendBlaster sends each message separately: the recipients&#8217; 
+    privacy is preserved. Using SendBlaster to manage multiple sends is therefore 
+    useful to prevent accidentally showing of other people&#8217;s e-mail address, 
+    which would be a violation of privacy rules.<br>
+      &nbsp; </p>
+  </blockquote>
+  <p class=item><strong>How can I filter a list?</strong></p>
+  <blockquote> 
+    
+  <p class=item>Using the sorting/grouping functions in the <a href="sendblaster_lists_managing.htm" class="itemelement">Manage
+    lists</a> section, and temporarily enabling/disabling a group of addresses,
+    will allow you to send a message to a subgroup of the addresses in the current
+    list. You can also use the <span class="itemelement">Filter</span> button.</p>
+  </blockquote>
+  <p class=item><strong>How can I insert in the message body a link to unsubscribe 
+    from the mailing list?</strong></p>
+  
+<blockquote> 
+  <p class=item>SendBlaster can manage its distribution lists by downloading messages 
+    from a dedicated e-mail address, different for each list (see <a href="sendblaster_lists_subscribe.htm" class="itemelement">Manage 
+    subscriptions</a>). Using the <span class="itemelement">Insert unsubscription link</span> button, when
+    composing a message, you will insert a link like:</p>
+    <blockquote>
+
+    <p class=valore>&lt;a href=&quot;mailto:#managingemail#?Subject=Unsubscribe&quot;&gt;Unsubscribe&lt;/a&gt;</p>
+    </blockquote>
+
+  <p class=item>The HTML code will inserted in the HTML section of
+    the message, you can review/edit it by clicking on <span class="itemelement">Show code</span>.
+  </p>
+  </blockquote>
+  <p class=item><strong>When I send a message to a mailing list, some of the messages 
+    don&#8217;t get delivered and are returned with an error.</strong></p>
+  <blockquote> 
+    
+  <p class=item>When sending to lots of addresses it is normal that not all of
+    the messages go through: some of the addresses could have become inactive
+    or be temporarily jammed, e-mail servers could be overloaded, the connection
+    could be momentarily interrupted or slow.</p>
+    
+    <p class=item>If the percentage of sent messages is very low, or even no
+    message  is sent, it is necessary to check the <a href="sendblaster_messages_send.htm" class="itemlink">Send Settings</a>.</p>
+    
+    
+  <p class=item>Actually, it could be necessary to change the send mode (direct
+    or through SMTP) and, if your SMTP server uses antispam filters, lower the
+    number of connections and raise the pause between messages. The SMTP server
+    could have restrictions that will prevent you from sending more than a certain
+    number of messages within a specific time span (for instance a given server
+    may not allow sending more than 50 e-mails per hour); in such case, after
+    the first send, the operation will be completed at a later time using the
+    <a href="sendblaster_messages_history.htm" class="itemelement">History</a>
+    functions.</p>
+    
+  <p class=item>If the SMTP server antispam restrictions can&#8217;t be overridden
+    and sending operations will go through only with very slow settings, you can
+    try with the direct send or by using a &#8220;more tolerant&#8221; SMTP server
+    (on the Internet it is possible to subscribe, even for a low price, to very
+    efficient SMTP services).</p>
+    <p class=item>If the problem arises while using the direct send mode, it may
+      be necessary to manually specify the IP address of the DNS server.<br>
+      &nbsp; </p>
+  </blockquote>
+  <p class=item><strong>I&#8217;ve lost the password and I can&#8217;t access
+    the program anymore. What can I do?</strong></p>
+  <blockquote> 
+    
+  <p class=item>You need to be aware that it won&#8217;t be possible to recover
+    lost data. The following procedure will only enable you to regain access to
+    the software.</p>
+    
+  <p class=item>1. Uninstall the software from the Windows Control Panel.</p>
+    
+  <p class=item>2. Manually remove the installation folder (i.e. <i>C.\Program
+    files\SendBlaster</i>), including all the subfolders; for security reasons,
+    in the event the software gets uninstalled, the database will not be automatically
+    removed (this is why you need to delete it manually).</p>
+    <p class=item>3. Install the software again.</p>
+  </blockquote>
+</body>
+</html>

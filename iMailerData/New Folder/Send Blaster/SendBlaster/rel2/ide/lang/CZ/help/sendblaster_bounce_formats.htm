@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Uživatelské formátovaní zp&#283;tných odpov&#283;di </p>
+<p class="item">Zp&#283;tné formátování bylo p&#367;vodn&#283; navrženo tak
+, aby je mohli &#269;íst lidí , ne stroje. Proto neexistuji&nbsp; stala
+pravidla pro n&#283;. SendBlaster m&#367;že zpracovat nejb&#283;žn&#283;jší&nbsp;
+formáty používáním jeho vnit&#345;ní databáze, ale m&#367;žete se setkat
+s n&#283;kterymi formáty které nejsou rozpoznané softwarem. Jestli se toto
+stane, vy m&#367;žete ru&#269;n&#283; p&#345;idat nový, uživatelský formát
+do databázi SendBlaster.</p>
+<p class="item">Uživatelský formát se skládá z n&#283;jakých pravidel;
+které musejí všem vyhovovat, aby zpráva stala za odpov&#283;&#271; (jinými
+slovy, logický operátor pravidel je AND). </p>
+<p class="item">Když chcete p&#345;idat <font color="#000080"><i><b>Nový formát</b></i></font>,
+p&#345;edevším musíte identifikovat n&#283;jaký vzor v P&#345;edm&#283;tu
+nebo v dalších hlavi&#269;kách, které jedine&#269;n&#283; identifikuje zprávu
+jako odpov&#283;&#271; ( <b><i><font color="#000080">Tvrdý formát</font></i></b>,
+jestli vy ozna&#269;íte poli&#269;ko, nebo m&#283;kký formát, pokud to ponecháte
+beze zm&#283;n). Ze seznamu hlavi&#269;ek jen slouží jako p&#345;íklad, vy m&#367;žete
+ru&#269;n&#283; p&#345;idat specifickou hlavi&#269;ku napsáním identifikátoru
+souboru v poli <font color="#000080"><b><i>Záhlaví</i></b></font> a vyhovující
+vzor do pole <b><i><font color="#000080">Hodnota</font></i></b>.</p>
+<p class="item"><font color="#000080"><b><i>Vzor</i></b></font> typicky zahrnuje
+n&#283;jaké zástupné znaky ( &quot;*&quot;stojící za podpisem což znamená
+&quot;n&#283;jaký znak&quot;): jako p&#345;íklad, jestli vy vložíte
+&quot;*doru&#269;it*oznámit* až za P&#345;edm&#283;t, vytvo&#345;íte vzor ve
+zpráv&#283; obsahující slova jako &quot;doru&#269;it&quot; a &quot;oznámit&quot;
+v jeho p&#345;edm&#283;tu - jako &quot; doru&#269;it&nbsp; <a href="mailto:doru&#269;it%20xxx@yyy.com%20a%20oznámit%20chyby">xxx@yyy.com</a>&nbsp;
+a oznámit chyby&quot; pak toto bude považováno za odpov&#283;&#271; zp&#283;t,
+a bude p&#345;edloženo pro zpracováni dalším pravidl&#367;m, které jste možná
+ješt&#283; definovali. Jestli vy použijete jen &quot;doru&#269;it a oznámit&quot;,
+bez zástupných znak&#367;, jen zprávy p&#345;esn&#283; obsahující
+&quot;doru&#269;it a oznámit&quot; v t&#283;le p&#345;edm&#283;tu budou
+zpracované jako zp&#283;tná odpov&#283;&#271; - &quot;doru&#269;it xxx@yyy.com
+a oznámit chyby&quot; by nebylo považováno za platný p&#345;edm&#283;t.</p>
+<p class="item">Vy m&#367;žete také vložit n&#283;která specifická slova
+(odd&#283;lené&nbsp; &#269;árkou) která musejí se nacházet v &#269;ásti
+zprávy: jestli žádný z t&#283;chto slov není nalezeno zpráva není považovaný
+za zp&#283;tnou odpov&#283;&#271;. Jako p&#345;íklad, nej&#269;ast&#283;jší
+zp&#283;tné odpov&#283;di obsahuji slova jako &quot;d&#367;vod&quot; (následované
+za textem který vysv&#283;tluje tento d&#367;vod pro&#269; zpráva nebyla
+doru&#269;ena). Prosím všimn&#283;te si , že seznam slov není vzor (vy nem&#367;žete
+užívat zástupné znaky) a logický operátor seznamu je OR </p>
+<p class="item">Jestli daná zpráva obsahuje všechna pravidla které jste
+definovali, to je zpracována jako zp&#283;tná odpov&#283;&#271;, a všechný
+e-mail adresy nalezené uvnit&#345; zprávy budou použité k odpov&#283;di,
+pokud oni&nbsp; budou nalezení v seznamu který jste vytvo&#345;ili. M&#367;žete
+vylou&#269;it typické p&#345;ednostu poštovního seznamu adres používáním
+vzoru.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">P&#345;íklad</font></strong></p>
+        <p class="item">&#344;ekn&#283;me že vy chcete zpracovat zprávy zp&#283;tné
+        odpov&#283;di pak musíte mít:</p>
+      <p class="item">a) slova jako &quot;undeliverable&quot;(&quot;nedoru&#269;itelná&quot;)
+      a &quot;message&quot; (&quot;zprava&quot;)v t&#283;le p&#345;edm&#283;tu;<br>
+          b) ur&#269;ité adresy jako&quot;postmaster@...&quot; ;<br>
+          c) jejich halví&#269;ka Content-Type obsahuje &quot;delivery notification&quot;
+      (&quot;potvrzeni o p&#345;e&#269;tení&quot;) nebo &quot;delivery failure notification&quot;
+      (&quot;chybové hlášení&quot;)<br>
+          d) obsahovat slova jako &quot;odpov&#283;&#271;&quot; nebo &quot;chyba&quot;
+      v t&#283;le</p>
+      <p class="item">ur&#269;it&#283; taky nechcete aby adresa jako (&quot;postmaster@...&quot;)
+      vám odepisovala, pokud to není skute&#269;na adresa v t&#283;le zprávy. </p>
+        <p class="item">P&#345;ibližný formát by mohl vypadat takto: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Tvrdé zpracováni :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(ozna&#269;eno)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Vzor p&#345;edm&#283;t:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Záhlaví:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">From</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Hodnota:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Záhlaví:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Hodnota:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*delivery*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>T&#283;lo zprávy obsahuje :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reason, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>V&#269;etn&#283; :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>A zde je moc jednoduchý formát, který zpracuje všechny zprávy se
+    slovy &quot;nedoru&#269;itelný&quot; v jejich p&#345;edm&#283;tu (a vylou&#269;í
+    oba osloveni postmaster@... a majordomo@...):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Tvrdé zpracováni :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(ozna&#269;eno)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Vzor p&#345;edm&#283;t:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*undeliverable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Záhlaví:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Hodnota:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Záhlaví:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Hodnota:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>T&#283;lo zprávy obsahuje :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(empty)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>V&#269;etn&#283; :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

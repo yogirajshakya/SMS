@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Import</p>
+<p class="item">M&#367;žete importovat data z externího zdroje do vybraného
+seznamu. SendBlaster p&#345;ijímá data ze 4 typ&#367; zdroj&#367;:</p>
+<ul>
+  <li class="item"> M&#367;žete importovat data z formátovaného textového
+    souboru (.csv, .txt) umíst&#283;ného na po&#269;íta&#269;i nebo na místní
+    síti výb&#283;rem volby <span class="itemelement">Importovat z externího
+    textového souboru</span>. “Formátovaný text” je formát pro vým&#283;nu
+    dat &#269;asto používaný programy pro tvorbu databází a kalkula&#269;ních
+    tabulek.<br>
+    &nbsp; </li>
+  <li class="item">M&#367;žete importovat data z webové stránky výb&#283;rem
+    položky <span class="itemelement">Importovat z Webu pomocí protokolu HTTP</span>.
+    Tento proces je velmi podobný p&#345;edcházející metod&#283;, až na to,
+    že zde importovaný soubor se nenachází nutn&#283; na po&#269;íta&#269;i
+    ani na místní síti, nýbrž na n&#283;kterém míst&#283; dostupném
+    pomocí protokolu HTTP. Data pro import lze vygenerovat i dynamicky pomocí
+    skriptu (nap&#345;. ASP nebo PHP). Tato metoda Vám umožní importovat
+    obsah on-line databáze vybavené skriptem pro export. Webovým odkazem se
+    ur&#269;í zdroj dat.<br>
+    &nbsp; </li>
+  <li class="item">M&#367;žete importovat data ze Schránky Windows (po vložení
+    dat do ní v jiném programu) volbou <span class="itemelement">Importovat ze
+    Schránky</span>.<br>
+    &nbsp; </li>
+  <li class="item">M&#367;žete importovat data z adresá&#345;e Outlook Express
+    (známý též jako Windows Address Book) volbou <span class="itemelement">Importovat
+    z programu Outlook Express</span>.</li>
+</ul>
+<p class="item">Data na&#269;tená z externího zdroje lze použít pro jednu z
+následujících operací:</p>
+<ul>
+  <li class="item">Lze je p&#345;idat do vybraného seznamu zvolením volby <span class="itemelement">P&#345;idat
+    do seznamu a p&#345;ihlásit nové adresy</span>.<br>
+    &nbsp; </li>
+  <li class="item">Lze je odstranit ze seznamu zvolením volby <span class="itemelement">Odstranit
+    nové adresy ze seznamu</span>. Všechny adresy p&#345;ítomné v zdroji dat
+    se odstraní ze seznamu, pokud jsou v n&#283;m p&#345;ítomné.<br>
+    &nbsp; </li>
+  <li class="item">Lze je odhlašovat, ale p&#345;itom nechat v seznamu (a tím
+    i zachovat data) zvolením volby <span class="itemelement">Odhlašovat nové
+    adresy</span>. Tato operace je podobná té popsané výše, ale adresy se
+    neodstraní ze seznamu, jen se ozna&#269;í jako odhlášené. Tato metoda Vám
+    umožní zachovat data v seznamu bez zahrnutí adresy do projekt&#367; rozesílání.</li>
+</ul>
+<p class="item">Po vybrání seznamu, zdroje dat a operace, klikn&#283;te tla&#269;ítko
+<span class="itemelement">Import</span>. Zobrazí se okno podobné známým
+&quot;pr&#367;vodc&#367;m&quot; a provede Vás n&#283;kolika volbami pot&#345;ebnými
+pro dokon&#269;ení importu:</p>
+<ul>
+  <li class="item"> <span class="itemelement">Cesta k importovanému souboru</span>,
+    nebo <span class="itemelement">URL importovaného souboru</span> v p&#345;ípad&#283;
+    importu z webu (import ze Schránky nebo z programu Outlook Express nevyžaduje
+    žádnou cestu).<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Formát</span> dat (není pot&#345;eba
+    u import&#367; z programu Outlook Express): pokud zvolíte <span class="itemelement">Odd&#283;lený
+    textový soubor</span> budete muset volit i <span class="itemelement">Odd&#283;lova&#269;
+    polí</span> a ur&#269;it, jestli <span class="itemelement">První &#345;ádek
+    obsahuje názvy polí</span>. Pokud zvolíte <span class="itemelement">Volný</span>
+    formát, importují se jen adresy (jsou zjišt&#283;né automaticky) a
+    nebude t&#345;eba ur&#269;it formát dat.<br>
+    &nbsp; </li>
+  <li class="item">Pokud provádíte typickou operaci importu (tedy p&#345;idávání
+    dat nebo operaci <span class="itemelement">P&#345;idat do seznamu a p&#345;ihlásit
+    nové adresy</span>), zp&#345;ístupní se dv&#283; další volby, které
+    informují program o tom, jak zareagovat, když externí adresa (adresa v
+    datech pro import) je již p&#345;ítomná v cílovém seznamu. Pokud zvolíte
+    <span class="itemelement">Nep&#345;idat adresy, pokud jsou duplicitní nebo
+    již v seznamu</span>, tyto adresy se budou ignorovat (jinak by se p&#345;idaly
+    a tím by vznikly zdvojené adresy). Pokud zvolíte <span class="itemelement">P&#345;ihlásit
+    adresy již p&#345;ítomné v seznamu</span>, nová data se nenaimportují,
+    ale adresy se ozna&#269;í jako p&#345;ihlášené.<br>
+    &nbsp; </li>
+  <li class="item">V následujícím kroku Vás program požádá o nastavení
+    shody mezi poli v externím zdroji dat a poli v SendBlaster. Pak až
+    kliknete tla&#269;ítko <span class="itemelement">Další</span> operace
+    importu za&#269;ne.</li>
+</ul>
+<p><font size="2"><u><b><font COLOR="#00007d">Snímky</font></b><font COLOR="#00007d">
+</font></u></font><font size="1">jsou zvlášt&#283; šikovní p&#345;i importu:
+pro úsp&#283;šné importování soubor&#367;, vytvo&#345;te snímek vaší
+konfigurace, aby uložit nastavení které jste užívali; pak vy budete schopní
+znovu použít je pozd&#283;ji jen za pár klik&#367;.</font></p>
+<p class="item"><strong><font color="#ff0000">POZOR:</font></strong> správné
+ur&#269;ení pole s adresami v externím zdroji dat je zvlášt&#283; d&#367;ležité,
+protože:</p>
+<ol>
+  <li class="item"><strong>Všechny externí záznamy, které neobsahují ve
+    vybraném poli formáln&#283; platnou e-mailovou adresu se ignorují</strong>.
+    Proto pokud ur&#269;íte nesprávné pole, nebude žádný záznam zahrnovat
+    platnou e-mailovou adresu a všechna externí data se tedy budou ignorovat.</li>
+  <li class="item">Základ operace srovnání externích dat a dat v seznamu
+    (aby program ur&#269;il, jestli n&#283;která adresa tam již je), leží ve
+    srovnání adresy pro dané pole v externích datech s adresou v seznamu.</li>
+</ol>
+</body>
+</html>

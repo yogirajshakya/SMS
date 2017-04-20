@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Напиши съобщение</p>
+<p class="item">В прозореца за писане на съобщения се създава съобщението, което ще се изпрати
+  до даден списък.</p>
+<p class="item">Писането на съобщението става както при всеки стандартен email клиент:
+  напишете <span class="itemelement">Темата</span> на съобщението, вмъкнете
+  <span class="itemelement">Прикачени файлове</span>*, ако е необходимо,
+  уточнете получател (използва се само при прегледа на писмото) и напишете текста
+  на съобщението. Ако искате да използвате специална азбука (не базирана на латиница),
+  трябва първо да зададете <span class="itemelement">Кодирането </span>(стандартно зададеното кодиране
+  може да се променя от <a href="sendblaster_settings_advancedsettings.htm" class="itemlink"><span class="itemelement">Разширени настройки</span></a>).</p>
+<blockquote>
+<p class="item">
+  Може да се вмъкват <span class="itemelement">тагове</span> с помощта на бутоните за тагове
+  (#) до полетата <span class="itemelement">Тема</span> и
+  <span class="itemelement">До</span>, с тяхна помощ се персонализират хедърите
+  в писмата.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><font color="#FF0000">Внимание:</font> Кодирането на съобщението 
+    трябва да се определи <strong>преди</strong> да напишете текста, за да може 
+    да се промени знаковата система. Ако не зададете кодирането преди да започнете да пишете, 
+    това може да доведе до създаването на нечетлив текст.</p>
+</blockquote>
+<p class="item">Страницата има две текстови зони:</p>
+<ul>
+  <li class="item">В основната зона, където е дългият ред с инструменти, може да вмъквате
+    форматиран текст, от който да се генерира съобщение в HTML. Може също да 
+    вмъквате снимки и връзки и да проверявате (и променяте) HTML кода по всяко 
+    време с кликване на бутона <span class="itemelement">Покажи 
+    кода</span> в горната част на полето.<br>
+    &nbsp; </li>
+  <li class="item">В зоната <span class="itemelement">Обикновен текст</span> може да
+    напишете съобщението в обикновен текстов формат. При някои получатели е 
+    възможно да не се показват съобщения в HTML, затова е важно 
+    да осигурите алтернативен формат на съдържанието, без снимки и/или връзки. 
+    Обикновеният текст може да се генерира автоматично като натиснете 
+    бутона <span class="itemelement">Текст от HTML </span>, след като 
+    напишете съобщението.</li>
+</ul>
+<p class="item">За да изпратите персонализирани съобщения (противоположно на генерализираните),
+  може да вмъкнете <span class="itemelement">Тагове</span> в заглавието и 
+  съдържанието (и в сектора HTML, и в обикновения текст). Всеки таг е на практика
+  отправка към поле: когато съобщението се изпрати, тагът се замества със стойност, 
+  прочетена от текста на получателя в определеното поле. Например, 
+  ако списъкът включва поле &quot;Име на фирмата&quot; и &quot;Адрес&quot; 
+  (<a href="sendblaster_settings_fields.htm" class="itemlink">наименованията на полетата 
+  може да се променят</a>), като напишете в текста на съобщението следното:</p>
+<blockquote>
+  <p class="valore">Messrs. #businessname#<br>
+    #address#</p>
+</blockquote>
+<p class="item">получателите ще отворят персонализирано съобщение, например:</p>
+<blockquote> 
+  <p class="valore">Messrs. The Coca Cola Company<br>
+    Atlanta, GA</p>
+</blockquote>
+<p class="item">Тъй като наименованията на полетата могат да се променят, може да използвате и
+  &quot;фиксирани&quot; тагове (независими от наименованието на полето), които се отнасят до
+  номера на полето (#1# #2# и т.н. до #10#). Номерата на полетата може да намерите в прозореца <a href="sendblaster_settings_fields.htm" class="itemlink"><span class="itemelement">Полета</span></a>. Предлагат се и три специални тага: <span class="itemelement">#listname#</span>,
+  който се замества с името на списъка, до който се изпраща съобщението; <span class="itemelement">#managingemail#</span>, 
+  който се замества с email адреса, на който се изпращат Абонаменти/Отписвания 
+  (така получателите могат лесно да премахнат адреса си от списъка) и <span class="itemelement"> 
+  #systemdate#</span>, който се замества с текущата дата, форматирана според настройките
+  на Windows.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Как 
+        да направим Връзка за отписване</strong></font></p>
+      <p>SendBlaster може да обработва списъци като изтегля съобщенията от
+        специално създаден за това email адрес, различен за всеки списък (<a href="sendblaster_lists_subscribe.htm" class="itemlink"><span class="itemelement">Обработка
+        на абонаменти</span></a>). С използването на тагове лесно се вмъква връзка за
+        отписване в HTML кода:</p>
+      <blockquote>
+        <p class="valore">&lt;a href=&quot;mailto:#managingemail#?Subject=Unsubscribe&quot;&gt;Remove&lt;/a&gt;</p>
+      </blockquote>
+      <p>Този HTML код може лесно да се вмъкне в HTML съобщението с помощта на бутона <span class="itemelement">Вмъкни връзка за отписване</span>,
+      който позволява и въвеждането на текст към връзката за отписване.</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Редактираното съобщение може да се запише в .eml формат
+  (съвместим с повечето email клиенти) като се натисне бутона <span class="itemelement">Запиши</span>.</p>  
+<p class="item">За да създадете ново съобщение, може да започнете отначало (с бутона <span class="itemelement">Ново</span> 
+  или <span class="itemelement">Избери шаблон</span>) или да отворите предварително записано съобщение с бутона <span class="itemelement">Отвори</span>: </p>
+<ul>
+  <li class="item">Импортирайте .eml файл (например, създаден с Outlook) с 
+    <span class="itemelement">Отвори</span> / <span class="itemelement">Отвори .eml 
+    файл</span></li>
+  <li class="item">Заредете съобщение, което вече е било изпратено с <span class="itemelement">Отвори</span> 
+    / <span class="itemelement">Отвори писмо от История</span></li>
+  <li class="item">Импортирайте форматиран текст от HTML страница от локалния  
+    твърд диск, включително и снимки, с <span class="itemelement">Отвори</span> / <span class="itemelement">Импортирай
+    HTML от файл</span></li>
+  <li class="item">Импортирайте обикновен текст с <span class="itemelement">Отвори</span>
+    / <span class="itemelement">Импортирай обикновен текст от външен файл</span></li>
+</ul>
+<p class="item">Бутонът <span class="itemelement">Текст от HTML</span> позволява
+  извличането на обикновен текст от форматиран HTML текст. Затова се препоръчва
+  да го използвате след като сте свършили с писането на съобщението.</p>
+<p class="item">Към съобщението може да добавяте опции за проследяване на email чрез бутоните <span class="itemelement">Google Analytics</span> и/или <span class="itemelement">TrackReports</span> от HTML панела; линковете в съобщението се променят автоматично според избраната система за проследяване и се добавя необходимия код. Добавянето на <a href="sendblaster_messages_googleanalytics.htm" class="itemlink">Google Analytics</a> или <a href="sendblaster_messages_trackreports.htm" class="itemlink">TrackReports</a> код винаги трябва да е последното действие – и двата метода променят финалния код, затова първо трябва да сте приключили с редактирането. Проследяването на съобщението може да се извърши и с двете системи; в този случай, първо трябва да се добави Google Analytics.</p>
+<p class="item">Преди да изпратите съобщението, може (и е препоръчително) да проверявате как ще се
+  покаже на различни email клиенти, като използвате бутона <span class="itemelement">Преглед
+  </span>. Тази функция използва примерни данни на подателя, въведени в раздел
+  <span class="itemelement">Моите лични данни</span> в прозореца
+  <a href="sendblaster_settings_fields.htm" target="mainframe" class="itemlink">Полета</a>.
+</p>
+<p class="item">Може да извършвате проверка за спам, докато редактирате съобщението,
+като използвате бутона <span class="itemelement">Проверка за
+  спам</span>, проверката се базира на популярния инструмент <b>SpamAssassin</b>, един от
+  най-разпространените антиспам филтри в email сървърите. С тази напредничава функция на
+  SendBlaster ще избегнете случайното филтриране на вашето съобщение като спам.</p>
+
+<hr size="1" noshade>
+<p class="item">*Функциите за прикачени файлове са достъпни в Pro версията.</p>
+<p align="center"><a href="http://blog.sendblaster.com" target="_blank"><img src="welcome/blog_logo_header2.png" width="90" height="27" border="0"></a>&nbsp;&nbsp;<a href="http://facebook.sendblaster.com" target="_blank"><img src="welcome/facebook_logo_header2.png" width="112" height="27" border="0"></a> &nbsp;&nbsp;<a href="http://twitter.sendblaster.com" target="_blank"><img src="welcome/twitter_logo_header2.png" width="116" height="27" border="0"></a></p>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Произвольные форматы возвращённых писем</p>
+<p class="item">Форматы возвращаемых писем были изначально созданы для
+    чтения человеком, а не машинами, поэтому не существует
+    универсального стандарта или правила.  SendBlaster может
+    обрабатывать самые распространённые форматы из своей базы данных,
+    однако Вы можете встретить и форматы, которые не могут быть
+    распознаны программой.  Если это произойдёт, Вы можете вручную
+    добавить новый формат в базу данных форматов возвращённых писем
+    SendBlaster.</p>
+<p class="item">Произвольный формат состоит из нескольких правил;
+  чтобы сообщение было признано возвращённым письмом, все эти правила
+  должны выполняться (другими словами, правила соединены логическим
+  оператором И).</p>
+<p class="item">Когда Вы хотите
+  добавить <span class="itemelement">Новый формат</span>, прежде всего
+  нужно указать несколько шаблонов в заголовках Subject и подобных,
+  чтобы письмо могло быть точно идентифицировано как возвращённое
+  (<span class="itemelement">Жёсткий возврат</span>, если Вы хотите
+  переключить состояние чекбокса, или мягкий, если не хотите).
+  Выпадающий список заголовков служит примером; Вы можете добавить
+  вручную специфический заголовок, набрав название заголовка в
+  поле <span class="itemelement">Заголовок</span>, а желаемый шаблон —
+  в поле <span class="itemelement">Значение</span>.</p>
+<p class="item"><span class="itemelement">Шаблон</span> обычно
+  включает несколько масок (знак, означающий «любой символ»):
+  например, если Вы введёте &quot;*delivery*notification*&quot; в
+  шаблоне для заголовка Subject, любое сообщение, содержащее слова
+  &quot;delivery&quot; и &quot;notification&quot; в теме письма —
+  т. е.. &quot;delivery to xxx@yyy.com notification failure&quot; —
+  будут считаться возвращённым письмом (если, конечно, другие
+  определённые Вами правила также выполняются).  Если Вы введёте
+  &quot;delivery notification&quot; без масок, только сообщения,
+  содержащие точную строку &quot;delivery notification&quot; в теме
+  будут считаться возвращёнными - &quot;delivery to xxx@yyy.com
+  notification failure&quot; не будет попадать под правило.</p>
+<p class="item">Также Вы можете ввести некоторые точные слова
+  (разделённые запятой), которые должны быть найдены в теле сообщения:
+  если ни одной из них не найдено, сообщение не считается
+  возвращённым.  Например, большинство возвращённых сообщений содержат
+  слово &quot;reason&quot; (причина), за которым следует текст,
+  объясняющий причину недоставки письма.  Обратите внимание, что
+  список слов не является шаблоном (нельзя использовать маски) и
+  логический оператор для списка — ИЛИ. </p>
+<p class="item">Если определённое письмо попадает под все определённые
+  Вам правила, оно обрабатывается как возвращённое сообщение, и все
+  адреса, найденные в сообщении, будут отписаны от рассылки (если они
+  также содержатся в списке адресов рассылки, к которой относится
+  возвращённое письмо).  Также Вы можете исключить с помощью шаблона
+  типичные адреса почтовых администраторов.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">Пример</font></strong></p>
+        <p class="item">Допустим, Вы хотите считать возвращёнными
+        письма, когда они:</p>
+        <p class="item">a) содержат слова &quot;undeliverable&quot; и
+          &quot;message&quot; в теме;<br>
+          b) присланы с адреса &quot;postmaster@...&quot; ;<br>
+          c) содержат заголовок Content-Type со значением &quot;delivery notification&quot; или &quot;delivery failure notification&quot;<br>
+          d)  содержат слово &quot;reason&quot; или &quot;error&quot;
+          в теле письма</p>
+        <p class="item">и Вы с очевидностью не хотите отписывать от
+        рассылке адрес вида (&quot;postmaster@...&quot;), так как
+        настоящий недоступный адрес находится где-то в теле письма. </p>
+        <p class="item">Вот так может выглядеть формат: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Жёсткий возврат:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(отмечен)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Шаблон темы:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Заголовок:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">From</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Значение:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Заголовок:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Значение:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*delivery*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Тело сообщения содержит :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reason, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Исключить:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>А здесь гораздо более простой формат, который будет
+    обрабатывать все сообщения со словом &quot;undeliverable&quot; в
+    теме (а также исключать адреса postmaster@... и
+    majordomo@...):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Жёсткий возврат:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(отмечен)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Шаблон темы:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*undeliverable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Заголовок:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(пусто)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Значение:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(пусто)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Заголовок:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(пусто)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Значение:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(пусто)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Тело сообщения содержит:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(пусто)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Исключить:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

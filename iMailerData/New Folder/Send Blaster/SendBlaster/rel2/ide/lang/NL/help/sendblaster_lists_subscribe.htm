@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Onderhoud inschrijvingen</p>
+<p class="item">SendBlaster kan automatisch inschrijvingen onderhouden (en uitschrijvingen) van distributie lijsten. Elke lijst kan verbonden worden met een e-mail adres; als er een bericht met 'Inschrijven' in het onderwerp naar dit adres gestuurd wordt, wordt de afzender automatisch toegevoegd aan de lijst. Als het onderwerp 'Uitschrijven' is wordt de gebruiker uitgeschreven (als hij/zij al ingeschreven was). SendBlaster download nieuwe berichten van de POP3 account, controleerd het onderwerp en vernieuwd de bijbehorende distributie lijst.</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">W</font><font color="#FF0000">aarschuwing:</font> 
+    Het gekozen adres om de inschrijvingen te onderhouden moet het downloaden van berichten van POP3 ondersteunen (hetzelde protocol dat door standaard e-mail clients gebruikt wordt). Het is niet mogelijk om adressen te gebruiken die allen via het web bezocht kunnen worden (zoals Hotmail).</p>
+</blockquote>
+<p class="item">Gewooonlijk wordt iedere lijst aan een ander e-mail adres verbonden. Maar het is ook mogelijk om hetzelfde e-mail adres aan meer als 1 lijst te verbinden. In dit geval zal als een lijst vernieuwd wordt, alle andere lijsten met hetzelfde in/uitschrijf adres ook vernieuwd worden. Bijvoorbeeld als u twee lijsten maakt met de namen &quot;lijst 1&quot; en &quot;lijst 2&quot; en ze zijn allebeei met hetzelfde e-mail adres verbonden, zal door berichten te downloaden voor het vernieuwen van lijst 1 ook lijst 2 vernieuwd worden.</p>
+<p class="item">Elk e-mail adres voor het onderhouden van een lijst wordt ingesteld door de goede parameters in te vullen om toegang te krijgen tot de POP3 account, net als in een e-mail client programma; naast het e-mail adres (<span class="itemelement">E-mail</span>) moet u ook de onvangende server(<span class="itemelement">POP3 Server</span>) instellen, welke, als het nodig is, 
+  ook een poortnummer nodig heeft in het server:poort formaat, de <span class="itemelement">Gebruikersnaam </span>en het <span class="itemelement">Wachtwoord</span>. De <span class="itemelement">SSL</span> 
+  checkbox zet SSL communicatie aan, wat nodig kan zijn voor sommige POP3 servers (bijvoorbeeld Gmail). In het <span class="itemelement">Timeout</span> 
+  veld kan u intypen na hoeveel seconden van inactief zijn de verbinding gesloten moet worden. Om de parameters te controleren klikt u op de <span class="itemelement">Test 
+  verbinding </span>knop (er worden geen berichten gedownload).</p>
+<p class="item">Door <span class="itemelement">Bewaar een kopie van de berichten op de server</span> aan te zetten, zal SendBlaster nieuwe berichten downlaoden van de server zonder ze daarna te verwijderen. De berichten zijn dan nog geschikbaar voor verder gebruik. Nieuwe berichten zullen genegeerd worden.</p>
+<p class="item"><span class="itemelement">Update alle velden </span>is een extreem krachtige optie: die als het aan staat, niet alleen het onderwerp maar het hele bericht controleerd; als een bericht <em>veldnaam: waarde </em>regels bevat, wordt niet alleen het e-mail adres geupdate maar ook de andere velden (<a href="#updateallfields">zie vak hieronder</a>).</p>
+<p class="item">Het nadeel is dat het downloaden en verwerken van de berichten veel trager gaat; daarom is het aanbevolen om <span class="itemelement">Update 
+  alle velden </span>alleen te gebruiken als u het echt nodig heeft, wat betekend dat uw website dan niet alleen naar e-mail adressen moet vragen maar ook naar andere velden.</p>
+<p class="item">Door op de <span class="itemelement">Download</span> knop te klikken, worden nieuwe berichte gedownload en de geselecteerde distributie lijst zal geupdate worden (net als andere lijsten die bij hetzelfde e-mail adres horen).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Welk adres moet ik gebruiken?</strong></font></p>
+      <p>Het is aan te raden om voor elke distributie lijst een ander in/uitschrijf adres te gebruiken, een adres dat niet gebruikt wordt voor het ontvangen en versturen van gewone berichten. Hiermee is het risico om spam te ontvangen veel kleiner (wordt genegeerd) en maakt het makkelijk om de lijsten te onderhouden. In zo'n soort omgeving is het niiet nodig om de <span class="itemelement">Bewaar een kopie van de berichten op de server</span>optie te gebruiken aangezien e-mails niet door andere programma's gelezen hoeven te worden. Op deze manier zal het downloaden van de berichten sneller zijn, en het belangrijkste, de ruimte op uw account gespaard worden. Sommige services hebben een maximum hoeveelheid ruimte die de berichten in mogen nemen, en als die ruimte bereikt is komen er geen nieuwe e-mails binnen.</p>
+      <p>Het is ook mogelijk, maar niet aan te raden, om een 'standaard' e-mail adres te gebruiken, die ook op een andere e-mail client gebruikt wordt om te versturen en te ontvangen. Op deze manier is het zeker nodig om  <span class="itemelement">Bewaar een kopie van de berichten op de server </span>aan te zetten (want anders zullen de berichen als ze zijn gedownload, verwijderd worden van de server). En nog belangrijker is dat de e-mail client goed ingesteld  moet zijn voordat SendBlaster de berichten kan lezen (in Outlook Express kiest u na het selecteren van een account <em>Eigenschappen / Geavanceerde instellingen / Bewaar een kopie van de berichten op de server</em>).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Waarschuwing:</font> als de download van nieuwe berichten traag lijkt te gaan, kan dit zijn zijn omdat op de e-mail server te veel berichten staan: schakel <span class="itemelement">Bewaar een kopie van de berichten op de server</span> uit en klik op download (of download vanaf uw standaard e-mail client). De berichten zullen als z zijn gedownload, verwijderd worden van de server en de volgende downloads zullen sneller gaan.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="updateallfields"></a>Hoe werkt &quot;Update alle velden&quot;</strong></font></p>
+      <p>Bij een 'normale' verwerking laat SendBlaster alleen de honderwerpen downloaden en verwerken, <span class="itemelement">Update alle velden </span> laat SendBlaster de hele berichten downloaden en verwerken, zoeken voor regels zoals <em>veldnaam: waarde </em>in het bericht, en de velden daarmee updaten.</p>
+      <p>Stel dat u twee veldnamen heeft &quot;Achternaam&quot; en &quot;Stad&quot;; als er een bericht binnenkomt van &quot;aaa@aa.com&quot; met &quot;Inschijven&quot; als onderwerp, en het volgende als bericht (elke nieuwe regels is een ander veld):</p>
+      <p>Achternaam: Smith<br>
+        Stad: New York</p>
+      <p>wordt er een nieuw contact aangemaakt met &quot;aaa@aa.com&quot; als e-mail, &quot;Smith&quot; als &quot;Achternaam&quot; en &quot;New York&quot; als &quot;Stad&quot;. </p>
+      <p>Sommige andere formaten, met dezelfde <span class="itemelement">Labels </span>als in <a href="sendblaster_messages_compose.htm">bericht samenstellen</a>, 
+        zijn ook toegestaal: <em>#label#: waarde</em> en <em>#veldnummer#: waarde zoals in de volgende voorbeelden</em>:</p>
+      <p>#achternaam#: Smith<br>
+        #stad#: New York</p>
+      <p>en</p>
+      <p>#2#: Smith<br>
+        #3# : New York</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

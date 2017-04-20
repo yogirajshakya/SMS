@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Importazione</p>
+<p class="item">E' possibile importare nella lista selezionata i dati presenti 
+  in una fonte esterna. Le possibili fonti sono quattro:</p>
+<ul>
+  <li class="item">si pu&ograve; importare il contenuto di un file di testo formattato 
+    (.csv, .txt), presente sul PC dell'utente o nella rete locale, selezionando 
+    <span class="itemelement">Importazione da file di testo esterno</span>. Il 
+    formato &quot;testo formattato&quot; &egrave; un formato di scambio dei dati 
+    usato dai database e dai fogli elettronici: praticamente tutti i software 
+    di questa tipologia sono in grado di esportare i propri dati in questo formato.<br>
+    &nbsp; </li>
+  <li class="item">&egrave; possibile importare da un indirizzo web scegliendo 
+    <span class="itemelement">Importazione da un sito web via http://</span>. 
+    L'importazione &egrave; di fatto del tutto simile a quella da testo formattato, 
+    soltanto che il file da importare non si trova sul PC dell'utente o nella 
+    rete locale ma &egrave; raggiungibile via web attraverso il protocollo http. 
+    I dati da importare possono anche essere generati dinamicamente da uno script 
+    (ad esempio asp o php); in questo modo &egrave; possibile importare il contenuto 
+    di un database online che disponga di uno script di esportazione, il cui indirizzo 
+    web sar&agrave; inserito come fonte dei dati.<br>
+    &nbsp; </li>
+  <li class="item">si pu&ograve; importare il contenuto degli appunti di Windows 
+    (dopo aver copiato i dati da un altro software) selezionando l'opzione <span class="itemelement">Importazione 
+    dagli appunti</span>.<br>
+    &nbsp; </li>
+  <li class="item">si possono importare gli indirizzi contenuti nella rubrica 
+    di Outlook Express scegliendo <span class="itemelement">Importa da Outlook 
+    Express</span>.</li>
+</ul>
+<p class="item">I dati prelevati dalla fonte esterna possono essere utilizzati 
+  per compiere una delle seguenti operazioni:</p>
+<ul>
+  <li class="item">possono essere inseriti nella lista selezionata, scegliendo 
+    <span class="itemelement">Aggiungi alla lista ed iscrivi i nuovi indirizzi</span>.<br>
+    &nbsp; </li>
+  <li class="item">possono essere rimossi dalla lista selezionata scegliendo <span class="itemelement">Elimina 
+    i nuovi indirizzi dalla lista</span>. Tutti gli indirizzi contenuti nella 
+    fonte dati saranno cancellati dalla lista selezionata, se presenti.<br>
+    &nbsp; </li>
+  <li class="item">possono essere disiscritti dalla lista (senza rimuoverli, cio&egrave; 
+    conservando i dati) selezionando <span class="itemelement">Disiscrivi i nuovi 
+    indirizzi</span>. L'operazione &egrave; simile alla precedente, ma gli indirizzi 
+    sono semplicemente disiscritti anzich&eacute; essere cancellati; in questo 
+    modo &egrave; possibile conservarne comunque i dati, evitando per&ograve; 
+    che siano inclusi nei mailing.</li>
+</ul>
+<p class="item">Dopo aver selezionato la lista, la fonte dei dati e l'operazione, 
+  premere il tasto <span class="itemelement">Importa</span>. Si aprir&agrave; 
+  una procedura guidata in cui inserire i dati necessari per eseguire l'importazione:</p>
+<ul>
+  <li class="item">il <span class="itemelement">Percorso del file da importare</span>, 
+    oppure l'<span class="itemelement">URL del file da importare</span> nel caso 
+    di importazione via web (l'importazione dagli appunti e da Outlook Express 
+    non richiede invece l'indicazione di nessun percorso);<br>
+    &nbsp; </li>
+  <li class="item">il <span class="itemelement">Formato</span> dei dati (non necessario 
+    per importare da Outlook): scegliendo <span class="itemelement">Delimitato</span> 
+    sar&agrave; necessario specificare il delimitatore e indicare se la prima 
+    riga contiene le intestazioni dei campi; scegliendo il formato <span class="itemelement">Libero</span> 
+    saranno importati solo gli indirizzi e-mail, riconosciuti automaticamente, 
+    e non sar&agrave; quindi necessario indicare il formato dei dati;<br>
+    &nbsp; </li>
+  <li class="item">se si sta eseguendo un'importazione in senso stretto (aggiunta 
+    di dati, cio&egrave; l'operazione <span class="itemelement">Aggiungi alla 
+    lista ed iscrivi i nuovi indirizzi</span>), saranno disponibili due ulteriori 
+    opzioni, che indicano che cosa fare quando un indirizzo esterno (cio&egrave; 
+    contenuto nei dati da importare) &egrave; gi&agrave; presente nella lista: 
+    scegliendo <span class="itemelement">Non aggiungere mail duplicate o gi&agrave; 
+    presenti nella lista</span> questi indirizzi saranno ignorati (in caso contrario 
+    verrebbero comunque aggiunti, creando dei duplicati); scegliendo <span class="itemelement">Iscrivi 
+    gli indirizzi gi&agrave; presenti nella lista</span>, se un indirizzo &egrave; 
+    gi&agrave; presente, ma non &egrave; iscritto (vedere <a href="sendblaster_lists_managing.htm" class="itemlink"><span class="itemelement">Gestione 
+    liste</span></a>), i nuovi dati non saranno importati ma l'indirizzo verr&agrave; 
+    iscritto;<br>
+    &nbsp; </li>
+  <li class="item">nella schermata successiva sar&agrave; infine necessario impostare 
+    le corrispondenze fra i campi esterni della fonte dati ed i campi di SendBlaster, 
+    e premendo il pulsante <span class="itemelement">Avanti</span> si dar&agrave; 
+    inizio all'importazione. </li>
+</ul>
+<p><span class="item">Le <a href="sendblaster_snapshots.htm" class="itemelement">Istantanee</a> sono particolarmente utili durante l'importazione: dopo aver importato con successo un file, &egrave; opportuno scattare un'istantanea delle impostazioni usate in modo da poterle successivamente riutilizzare con pochi click, senza dover ricominciare la configurazione da zero.</span></p>
+<p class="item"><strong><font color="#FF0000">Importante:</font></strong> la corretta 
+  indicazione di quale campo della fonte dati esterna contenga l'indirizzo e-mail 
+  dei contatti &egrave; fondamentale; infatti:</p>
+<ol>
+  <li class="item"><strong>tutti i record esterni che non contengano, nel campo 
+    indicato, un indirizzo e-mail formalmente valido saranno ignorati</strong>. 
+    Se dunque si attribuisce il campo sbagliato, nessun record conterr&agrave; 
+    un indirizzo e-mail e tutti i dati esterni saranno ignorati</li>
+  <li class="item">il confronto fra i dati esterni e i dati della lista, per verificare 
+    se un indirizzo sia gi&agrave; presente, viene eseguito proprio sulla base 
+    dell'indirizzo e-mail </li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# options: -translation lf -encoding utf-8
+
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Anniversary01.html} A26E6AC6-FA64-489A-9602-A24DF2545101 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Anniversary01.jpg} 173F5AF1-F096-4263-B567-14A1BFB04810 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/background.jpg} CD76167F-A5AD-4C18-B516-BF6D6EF4DC33 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/background.png} 04889C68-A426-4A4C-A2C1-F5A25979C5D7 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Birthday01.html} F3811723-A90E-4E03-B160-52201D7D3415 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Birthday01.jpg} 05FF42C9-9E8D-49E4-87CA-7EFB379DC41C zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Christmas01.html} 066CACDE-123B-49C3-9EEC-AA062DAD8568 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Christmas01.jpg} B2F87A68-E281-47D8-B343-06EE58CF907F zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Diwali01.html} 1E184CE4-1B12-41E7-9BA2-8673519BFFC2 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Diwali01.jpg} 2B722E8D-AE4B-498E-93E8-14D4FC735891 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Eid01.html} CFD31C68-9E1B-4BC4-AB9D-1E7B0123C8B7 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Eid01.jpg} AC2A6038-1A48-4BFC-A95D-1441A66AACFE zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Holi01.html} 40D61BF6-DA6D-44C1-BD24-3FD4987208FD zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Holi01.jpg} DFEB28A2-14A9-425C-B225-C38495B23175 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/IndependenceDay01.html} 3FFA3946-97FD-4FBF-A0A8-2704D37CD469 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/IndependenceDay01.jpg} 3F432D3F-9F53-4C63-9F61-B9268A0CBF2D zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/Logo.jpg} 94E2C0C1-2BB9-486A-82F0-2F5A747ED193 zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/RepublicDay01.html} 5E9A5371-D88D-4A23-9103-19C1A01FC96F zlib
+{C:/Documents and Settings/Administrator/Desktop/iMailer/installer/packageFiles/HTMLTemplates/RepublicDay01.jpg} F5326272-8C68-4F4A-A879-A8862E602AF1 zlib

@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+    <p class="title">
+        Formatos personalizados de emails devolvidos
+    </p>
+    <p class="item">
+        Os formatos dos emails devolvidos foram originalmente criados para serem lidos por
+        humanos, não por máquinas e portanto não existe um formato pradrão ou regra. O SendBlaster
+        consegue processar a maioria dos formatos de emails devolvidos usando a sua base
+        de dados interna. Mas pode acontecer que encontre alguns formatos que não estão
+        a ser reconhecidos pelo software. Se isto acontecer, pode adicioná-los manualmente
+        à base de dados dos emails devolvidos.
+    </p>
+    <p class="item">
+        Um formato personalizado é constítuido por algumas regras; cada uma delas tem de
+        ser satisfeita de forma a que uma mensagem seja considerada devolvida (em outras
+        palavras, o operador lógico das regras é o E (AND)).
+    </p>
+    <p class="item">
+        Quando quer adicionar um <span class="itemelement">Novo formato</span>, primeiro
+        de tudo deverá identificar um padrão no Assunto ou nos outros cabeçalhos, que identificam
+        unicamente a mensagem como uma mensagem devolvida (uma <span class="itemelement">Devolução
+            Rígida</span>, se marcar a checkbox, ou uma suave se a checkbox for deixada desmarcada).
+        O conjunto de cabeçalhos na lista apenas serve de exemplo. Pode adicionar manualmente
+        um cabeçalho específico por inserir o nome do cabeçalho no campo <span class="itemelement">
+            Cabeçalho</span> e o padrão desejado no campo <span class="itemelement">Valor</span>.
+    </p>
+    <p class="item">
+        Um <span class="itemelement">padrão</span> normalmente inclui alguns asteriscos
+        (o símbolo &quot;*&quot; que significa &quot;qualquer caracter&quot;): por exemplo,
+        se escrever &quot;*notificação*entrega*&quot; como padrão de Assunto, qualquer mensagem
+        que contenha as palavras &quot;entrega&quot; e &quot;notificação&quot; no assunto
+        - i.e. &quot;notificação de entrega a xxx@yyy.com falhou&quot; - será considerada
+        como um email devolvido, mas também poderá corresponder a outras regras que definiu.
+        Se escrever &quot;notificação entrega&quot;, sem os asteriscos, apenas as mensagem
+        que contenham exactamente &quot;notificação entrega&quot; como assunto serão
+        processadas como mensagens devolvidas - &quot;notificação de entrega a xxx@yyy.com
+        falhou&quot; não será considerado um assunto válido.</p>
+    <p class="item">
+        Pode também introduzir algumas palavras específicas (separadas por vírgula) que
+        deverão ser encontradas no corpo da mensagem: se nenhuma destas palavras for encontrada,
+        a mensagem não será considerada como devolvida. Por exemplo, a maioria das
+        mensagens devolvidas contém a palavra &quot;razão&quot; (seguido de um texto que
+        explica a razão pela qual a mensagem não foi entregue). Repare que a lista de palavras
+        não é um padrão (não pode usar asteriscos) e o operador lógico na lista é o OU (OR).
+    </p>
+    <p class="item">
+        Se uma dada mensagem satisfaz todas as regras que definiu esta será processada como
+        um email devolvido e para todos os endereços de email encontrados na mensagem será
+        efectuado um cancelamento de subscrição (se eles forem também encontrados na lista
+        de devolvidos que está a descarregar). Pode querer excluir endereços de postmaster
+        usando um padrão.</p>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <strong><font color="#009900">Um exemplo</font></strong>
+                </p>
+                <p class="item">
+                    Digamos que quer processar mensagens como devolvidas quando estas:</p>
+                <p class="item">
+                    a) têm as palavras &quot;não entregue&quot; e &quot;mensagem&quot; no assunto;<br>
+                    b) são de um endereço &quot;postmaster@...&quot;;<br>
+                    c) o seu Conteúdo-Tipo do cabeçalho é &quot;notificação de entrega&quot; ou &quot;notificação
+                    de falha na entrega&quot;<br>
+                    d) contêm a palavra &quot;razão&quot; ou &quot;erro&quot; no corpo principal</p>
+                <p class="item">
+                    e obviamente não quer que o endereço do remetente (&quot;postmaster@...&quot;) seja
+                    incluido no cancelamento de subscrição, já que o verdadeiro endereço indisponível
+                    está algures no corpo da mensagem.
+                </p>
+                <p class="item">
+                    Aqui está como o formato poderá parecer:
+                </p>
+                <table border="0" cellspacing="0" cellpadding="2">
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>Devolução Rígida :</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            (activado)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>Padrão do assunto:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            *mensagem*não entregue*
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="0" class="item">
+                            <strong>1.</strong>
+                        </td>
+                        <td class="item">
+                            <strong>Cabeçalho:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            De
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="0" class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <strong>Valor:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            *postmaster*
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item">
+                            <strong>2.</strong>
+                        </td>
+                        <td class="item">
+                            <strong>Cabeçalho:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            Conteúdo-Tipo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <strong>Valor:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            *notificação*entrega*
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>O corpo da mensagem contém :</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            razão, erro
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>Exclui :</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            postmaster@*
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    E aqui está um formato muito mais simples,
+                    que irá processar todas as mensagens que tiverem a palavra
+                    &quot;não entregue&quot; no assunto (e excluir ambos endereços postmaster@... e
+                    majordomo@... ):</p>
+                <table border="0" cellspacing="0" cellpadding="2">
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>Devolução Rígida :</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            (activo)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>Padrão do assunto:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            *não entregue*
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="0" class="item">
+                            <strong>1.</strong>
+                        </td>
+                        <td class="item">
+                            <strong>Cabeçalho:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <em>(vazio)</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="0" class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <strong>Valor:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <em>(vazio)</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item">
+                            <strong>2.</strong>
+                        </td>
+                        <td class="item">
+                            <strong>Cabeçalho:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <em>(vazio)</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <strong>Valor:</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <em>(vazio)</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>O corpo da mensagem contém :</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            <em>(vazio)</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="item">
+                            <strong>Exclui :</strong>
+                        </td>
+                        <td class="item">
+                            &nbsp;
+                        </td>
+                        <td class="item">
+                            postmaster@*, majordomo@*
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

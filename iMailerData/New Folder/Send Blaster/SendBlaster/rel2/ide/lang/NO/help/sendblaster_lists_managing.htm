@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Administrér lister</p>
+<p class="item">SendBlaster kan administrere multiple distribusjonslister*. </p>
+<p class="item">Liste velges ved hjelp av rullgardin-menyen som du finner &oslash;verst i vinduet.
+  Ved siden av den finner du tre knapper som lar deg
+  opprette ny liste (<span class="itemelement">Ny</span><span class="item">-knappen), 
+  d&oslash;pe om valgt liste (</span><span class="itemelement">D&oslash;p om</span><span class="item">-knappen), 
+  slette den (</span><span class="itemelement">Slett</span><span class="item">-knappen) 
+  eller sende den til utskrift (</span><span class="itemelement">Skriv ut</span><span class="item">-knappen)</span><span class="item">. 
+  Disse oppgavene kan ogs&aring; utf&oslash;res ved &aring; klikke p&aring; rullgardinmenyen med h&oslash;yre museknapp.</span></p>
+<p class="item">Resten av vinduet er reservert til adresselisten for den valgte distribusjonslisten.</p>
+<p class="item">Hver adresse viser: abonnement-status (markert med <img src="img/sendblaster_lists_managing_1.gif" width="12" height="12"> 
+  og <img src="img/sendblaster_lists_managing_2.gif" width="12" height="12"> 
+  ikoner), aktiveringssttus (markert med sjekkboks), innholdet til de 15 
+  <a href="sendblaster_settings_fields.htm" class="itemlink">tilpassede feltene</a> 
+  (f&oslash;rste felt er alltid e-postadressen), kommentarstatus (markert 
+  med <img src="img/sendblaster_lists_managing_3.gif" width="15" height="10"> 
+  ikonet, klikk p&aring; ikonet for &aring; &aring;pne kommentaren). Kolonnerekkef&oslash;lgen kan endres 
+  ved &aring; flytte p&aring; kolonner (trekk i kolonneoverskriftene). Kolonnene kan ogs&aring; reskaleres.
+</p>
+<p class="item">Under en <a href="sendblaster_messages_send.htm" class="itemlink">send 
+  operasjon</a>, vil adresser som er markert med av-abonnert eller inaktive bli hoppet over. 
+  Sendeoperasjonen vil derfor kun involvere de adressene som for &oslash;yeblikket er
+  b&aring;de abonnert og aktive. Du kan enkelt detektere adressene som ikke vil bli inkludert
+  siden disse er markert med gr&aring; skrift:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><img src="img/sendblaster_lists_managing_4.gif" width="156" height="94"></td>
+    <td valign="middle" class="item">&nbsp;</td>
+    <td width="100%" valign="top" class="item">I eksepelet til venster, vil en sendoperasjon
+      kun involvere den f&oslash;rste adressen, siden denne er b&aring;de abonnert og aktiv.
+      </td>
+  </tr>
+</table>
+<p class="item">Adresselisten kan fritt sorteres ved &aring; klikke p&aring; kolonneoverskriftene.
+  Ved &aring; trekke en eller flere kolonneoverskrifter i omr&aring;det over listen (<span class="itemelement">Trekk 
+  en kolonneoverskrift i dette omr&aring;det for &aring; gruppere data</span>) kan du gruppere adresser
+  basert p&aring; innholdet i de valgte feltene. <span class="itemelement">Total 
+  </span>sjekkboksen vil ogs&aring; bli vist, den gir deg mulighet (n&aring;r den er aktiv) til &aring; finne ut
+  antall adresser inkludert i hver gruppe.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong> 
+        Hvordan filtrere adresser</strong></font></p>
+      <p>Midlertidig aktivering/deaktivering av et eller flere elementer (uten &aring; m&aring;tte 
+        av-abonnere dem) gir det muligheten til &aring; sende meldinger til en undergruppe av
+        adresselisten. Ved &aring; kombinere denne funksjonaliteten med sortering/gruppering
+        vil du bli i stand til &aring; lage kraftige filtreringsrutiner som kan benyttes i sendeprosessen.</p>
+      <p>For eksempel, hvis et &quot;By&quot;-felt er definert, s&aring; kan du sende en melding
+        kun til de som bor i en spesiell by, ved &aring; midlertidig deaktivere alle andre adresser.
+        Hvis et &quot;Jobb&quot;-felt er definert, s&aring; kan du
+        sende melding kun til bestemte yrkesgrupper (det er ogs&aring; mulig &aring; kombinere
+        disse to filtrene ved hjelp av grupperingsfunksjonaliteten: 
+        adressene blir gruppert prim&aelig;rt p&aring; &quot;By&quot; og sekund&aelig;rt p&aring; &quot;Jobb&quot;).</p>
+      <p>SendBlaster tilbyr en kraftig data filter generator, som lar brukeren finjustere postingene ved &aring; velge og aktivere/deaktivere records som tilfredsstiller noen betingelser. Generatoren st&oslash;tter multiple betingelser og complekse operatorer, s&aring; det er mulig &aring; lage kraftige SQL-sp&oslash;rringer uten &aring; skrive kode. Filtergeneratoren er tilgjengelig via <span class="itemelement">Filter</span>-knappen.</p>  
+      <p>Deaktivering av en eller flere adresser vil ogs&aring; gj&oslash;re deg i stand til &aring; lage 
+        ekskluderingslister (adresser som det aldri vil sendes meldinger til, selv om brukeren 
+        spontant abonnerer p&aring; listen).</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Over adresselisten finner du verkt&oslash;ylinjen for listeadministrasjon.
+  Du kan ogs&aring; aksessere disse kommandoene via kontekstmenyen som vises
+  n&aring;r du h&oslash;yreklikker p&aring; listen.</p>
+<p class="item">Du kan sette inn en ny adresse (<span class="itemelement">Ny</span>-knappen), 
+  endre valgt adresse (<span class="itemelement">Endre</span>) eller slette
+  en eller flere adresser (<span class="itemelement">Slett</span>). Du kan velge
+  multiple adresser med tastatur og med mus: ved &aring; klikke &aring; en adresse
+  mens <em>Ctrl</em>-tasten holdes nede, legger du til adressen til utvalget, 
+  ved &aring; trykke &aring; en adresse mens  <em>Shift</em>-knappen holdes nede, legger du til
+  en gruppe av adresser.</p>
+<p class="item">Med <span class="itemelement">Klipp ut</span> / <span class="itemelement">Kopier</span> 
+  / <span class="itemelement">Lim inn</span><span class="item">-knappene kan du 
+  slette adresser eller kopiere dem til/fra hurtigbufferet (hvis du trenger &aring; velge alle elementer,
+  h&oslash;yreklikk p&aring; en vilk&aring;rlig adresse og velg </span><span class="itemelement">Velg 
+  alle</span><span class="item">).</span></p>
+<p class="item"><span class="itemelement">Abboner valgte adresser</span> 
+  og <span class="itemelement">Av-abonner valte adresser</span>-knappene lar deg
+  manuelt administrere abonnenter til den valgte listen (abonnering av en adresse
+  medf&oslash;rer endring av abonneringsdatoen). <span class="itemelement">Aktiver 
+  valgte adresser</span> og <span class="itemelement">Deaktiver valgte adresser
+  </span>-knappene lar deg aktiver/deaktivere adresser uavhengig av abbonementstatus.</p>
+<p class="item"><span class="itemelement">Filter</span>-knappen lar brukeren filtrere data
+ved hjelp av opp til 5 filtreringsregler, lignende en SQL-sp&oslash;rring, men uten kompleksiteten; 
+det er ogs&aring; spesifisere en handling som skal utf&oslash;res for alle kontakter som tilfredsstiller reglene; 
+<span class="itemelement">Aktivere/Deaktivere</span> dem, eller
+<span class="itemelement">Abonnere/Av-abonnere</span> dem, du kan ogs&aring;
+velge &aring; <span class="itemelement">Deaktivere</span> kontakter som ikke tilfredsstiller regelen, eller ignorere dem.
+</p>
+<p class="item"><span class="itemelement">Histikk</span>-knappen viser 
+  deg en liste over tidligere sendte meldinger og til den valgte adressen.</p>
+<p class="item"><span class="itemelement">Notater</span>-knappen
+   gir deg et nytt vindu der du kan skrive inn fritekst som blir assosiert med den aktuelle adressen. 
+   Adresser assosiert med et notat blir merket med <img src="img/sendblaster_lists_managing_3.gif" width="15" height="10"> 
+  ikonet i siste kolonne (trykk p&aring; ikonet for &aring; vise Notat-vinduet).</p>
+<p class="item"><span class="itemelement">S&oslash;k</span>**-knappen gir deg
+  et vindu der du kan s&oslash;ke etter tekst i et eller flere spesifiserte felt
+  (inkludert notat-feltet). Ved &aring; velge <span class="itemelement">Match hele 
+  ordet</span><span class="item"> vil s&oslash;keoperasjonen vise alle adresser
+  som matcher n&oslash;yaktig med verdien spesifisert. Ellers vil s&oslash;keoperasjonen vise alle adresser
+  som inneholder verdien selv om det ikke matcher eksakt med spesifisert verdi.
+  For &aring; bla gjennom resultatlisten, bruk </span><span class="itemelement">Finn 
+  f&oslash;rste</span><span class="item">, </span><span class="itemelement">Neste</span><span class="item"> 
+  og </span><span class="itemelement">Forrige</span><span class="item">-knappene 
+  i s&oslash;kevinduet.</span></p>
+<p class="item"><span class="itemelement">Finn Duplikater</span>-knappen viser et vindu som lar deg
+administrere dupliserte e-postadresser p&aring; tvers av lister. Du kan s&oslash;ke etter duplikater i
+valgte lister, og slette eller editere dupliserte kontakter i duplikat-vinduet. Legg merke til at
+du kan ha dupliserte e-postadresse i dine lister, og velge om du vil sende meldinger til dupliserte
+e-postadresser i <a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Advanserte Innstillinger</a>-vinduet.
+</p>
+<p class="item"><span class="itemelement">Skift visning</span>-knappen lar 
+  deg skifte mellom normal visning og &quot;Kort-visning&quot; (og tilbake). 
+  I &quot;Kort-visning&quot; blir hver adresse vist p&aring; et separat kort med
+  regulerbar bredde. Man kan navigere ved hjelp av horisontal scroll bar.</p>
+<p class="item">Du kan &oslash;nske &aring; bruke kun et utvalg av de 15 tilgjengelige feltene; 
+  for &aring; spare plass p&aring; skjermen, ved &aring; klikke p&aring; <span class="itemelement">Synlige
+  felt</span> kan du veldg hvilke felt som skal vises.</p>
+<hr size="1" noshade>
+<p class="item">*Gratisversjonen h&aring;ndterer opp til 2 distribusjonslister.<br>
+  **S&oslash;k er kun tilgjengelig i Pro edition</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

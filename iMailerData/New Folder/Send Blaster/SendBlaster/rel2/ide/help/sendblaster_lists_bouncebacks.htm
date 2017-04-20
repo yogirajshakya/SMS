@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Manage bounce-backs</p>
+<p class="item">A bounced e-mail (or <em>bounce-back</em>) is one that never arrives 
+  in the recipient's inbox and is sent back, or bounced back, to the sender with 
+  an error message that indicates to the sender that the e-mail was never successfully 
+  transmitted. Typically, this happens when you send your mailings using Smtp 
+  servers: if an address is non-existent, Smtp server (which has no way of knowing 
+  it) will accept the message anyway, but it will be bounced later.</p>
+<p class="item">There are two main types of bounce-backs:</p>
+<ul>
+  <li class="item">Hard bounces: the e-mail could not be delivered due to a permanent 
+    error (i.e. non-existent address)</li>
+  <li class="item">Soft bounces: A temporary condition exists causing the email
+    delivery to fail (i.e. the recipient's mail server is temporarily busy)</li>
+</ul>
+<p class="item">SendBlaster can automatically recognize most* bounced e-mails and
+  unsubscribe or delete bounced addresses in the selected list.</p>
+<p class="item">Bounced mails will be sent to the mailing's sender address, which 
+  may not be the same address used for subscriptions and cancellations (see <span class="itemlink"><a href="sendblaster_lists_managing.htm" class="itemelement">Manage 
+  subscriptions</a></span>). Therefore it is necessary to tell the program which 
+  address should be checked.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Which 
+        address should I enter?</strong></font></p>
+      <p>Remember that e-mail bounces are sent to the mailing's sender address, 
+        not to the address used for subscriptions. Suppose you chose &quot;subscriptions@mysite.com&quot; 
+        as your subscriptions managing address for List 1, and you later sent 
+        your mailings from &quot;newsletter@mysite.com&quot; address. Bounce-backs 
+        will therefore be delivered to &quot;newsletter@mysite.com&quot;, and 
+        this is the address you will have to configure in <span class="itemelement">Manage 
+        bounce-backs</span> section for List 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">The address to check is set by typing the correct parameters to 
+  access its POP3 account, just like any e-mail client software: besides
+  the address (<span class="itemelement">E-mail</span>) you need to specify the
+  receiving server (<span class="itemelement">POP3 Server</span>), the
+  <span class="itemelement">Port</span> number (if no port is specified, default port
+  110 will be used), the <span class="itemelement">Username</span>
+  and the <span class="itemelement">Password</span>. The <span class="itemelement">SSL</span>
+  checkbox enables SSL communication, which may be needed by some pop3 servers
+  (a typical example is Gmail's server). In the <span class="itemelement">Timeout</span>
+  field you can type the number of seconds of inactivity after which the connection
+  will be closed. To verify the parameters just click on <span class="itemelement">Connection
+  test</span> button (no message will be downloaded).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tip:</font>
+    <span class="itemelement">Profiles</span> button allows to manage multiple POP3
+    settigs. Account information can be
+    stored for multiple profiles, so all POP3 settings are saved/loaded
+    with a couple of clicks. This feature is specially usefull when sending mails
+    on behalf or someone else.
+  </p>
+</blockquote>
+<p class="item">By checking <span class="itemelement">Keep a copy of the messages
+  on the server once downloaded</span>, SendBlaster will download new messages without deleting
+  them from the server. The messages will then be available for future uses. New
+  messages will be ignored.</p>
+<p class="item">By checking <span class="itemelement">Only delete new bounce-back messages</span>
+ SendBlaster will delete only this messages, leaving the rest of the messages in the server.</p>
+<p class="item"> If <span class="itemelement">Delete bounced addresses </span>is 
+  checked, bounced addresses will be deleted from the selected list. If not, they 
+  will just be unsubscribed from the list.</p>
+<p class="item">By checking <span class="itemelement">Process hard bounces</span> 
+  and <span class="itemelement">Process soft bounces </span> you can choose which 
+  bounce types (see above) should be processed; of course if neither option is 
+  checked no bounced e-mails processing will occur.</p>
+<p class="item">By clicking on the <span class="itemelement">Download</span> button, 
+  the new messages will be downloaded and the selected distribution list will 
+  be updated (as well as all other lists that use the same e-mail address for 
+  bounce-backs).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Warning:</font> if the download of new 
+    messages appears to be rather slow, this might indicate that on the e-mail 
+    server many messages have piled up: disable the <span class="itemelement">Keep 
+    a copy of the messages on the server</span> option and click on <span class="itemelement">Download</span> 
+    (or execute downloading on your standard e-mail client). The messages, once 
+    downloaded, will be removed form the server and the following downloads will 
+    be faster.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*New bounce-back formats can be managed from the
+<a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Advanced Settings</a> screen.</p>
+</body>
+</html>

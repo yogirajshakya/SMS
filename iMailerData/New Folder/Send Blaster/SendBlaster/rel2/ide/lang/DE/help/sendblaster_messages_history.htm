@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>SendBlaster</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" class="body" marginheight="8"
+ marginwidth="8">
+<p class="title">Verlauf</p>
+<p class="item">Dieses Fenster zeigt eine Liste aller versendeten
+Nachrichten an. Falls ein Mailing nicht abgeschlossen werden konnte (z.
+B. falls Ihr SMTP-Server die Anzahl der pro Zeiteinheit versendeten
+Nachrichten begrenzt) ist es hier m&ouml;glich, das Versenden am
+Zeitpunkt des Abbruchs fortzusetzen. Es werden also nur Nachrichten an
+jene Empf&auml;nger versendet, die diese bis zum Abbruch des Versendens
+noch nicht erhalten haben. </p>
+<p class="item">Jedes Mailing wird mit dem Sendedatum, dem Namen
+der Liste an welche die Nachricht gesendet wurde und dem Betreff
+gespeichert.</p>
+<p class="item">Klicken Sie auf den <span class="itemelement">Vorschau</span>-Button
+(oder w&auml;hlen Sie diesen Befehl mit der rechten Maustaste), um die
+f&uuml;r diesen Eintrag versendete Email anzuzeigen.</p>
+<p class="item">Die <span class="itemelement">Adressenliste</span>
+zeigt eine Liste aller Adressen, an die die Nachricht gesendet wurde.
+Alle Adressen, an die die Nachricht erfolgreich gesendet wurde, werden
+in gr&uuml;n angezeigt, w&auml;hrend&nbsp;rot markierte Eintr&auml;ge
+diejenigen&nbsp;sind, an die die Nachricht nicht erfolgreich versendet
+werden konnten.</p>
+<p class="item">Der <span class="itemelement">Log</span>-Button zeigt
+ein Sende-Log, welches den <em>Dialog</em> mit dem SMTP-Server (oder
+mit den Zielservern im Falle eines Direktversands) wiedergibt.</p>
+<p class="item">Falls eine oder mehrere Adressen nicht im Mailing
+ber&uuml;cksichtigt wurden, zeigt die letzte Spalte der Liste (f&uuml;r
+unvollst&auml;ndige Eintr&auml;ge) den <img
+ src="img/sendblaster_messages_history_1.gif" height="16" width="16">
+Button. Mit einem Klick darauf wird das urspr&uuml;nglich geplante
+Mailing mit den aktuellen Sendeoptionen abgeschossen, so wie sie unter <a
+ href="sendblaster_messages_send.htm" class="itemlink"><span
+ class="itemelement">Senden</span></a> angegeben sind. Die Nachricht
+wird an alle Empf&auml;nger gesendet, die diese bis jetzt noch nicht
+erhalten haben (die roten Adressen im Adressenlistenfenster).</p>
+<p class="item">Eintr&auml;ge im Verlauf k&ouml;nnen gel&ouml;scht
+werden, indem sie ausgew&auml;hlt werden (benutzen Sie die&nbsp;<em>Strg</em>-Taste
+auf der Tastatur, um mehrere Elemente gleichzeitig auszuw&auml;hlen
+oder benutzen Sie <em>Shift</em>, um eine Gruppe auszuw&auml;hlen) und
+indem Sie anschliessend auf <span class="itemelement">Eintr&auml;ge
+l&ouml;schen</span> klicken.</p>
+<p class="item">Adressen
+die die Nachricht empfangen bzw. noch nicht empfangen haben k&ouml;nne
+in
+eine Textdatei exportiert werden. Verwenden Sie hierzu die&nbsp;<span
+ class="itemelement">Exportiere zugestellte</span> und <span
+ class="itemelement">Exportiere nicht zugestellte</span>
+Buttons. Der Export nicht zugestellter Adressen kann auch dazu
+verwendet werden, um die Liste von ung&uuml;ltigen Adressen zu
+bereinigen:
+Sie k&ouml;nnen hierzu sp&auml;ter die&nbsp;<a
+ href="sendblaster_lists_import.htm" class="itemlink">Datei importieren</a>
+und die Optionen zum Empfernen oder Abmelden von Adressen verwenden.</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><strong><font color="#009900">Wann ist es sinnvoll, die
+History-Funktion zu nutzen? </font></strong></p>
+      <p>Ein Mailing &uuml;ber den Verlauf zu beenden ist eine
+gute M&ouml;glichkeit, SMTP-Servereinschr&auml;nkungen zu umgehen, die
+ansonsten das Senden von vielen Nachrichten innerhalb eines kurzen
+Zeitraums unm&ouml;glich machen. SMTP-Servereinschr&auml;nkungen
+k&ouml;nnten derart sein, dass trotz der Einstellungen in <span
+ class="itemelement">Erweiterte Einstellungen</span> unter&nbsp;<a
+ href="sendblaster_messages_send.htm" class="itemlink"><span
+ class="itemelement">Senden</span></a> die Durchf&uuml;hrung des
+kompletten Mailings in einem einzigen Schritt nicht m&ouml;glich ist.
+Z.B. k&ouml;nnte es eine Situation geben, in der Sie mit einem Server
+arbeiten, der nicht mehr als 50 Nachrichten pro Stunde erlaubt. Bei
+einer Verteilerliste mit 100 Adressen kann so nur die erste H&auml;lfte
+der Nachrichten im ersten Durchgang gesendet werden. Erst nach einer
+Pause von einer Stunde kann das Mailing abgeschlossen werden, indem
+Sie das Verlauf-Fenster nutzen.</p>
+      <p>Das Exportieren nicht zugestellter (roter) Adressen kann auch
+n&uuml;tzlich sein, um die Liste von ung&uuml;ltigen Adressen zu
+bereinigen.</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>SendBlaster</title>
+
+  
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <link href="sendblaster.css" rel="stylesheet" type="text/css"></head><body leftmargin="8" topmargin="8" class="body" marginheight="8" marginwidth="8">
+<p class="title">Formats personalisés des Rebonds </p>
+
+<p class="item">Les formats de courriel de rebonds ont été initialement
+conçus pour être lus par des humains, et non par des machines, il n'y a
+donc pas de format standard ou de règle. SendBlaster peut traiter la
+plupart des formats de rebonds communs en utilisans sa base de données
+interne, mais vous pourriez rencontrer certains formats qui ne sont pas
+reconnus par le logiciel. Si cela se produit, vous pouvez ajouter
+manuellement
+un nouveau format personnalisé à la base de donnée des rebonds de
+SendBlaster.
+</p>
+
+<p class="item">
+Un format personnalisé se compose de quelques règles ; chacun d'entre
+elles
+doivent être remplies pour qu'un message soit considérée comme un
+rebond
+(en d'autres termes, l'opérateur logique des règles est AND). </p>
+
+<p class="item">Lorsque vous ajoutez un <span class="itemelement">Nouveau
+format</span>, avant toute chose, vous devez identifier un certain
+modèle
+dans le Sujet ou dans les autres en-têtes, qui identifie exclusivement
+le
+message comme étant un rebond (un <span class="itemelement">Rebond dur</span>,
+si vous cochez la case, ou un rebond doux si vous la laissez décochée).
+La liste déroulante des en-têtes ne sert que d'exemple, vous pouvez
+manuellement
+ajouter un en-tête spécifique en tapant le nom de l'en-tête dans le
+champ <span class="itemelement">En-tête</span> et le modèle désiré
+dans le champ
+<span class="itemelement">Valeur</span>.</p>
+
+<p class="item">Un <span class="itemelement">Modèle</span> inclue
+typiquement
+quelques jokers (le signe "*" signifie "quelconque caractère"): par
+exemple,
+si vous entrez "*livraison*notification*" dans le modèle du Sujet
+, tout message contenant les mots "livraison" et "notification"
+dans son sujet - i.e. "livraison à xxx@yyy.com échec de la
+notification" -
+sera considéré tel un rebond, à condition que cela réponds égalment aux
+autres règles
+que vous pourriez avoir définies. Si vous utilisez "notification de
+livraison", sans de
+jokers, seuls les messages ayant exactement "notification de livraison"
+dans leur
+sujet seront traités tels des rebonds - "livraison à
+xxx@yyy.com échec de la notification" ne sera pas considéré comme un
+sujet valide.</p>
+
+<p class="item">
+Vous pouvez également entrer des mots spécifiques (séparés par des
+virgules), qui doivent être trouvés dans le corps du message: si aucun
+de ces
+mots n'est trouvé, le message n'est pas considéré comme un rebond. Par
+exemple, la plupart des rebonds contient le mot «raison» (suivi d'un
+texte qui explique pourquoi le message n'a pas été livré).
+S'il vous plaît noter que la liste de mots n'est pas un modèle (vous ne
+pouvez pas utiliser
+de jokers) et que l'opérateur logique de la liste est OR.</p>
+
+<p class="item">
+Si un message donné répond à toutes les règles que vous avez
+défini, il est traité comme un rebond, et toutes les adresses courriels
+trouvées à l'intérieur du message seront désabonnées si elles se
+trouvent aussi
+dans la liste des rebonds que vous téléchargez pour utilisation. Vous
+pourriez vouloir exclure les adresses typiques de postmaster en utilisant un modèle.</p>
+
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><strong><font color="#009900">Un exemple </font></strong></p>
+      <p class="item">Disons que vous voulez les messages à être traités comme des
+rebonds s'ils:</p>
+      <p class="item">a) ont les mots "non distribuable" et "message"
+dans leur sujet;<br>
+b) et viennent d'une adresse "postmaster@...";<br>
+c) leur en-tête Type-de-Contenu est "notification de la livraison" ou bien "échec de la
+notification de la livraison"<br>
+d) contiennent le mot "raison" ou "erreur" dans le corps principal du message</p>
+      <p class="item">et vous ne voulez pas évidemment que l'adresse de l'expéditeur
+("postmaster@...") soit désabonnée, car la véritable adresse inacessible est ailleurs
+dans le corps du message. </p>
+      <p class="item">Voici à quoi pourrait ressembler le format: </p>
+      <table border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+          <tr>
+            <td colspan="2" class="item"><strong>Rebond dur :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(coché)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Modèle du sujet:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*non distribuable*message*</td>
+          </tr>
+          <tr>
+            <td class="item" width="0"><strong>1.</strong></td>
+            <td class="item"><strong>En-tête:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">De</td>
+          </tr>
+          <tr>
+            <td class="item" width="0">&nbsp;</td>
+            <td class="item"><strong>Valeur:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>En-tête:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Contenu-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Valeur:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*livraison*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Corps du message contient :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">raison, erreur </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Sauf :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Et
+voici un format beaucoup plus simple, qui va traiter tous les messages
+ayant les mots "non distribuable" dans le sujet (et qui va exclure
+aussi bien les adresses postmaster@... que majordomo@... ):</p>
+      <table border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+          <tr>
+            <td colspan="2" class="item"><strong>Rebond dur :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(coché)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Modèle du sujet:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*non distribuable*</td>
+          </tr>
+          <tr>
+            <td class="item" width="0"><strong>1.</strong></td>
+            <td class="item"><strong>En-tête:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item"><em>(vide)</em></td>
+          </tr>
+          <tr>
+            <td class="item" width="0">&nbsp;</td>
+            <td class="item"><strong>Valeur:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item"><em>(vide)</em></td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>En-tête:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item"><em>(vide)</em></td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Valeur:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item"><em>(vide)</em></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Corps du message contient :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item"><em>(vide)</em></td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Sauf :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*, majordomo@* </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+</body></html>

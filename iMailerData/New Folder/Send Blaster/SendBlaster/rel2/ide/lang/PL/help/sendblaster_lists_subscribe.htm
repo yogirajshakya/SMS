@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.style1 {
+				color: #FF0000;
+}
+.style2 {
+				font-style: italic;
+				font-weight: bold;
+				color: #1441A0;
+}
+</style>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Zarz&#261;dzanie subskrypcjami</p>
+<p class="item">SendBlaster mo&#380;e automatycznie zarz&#261;dza&#263; subskrypcjami (jak 
+równie&#380; ich zako&#324;czeniem) na listach dystrybucyjnych. Ka&#380;da lista mo&#380;e zosta&#263; 
+powi&#261;zana z adresem email: kiedy wiadomo&#347;&#263; z &quot;Subskrybuj&quot; w temacie jest wys&#322;ana 
+na ten adres nadawca zostanie dodany do listy. Je&#380;eli w temacie jest &quot;Zako&#324;cz 
+subskrypcj&#281;&quot; nadawca zostanie usuni&#281;ty(je&#380;eli wcze&#347;niej on/ona byli 
+subskrybentem).
+  SendBlaster pobiera nowe wiadomo&#347;ci przez konto POP3, sprawdza temat i 
+aktualizuje powi&#261;zane listy dystrybucyjne.</p>
+<blockquote>
+  <p class="item"><span class="style1">Uwaga</span><font color="#FF0000">:</font>
+    Domy&#347;lnie tematy (&quot;Subskrybuj&quot; dla subskrybowania oraz &quot;Zako&#324;cz 
+	subskrypcj&#281;&quot; dla anulowania) mog&#261; zosta&#263; zmienione w oknie
+	<a class="itemelement" href="sendblaster_settings_advancedsettings.htm">
+	Ustawienia zaawansowane</a>.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><span class="style1">Ostrze&#380;enie</span><font color="#FF0000">:</font>
+    Adres wybrany do zarz&#261;dzania listami musi pozwala&#263; na pobieranie wiadomo&#347;ci 
+	przez POP3 
+    (ten sam protokó&#322; jest u&#380;ywany przez standardowego klienta poczty). Nie 
+	mo&#380;na korzysta&#263; z adresów, które mog&#261; by&#263; tylko zarz&#261;dzane przez www (na 
+	przyk&#322;ad us&#322;ugi Hotmail).</p>
+</blockquote>
+<p class="item">Normalnie ka&#380;da lista mo&#380;e by&#263; powi&#261;zana z dedykowanym adresem 
+email.
+  Ale, jest mo&#380;liwym powi&#261;zanie jednego adresu email z wi&#281;cej ni&#380; z jedn&#261; list&#261;. 
+W tym przypadku kiedy lista jest aktualizowana wszystkie listy, które maj&#261; adres 
+subskrybenta równie&#380; zostan&#261; zaktualizowane. Na przyk&#322;ad, je&#380;eli stworzysz dwie 
+listy &quot;Lista
+  1&quot; i &quot;Lista 2&quot;&nbsp; i s&#261; powi&#261;zane do tego samego adresu 
+zarz&#261;dzaj&#261;cego email, pobieraj&#261;c wiadomo&#347;ci aby zaktualizowa&#263; &quot;Lista 1&quot;, &quot;Lista
+  2&quot; równie&#380; zostanie zaktualizowana.</p>
+<p class="item">Ka&#380;dy adres zarz&#261;dzaj&#261;cy listami jest konfigurowany poprzez 
+wprowadzenie poprawnych parametrów dla konta POP3, tak jak kliencie poczty: 
+oprócz adresu (<span class="itemelement">E-mail</span>) musisz okre&#347;li&#263; serwer 
+dostarczaj&#261;cy (<span class="itemelement">POP3 Serwer</span>), numer
+  <span class="itemelement">Port </span>(je&#380;eli nie podasz numeru portu, 
+domy&#347;lny port
+  110 zostanie u&#380;yty), <span class="style2">Nazwa u&#380;ytkownika</span> i
+<span class="style2">Has&#322;o</span>. Checkbox <span class="itemelement">SSL</span>
+  w&#322;&#261;cza komunikacj&#281; SSL, która mo&#380;e by&#263; potrzebna w przypadku niektórych 
+serwerów 
+  (typowym przyk&#322;adem jest Gmail). W polu <span class="itemelement">Timeout</span>
+  mo&#380;na poda&#263; po ilu sekundach nieaktywno&#347;ci po&#322;&#261;czenie zostanie zamkni&#281;te. Aby 
+sprawdzi&#263; po&#322;&#261;czenie naci&#347;nij przycisk <span class="style2">Test po&#322;&#261;czenia</span> 
+(&#380;adne wiadomo&#347;ci nie zostan&#261; pobrane).</p>
+<p class="item">W niektórych przypadkach, ci&#281;&#380;kich do przewidzenia, twój serwer POP3 
+mo&#380;e zwolni&#263; pobieranie wiadomo&#347;ci; je&#380;eli masz problemy mo&#380;esz w&#322;&#261;czy&#263; checkbox
+<span class="itemelement">Slower</span> (nie ma tu regu&#322;y, po prostu spróbuj to 
+w&#322;&#261;czy&#263; i zobacz czy dzia&#322;a lepiej). </p>
+<blockquote>
+  <p class="item"><span class="style1">Podpowied&#378;</span><font color="#FF0000">:</font>
+    Przycisk <span class="itemelement">Profile</span> pozwala na zarz&#261;dzanie 
+	wieloma ustawieniami POP3. Informacja o koncie mo&#380;e by&#263; przechowywana w 
+	wielu profilach, tak &#380;e ustawienie POP3 mog&#261; zosta&#263; zapisane/za&#322;adowane 
+	kilkoma klikni&#281;ciami. Ta mo&#380;liwo&#347;&#263; jest szczególnie u&#380;yteczna, gdy wysy&#322;asz 
+	wiadomo&#347;&#263; w czyim&#347; imieniu; albo po prostu zapisa&#263; profil aby pó&#378;niej u&#380;y&#263; z 
+	t&#261; sam&#261; list&#261; lub jak&#261;kolwiek inn&#261;.</p>
+</blockquote>
+<p class="item">Zaznaczaj&#261;c <span class="style2">Zachowaj kopi&#281; wiadomo&#347;ci na 
+serwerze po pobraniu, </span>SendBlaster pobierze nowe wiadomo&#347;ci bez kasowania 
+ich na serwerze. Wiadomo&#347;&#263; b&#281;dzie potem dost&#281;pna do kolejnego wykorzystania. 
+Nowe wiadomo&#347;ci zostan&#261; zignorowana.</p>
+<p class="item">Zaznaczaj&#261;c <span class="itemelement">Usu&#324; tylko nowe 
+subskrypcje i anulowane wiadomo&#347;ci </span>SendBlaster usunie tylko wiadomo&#347;ci, 
+które zosta&#322;y rozpoznane jako subskrypcje lub anulacje; jest to na prawd&#281; 
+przydatne je&#380;eli korzystasz z tego samego konta do zarz&#261;dzania oraz otrzymywania 
+wiadomo&#347;ci nie zwi&#261;zanych z zarz&#261;dzaniem jak odpowiedzi czytelników i inne.</p>
+<p class="item"><span class="style2">Zmie&#324; wszystkie pola</span><span class="itemelement"> </span>
+jest pot&#281;&#380;n&#261; opcj&#261;: kiedy jest zaznaczone, nie tylko temat, ale ca&#322;a wiadomo&#347;&#263; 
+b&#281;dzie przetwarzana; je&#380;eli cia&#322;o wiadomo&#347;ci zawiera linie <em>nazwapola: 
+warto&#347;&#263;</em>, nie tylko rekordy z adresem email ale równie&#380; inne pola zostan&#261; 
+zaktualizowane (<a href="#updateallfields">zobacz ramk&#281; poni&#380;ej</a>).</p>
+<p class="item">Wad&#261; jest &#380;e pobieranie i przetwarzanie b&#281;dzie znacz&#261;co 
+wolniejsze; dlatego jest bardzo sugerowane &#380;eby pole <span class="style2">
+Aktualizuj wszystkie pola</span> zaznacza&#263; tylko, gdy jest to naprawd&#281; 
+potrzebne, co oznacza &#380;e gdy twoja strona generuje skrypty do subskrypcji 
+zawieraj&#261;ce nie tylko adresy, ale równie&#380; inne pola. </p>
+<p class="item">Klikaj&#261;c przycisk <span class="style2">Pobierz</span>, 
+  nowa wiadomo&#347;&#263; zostanie pobrana, a wybrana lista zostanie zaktualizowana (jak 
+równie&#380; wszystkie inne listy, które korzystaj&#261; z tego samego adresu do 
+zarz&#261;dzania).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900">
+	<strong>Którego adresu powinienem u&#380;y&#263;?</strong></font></p>
+      <p>Jest zalecanym aby korzysta&#263; z dedykowanego adresu subskrypcji/ 
+		zako&#324;czenia subskrypcji dla ró&#380;nych list dystrybucyjnych, co oznacza, &#380;e 
+		adres nie jest wykorzystywany do standardowej operacji wysy&#322;ania i 
+		obierania emaili. Zminimalizuje to ryzyko otrzymywania spamu (b&#281;dzie 
+		ignorowany) i uczyni &#322;atwiejszym zarz&#261;dzanie listami. W takim 
+		&#347;rodowisku nie b&#281;dzie konieczne korzystanie z opcji <span class="style2">
+		Zachowaj kopi&#281; wiadomo&#347;ci po pobraniu na serwerze </span>z racji tego &#380;e 
+		emaile nie b&#281;d&#261; przetwarzane przez inne oprogramowanie. W ten sposób 
+		pobieranie wiadomo&#347;ci b&#281;dzie szybsze, jak równie&#380; przestrze&#324; konta 
+		b&#281;dzie oszcz&#281;dzona. Niektóre z us&#322;ug maj&#261; limit miejsca które mog&#261; 
+		zajmowa&#263; wiadomo&#347;ci, a je&#380;eli zostanie ona ca&#322;kowicie wype&#322;niona nowe 
+		wiadomo&#347;ci nie b&#281;d&#261; dostarczane.</p>
+      <p>Jest równie&#380; mo&#380;liwym, ale nie zalecanym wykorzystanie standardowego 
+		adresu wykorzystywanego&nbsp; w innym programie do wysy&#322;ania i 
+		odbierania wiadomo&#347;ci. W ten sposób jest absolutnie niezb&#281;dne w&#322;&#261;czenie 
+		opcji <span class="style2">Zachowaj kopi&#281; wiadomo&#347;ci po pobraniu na 
+		serwerze</span> lub <span class="itemelement">Usu&#324; tylko nowe 
+		subskrypcje i anulowane wiadomo&#347;ci </span>(lub te&#380; gdy wiadomo&#347;&#263; 
+		zostanie pobrana mo&#380;e zosta&#263; usuni&#281;ta z serwera). Jeszcze wa&#380;niejszym 
+		jest, &#380;e nawet standardowy klient jest skonfigurowany prawid&#322;owo, aby 
+		pozwala&#263; czyta&#263; wiadomo&#347;ci SendBlaster&nbsp; (w Outlook Express po 
+		klikni&#281;ciu konta wybierz&nbsp; <em>W&#322;a&#347;ciwo&#347;ci/ Ustawienia zaawansowana / 
+		Zachowaj kopi&#281; wiadomo&#347;ci na serwerze</em>).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><span class="style1">Uwaga</span><font color="#FF0000">:</font> 
+	je&#380;eli pobierania nowej wiadomo&#347;ci dzia&#322;a raczej wolno, mo&#380;e to by&#263; 
+	spowodowane tym, &#380;e serwer ma za du&#380;o wiadomo&#347;ci: zablokuj opcj&#281;
+	<span class="style2">Zachowaj kopi&#281; wiadomo&#347;ci po pobraniu na serwerze</span> 
+	i kliknij opcj&#281; <span class="style2">Pobierz</span> 
+    (lub uruchom pobieranie standardowym klientem poczty). Po pobraniu 
+	wiadomo&#347;ci, zostanie ona skasowana na serwerze i dalsze pobieranie b&#281;dzie 
+	dzia&#322;a&#263; szybciej. </p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900">
+	<strong>Jak dzia&#322;a &quot;Aktualizuj wszystkie pola&quot;</strong></font></p>
+      <p>Gdy &quot;normalne&quot; przetwarzanie powoduje, &#380;e SendBlaster pobiera i 
+		przetwarza tylko tematy wiadomo&#347;ci wiadomo&#347;ci, opcja <span class="style2">
+		Uaktualnij </span><span class="itemelement">wszystkie pola</span> 
+		pozwala SendBlaster przetwarza&#263; ca&#322;e wiadomo&#347;ci, 
+        szuka&#263; linii w formacie <em>nazwapola: warto&#347;&#263;</em> wewn&#261;trz wiadomo&#347;ci 
+		i w&#322;a&#347;ciwie uaktualnia&#263; pola.</p>
+      <p>Za&#322;ó&#380;my, &#380;e masz dwa pola &quot;Nazwisko&quot; i &quot;Miasto&quot;; 
+		je&#380;eli wiadomo&#347;&#263; jest od &quot;aaa@aaa.com&quot; z &quot;Subskrybuj&quot; 
+        jako temat i g&#322;ówn&#261; cz&#281;&#347;ci&#261; emaila jest (zwró&#263; uwag&#281; &#380;e ka&#380;da linia 
+		zawiera inne pole):</p>
+      <p>Nazwisko: Smith<br>
+        Miasto: New York</p>
+      <p>nowy kontakt &quot;aaa@aaa.com&quot; jest dodany do listy, maj&#261;cy &quot;Smith&quot; 
+        jako &quot;Nazwisko&quot; i &quot;New York&quot; jako &quot;Miasto&quot;.</p>
+      <p>Kilka innych formatów sk&#322;adni, korzystaj&#261;c z tego samego
+		<span class="itemelement">Taga</span> jak w
+		<a href="sendblaster_messages_compose.htm">tworzeniu wiadomo&#347;ci</a>, 
+        jest dozwolone: <em>#tag#: warto&#347;&#263;</em> i <em>#numerpola#: warto&#347;&#263; </em>&nbsp;jak 
+		w nast&#281;puj&#261;cym przyk&#322;adzie:</p>
+      <p>#nazwisko#: Smith<br>
+        #miasto#: New York</p>
+      <p>i</p>
+      <p>#2#: Smith<br>
+        #3# : New York</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> &Uuml;yelikleri y&ouml;net</p>
+<p class="item">SendBlaster otomatik olarak da&#287;&#305;t&#305;m listelerine &uuml;yelikleri (ve &uuml;yelikten &ccedil;&#305;kmalar&#305;) y&ouml;netebilir. Her bir liste bir e-posta adresi ile ili&#351;kilendirilebilir: bu adrese mesaj ba&#351;l&#305;&#287;&#305; &quot;&Uuml;ye ol&quot; &#351;eklinde bir mesaj g&ouml;nderilirse g&ouml;nderici e-posta adresi otomatik olarak listeye eklenir. E&#287;er mesaj ba&#351;l&#305;&#287;&#305; &quot;&Uuml;yelikten &ccedil;&#305;k&quot; olursa, g&ouml;nderici otomatik olarak &uuml;yelikten &ccedil;&#305;kart&#305;l&#305;r (e&#287;er daha &ouml;nce &uuml;ye oldu ise). SendBlaster yeni mesajlar&#305; POP3 hesab&#305;ndan indirir, mesaj ba&#351;l&#305;&#287;&#305;n&#305; do&#287;rular ve ilgili da&#287;&#305;t&#305;m listelerini g&uuml;nceller.</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Not:</font> Varsay&#305;lan mesaj sat&#305;rlar&#305; (&uuml;yelik i&ccedil;in &quot;&Uuml;ye ol&quot; ve &uuml;yelikten &ccedil;&#305;kmak i&ccedil;in &quot;&Uuml;yelikten &ccedil;&#305;k&quot;)  <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Geli&#351;mi&#351; Ayarlar</a> penceresi i&ccedil;erisinden de&#287;i&#351;tirlebilir.</p>
+  <p class="item"><font color="#FF0000">Uyar&#305;</font><font color="#FF0000">:</font> &Uuml;yelikleri y&ouml;netmek i&ccedil;in se&ccedil;ilen adres POP3 mesaj indirimine izin vermelidir (standart e-posta istemcileri taraf&#305;ndan kullan&#305;lan ile ayn&#305; protokol). Yaln&#305;zca web arabirimi ile y&ouml;netilebilen e-posta adreslerinin kullan&#305;m&#305; m&uuml;mk&uuml;n de&#287;ildir (&ouml;rne&#287;in Hotmail servisi gibi).</p>
+</blockquote>
+<p class="item">Normal olarak her bir listeye bir sabit e-posta adresi atan&#305;r. Bununla beraber, ayn&#305; e-posta adresini birden fazla listeye atamakta m&uuml;mk&uuml;nd&uuml;r. Bu durumda bir liste g&uuml;ncellendi&#287;inde, ayn&#305; &Uuml;ye ol/&Uuml;yelikten &ccedil;&#305;k adresini kullanan t&uuml;m listeler g&uuml;ncellenir. &Ouml;rne&#287;in, &quot;Liste 1&quot; ve &quot;Liste 2&quot; &#351;eklinde iki liste olu&#351;turursan&#305;z ve bunlar&#305; ayn&#305; e-posta y&ouml;netim adresine ba&#287;larsan&#305;z, &quot;Liste 1&quot; i&ccedil;in mesajlar&#305; indirdi&#287;inizde, &quot;Liste 2&quot; listeside ayr&#305;ca g&uuml;ncellenir.</p>
+<p class="item">Kontrol edilecek adres, herhangi bir e-posta istemcisinde oldu&#287;u gibi ilgili adresin POP3 hesab&#305; girilerek ayarlan&#305;r: adrese  (<span class="itemelement">E-posta) </span>ek olarak,<span class="itemelement"> Kullan&#305;c&#305; ad&#305;</span> ve <span class="itemelement">&#350;ifre</span> ile birlikte alan sunucuyu (<span class="itemelement">POP3 Sunucusu</span>) ve gerekli ise sunucunun port adresini &quot;sunucu:port&quot; bi&ccedil;iminde belirtmeniz gerekmektedir.<span class="itemelement"> SSL</span> onay kutusu baz&#305; pop3 sunucular&#305; taraf&#305;ndan (&ouml;rne&#287;in Gmail gibi) ihtiya&ccedil; duyulan SSL ileti&#351;im &ouml;zelli&#287;ini etkinle&#351;tirir. <span class="itemelement">Zaman a&#351;&#305;m&#305;</span> de&#287;eri ba&#287;lant&#305;n&#305;n ne kadar s&uuml;re sonra herhangi bir aktivite yoksa kapat&#305;laca&#287;&#305;n&#305; belirtir. Parametreleri kontrol etmek i&ccedil;in <span class="itemelement">Ba&#287;lant&#305; testi</span> d&uuml;&#287;mesine t&#305;klay&#305;n (herhangi bir mesaj indirilmeyecektir).</p>
+<p class="item">Tahmin edilmesi zor ba&#351;&#305; ko&#351;ullar alt&#305;nda, POP3 sunucunuz mesaj indirme i&#351;leminin yava&#351;lat&#305;lmas&#305;na gerek duyabilir; e&#287;er sorun ya&#351;&#305;yorsan&#305;z, <span class="itemelement">Daha yava&#351; </span>onay kutucu&#287;unu se&ccedil;ebilirsiniz (burada kesin bir durum s&ouml;z konusu de&#287;ildir, her iki durumuda test ediniz ve hangisinin daha iyi &ccedil;al&#305;&#351;t&#305;&#287;&#305;n&#305; do&#287;rulay&#305;n&#305;z).  </p>
+<blockquote>
+  <p class="item"><font color="#FF0000">&#304;pucu:</font> <span class="itemelement">Profiller</span> d&uuml;&#287;mesi birden &ccedil;ok POP3 ayar&#305;n&#305; y&ouml;netmenize olanak sa&#287;lar. Birden &ccedil;ok profil i&ccedil;in hesap bilgileri kay&#305;t edilebilir ve bu nedenle t&uuml;m POP3 ayarlar&#305; bir ka&ccedil; fare t&#305;klamas&#305; ile kaydedilebilir veya geri y&uuml;klenebilir. Bu &ouml;zellik &ouml;zellikle ba&#351;kas&#305; ad&#305;na mesaj g&ouml;nderirken olduk&ccedil;a faydal&#305;d&#305;r.</p>
+</blockquote>
+<p class="item"><span class="itemelement">Mesaj&#305;n bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak</span> se&ccedil;ene&#287;ini se&ccedil;erseniz, SendBlaster sunucu &uuml;zerinden mesajlar&#305; silmeden mesajlar&#305; indirecektir. Mesajlar, daha sonra kullan&#305;mlar i&ccedil;in sunucu &uuml;zerinde kalacaklard&#305;r. Yeni mesajlar yok say&#305;lacakt&#305;r.</p>
+<p class="item"><span class="itemelement">T&uuml;m alanlar&#305; g&uuml;ncelle</span> olduk&ccedil;a &ouml;nemli bir se&ccedil;enektir: se&ccedil;ildi&#287;inde yaln&#305;zca mesaj ba&#351;l&#305;&#287;&#305; de&#287;il t&uuml;m mesaj i&ccedil;eri&#287;i i&#351;lenir; e&#287;er mesaj i&ccedil;eri&#287;i <em>alanismi: de&#287;er </em>sat&#305;rlar&#305; i&ccedil;eriyorsa yaln&#305;zca kontak kayd&#305;n&#305;n e-posta adresi de&#287;il di&#287;er ilgili alanlarda g&uuml;ncellenir (<a href="#updateallfields">a&#351;a&#287;&#305;daki  kutuya bak&#305;n&#305;z</a>).</p>
+<p class="item">Tek dezavantaj, mesaj indirme ve i&#351;leme yava&#351; olabilir; bu nedenle <span class="itemelement">T&uuml;m alanlar&#305; g&uuml;ncelle</span> se&ccedil;ene&#287;inin, web siteniz yaln&#305;zca e-posta adreslerini de&#287;il fakat di&#287;er alanlar&#305;da i&ccedil;eren &uuml;yelik mesajlar&#305; olu&#351;turuyorlarsa ve yaln&#305;zca gerekli oldu&#287;unda se&ccedil;ilmesi tavsiye edilir. </p>
+<p class="item"><span class="itemelement">&#304;ndir </span> d&uuml;&#287;mesine t&#305;klayarak, yeni mesajlar indirilecektir ve se&ccedil;ili da&#287;&#305;t&#305;m listeleri g&uuml;ncellenecektir (ayr&#305;ca ayn&#305; y&ouml;netim e-posta adresini kullanan di&#287;er t&uuml;m listelerde g&uuml;ncellenecektir).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hangi adresi kullanmal&#305;y&#305;m?</strong></font></p>
+      <p> Her bir da&#287;&#305;t&#305;m listesi i&ccedil;in farkl&#305; bir sabit &uuml;ye ol/&uuml;yelikten &ccedil;&#305;k adresi, yani herhangi bir standard e-posta alma ve g&ouml;nderme i&#351;lemi i&ccedil;in kullan&#305;lmayan, kullan&#305;lmas&#305; tavsiye edilir. Bu listeleri y&ouml;netme i&#351;lemini kolayla&#351;t&#305;racak ve spam mesaj alma riskini (spam mesajlar yok say&#305;l&#305;r) minimize edecektir. Bu tarz bir &ccedil;al&#305;&#351;ma ortam&#305;nda <span class="itemelement">Mesaj&#305;n bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak</span> se&ccedil;ene&#287;ini se&ccedil;meye gerek yoktur zira mesajlar&#305; okuyan ba&#351;ka bir e-posta istemcisi yoktur. Bu &#351;ekilde mesaj indirimi daha h&#305;zl&#305; olacakt&#305;r ve en &ouml;nemlisi hesap disk alan&#305; dolmayacakt&#305;r. Baz&#305; servisler, mesajlar&#305;n kaplayabilece&#287;i toplam disk alan&#305; &uuml;zerinde k&#305;s&#305;tlamalar&#305; vard&#305;r ve bu limitler a&#351;&#305;l&#305;rsa mesaj da&#287;&#305;t&#305;m&#305; yap&#305;lmaz. </p>
+      <p>Tavsiye edilmesede, di&#287;er e-posta yaz&#305;l&#305;mlar&#305; taraf&#305;ndan mesaj alma ve g&ouml;nderme i&ccedil;in kullan&#305;lan &quot;standard&quot; e-posta adreslerinin kullan&#305;lmas&#305;da m&uuml;mk&uuml;nd&uuml;r. Bu durumda <span class="itemelement">Mesaj&#305;n bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak</span> se&ccedil;ene&#287;ini se&ccedil;mek kesinlikle gereklidir (aksi durumda mesajlar indirildik&ccedil;e sunucu &uuml;zerinden silinirler). Ve daha da &ouml;nemlisi, standart e-posta istemcisi i&ccedil;erisinde de SendBlaster'&#305;n mesajlar&#305; okuyabilmesi i&ccedil;in ayn&#305; ayar&#305;n yap&#305;lmas&#305;d&#305;r (Outlook Express i&ccedil;erisinde hesap se&ccedil;ildikten sonra  <em>&Ouml;zellikler / Geli&#351;mi&#351; Ayarlar / Mesaj&#305;n bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak </em>se&ccedil;ene&#287;ini se&ccedil;in).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Uyar&#305;:</font> e&#287;er yeni mesajlar&#305;n indirilmesi &ccedil;ok yava&#351; gibiyse, bu e-posta sunucusu &uuml;zerinde &ccedil;ok fazla say&#305;da mesaj&#305;n birikti&#287;i anlam&#305;na gelebilir: <span class="itemelement">Bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak</span> se&ccedil;ene&#287;ini etkisizle&#351;tirin ve <span class="itemelement">&#304;ndir</span> d&uuml;&#287;mesi &uuml;zerine t&#305;klay&#305;n (veya standartt e-posta istemcinizi &ccedil;al&#305;&#351;t&#305;r&#305;n). Mesajlar indirildikten sonra sunucu &uuml;zerinden silineceklerdir ve takip eden mesaj indirmeleri daha h&#305;zl&#305; olacakt&#305;r.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="updateallfields"></a> &quot;T&uuml;m alanlar&#305; g&uuml;ncelle&quot;nas&#305;l &ccedil;al&#305;&#351;&#305;yor</strong></font></p>
+      <p>SendBlaster &quot;normal&quot; i&#351;leme modunda yaln&#305;zca mesaj ba&#351;l&#305;klar&#305;n&#305; indirir ve i&#351;lerken, <span class="itemelement">T&uuml;m alanlar&#305; g&uuml;ncelle </span>se&ccedil;ene&#287;i SendBlaster'&#305;n t&uuml;m mesaj g&ouml;vdesini indirmesine ve i&#351;lemesine, mesaj g&ouml;vdesi i&ccedil;erisinde <em>alanismi: de&#287;er </em>bi&ccedil;iminde sat&#305;rlar aramas&#305;na ve alanlar&#305; uygun &#351;ekilde g&uuml;ncellemesini sa&#287;lar.</p>
+      <p>&Ouml;rne&#287;in &quot;Soy isim&quot; ve &quot;&#350;ehir&quot; &#351;eklinde iki alan&#305;n&#305;z oldu&#287;unu varsayal&#305;m; e&#287;er &quot;aaa@aaa.com&quot; e-posta adresinden ba&#351;l&#305;&#287;&#305; &quot;&Uuml;ye ol&quot; ve i&ccedil;eri&#287;i a&#351;a&#287;&#305;daki &#351;ekilde olan bir mesaj al&#305;n&#305;rsa (her sat&#305;r&#305;n farkl&#305; alanlar i&ccedil;erdi&#287;ine not edin):</p>
+      <p>Soy isim: Smith<br>
+      &#350;ehir: New York</p>
+      <p>&quot;aaa@aaa.com&quot; ad&#305;nda bir kontak, &quot;Soy isim&quot; alan&#305; &quot;Smith&quot;, &quot;&#350;ehir&quot; alan&#305; &quot;New York&quot; olacak &#351;ekilde listeye eklenir.</p>
+      <p> <a href="sendblaster_messages_compose.htm">Mesaj olu&#351;turma</a> i&ccedil;erisinde ayn&#305;<span class="itemelement"> Etiketleri</span> kullanarak baz&#305; di&#287;er yaz&#305;m bi&ccedil;imlerini kullanmakta m&uuml;mk&uuml;nd&uuml;r: a&#351;a&#287;&#305;daki &ouml;rnekte oldu&#287;u gibi <em>#etiket#: de&#287;er</em> ve <em>#alannumaras&#305;#: de&#287;er</em>bi&ccedil;iminde:</p>
+      <p>#soyisim#: Smith<br>
+        #&#351;ehir#: New York</p>
+      <p>ve</p>
+      <p>#2#: Smith<br>
+        #3# : New York</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

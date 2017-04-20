@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Формати на върнати съобщения</p>
+<p class="item">Първоначално форматите на върнатите съобщения са били предназначени да се четат от хора, не от машини, затова няма стандарт или правило. SendBlaster може да обработва най-разпространените формати на върнати писма с помощта на вътрешната си база данни, но може да срещнете и формати, които програмата не разпознава. Ако това се случи, може ръчно да добавите нов формат към базата данни за върнати съобщения на SendBlaster.</p>
+<p class="item">Един такъв формат се състои от няколко правила, като всички от тях трябва да се спазят, за да се определи съобщението като върнато (с други думи, логическият оператор на правилата е AND {И}).</p>
+<p class="item">Когато искате да добавите <span class="itemelement">Нов формат</span>, първо трябва да определите модела в полето за тема или други полета, които еднозначно определят съобщението като върнато (<span class="itemelement">Сложно върнато съобщение</span>, ако поставите отметка в това поле, или просто, ако не маркирате нищо). Падащият списък с полета служи само за пример, вие може ръчно да добавяте конкретно поле като напишете наименованието му в полето  <span class="itemelement">Хедър</span> и желаният модел в полето <span class="itemelement">Стойност</span>.</p>
+<p class="item"><span class="itemelement">Моделът</span> обикновено трябва да съдържа някои жокери (знакът &quot;*&quot; означава &quot;всеки символ&quot;): например, ако въведете &quot;*известие*неполучено*&quot; като модел на Тема, всяко съобщение, съдържащо думите &quot;известие&quot; и &quot;неполучено&quot;  в темата си - т.е. &quot;известие за неполучено съобщение от xxx@yyy.com&quot; - ще бъде определено като върнато, при условие, че съвпада и с останалите правила, които сте задали. Ако използвате &quot;известие за неполучено&quot;, без жокери, само съобщения, съдържащи точно &quot;известие за неполучено&quot; като тема, ще бъдат обработени като върнати - &quot;известие за неполучено съобщение от xxx@yyy.com&quot; няма да бъде смятано за валидна тема.</p>
+<p class="item">Може също да въведете специфични думи (разделени със запетая), които трябва да бъдат намерени в текста на съобщението: ако нито една дума не бъде открита, съобщението не се определя като върнато. Например,  повечето върнати съобщения съдържат думата &quot;причина&quot; (последвана от текст, който обяснява поради каква причина съобщението не е доставено). Моля, обърнете внимание, че списъкът с думи не е модел (не може да използвате жокери) и логическият оператор на списъка е OR (ИЛИ). </p>
+<p class="item">Ако дадено съобщение отговаря на всички правила, които сте задали, то се обработва като върнато и всички email адреси, намерени в съобщението, ще бъдат отписани, ако бъдат открити и в списъка, за който изтегляте върнати съобщения. Може да изключите типични администраторски адреси с помощта на модел. </p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">Пример</font></strong></p>
+        <p class="item">Да кажем, че искате съобщенията да се обработват като върнати, когато:</p>
+        <p class="item">а) съдържат думите  &quot;неполучено&quot; и &quot;съобщение&quot; в темата;<br>
+          б) са от &quot;postmaster@...&quot; адрес;<br>
+        в) техният хедър за съдържание е &quot;известие за получаване&quot; или 
+        &quot;известие за неполучено съобщение&quot;<br>
+          г) съдържат думите &quot;причина&quot; или &quot;грешка&quot; в основния си текст</p>
+        <p class="item">и очевидно не искате адреса на подателя (&quot;postmaster@...&quot;) да бъде отписан, тъй като истинският, недостъпен адрес е някъде в основния текст.</p>
+        <p class="item">Ето как може да изглежда формата: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Сложни върнати :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(маркирано)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Модел на тема:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*неполучено*съобщение*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Хедър:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">От</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Стойност:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Хедър:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Вид съдържание</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Стойност:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*известие за*получаване*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Основният текст съдържа :</strong></td>
+            <td class="item">&nbsp;</td>
+            
+          <td class="item">причина, грешка</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Изключи :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>Ето и един много по-лесен формат, който ще обработва всички съобщения, съдържащи думата &quot;неполучено&quot; в темата си (и ще изключи адреси от типа postmaster@... и majordomo@...):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Сложни върнати :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(маркирано)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Модел на тема:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*неполучено*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Хедър:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(празно)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Стойност:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(празно)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Хедър:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(празно)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Стойност:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(празно)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Основният текст съдържа :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(празно)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Изключи :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p align="center"><a href="http://blog.sendblaster.com" target="_blank"><img src="welcome/blog_logo_header2.png" width="90" height="27" border="0"></a>&nbsp;&nbsp;<a href="http://facebook.sendblaster.com" target="_blank"><img src="welcome/facebook_logo_header2.png" width="112" height="27" border="0"></a> &nbsp;&nbsp;<a href="http://twitter.sendblaster.com" target="_blank"><img src="welcome/twitter_logo_header2.png" width="116" height="27" border="0"></a></p>
+</body>
+</html>

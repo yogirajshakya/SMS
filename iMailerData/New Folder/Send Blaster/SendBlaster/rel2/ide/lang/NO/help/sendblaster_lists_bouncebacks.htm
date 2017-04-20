@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Administrere bounce-backs</p>
+<p class="item">En bounced e-post (eller <em>bounce-back</em>) er en som aldri n&aring;r
+  mottakers inbox og blir sendt tilbake, bounced back, til senderen med en feilmelding
+  som indikerer til senderen at overf&oslash;ring av meldingen ikke lyktes. 
+  Dette skjer typisk hvis du sender dine postinger vha Smtp-servere: 
+  hvis en adresse er ikke-eksisterende, s&aring; vil Smtp-serveren (som ikke har mulighet til
+  &aring; vite det) akseptere meldingen uansett, men den vil bli bounced senere.</p>
+<p class="item">Det finnes to hovedtyper av bounce-backs:</p>
+<ul>
+  <li class="item">Hard bounces: e-posten kunne ikke leveres pga en permanet feil 
+  (f.eks ikke-eksisterende adresse)</li>
+  <li class="item">Soft bounces: En midlertidig tilstand gj&oslash;r at levering av e-posten 
+  feiler (f.eks. motakers e-postserver er midlertidig opptatt)</li>
+</ul>
+<p class="item">SendBlaster gjenkjenner automatisk de fleste* bounced'e e-poster og 
+  av-abonnerer eller sletter bounced'e adresser i den valgte listen.</p>
+<p class="item">Bounced'e e-poster blir sendt til avsenderadressen, som ikke trenger
+  &aring; v&aelig;re den samme adressen som blir brukt til abonnering og kansellering (se <span class="itemlink"><a href="sendblaster_lists_managing.htm" class="itemelement">Administrere 
+  abonneringer</a></span>). Derfor er det n&oslash;dvendig &aring; forteller programmet hvilken 
+  adresse som skal sjekkes.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hvilken    
+        adresse skal jeg skrive inn?</strong></font></p>
+      <p>Husk at e-post bounce'r sendes til postingens avsenderadresse, 
+        ikke til adressen brukt til abonnering. Anta at du velger &quot;subscriptions@mysite.com&quot; 
+        som din adresse for administrening av abonnementer for Liste 1, og at du senere sender
+        dine postinger fra adressen &quot;newsletter@mysite.com&quot;. Bounce-backs 
+        vil derfor bli levert til &quot;newsletter@mysite.com&quot;, og
+        dette er adressen du m&aring; konfigurere i <span class="itemelement">Administrér
+        bounce-backs</span>-seksjonen for Liste 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Adressen som sjekkes blir satt ved &aring; skrive inn riktige parameter for &aring; 
+  aksessere POP3-kontoen, akkurat som i enhver e-postklient-software: i tillegg til adressen 
+  (<span class="itemelement">E-post</span>) m&aring; du spesifisere mottakende 
+  server (<span class="itemelement">POP3 Server</span>), eventuelt ogs&aring; 
+  portnumber (hvis portnummer ikke spesifiseres benyttes default portnummer 110), <span class="itemelement">Brukernavn</span> 
+  og <span class="itemelement">Passord</span>. <span class="itemelement">SSL</span> 
+  sjekkboksen aktiverer SSL-kommunikasjon, som kan kreves av enkelte pop3-servere 
+  (et typisk eksempel er Gmails server). I <span class="itemelement">Timeout</span>-feltet
+  skriver du inn antall sekunder med innaktivitet som aksepteres f&oslash;r tilkoblingen brytes.
+  For &aring; verifisere parametrene, bare klikk p&aring; <span class="itemelement">Test 
+  tilkobling</span>-knappen (ingen meldinger blir lastet ned).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tips:</font>
+    <span class="itemelement">Profiler</span>-knappen lar deg administrere multiple POP3-innstillinger.
+    Konotinformasjon kan lagres for multiple profiler, s&aring; alle POP3-innstillinger lagres/lastes med et par klikk.
+	Denne funksjonaliteten er spesielt nyttig hvis du sender e-post p&aring; vegne av andre.
+  </p>
+</blockquote>
+<p class="item">Hvis <span class="itemelement">Behold kopi av meldingene p&aring; 
+  serveren</span> er avkrysset, vil SendBlaster laste ned meldinger uten &aring; slette
+  dem fra serveren. Meldingen vil da v&aelig;re tilgjengelige for fremtidig bruk. 
+  Nye meldinger blir ignorert.</p>
+<p class="item">Hvis <span class="itemelement">Slett kun nye bounce-back meldinger</span>
+ er avkrysset vil SendBlaster slette kun denne meldingen, og la resten av meldingene bli liggende p&aring; serveren.</p>
+<p class="item"> Hvis <span class="itemelement">Slett bounced'e adresser </span>er 
+  krysset av, s&aring; vil bounced'e adresser bli slettet fra den valgte listen. Hvis ikke, s&aring; vil
+  de kun bli av-abonnert fra listen.</p>
+<p class="item">Ved &aring; krysse av <span class="itemelement">Prosesser hard bounces</span> 
+  og <span class="itemelement">Prosesser soft bounces </span> kan du velge hvilke 
+  bounce-typer (se over) som skal prosesseres; self&oslash;lgelig, hvis ingen av dem er krysset av
+  s&aring; vil ingen prosessering av bounced'e e-poster forekomme.</p>
+<p class="item">Ved &aring; klikke p&aring; <span class="itemelement">Last ned</span>-knappen, 
+  vil nye meldinger bli lastet ned, og den valgte distribusjonslisten vil 
+  bli oppdatert (s&aring; vel som alle andre lister som benytter samme e-postadresse for  
+  bounce-backs).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Advarsel:</font> hvis nedlasting av nye 
+    meldinger ser ut til &aring; g&aring; ganske sakte, s&aring; kan det indikere at mange meldinger har
+    hopet seg opp p&aring; e-postserveren: deaktiver<span class="itemelement">Behold 
+    kopi av meldingene p&aring; serveren</span>-opsjonen og klikk p&aring; 
+    <span class="itemelement">Last ned</span> 
+    (eller utf&oslash;r nedlasting i din standard e-postklient). N&aring; vil meldingene bli
+    fjernet fra serveren s&aring; fort de er lastet ned, og p&aring;f&oslash;lgende nedlastinger
+    vil g&aring; raskere.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*Nye bounce-back-formater kan administreres fra 
+<a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Advanserte Innstillinger</a>-skjermen.</p>
+</body>

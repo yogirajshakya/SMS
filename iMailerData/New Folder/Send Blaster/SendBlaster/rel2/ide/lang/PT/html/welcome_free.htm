@@ -1,0 +1,546 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <style type="text/css">
+        <!
+        -- .body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10pt;
+        }
+        .small
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 8pt;
+            color: #666666;
+        }
+        .link
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 8pt;
+            color: #003366;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .link:hover
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 8pt;
+            color: #003366;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        -- ></style>
+</head>
+<body class="body">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="top">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td colspan="2" class="body">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="100%" class="body">
+                                        Bem-vindo ao SendBlaster! Aqui estão alguns atalhos para as tarefas mais comuns:
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#compose">
+                                            <img src="welcome/W_compose.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#compose" class="link">Compor uma nova mensagem</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Aqui compõe as suas mensagens e escolhe templates importando ficheiros .eml ou .htm
+                                        existentes.
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#send">
+                                            <img src="welcome/W_send.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#send" class="link">Envie a sua mensagem agora</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Seleccione uma lista de destinatários e inicie a sua mailing
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#schedule">
+                                            <img src="welcome/W_schedule.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#schedule" class="link">Envie a sua mensagem mais tarde</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Agende o envio da sua mailing para que possa ser automaticamente enviada numa determinada
+                                        hora
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#history">
+                                            <img src="welcome/W_history.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#history" class="link">Ver mailings anteriores</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Complete as suas mailings anteriores e veja os respectivos logs
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#trackreports">
+                                            <img src="welcome/W_trackreports.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#trackreports" class="link">Acompanhe as suas campanhas com o TrackReports</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Analise os dados coleccionados sobre a abertura da sua mailing e a taxa de clique,
+                                        ou analise a informação detalhada sobre a acção de cada utilizador.
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#google">
+                                            <img src="welcome/W_google.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#google" class="link">Acompanhe as suas campanhas com o Google Analytics</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Acompanhe o desempenho da sua campanha usandos as ferramentas poderosas do Google
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#lists">
+                                            <img src="welcome/W_lists.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#lists" class="link">Gira os seus contactos</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Crie e modifique as suas listas e endereços
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#filter">
+                                            <img src="welcome/W_filter.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#filter" class="link">Filtre os seus contactos</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Use filtros poderosos e opções de agrupamento sobre os seus dados
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#duplicates">
+                                            <img src="welcome/W_duplicates.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#duplicates" class="link">Encontre duplicados</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        O SendBlaster pode filtrar automaticamente os duplicados aquando do envio da sua
+                                        mailing; mas se precisar limpar os seus contactos, pode procurar por duplicados
+                                        numa ou várias listas
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#blacklist">
+                                            <img src="welcome/W_blacklist.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#blacklist" class="link">Defina uma lista negra</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Defina uma lista de endereços ou domínios que serão automaticamente excluídos das
+                                        suas mailings
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#import">
+                                            <img src="welcome/W_import.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#import" class="link">Importar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Importe dados de fontes externas
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#export">
+                                            <img src="welcome/W_export.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#export" class="link">Exportar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Exporte os seus dados para um ficheiro de texto
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#subscriptions">
+                                            <img src="welcome/W_subscriptions.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#subscriptions" class="link">Descarregar subscrições </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Ligue-se à sua conta Pop3 e descarregue as novas subscrições e cancelamentos
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#bounces">
+                                            <img src="welcome/W_bounces.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#bounces" class="link">Processar mensagens devolvidos</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Descarregue os emails devolvidos e elimine os endereços remetentes da sua lista
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#fields">
+                                            <img src="welcome/W_fields.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#fields" class="link">Personalize a sua base de dados</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Troque o nome dos campos e as definições das mensagens
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#security">
+                                            <img src="welcome/W_lock.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#security" class="link">Protega os seus dados</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Crie uma palavra-passe para a sua base de dados
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#settings">
+                                            <img src="welcome/W_settings.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#settings" class="link">Personalize o modo como o SendBlaster funciona</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Altere várias configurações avançadas e ponha o software a funcionar exactamente
+                                        como precisa
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#plugin">
+                                            <img src="welcome/W_plugin.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#plugin" class="link">Use plugins</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Adicione funcionalidades ao SendBlaster com add-ons gratuitos a partir do nosso
+                                        site
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr class="small">
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td align="center" valign="top">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#videointro">
+                                            <img src="welcome/W_video.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#videointro" class="link">Veja o vídeo </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Veja um rápido vídeo-tutorial sobre as principais funcionalides do SendBlaster
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td align="center" valign="top">
+                            <table width="100%" border="0" cellpadding="1" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td rowspan="2">
+                                        <a href="#showtips">
+                                            <img src="welcome/W_tips.gif" width="64" height="64" border="0"></a>
+                                    </td>
+                                    <td width="100%" class="body">
+                                        <a href="#showtips" class="link">E muito mais...</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" class="small">
+                                        Veja e obtenha as novas dicas sobre as funcionalidades poderosas do SendBlaster
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td width="170" align="center" valign="top" class="body">
+                <span class="small">Tabela comparativa:</span>
+                <iframe name="mainframe" src="../help/sendblaster_compare.htm" scrolling="no" width="192"
+                    height="200" frameborder="0"></iframe>
+                <span class="small"><a href="http://www.sendblaster.com/redirect/redirect.php?key=buy&language=PT"
+                    target="_blank">
+                    <img src="welcome/W_pro.gif" alt="Upgrade to Pro" width="192" height="64" border="0"></a></span>
+<p>&nbsp;</p>
+	  <p><a href="http://blog.sendblaster.com" target="_blank"><img src="welcome/blog_logo_header2.png" width="90" height="27" border="0"></a></p>
+	  <p><a href="http://facebook.sendblaster.com" target="_blank"><img src="welcome/facebook_logo_header2.png" width="112" height="27" border="0"></a></p>
+	  <p><a href="http://twitter.sendblaster.com" target="_blank"><img src="welcome/twitter_logo_header2.png" width="116" height="27" border="0"></a></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

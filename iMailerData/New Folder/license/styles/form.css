@@ -1,0 +1,67 @@
+/*
+	author:			Infolancers E Services Private Limited
+	copyright:		Copyright © Infolancers E Services Private Limited. All Rights Reserved. This is a properiety property of
+					Infolancers and any use of this is to be brought to the notice of Infolancers.
+*/
+.text-box{
+	width:200px;
+	background:#FFFFFF;
+	font-family:"Trebuchet MS", sans-serif, arial;
+	font-size:11px;
+	color:#333333;
+	border:1px solid #B0B0B0;
+}
+select
+{
+	width:203px;
+	background:#FFFFFF;
+	font-family:"Trebuchet MS", sans-serif, arial;
+	font-size:11px;
+	color:#333333;
+	border:1px 1px 1px 1px solid #B0B0B0;
+}
+.button{
+	background-color:#D4D0C8;
+	border:1px solid #B0B0B0;
+	font-weight:normal;
+	color:#000000;
+	font-size:11px;
+	font-family:"Trebuchet MS", sans-serif, arial;
+}
+.form-text-white{
+	font-weight:normal;
+	color:#333333;
+	font-size:11px;
+	font-family:"Trebuchet MS", sans-serif, arial;
+	text-decoration:none;
+	text-align:justify;
+}
+.form-text-white-small{
+	font-weight:normal;
+	color:#333333;
+	font-size:9px;
+	font-family:"Trebuchet MS", sans-serif, arial;
+	text-decoration:none;
+	text-align:justify;
+}
+.form-text-error{
+	font-weight:normal;
+	color:#FF0000;
+	font-size:11px;
+	font-family:"Trebuchet MS", sans-serif, arial;
+	text-decoration:none;
+	text-align:justify;
+}
+.tr-form{
+	height:20px;
+}
+.td-fieldName{
+	background:#EFEFEF;
+	width:225px;
+	text-align:left;
+	padding-left:5px;
+}
+.td-fieldInput{
+	width:200px;
+	text-align:left;
+}

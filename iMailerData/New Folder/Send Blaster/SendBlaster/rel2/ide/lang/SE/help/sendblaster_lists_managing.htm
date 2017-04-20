@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
+<html> 
+<head> 
+<title>SendBlaster</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<link href="sendblaster.css" rel="stylesheet" type="text/css"> 
+</head> 
+ 
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body"> 
+<p class="title">Hantera listor</p>
+<p class="item">SendBlaster kan hantera flera adresslistor *. 
+</p> 
+<p class="item">          Listan 
+  väljs med hjälp av dropprutorna som finns i övre delen av fönstret. Bredvid finns 3 knappar som 
+  låter dig skapa en ny lista (knappen <span class="itemelement">Ny</span><span class="item"> 
+  ), döpa om listan (</span><span class="itemelement">Döp om</span><span class="item">), radera den&nbsp;(</span><span class="itemelement">Ta bort</span><span class="item"> 
+   ) eller skriva ut den (</span><span class="itemelement">Skriv 
+ut</span><span class="item">)</span><span class="item"> 
+         . Detta kan också utföras genom att 
+  högerklicka på dropprutan.</span></p> 
+<p class="item">          Resten av 
+  fönstret är till för adresslistan.</p> 
+<p class="item">   Varje adress visar: prenumerationsstatus (markerad med <img height="12" src="img/sendblaster_lists_managing_1.gif" width="12">&nbsp;och <img height="12" src="img/sendblaster_lists_managing_2.gif" width="12"> 
+     ), aktiveringsstatus (markerad med en kryssruta), innehållet av de 15
+  <a class="itemlink" href="sendblaster_settings_fields.htm">anpassade fälten</a> 
+          (det första är alltid epost-adressen), 
+  kommentarer (markerade&nbsp;med <img height="10" src="img/sendblaster_lists_managing_3.gif" width="15"> 
+     , att klicka på den öppnar kommentarer). Fältordningen kan ändras 
+  genom att flytta på kolumner (bara dra i huvudet). Kolumnernas storlek kan också ändras. 
+</p>
+<p class="item">Vid <a class="itemlink" href="../../../../www/sendblaster/httpdocs/help/sendblaster_messages_send.htm" ><font 
+color=#0000ff>sändningen</font></a> kommer adresser markerade inaktiva eller 
+avbeställda att hoppas över. Det krävs alltså att en adress är markerad som 
+prenumererad och aktiv. Adresser som kommer att hoppas över är markerade med grå 
+färg. </p> 
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+  <tr> 
+    <td><img height="94" src="img/sendblaster_lists_managing_4.gif" width="156"></td> 
+    <td valign="center" class="item">&nbsp;</td> 
+    <td width="100%" valign="top" class="item">  I detta exempel kommer utskicket att
+      göras bara till den första adressen eftersom det är den enda som både är 
+      prenumerant och aktiv.</td> 
+  </tr> 
+</table>
+<p class="item">Adresslistan kan sorteras genom att klicka på någon av 
+  kolumnrubrikerna. Genom att dra en eller flera kolumnrubriker till området ovanför rubrikerna (<span class="itemelement">Drag 
+  a column header in this area to group data</span>     )&nbsp;kan man
+  gruppera listan efter innehållet i dessa kolumner. Om rutan <span class="itemelement">Total
+  </span>är markerad visas antal i varje grupp längst 
+ner. </p> 
+<table width="100%" border="0" cellpadding="4" cellspacing="0"> 
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+    <td width="100%" bgcolor="#ffff99" class="item"> <p><font color="#009900"><strong>Hur 
+        man filtrerar adresser</strong></font></p>
+      <p>Genom att tillfälligt aktivera eller deaktivera en 
+      eller flera adresser (utan att behöva avbeställa prenumerationen) kan man 
+      sända mail till en del av adresserna på listan. Genom att kombinera detta 
+      med sortering och gruppering kan man filtrera och göra urval bland 
+      adresserna.</p>
+      <p>Om du tex använder fältet "Ort" kan du sända mail 
+      bara till dem som bor där. Eller om du har ett fält "Kundtyp" kan du tex 
+      skicka mail till alla kunder intresserade av en viss typ av produkter. 
+</p> 
+      <p>      SendBlaster innehåller en kraftfull byggare för&nbsp;datafilter vilken
+      låter användare finjustera utskick genom att välja och aktivera eller avaktivera poster som
+      matchar vissa villkor. Det stödjer flera villkor och komplex operander,
+      så att man visuellt kan bygga en kraftfull SQL-fråga utan att skriva kod.
+      Filterbyggaren finns under <span class="itemelement">Filter</span>-knappen.</p> 
+      <p>          Avaktivering av en
+        eller flera adresser låter dig skapa exkluderingslistor (adresser som inte får något meddelande, inte
+        ens om användaren skull prenumerera på listan).</p> 
+      </td> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+  </tr> 
+</table> 
+<p class="item">            
+   Högst upp i adresslistan finns listhanterings-verktygsfältet. Du kan även nå kommandona genom
+  kontextmenyn som visas när du högerklickar med musen.</p>
+ <p class="item">Du kan sätta in nya adresser med knappen <span class="itemelement">Ny,</span> 
+  modifiera vald adress med knappen <span class="itemelement">Modifiera </span>eller 
+  raders med knappen <span class="itemelement">Ta bort</span>. Det går att 
+  markera flera adresser genom att hålla ner tangenten Shift och samtidigt 
+  klicka på första och sista adressen eller hålla ner Ctrl tangenten 
+  och klicka på olika adresser. </p>
+<p class="item">Med <span class="itemelement">Klipp ut /Kopiera/Klistra in </span><span class="item"> 
+  kan man kopiera adresser mellan olika program</span><span class="item">.</span></p>
+<p class="item">Knapparna <span class="itemelement">Aktivera prenumeration för 
+  valda adresser</span> och <span class="itemelement">Avbeställ prenumeration 
+  för valda adresser</span> använder du för att manuellt hantera 
+  prenumerationer. Med <span class="itemelement">Aktivera valda adresser</span> 
+  och <span class="itemelement">Deaktivera valda adresser </span>kan man aktivera/deaktivera 
+  oavsett status på prenumerationen.</p> 
+<p class="item"> <span class="itemelement">Filter</span>-knappen låter
+användare att filtrera data med upp till 5 regler, ungefär som en SQL-fråga skulle göra men utan komplexiteten; den låter dig också specificera aktiviteter som ska utföras på alla
+kontakter som matchar reglerna: <span class="itemelement">Aktivera/Avaktivera</span> dem, eller
+<span class="itemelement">Prenumerera/Säg upp</span> dem, du kan också
+välja att <span class="itemelement">Avaktivera</span> de som inte matchar, eller bara lämna dem som de är.
+</p>
+<p class="item"><span class="itemelement">Historik</span> -knappen visar en lista 
+  på meddelanden som skickats till den valda adressen.</p>
+<p class="item">Ett klick på knappen <span class="itemelement">Anteckningar 
+  </span>
+        öppnar ett nytt fönster där man kan skriva in en anteckning
+  om 
+  den aktuella adressen. En adress som har en anteckning markeras med symbolen <img height="10" src="img/sendblaster_lists_managing_3.gif" width="15"> i den 
+  sista kolumnen (om du klickar på ikonen visas Anteckningsfönstret).</p>
+<p class="item">Med <span class="itemelement">Sök</span>** knappen öppnas 
+  ett fönster för att söka i ett eller flera fält (även 
+  anteckningar). Genom att markera <span class="itemelement">Matcha hela ord</span><span class="item"> 
+undviker man att få träff på längre ord där söksträngen ingår. Annars visas 
+adresser som innehåller värdet även om de inte exakt matchar det angivna värdet. För att gå igenom resultatlistan, 
+  använd </span><span class="item">        
+             
+               
+             </span><span class="itemelement">Hitta 
+  första</span><span class="item">, </span><span class="itemelement">Nästa</span><span class="item"> 
+  och </span><span class="itemelement">Föregående</span><span class="item">  
+    i sökfönstret.</span></p> 
+<p class="item"> <span class="itemelement">Hitta dubletter</span>         
+  -knappen visar ett fönster som låter dig hantera dubletter i listor. Du
+kan söka efter dubletter i valda listor, och ta bort eller redigera dubletter från fönstret.
+Notera att du kan ha dubletter i dina listor och välja om du vill skicka meddelanden
+till dubletter i <a class="itemlink" href="sendblaster_settings_advancedsettings.htm">Advancerade Inställningar</a> .
+</p> 
+<p class="item">Med <span class="itemelement">Växla utseende</span>  
+               
+              kan man 
+  visa informationen kan man visa informationen i kolumner i stället för rader.</p> 
+<p class="item">    Du kan använda ett subset med 15 tillgängliga fält; 
+  för att spara plats på skärmen kan du klicka på <span class="itemelement">Synliga 
+  fält</span>  och välja vilka fält som ska synas.</p> 
+<hr size="1" noshade> 
+<p class="item">*Gratisversionen kan hantera upp till 2 adresslistor.<br> 
+     **Sökning finns bara Pro versionen </p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

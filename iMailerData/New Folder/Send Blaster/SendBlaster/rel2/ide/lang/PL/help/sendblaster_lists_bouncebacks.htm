@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.style1 {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 8pt;
+}
+</style>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Zarz&#261;dzanie zwrotami</p>
+<p class="item">Email zwrotny (ang. <em>bounce-back</em>) to taki, który nigdy 
+nie dotar&#322; do skrzynki odbiorcy i zosta&#322; odes&#322;any z powrotem, lub informacj&#261; o 
+tym fakcie, do nadawcy, wraz z opisem b&#322;&#281;du, który informuje nadawc&#281;, &#380;e 
+wiadomo&#347;&#263; nie zosta&#322;a dostarczona. Zazwyczaj ma to miejsce, gdy wysy&#322;asz swoje 
+wiadomo&#347;ci przez serwer SMTP (który nie ma mo&#380;liwo&#347;ci aby o tym wiedzie&#263;), który 
+akceptuje wiadomo&#347;&#263;, ale zwraca j&#261; pó&#378;niej.</p>
+<p class="item">S&#261; dwa typy zwrotów:</p>
+<ul>
+  <li class="item">Ci&#281;&#380;kie zwroty : email nie mo&#380;e zosta&#263; dostarczony ze wzgl&#281;du 
+	na sta&#322;y b&#322;&#261;d (np. nieistniej&#261;cy adres)</li>
+  <li class="item">Lekkie zwroty: tymczasowy problem powoduje nie dostarczenie 
+	wiadomo&#347;ci (np. serwer odbiorcy jest zaj&#281;ty)</li>
+</ul>
+<p class="item">SendBlaster mo&#380;e automatycznie rozpozna&#263; wi&#281;kszo&#347;&#263;* zwrotnych 
+emaili i zako&#324;czy&#263; subskrypcj&#281; lub skasowa&#263; b&#322;&#281;dne adresy z listy.</p>
+<p class="item">Zwrotne emaile zostan&#261; wys&#322;ane na adres mailingu nadawcy, który 
+mo&#380;e nie by&#263; tym samym adresem, który jest u&#380;yty do subskrypcji i anulowania (zobacz <span class="itemlink">
+<a class="itemelement" href="sendblaster_lists_managing.htm">Zarz&#261;dzanie 
+subskrypcj&#261;</a></span>). Dlatego trzeba okre&#347;li&#263; programowi, który z adresów 
+b&#281;dzie sprawdzany.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900">
+	<strong>Który adres powinienem wprowadzi&#263;?</strong></font></p>
+      <p>Pami&#281;taj, &#380;e adres na który s&#261; wysy&#322;ane zwroty, to nie powinien by&#263; 
+		adres u&#380;yty do wysy&#322;ania subskrypcji. Za&#322;ó&#380;my, &#380;e wybra&#322;e&#347; &quot;subscriptions@mysite.com&quot; 
+        jako adres zarz&#261;dzaj&#261;cy List&#261; 1, a potem wysy&#322;asz mailing z adresu &quot;newsletter@mysite.com&quot;. 
+		Zwroty potem zostan&#261; dostarczone na &quot;newsletter@mysite.com&quot;, i 
+		b&#281;dzie to adres który b&#281;dziesz musia&#322; skonfigurowa&#263; w sekcji
+		<span class="itemelement">Zarz&#261;dzanie zwrotami</span>&nbsp; Listy 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Adres do sprawdzenia jest ustawiany przez wprowadzenie 
+poprawnych parametrów dost&#281;powych do konta POP3, tak jak w dowolnym kliencie 
+pocztowym: oprócz adresu (<span class="itemelement">E-mail</span>) musisz poda&#263; 
+serwer odbieraj&#261;cy (<span class="itemelement">Serwer POP3</span><span class="style1">)</span>, 
+numer
+  <span class="itemelement">Portu </span>(je&#380;eli nie zostanie podany, domy&#347;lna 
+warto&#347;&#263;, port
+  110, zostanie u&#380;yta), <span class="itemelement">Nazwa u&#380;ytkownika </span>
+<span class="style1">i</span> <span class="itemelement">Has&#322;o</span>. Pole
+<span class="itemelement">SSL</span>
+  w&#322;&#261;cza komunikacj&#281; po SSL, co mo&#380;e by&#263; potrzebne w przypadki niektórych 
+serwerów pop3 
+  (na przyk&#322;ad serwer Gmail). W polu <span class="itemelement">Timeout</span>
+  mo&#380;esz wprowadzi&#263; po ilu sekundach nieaktywno&#347;ci po&#322;&#261;czenie zostanie 
+zamkni&#281;te. Aby sprawdzi&#263; parametry po prostu naci&#347;nij przycisk
+<span class="itemelement">Test po&#322;&#261;czenia </span>(&#380;adna wiadomo&#347;&#263; nie zostanie 
+pobrana).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Podpowied&#378;: </font>&nbsp;<span class="style1">Przycisk </span> 
+	<span class="itemelement">Profile</span> pozwala na zarz&#261;dzanie wieloma 
+	ustawieniami POP3. Informacje o koncie mo&#380;e by&#263; przechowywana dla wielu 
+	profili, tak &#380;e wszystkie ustawienia POP3 s&#261; zapisane / &#322;adowane za pomoc&#261; 
+	kilku klikni&#281;&#263;. Ta opcja jest szczególnie u&#380;yteczna, gdy wysy&#322;amy email 
+	zamiast kogo&#347; lub kto&#347; inny to robi.&nbsp;
+  </p>
+</blockquote>
+<p class="item">Zaznaczaj&#261;c <span class="itemelement">Zachowaj kopi&#281; wiadomo&#347;ci 
+na serwerze po pobraniu</span>, SendBlaster pobierze nowe wiadomo&#347;ci bez ich kasowania na 
+serwerze. Wiadomo&#347;ci b&#281;d&#261; wtedy dost&#281;pne do dalszego wykorzystania. Nowe 
+wiadomo&#347;ci b&#281;d&#261; ignorowane. </p>
+<p class="item">Zaznaczaj&#261;c <span class="itemelement">Usu&#324; tylko nowe 
+odrzucone wiadomo&#347;ci </span>SendBlaster skasuje tylko te wiadomo&#347;ci, zostawiaj&#261;c reszt&#281; na serwerze.</p>
+<p class="item"> Je&#380;eli zaznaczymy <span class="itemelement">Usu&#324; 
+zwrócone adresy, </span>adresy zwrotów zostan&#261; skasowane z wybranej listy, je&#380;eli nie 
+zostan&#261; tylko usuni&#281;te z subskrypcji.</p>
+<p class="item">Zaznaczaj&#261;c <span class="itemelement">Przetwarzaj ci&#281;&#380;kie zwroty </span>
+<span class="style1">i</span> <span class="itemelement">Przetwarzaj lekkie 
+zwroty </span>mo&#380;esz wybra&#263; jaki typ zwrotu b&#281;dzie przetwarzany (zobacz powy&#380;ej); 
+oczywi&#347;cie je&#380;eli &#380;adna z opcji nie jest zaznaczona nie b&#281;dzie przetwarzania 
+zwrotów.</p>
+<p class="item">Klikaj&#261;c na przycisk <span class="itemelement">Pobierz</span>, 
+  nowe wiadomo&#347;ci zostan&#261; pobrane i wybrana lista zostanie zaktualizowana (jak 
+równie&#380; wszystkie inne listy powi&#261;zane z tym adresem).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Uwaga:</font> je&#380;eli pobierania 
+	wiadomo&#347;ci wydaje si&#281; wolne, mo&#380;e to oznacza&#263; serwer poczty musi 
+	przeszukiwa&#263; wiele wiadomo&#347;ci: zablokuj wtedy opcj&#281;&nbsp;
+	<span class="itemelement">Zachowaj kopi&#281; wiadomo&#347;ci na serwerze </span>i 
+	naci&#347;nij <span class="itemelement">Pobierz </span>(lub uruchamiaj&#261;c 
+	pobieranie wiadomo&#347;ci przez standardowy klient poczty). Wiadomo&#347;ci, raz 
+	pobrane zostan&#261; skasowane na serwerze, a wtedy pobieranie b&#281;dzie szybsze.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*Nowy format zwrotów mo&#380;e by&#263; zarz&#261;dzany w oknie
+<a class="itemlink" href="sendblaster_settings_advancedsettings.htm">Ustawienia 
+zaawansowane</a>.</p>
+</body>
+</html>

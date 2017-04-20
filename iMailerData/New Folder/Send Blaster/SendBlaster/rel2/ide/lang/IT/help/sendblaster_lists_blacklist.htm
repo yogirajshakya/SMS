@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Blacklist</p>
+<p class="item">Una <span class="itemelement">blacklist</span> &egrave; un filtro 
+  che impedisce che siano inviati messaggi a determinati indirizzi, indipendentemente 
+  dal fatto che siano <a href="sendblaster_lists_managing.htm">iscritti ed attivi</a>.</p>
+<p class="item">Quando si invia un messaggio a una lista di distribuzione, prima 
+  che ciascuna singola mail sia effettivamente inviata SendBlaster controlla se 
+  il relativo destinatario o il suo dominio sono presenti nella blacklist: in 
+  caso affermativo, l'invio della mail viene &quot;saltato&quot; (nel pannello 
+  di log appare il messaggio <em>&quot;&lt;indirizzo&gt;: blacklisted</em>&quot;).</p>
+<p class="item">SendBlaster prevede due distinte blacklist:</p>
+<ul>
+  <li class="item">La lista <span class="itemelement">Indirizzi</span>: inserire 
+    gli indirizzi a cui si desidera che non venga mai inviato alcun messaggio.<br>
+    &nbsp; </li>
+  <li class="item">La lista <span class="itemelement">Domini</span>*: invece che 
+    singoli indirizzi, &egrave; possibile specificare interi domini (un dominio 
+    e-mail &egrave; la parte che segue il carattere &quot;@&quot; in un indirizzo 
+    e-mail: prestare attenzione a non includere <em>&quot;www.</em>&quot; o qualsiasi 
+    altro dominio di terzo livello). Se un dominio &egrave; inserito nella blacklist, 
+    non sar&agrave; mai inviato alcun messaggio ad alcun indirizzo e-mail appartenente 
+    a quel dominio.</li>
+</ul>
+<p class="item">Le voci possono essere inserite in modalit&agrave; &quot;testo 
+  libero&quot;; ogni riga dovr&agrave; contenere un indirizzo (o un dominio, a 
+  seconda della lista in cui si sta digitando) e nessun carattere extra: non &egrave; 
+  possibile usare caratteri jolly. Si pu&ograve; copiare / incollare dagli appunti, 
+  cos&igrave; da poter manipolare le blacklist in altri software; oppure premere 
+  il pulsante <span class="itemelement">Modifica con il Blocco Note </span> per 
+  aprire la lista nell'editor di testo di Windows (in questo caso l'esecuzione 
+  del programma si arresta temporaneamente finch&eacute; il Blocco Note non viene 
+  chiuso; le eventuali modifiche vengono conservate).</p>
+<form>
+  <p class="item">Ecco un esempio di una lista <span class="itemelement">Indirizzi</span> 
+    valida:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">ed una lista <span class="itemelement">Domini</span> valida:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>La lista che segue non &egrave; 
+    corretta </strong></font>perch&eacute; include caratteri jolly (<em>&quot;*</em>&quot;) 
+    e un dominio di terzo livello (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p><span class="item">Le blacklist hanno un limite nelle dimensioni, e non sono progettate per sostituire una corretta gestione delle cancellazioni. Come regola generale, dovrebbero essere usate in situazioni di emergenza o comunque speciali (ad esempio quando un utente richiede di non ricevere pi&ugrave; messaggi, neppure in caso di reiscrizione; oppure se si vuole evitare che i propri concorrenti si iscrivano alle liste).</span> </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*La blacklist dei domini &egrave; disponibile solo nell'edizione 
+  Pro</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Blacklist</p>
+<p class="item">A <span class="itemelement">blacklist</span> is a filter that 
+  prevents certain e-mail addresses or domains from receiving mails, independently 
+  from their <a href="sendblaster_lists_managing.htm">subscription/activation 
+  state</a>.</p>
+<p class="item">When you send a message to a given list, before each mail is actually 
+  sent, Sendblaster checks whether the recipent's address or domain is included 
+  in the blacklist: if it is, the mail is skipped (an <em>&quot;&lt;address&gt;: 
+  blacklisted</em>&quot; message will be shown in the log panel).</p>
+<p class="item">Sendblaster supports two different blacklists:</p>
+<ul>
+  <li class="item"><span class="itemelement">Addresses</span> blacklist: enter 
+    here the e-mail addresses you don't want any messages are ever sent to.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Domains</span> blacklist*: instead 
+    of single addresses, you can specify whole domains (a mail domain is the part 
+    that comes after the &quot;@&quot; sign in an e-mail address: be careful not 
+    to include <em>&quot;www.</em>&quot; or any other third level domain name). 
+    When a domain is blacklisted, no address belonging to that domain will ever 
+    be sent a message.</li>
+</ul>
+<p class="item">You can enter items as free text; each row must contain one address 
+  / domain (and no extra characters: you can't use wildcards). You can copy to 
+  / paste from the clipboard, in order to manipulate blacklists with third party 
+  software; or press <span class="itemelement">Edit with Notepad</span> button 
+  to open a blacklist with Windows' built-in text editor (program execution stops 
+  until you finish editing and close Notepad).</p>
+<form>
+  <p class="item">Here is an example of a valid <span class="itemelement">addresses</span> 
+    blacklist:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">and a valid <span class="itemelement">domains</span> blacklist:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>The following blacklist is wrong</strong></font> 
+    because it includes wildcards (<em>&quot;*</em>&quot;) and third level domain 
+    names (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p class="item">Please note thar blacklists have a size limit, and are not intended as a substitute for &quot;proper&quot; unsubscriptions tasks. As a general rule, they should be used for &quot;emergency&quot; or special tasks only (i.e. when someone explicitly asks not to receive any message from you anymore, not even after a subscription; or when you want to make sure your competitors are not receiving newsletters from you).</p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Only available in Pro Edition</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

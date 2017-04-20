@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Spravovat vrácené zprávy</p>
+<p class="item">Vrácená zpráva je ta, která nikdy nedorazí do schránky
+adresáta a je poslána zp&#283;t (angl. bounced) odesílateli spolu s chybovou
+hláškou, která oznamuje odesílateli, že zpráva nebyla nikdy úsp&#283;šn&#283;
+doru&#269;ena. Typicky se to stává, když pro rozesílání používáte
+servery SMTP: pokud n&#283;která adresa neexistuje, server SMTP (který o tom
+nem&#367;že nic v&#283;d&#283;t) ji p&#345;esto p&#345;ijme, ale potom se zpráva
+vrátí.</p>
+<p class="item">SendBlaster rozlišuje dva hlavní druhy vracení zpráv:</p>
+<ul>
+  <li class="item">&quot;Tvrdé vracení&quot;: zprávu nebylo možné doru&#269;it
+    kv&#367;li trvalé chyb&#283; (tedy adresa neexistuje)</li>
+  <li class="item">&quot;M&#283;kké vracení&quot;: n&#283;který do&#269;asný
+    stav znemož&#328;uje doru&#269;ení zprávy (nap&#345;. e-mailový server
+    adresáta je do&#269;asn&#283; zaneprázdn&#283;ný)</li>
+</ul>
+<p class="item">SendBlaster umí automaticky rozpoznat v&#283;tšinu vrácených
+e-mail&#367; a v seznamu odhlásit nebo smazat adresy, na které byly poslány.</p>
+<p class="item">Vrácené zprávy se vrátí na Adresu odesílatele pro daný
+projekt rozesílání. Tato nesmí být stejná jako ta, která se používá
+pro p&#345;ihlášení a odhlášení (viz <span class="itemlink"><a class="itemelement" href="file:///C:/Program%20Files/SendBlaster/rel2/ide/lang/CZ/help/sendblaster_lists_managing.htm">Spravovat
+p&#345;ihlášení</a></span>). Proto je t&#345;eba informovat program o tom,
+která adresa se má kontrolovat.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Kterou
+      adresu mám zadat?</strong></font></p>
+      <p>M&#283;jte na pam&#283;ti, že vrácené e-maily se vrací Adrese odesílatele,
+      nikoli adrese, kterou používáte pro p&#345;ihlášení. &#344;ekn&#283;me,
+      že jste zvolili &quot;prishlaseni@mujserver.com&quot; jako svou adresu
+      pro správu adres u Seznamu 1, a pozd&#283;ji rozesíláte z adresy &quot;buletin@mujserver.com&quot;.
+      Vrácené zprávy budou tedy chodit adrese &quot;buletin@mujserver.com&quot;,
+      a toto je adresa, kterou musíte nastavit v sekci <span class="itemelement">Spravovat
+      vrácené zprávy (bounces)</span> pro Seznam 1.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Kontrolovanou adresu nastavíte zadáním správných parametr&#367;
+pro p&#345;ístup k jejímu ú&#269;tu POP3 tak, jako u kteréhokoli programu
+pro práci s elektronickou poštou: musíte zadat adresu (<span class="itemelement">E-mail</span>),
+pak server pro p&#345;íjem (<span class="itemelement">Server POP3</span>),
+&#269;íslo <span class="itemelement">Portu</span> (pokud není specifikován
+standardn&#283; je port
+  110), uživatelské <span class="itemelement">Jméno</span> pro ú&#269;et a
+jeho <span class="itemelement">heslo</span>. V <span class="itemelement">SSL</span>
+polí&#269;ku povolite SSL komunikaci, pro ur&#269;ité typy pop3 server&#367; (typicky
+pro Gmail server). V poli <span class="itemelement">&#268;asový limit odpojení
+(timeout)</span> m&#367;žete napsat po&#269;et sekund ne&#269;innosti, po kterém
+se spojení ukon&#269;í. Ov&#283;&#345;it parametry m&#367;žete kliknutím na
+tla&#269;ítko <span class="itemelement">Test spojení</span> (žádná zpráva
+se nestáhne).</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tip:</font> Tla&#269;ítko <span class="itemelement">Profily</span>
+  povoluje spravovat vícenásobné nastavení POP3 ú&#269;t&#367;. Informace
+  o&nbsp; ú&#269;tech mohou byt uložené v n&#283;kolika profilech&nbsp; POP3
+  p&#345;i uloženi/na&#269;tení jen za par kliknuti. <font FACE="Times New Roman" size="2">Tento
+  rys je obzvláš&#357; užite&#269;ný p&#345;i poslání pošty ve prosp&#283;ch
+  n&#283;koho jiného..</font>
+  </p>
+</blockquote>
+<p class="item">Pokud je zatržené <span class="itemelement">Nechat zprávy na
+serveru po stažení</span> SendBlaster neodstraní nové zprávy ze serveru p&#345;i
+stažení. Zprávy tak z&#367;stanou dostupné pro budoucí použití. Nové zprávy
+se budou ignorovat.</p>
+<p class="item">Pokud je aktivní <span class="itemelement">Odstranit adresy,
+pro které jsou vrácené zprávy</span>, odstraní se takové adresy z vybraného
+seznamu. Pokud není, pak se jen odhlásí.</p>
+<p class="item">Pokud ozna&#269;íte pole <span class="itemelement">Odstranit zp&#283;tn&#283;
+vracené zprávy</span>, ozna&#269;ené adresy budou vymazané ze seznáamu.
+Pokud zvolíte ne , pak adresy budou ze seznamu odhlášené.&nbsp; </p>
+<p class="item">Aktivací volby <span class="itemelement">Zpracovat &quot;tvrdé&quot;
+vrácené zprávy</span> a volby <span class="itemelement">Zpracovat &quot;m&#283;kké&quot;
+vrácené zprávy</span> m&#367;žete zvolit, které typy (viz výše) vrácených
+zpráv se mají zpracovat; samoz&#345;ejm&#283; pokud není aktivní ani jedna z
+voleb, žádné vrácené zprávy se zpracovávat nebudou.</p>
+<p class="item">Když kliknete na tla&#269;ítko <span class="itemelement">Stahovat</span>
+stáhnou se nové zprávy a vybraný distribu&#269;ní seznam se zaktualizuje (a
+také každý další p&#345;ípadný seznam, který používá stejnou adresu
+pro vrácené zprávy).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Pozor:</font>  pokud je stahování nových
+  zpráv pom&#283;rn&#283; pomalé, m&#367;že to znamenat, že je p&#345;íliš
+  mnoho zpráv na poštovním serveru: vypn&#283;te volbu <span class="itemelement">Nechat
+  zprávy na serveru po stažení</span> a klikn&#283;te na tla&#269;ítko <span class="itemelement">Stahovat</span>
+  (nebo používejte sv&#367;j oblíbený klient pošty). Po stažení se zprávy
+  odstraní ze serveru a další stahování budou rychlejší.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*Novinka, spravovat zp&#283;tn&#283; vracené zprávy m&#367;žete
+v okn&#283;&nbsp; <a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Rozší&#345;ené
+nastavení</a>.</p>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Formatos personalizados de devoluciones</p>
+<p class="item">Los formatos de devoluciones de e-mail han sido dise&ntilde;ados originalmente para ser le&iacute;dos por humanos, no m&aacute;quinas, por ello, no existe un formato est&aacute;ndar o regla general. SendBlaster puede procesar los formatos de devoluciones m&aacute;s comunes, utilizando su base de datos interna, pero usted puede encontrar algunos formatos que no son reconocidos por el software. Si esto sucede, usted puede agregar manualmente un nuevo formato personalizado a la base de datos de formatos de devoluciones de SendBlaster.</p>
+<p class="item">Un formato personalizado se encuentra compuesto por reglas; todas las reglas deben cumplirse para que un mensaje sea considerado como una devoluci&oacute;n (en otras palabras, el operador l&oacute;gico que une las reglas es &quot;Y&quot;). </p>
+<p class="item">Cuando usted desea agregar un <span class="itemelement">Nuevo formato</span>, en primer lugar, debe identificar un patr&oacute;n en el Asunto del mensaje, u otras cabeceras, que identifique en forma un&iacute;voca al mensaje como una devoluci&oacute;n (una <span class="itemelement">Devoluci&oacute;n fuerte</span>, si usted marca esta opci&oacute;n, o una devoluci&oacute;n d&eacute;bil si no marca esta opci&oacute;n). La lista desplegable de cabeceras s&oacute;lo sirve como ejemplo, usted puede agregar en forma manual una cabecera espec&iacute;fica ingresando el nombre de la cabecera en el campo <span class="itemelement">Cabecera</span> y el patr&oacute;n deseado en el campo <span class="itemelement">Valor</span>.</p>
+<p class="item">Un <span class="itemelement">patr&oacute;n</span> generalmente incluye algunos comodines (el s&iacute;mbolo &quot;*&quot; significa &quot;cualquier caracter&quot;): por ejemplo, si usted ingresa &quot;*notificaci&oacute;n*entrega*&quot; como patr&oacute;n en el Asunto, cualquier mensaje que contenga las palabras &quot;notificaci&oacute;n&quot; y &quot;entrega&quot; en su asunto, por ejemplo &quot;notificaci&oacute;n de entrega a xxx@yyy.com&quot; - ser&aacute; considerado como una devoluci&oacute;n, siempre que tambi&eacute;n coincida con el resto de las reglas que usted pueda haber definido. Si usted utiliza &quot;notificaci&oacute;n de entrega&quot;, sin los comodines, s&oacute;lo los mensajes que posean exactamente &quot;notificaci&oacute;n de entrega&quot; como asunto ser&aacute;n procesados como devoluciones - &quot;notificaci&oacute;n para entrega a xxx@yyy.com&quot; no ser&iacute;a considerado como una cabecera v&aacute;lida.</p>
+<p class="item">
+Usted tambi&eacute;n puede ingresar algunas palabras espec&iacute;ficas (separadas por coma) las cu&aacute;les deben encontrarse en el cuerpo del mensaje: si ninguna de estas palabras es encontrada, el mensaje no ser&aacute; considerado como una devoluci&oacute;n. Por ejemplo, la mayor&iacute;a de las devoluciones contienen la palabra &quot;raz&oacute;n&quot; (seguida por un texto que explica la raz&oacute;n por la cual el mensaje no se ha podido entregar). Por favor tenga en cuenta que la lista de palabras no conforma un patr&oacute;n (usted no puede utilizar comodines) y el operador l&oacute;gico en la lista es &quot;O&quot;. </p>
+<p class="item">Si un mensaje determinado, cumple con todas las reglas definidas, ser&aacute; procesado como devoluci&oacute;n, y todas las direcciones de e-mail que se encuentren en el mensaje ser&aacute;n desuscriptas, si tambi&eacute;n se encuentran en la lista para la cu&aacute;l usted est&aacute; descargando devoluciones. Puede desear excluir direcciones de administradores utilizando un patr&oacute;n.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">Un ejemplo </font></strong></p>
+        <p class="item">Supongamos que usted desea procesar mensajes como devoluciones cuando:</p>
+        <p class="item">a) Posean las palabras &quot;entregable&quot; y &quot;mensaje&quot; en su asunto;<br>
+          b) que provengan de direcciones &quot;administrador@...&quot;;<br>
+          c) cuya cabecera Content-Type sea &quot;notificaci&oacute;n de env&iacute;o&quot; o &quot;notificaci&oacute;n de falla de env&iacute;o&quot; y<br>
+          d) contengan la palabra &quot;raz&oacute;n&quot; o &quot;error&quot; en el cuerpo del mensaje</p>
+        <p class="item">y obviamente, usted no desea que el remitente (&quot;administrador@...&quot;) sea desuscripto, ya que la direcci&oacute;n real a desuscribir se encuentra en otro lugar en el cuerpo del mensaje. </p>
+        <p class="item">El formato se configurar&iacute;a de la siguiente forma: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Devoluci&oacute;n fuerte:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(activada)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Patr&oacute;n de asunto:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*entregable*mensaje*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Cabecera:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">De</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Valor:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*administrador*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Cabecera:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Valor:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*notificaci&oacute;n*env&iacute;o*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>El cuerpo del mensaje contiene:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">raz&oacute;n, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Excluir :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">administrador@*</td>
+          </tr>
+        </table>
+    <p>Y aqu&iacute; ofrecemos un formato m&aacute;s simple, el cu&aacute;l procesa todos los mensajes que poseen las palabras &quot;no entregable&quot; en su asunto (y excluyen las direcciones administrador@... y gestor@...):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Devoluci&oacute;n fuerte:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(activada)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Patr&oacute;n de asunto:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*no entregable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Cabecera:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(vac&iacute;a)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Valor:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(vacio)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Cabecera:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(vac&iacute;a)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Valor:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(vacio)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>El cuerpo del mensaje contiene:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(vacio)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Excluir:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">administrador@*, gestor@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

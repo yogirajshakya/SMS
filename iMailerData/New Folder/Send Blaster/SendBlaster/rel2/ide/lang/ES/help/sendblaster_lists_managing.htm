@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Administrar listas</p>
+<p class="item">SendBlaster puede administrar listas de distribuci&oacute;n m&uacute;ltiples*. </p>
+<p class="item">
+La lista actual es seleccionada desde la lista desplegable que se encuentra
+en la parte superior de la pantalla. A su lado, usted puede encontrar 3 botones que le permitir&aacute;n crear
+una nueva lista (bot&oacute;n <span class="itemelement">Nuevo</span><span class="item">),
+renombrar la lista actual (</span><span class="itemelement">Renombrar</span><span class="item">),
+eliminarla (</span><span class="itemelement">Eliminar</span><span class="item">)
+o enviarla a la impresora (</span><span class="itemelement">Imprimir</span><span class="item">)</span><span class="item">.
+Estas operaciones tambi&eacute;n pueden ser ejecutadas realizando click derecho con el mouse sobre la lista desplegable.</span></p>
+<p class="item">
+El &aacute;rea restante de la ventana, se encuentra dedicado a la lista de direcciones de la lista de distribuci&oacute;n seleccionada.</p>
+<p class="item">
+Cada direcci&oacute;n muestra: el estado de suscripci&oacute;n (denotado por los iconos <img src="img/sendblaster_lists_managing_1.gif" width="12" height="12">
+  y <img src="img/sendblaster_lists_managing_2.gif" width="12" height="12">),
+  el estado de activaci&oacute;n (denotado por una caja de verificaci&oacute;n),
+  los contenidos de 15
+  <a href="sendblaster_settings_fields.htm" class="itemlink">campos personalizados</a>
+  (el primero representa siempre a la direcci&oacute;n de e-mail), la presencia de comentarios
+  (marcada por el icono <img src="img/sendblaster_lists_managing_3.gif" width="15" height="10">,
+  presionando sobre la misma, podr&aacute; abrir los comentarios).
+  El orden de las columnas puede ser alterado moviendo las columnas (simplemente
+  arrastre la cabecera de la columna).
+  Las columnas tambi&eacute;n pueden ser redimensionadas.
+</p>
+<p class="item">Durante una <a href="sendblaster_messages_send.htm" class="itemlink">
+operaci&oacute;n de env&iacute;o</a>,
+las direcciones marcadas como no suscriptas o inactivas ser&aacute;n omitidas.
+La operaci&oacute;n de env&iacute;o por ello, s&oacute;lo afectar&aacute; a aquellas
+direcciones que se encuentren suscriptas y activas. Usted puede detectar las direcciones
+que no ser&aacute;n incluidas en las operaciones de env&iacute;o f&aacute;cilmente
+ya que se encuentran mostradas en gris:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img src="img/sendblaster_lists_managing_4.gif" width="156" height="94"></td>
+    <td valign="middle" class="item">&nbsp;</td>
+    <td width="100%" valign="top" class="item">
+    En el ejemplo de la izquierda, una operaci&oacute;n de env&iacute;o s&oacute;lo
+    afectar&aacute; a la primera direcci&oacute;n, ya que es la &uacute;nica
+    que se encuentra suscripta y activa.</td>
+  </tr>
+</table>
+<p class="item">
+La lista de direcciones puede ser ordenada libremente presionando las cabeceras de columnas.
+Arrastrando una o m&aacute;s cabeceras de columnas hacia el &aacute;rea de arriba de la lista (<span class="itemelement">Arrastre una cabecera de columna a este &aacute;rea para agrupar informaci&oacute;n</span>)
+podr&aacute; agrupar direcciones en base a los contenidos de los campos seleccionados.
+La casilla de <span class="itemelement">Total
+  </span> ser&aacute; mostrada, permiti&eacute;ndole (en caso de ser marcada) conocer
+  la cantidad de direcciones incluidas en cada grupo.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>
+    C&oacute;mo filtrar direcciones</strong></font></p>
+      <p>
+      Activando/desactivando uno o m&aacute;s &iacute;tems (sin deber desuscribirlos)
+      usted podr&aacute; enviar un mensaje a un subgrupo de direcciones en la lista.
+      Con esta caracter&iacute;stica usted podr&aacute; crear filtros avanzados que
+      ser&aacute;n aplicados al proceso de env&iacute;o.</p>
+      <p>Por ejemplo, si el campo &quot;Ciudad&quot; es definido, usted puede enviar
+      un mensaje s&oacute;lo a aquellos que habitan en una ciudad espec&iacute;fica,
+      desactivando temporalmente todas las otras direcciones.
+      Si ha definido un campo &quot;Empleo&quot;, podr&aacute; enviar un mensaje s&oacute;lo
+      a un grupo de categor&iacute;as de profesionales (tambi&eacute;n ser&aacute; posible
+      combinar ambos filtros).</p>
+      <p>SendBlaster provee de un poderoso constructor de filtros de informaci&oacute;n, el cual
+      permite a los usuarios refinar sus operaciones de env&iacute;o seleccionando y activando o desactivando
+      los registros que coinciden con algunas condiciones. Este filtro soporta m&uacute;ltiples condiciones
+      y operadores complejos, en forma tal que usted pueda construir visualmente una consulta
+      SQL sin escribir c&oacute;digo. Este constructor de filtros puede ser accedido utilizando el
+      bot&oacute;n de
+      <span class="itemelement">Filtro</span>.</p>
+      <p>
+      Desactivando una o m&aacute;s direcciones usted podr&aacute; crear listas de exclusi&oacute;n
+      (direcciones a las cu&aacute;les no se enviar&aacute; ning&uacute;n mensaje, sin importar
+      si el usuario se suscribe a la lista en forma espont&aacute;nea).</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">
+En la parte superior a la lista de direcciones, usted puede encontrar la barra de herramientas de administraci&oacute;n de listas.
+Puede acceder a estos comandos tambi&eacute;n mediante el men&uacute; contextual que es mostrado
+al realizar click derecho con el mouse sobre la lista.</p>
+<p class="item">
+Puede insertar una nueva direcci&oacute;n (bot&oacute;n <span class="itemelement">Nuevo</span>),
+modificar la direcci&oacute;n seleccionada (<span class="itemelement">Modificar</span>)
+e eliminar una o m&aacute;s direcciones (<span class="itemelement">Eliminar</span>).
+Puede seleccionar m&uacute;ltiples direcciones utilizando el teclado y el mouse:
+presionando sobre una direcci&oacute;n, mientras la tecla <em>Ctrl</em> se encuentra
+presionada, usted puede agregar direcciones a la selecci&oacute;n,
+presionando sobre una direcci&oacute;n mientras la tecla <em>Shift</em> se encuentra
+presionada, agregar&aacute; un grupo de direcciones.</p>
+<p class="item">Con los botones <span class="itemelement">Cortar</span> / <span class="itemelement">Copiar</span>
+  / <span class="itemelement">Pegar</span><span class="item">
+  usted puede eliminar las direcciones o copiarlas hacia/desde el portapapeles (si necesita seleccionar todos los registros, realice click derecho sobre cualquier
+  registro y seleccione </span><span class="itemelement">Seleccionar todo</span><span class="item">).</span></p>
+<p class="item">Los botones <span class="itemelement">Suscribir direcciones seleccionadas</span>
+  y <span class="itemelement">Desuscribir direcciones seleccionadas</span>
+  le permitir&aacute;n administrar manualmente las suscripciones a la lista seleccionada
+  (el suscribir direcciones afectar&aacute; a la fecha de suscripci&oacute;n). Los botones <span class="itemelement">Habilitar direcciones seleccionadas</span>
+  y <span class="itemelement">Deshabilitar direcciones seleccionadas
+  </span>le permitir&aacute;n activar/desactivar una direcci&oacute;n independientemente de su estado de suscripci&oacute;n.</p>
+<p class="item">El bot&oacute;n de <span class="itemelement">Filtro</span> permite a los usuarios filtrar la informaci&oacute;n
+utilizando hasta 5 reglas de filtrado, al igual que lo har&iacute;a una consulta SQL sin las complejidades; tambi&eacute;n permite especificar una
+acci&oacute;n a efectuar sobre los contactos que coincidan con las reglas definidas: <span class="itemelement">Activarlos/Desactivarlos</span>,
+o <span class="itemelement">Suscribirlos/Desuscribirlos</span>,
+tambi&eacute;n puede optar por <span class="itemelement">Desactivar</span>
+los contactos no coincidentes, o simplemente dejarlos como est&aacute;n.
+</p>
+<p class="item">El bot&oacute;n de <span class="itemelement">Historial</span>
+mostrar&aacute; un listado de los mensajes enviados previamente a las direcciones seleccionadas.</p>
+<p class="item">Presionando el bot&oacute;n de <span class="itemelement">Notas</span>
+usted podr&aacute; mostrar una nueva ventana en la cual podr&aacute; insertar texto libre asociado
+con la direcci&oacute;n actual. Las direcciones asociadas con una nota son marcadas con el icono <img src="img/sendblaster_lists_managing_3.gif" width="15" height="10">
+en la &uacute;ltima columna (presionando este icono, tambi&eacute;n puede mostrar la ventana de Notas).</p>
+<p class="item">El bot&oacute;n  <span class="itemelement">Buscar</span>**
+mostrar&aacute; una ventana que le permitir&aacute; buscar un texto en un campo espec&iacute;fico o en m&uacute;ltiples
+campos (incluyendo las notas). Seleccionando <span class="itemelement">
+Coincidir palabra completa</span><span class="item">
+la operaci&oacute;n de b&uacute;squeda mostrar&aacute; todas las direcciones que coincidan
+exactamente con el valor especificado. En caso contrario la operaci&oacute;n de b&uacute;squeda
+mostrar&aacute; todas las direcciones que contienen el valor, aunque no coincidan exactamente
+con el valor especificado. Para moverse en la lista resultante, utilice los botones </span><span class="itemelement">Primero</span><span class="item">, </span><span class="itemelement">Siguiente</span><span class="item">
+  y </span><span class="itemelement">Anterior</span><span class="item"> en la ventana de b&uacute;squeda.</span></p>
+<p class="item">El bot&oacute;n <span class="itemelement">Buscar Duplicados</span>
+mostrar&aacute; una ventana que le permitir&aacute; administrar las direcciones de e-mail duplicadas en las listas.
+Usted puede buscar duplicados en las listas seleccionadas, y quitar o editar los contactos duplicados desde la ventana
+de duplicados. Tenga en cuenta que puede tener direcciones de e-mail duplicadas en sus listas y puede optar
+por enviar e-mails a las direcciones duplicadas en la secci&oacute;n de <a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Configuraciones Avanzadas</a>.
+</p>
+<p class="item">El bot&oacute;n de <span class="itemelement">Cambiar vista</span>
+le permite alternar entre la vista normal y la &quot;Vista de Tarjeta&quot; (y viceversa).
+  En la &quot;Vista de Tarjeta&quot; cada direcci&oacute;n ser&aacute; mostrada como una tarjeta
+  separada con un ancho personalizable. La navegaci&oacute;n es posible utilizando la barra
+  de desplazamiento horizontal.</p>
+<p class="item">
+Usted puede desear utilizar s&oacute;lo un subconjunto de los 15 campos disponibles;
+para ahorrar espacio en la pantalla, presionando el bot&oacute;n <span class="itemelement">
+Campos visibles</span>, puede seleccionar los campos que ser&aacute;n mostrados.</p>
+<hr size="1" noshade>
+<p class="item">*La edici&oacute;n gratuita permite administrar hasta 2 listas de distribuci&oacute;n.<br>
+  **La b&uacute;squeda s&oacute;lo se encuentra disponible en la edici&oacute;n Pro.</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Spravovat p&#345;ihlášení</p>
+<p class="item">SendBlaster umí automaticky spravovat p&#345;ihlášení a odhlášení
+do distribu&#269;ních seznam&#367;. Každý seznam lze sdružit s e-mail
+adresou: když se z n&#283;jaké adresy pošle zprávu se slovem &quot;Subscribe&quot;
+v poli pro p&#345;edm&#283;t, tato adresa se p&#345;idá do seznamu. Pokud je p&#345;edm&#283;t
+naopak &quot;Unsubscribe&quot;, adresa se odhlásí (pokud byla p&#345;ihlášená).
+SendBlaster stahuje nové zprávy z ú&#269;tu POP3, ov&#283;&#345;uje p&#345;edm&#283;t
+a zaktualizuje spojený distribu&#269;ní seznam.</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Poznámka:</font> Standardné linie zprávy
+  (jako &quot;Subscribe&quot; od p&#345;ihlášených a&nbsp; &quot;Unsubscribe&quot;
+  od odhlášených) kde m&#367;žete zm&#283;nit v okn&#283; <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Rozší&#345;ené
+  Nastavení</a>.</p>
+</blockquote>
+<blockquote>
+  <p class="item"><font color="#ff0000">Pozor:</font> Adresa zvolená pro správu
+  adres musí umož&#328;ovat stahování zpráv pomocí protokolu POP3
+  (protokol, který používají standardní poštovní klienti). Není možné
+  používat adresy p&#345;ístupné jen p&#345;es Web (nap&#345;. služby
+  Hotmail).</p>
+</blockquote>
+<p class="item">Za normálních okolností dostane každý seznam vlastní e-mailovou
+adresu. Ovšem je možné p&#345;i&#345;adit jednu adresu více než jednomu
+seznamu. V tomto p&#345;ípad&#283; se p&#345;i aktualizaci seznamu aktualizují
+i všechny další seznamy používající stejnou adresu pro správu. Nap&#345;íklad
+pokud vytvo&#345;íte dva seznamy s názvem &quot;Seznam 1&quot; a &quot;Seznam
+2&quot; a oba jsou napojené na stejnou adresu pro správu, stáhnutí zpráv
+pro aktualizaci &quot;Seznamu 1&quot; zaktualizuje i &quot;Seznam 2&quot;.</p>
+<p class="item">Adresu pro správu u každého seznamu nastavíte zadáním správných
+parametr&#367; pro p&#345;ístup k ú&#269;tu POP3, stejn&#283; jako u programu
+pro e-mail: krom&#283; adresy (<span class="itemelement">e-mail</span>) to
+znamená i to, který (<span class="itemelement">Server POP3</span>) bude dostávat
+poštu, i které uživatelské <span class="itemelement">Jméno</span> a <span class="itemelement">Heslo</span>
+bude server o&#269;ekávat. V poli <span class="itemelement">&#268;asový limit
+odpojení (timeout)</span> m&#367;žete zadávat po&#269;et vte&#345;in ne&#269;innosti,
+po kterém se spojení automaticky ukon&#269;í. Ov&#283;&#345;it parametry m&#367;žete
+kliknutím na tla&#269;ítko <span class="itemelement">Test spojení</span> (žádná
+zpráva se ve skute&#269;nosti nestáhne).</p>
+<p class="item">Za ur&#269;itých nep&#345;edvídatelných okolnosti je t&#345;eba
+aby váš POP3 server stahoval zprávy menší rychlosti; m&#367;žete procvi&#269;it
+s zaškrtnutím okénka <span class="itemelement">Pomalu</span> <font size="1">
+(není žádná cesta zp&#283;t nebo vp&#345;ed, jen zkusíte metodu a zvolíte
+tu která pracuje lépe).</font> </p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tip:</font>
+  Tla&#269;ítko <span class="itemelement">Profily </span>povoluje spravovat n&#283;kolik
+  POP3 nastaveni. <font size="1">Informace o ú&#269;tu m&#367;že být uložena
+  do vícenásobných profil&#367;, tak všichni<font COLOR="#ff0080"> POP3</font>
+  nastavení jsou uložené/na&#269;tené jen za n&#283;kolik klik&#367;. Tento
+  rys je speciáln&#283; užite&#269;ný p&#345;i poslání pošty za n&#283;koho
+  jiného; nebo jen pro rychle uložení profilu který vy m&#367;žete použít
+  pozd&#283;ji v stejném seznamu, nebo n&#283;jakém jiném.</font></p>
+</blockquote>
+<p class="item">Aktivací volby <span class="itemelement">Nechat zprávy na
+serveru po stažení</span> informujete SendBlaster, že má stáhnout nové zprávy,
+aniž by je vymazal ze serveru. Takto z&#367;stanou dostupné pro budoucí použití.
+Nové zprávy se budou ignorovat.</p>
+<p class="item">Ozna&#269;ením <span class="itemelement">Odstranit jen nove p&#345;edplatné
+a stornovat zprávy&nbsp;</span> SendBlaster odstraní jen zprávy které byli
+rozpoznané jako nepotvrzeni nebo stornované; toto je skute&#269;n&#283; užite&#269;ný
+nástroj aby bylo možné odlišit nep&#345;e&#269;tené a ignorované zprávy a
+spravovat tak jen reální e-mail adresy na které jste dostali odpov&#283;&#271;&nbsp;
+nebo byli p&#345;e&#269;tené.</p>
+<p class="item"><span class="itemelement">Aktualizovat všechna pole</span> je
+extrémn&#283; užite&#269;ná volba: když je aktivní, zpracuje se nejen p&#345;edm&#283;t
+ale i t&#283;lo zprávy. Pokud t&#283;lo zprávy obsahuje &#345;ádky s páry <em>název-pole:
+hodnota</em> pak se podle toho bude aktualizovat nejen adresa tohoto kontaktu
+ale i další pole (<a href="#updateallfields">viz text níže</a>).</p>
+<p class="item">Stinná stránka je v tom, že stahování a zpracování zpráv
+se tímto zna&#269;n&#283; zpomalí. Proto v&#345;ele doporu&#269;ujeme, abyste
+použili <span class="itemelement">Aktualizovat všechna pole</span> jen tehdy,
+kdy to opravdu pot&#345;ebujete, což znamená tehdy, kdy váš web generuje p&#345;ihlašovací
+zprávy obsahující nejen adresy ale i další pole.</p>
+<p class="item">Kliknutím na tla&#269;ítko <span class="itemelement">Download
+(Stáhnout)</span> spustíte stahování nových správ a obnovení vybraného
+distribu&#269;ního seznamu (jakož i jiných seznam&#367; používajících
+stejnou adresu pro správu).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Kterou
+      mám používat adresu?</strong></font></p>
+      <p>Doporu&#269;ujeme, abyste používali jiný e-mail pro p&#345;ihlášení/odhlášení
+      u každého distribu&#269;ního seznamu, a to adresu, která se nepoužívá
+      pro žádnou standardní práci s elektronickou poštou. To sníží na
+      minimum riziko, že bude tato adresa dostávat spam (ten se ignoruje, ale
+      jeho stahování stojí &#269;as) a velmi usnadní správu seznam&#367;. V
+      prost&#345;edí tohoto typu není nutné aktivovat volbu <span class="itemelement">Nechat
+      zprávy na serveru po stažení</span>, protože žádné jiné programy
+      nebudou muset tyto e-maily &#269;íst. To urychlí stahování zpráv a p&#345;edevším
+      sníží na minimum místo na serveru, který ú&#269;et zabírá. N&#283;které
+      poštovní servery mají v tomto sm&#283;ru omezení a m&#367;žete p&#345;icházet,
+      pokud dojde místo, o n&#283;které p&#345;ihlašovací zprávy (nebudou
+      se doru&#269;ovat, dokud se n&#283;jaké místo neuvolní).</p>
+      <p>Je též možné, i když nedoporu&#269;ené, používat n&#283;kterou
+      standardní adresu, kterou používáte i v jiném programu pro e-mail pro
+      p&#345;íjem a odesílání zpráv. V tomto p&#345;ípad&#283; je naprostá
+      nutnost povolit volbu <span class="itemelement">Nechat zprávy na serveru
+      po stažení</span>. (Jinak jsou zprávy smazané po stažení ze
+      serveru). Ješt&#283; d&#367;ležit&#283;jší je to, aby i Váš program
+      pro normální prací s poštou na tomto ú&#269;tu m&#283;l také
+      zapnutou volbu pro nechávání zpráv na serveru. Bylo by také vhodné
+      aby váš poštovní klient umožnil toto nastaveni aby SedBlaster m&#283;l
+      možnost jeho kontroly(jako p&#345;íklad ov&#283;&#345;te nastaveni v
+      Outlook Express v panelu Nástroje/Možnosti a tam zaškrtn&#283;te poli&#269;ko
+      Ponechat kopie zprav na serveru)</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#ff0000">Upozorn&#283;ní:</font> pokud je stahování
+  nových zpráv pomalé, m&#367;že to znamenat, že se na poštovním serveru
+  nashromáždilo p&#345;íliš mnoho zpráv: vypn&#283;te pak volbu <span class="itemelement">Nechat
+  zprávy na serveru po stažení</span> a kliknete na tla&#269;ítko <span class="itemelement">Stahování</span>
+  (nebo stahujte ve svém oblíbeném programu pro práci s poštou). Po stáhnutí
+  se zprávy odstraní ze serveru a budoucí stahování bude rychlejší.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="updateallfields"><font color="#009900">Jak
+      funguje funkce &quot;Aktualizovat všechna pole&quot;</font></a></strong></font></p>
+      <p>Zatímco b&#283;hem normálního zpracování SendBlaster stahuje a
+      zpracuje jen p&#345;edm&#283;ty zpráv, volba <span class="itemelement">Aktualizovat
+      všechna pole</span> umožní, aby SendBlaster stahoval a zpracoval celá
+      t&#283;la zpráv, hledal &#345;ádky ve formátu <em>název pole: hodnota</em>
+      v t&#283;le zprávy a aktualizoval pole podle toho.</p>
+      <p>&#344;ekn&#283;me, že máme dv&#283; pole s názvy &quot;P&#345;íjmení&quot;
+      a &quot;M&#283;sto&quot;; pokud dostanete zprávu z adresy &quot;aaa@aaa.com&quot;
+      s p&#345;edm&#283;tem &quot;Subscribe&quot; a následujícím t&#283;lem
+      (m&#283;jte na pam&#283;ti, že každý &#345;ádek obsahuje jiné pole):</p>
+      <p>P&#345;íjmení: Smith<br>
+      M&#283;sto: New York</p>
+      <p>p&#345;idá se do seznamu nový kontakt &quot;aaa@aaa.com&quot; s
+      hodnotou &quot;Smith&quot; pro pole &quot;P&#345;íjmení&quot; a s
+      hodnotou &quot;New York&quot; pro pole &quot;City&quot;.</p>
+      <p>N&#283;které další formáty s použitím stejných <span class="itemelement">Zna&#269;ek</span>
+      jako u <a href="file:///C:/Program%20Files/SendBlaster/rel2/ide/lang/CZ/help/sendblaster_messages_compose.htm">psaní
+      zpráv</a> jsou také povolené: <em>#zna&#269;ka#: hodnota</em> a <em>#&#269;íslo
+      pole#: hodnota</em> jako v následujících p&#345;íkladech:</p>
+      <p>#p&#345;íjmení#: Smith<br>
+      #m&#283;sto#: New York</p>
+      <p>a</p>
+      <p>#2#: Smith<br>
+      #3# : New York</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

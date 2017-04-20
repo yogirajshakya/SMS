@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" class="body" marginheight="8"
+ marginwidth="8">
+<p class="title"> R&uuml;ckl&auml;ufer verwalten<br>
+</p>
+<p class="item">Eine R&uuml;ckl&auml;ufer-Email (oder "<em>Bounce-Back"</em>)
+ist eine Email, die nie das Postfach des Empf&auml;ngers erreicht hat
+und an den Absender, mit einer Fehlermeldung, zur&uuml;ckgesendet
+wurde, die dem Absender mitteilt, dass die Nachricht niemals
+erfolgreich zugestellt werden konnte. Dies kann vor allem beim Versand &uuml;ber einen SMTP Server passieren: Wenn eine
+Adresse nicht existiert, werden SMTP Server (welche keine
+M&ouml;glichkeit haben sie zu &uuml;berpr&uuml;fen) sie dennoch
+akzeptieren aber sp&auml;ter zur&uuml;cksenden.</p>
+<p class="item">Es gibt zwei Hauptkategorien von R&uuml;ckl&auml;ufern:</p>
+<ul>
+  <li class="item">"Harte" R&uuml;ckl&auml;ufer: Die Email konnte
+aufgrund eines permanenten Fehlers nicht zugestellt werden (z.B. eine
+nicht existierende Adresse).</li>
+  <li class="item">"Weiche" R&uuml;ckl&auml;ufer: Die Zustellung einer
+Email ist aufgrund eines tempor&auml;ren Problems gescheitert (z.B. der
+Mail Server des Empf&auml;ngers ist zu besch&auml;ftigt).</li>
+</ul>
+<p class="item">SendBlaster kann die meisten R&uuml;ckl&auml;ufer
+automatisch erkennen und die zugeh&ouml;rigen Email-Adressen von der
+ausgew&auml;hlten Liste abmelden oder l&ouml;schen.</p>
+<p class="item">Abgewiesene Nachrichten werden an die Absender-Adresse
+des Mailings zur&uuml;ckgeschickt, welche nicht die selbe Adresse wie
+f&uuml;r Anmeldungen und L&ouml;schungen sein muss (siehe <span
+ class="itemlink"><a href="sendblaster_lists_subscribe.htm"
+ class="itemelement">Anmeldungen verwalten</a></span>). Deshalb ist es
+n&ouml;tig dem Programm mitzuteilen welche Adressen &uuml;berpr&uuml;ft
+werden sollen.</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong>Welche Adresse soll ich eingeben?</strong></font></p>
+      <p>Denken Sie daran, dass abgewiesene Email an die
+Absender-Adresse des Mailings zur&uuml;ckgeschickt wird, nicht an die
+Adresse die f&uuml;r Anmeldungen verwendet wird. Angenommen sie
+verwenden "anmeldung@meineseite.de" als Verwaltungsadresse f&uuml;r
+Anmeldungen der Liste 1 und senden sp&auml;ter Mailings von der Adresse
+"nachrichten@meineseite.de". R&uuml;ckl&auml;ufer werden deshalb an
+"nachrichten@meineseite.de" gesendet und diese Adresse m&uuml;ssen Sie
+im Abschnitt <span class="itemelement">R&uuml;ckl&auml;ufer verwalten </span>f&uuml;r
+Liste 1 angeben.</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="item">Die zu &uuml;berpr&uuml;fende Adresse wird eingestellt
+indem Sie die korrekten Einstellungen f&uuml;r deren POP3 Konto
+angeben, genau wie in einem Email-Client: Neben der Adresse (<span
+ class="itemelement">Email</span>) m&uuml;ssen Sie den empfangenden
+Server (<span class="itemelement">POP3 Server</span>) angeben, welcher,
+falls ben&ouml;tigt, auch eine Port-Nummer im Format "Server:Port",
+einen <span class="itemelement">Benutzer</span> und ein <span
+ class="itemelement">Passwort</span> beinhalten kann. Die <span
+ class="itemelement">SSL</span>-Checkbox erm&ouml;glicht die
+SSL-Kommunikation welche von einigen POP3 Servern gefordert ist (ein
+typisches Beispiel sind die GMail Server). Im Feld <span
+ class="itemelement">Timeout</span> k&ouml;nnen Sie die Anzahl an
+Sekunden ohne Aktivit&auml;t eingeben nach denen die Verbindung
+getrennt wird. Um die Einstellungen zu &uuml;berpr&uuml;fen klicken Sie
+einfach den <span class="itemelement">Verbindungstest</span>-Button
+(es werden dabei keine Nachrichten heruntergeladen).</p>
+<p class="item">Wenn <span class="itemelement">Eine Kopie der
+Nachrichten auf dem Server belassen</span> aktiviert ist, wird
+SendBlaster die neuen Nachrichten herunterladen ohne sie vom Server zu
+l&ouml;schen. Die Nachrichten bleiben f&uuml;r einen sp&auml;teren
+Gebrauch verf&uuml;gbar. Neue Nachrichten werden ignoriert.</p>
+<p class="item">Wenn <span class="itemelement">Zur&uuml;ckgekommene
+Adressen l&ouml;schen </span>aktiviert ist, werden
+zur&uuml;ckgewiesene Adressen
+aus der ausgew&auml;hlten Liste gel&ouml;scht. Wenn nicht, werden sie
+nur von der Liste abgemeldet.</p>
+<p class="item">&Uuml;ber die Optionen <span class="itemelement">"Harte"
+R&uuml;ckl&auml;ufer verarbeiten</span> und <span class="itemelement">"Weiche"
+R&uuml;ckl&auml;ufer verarbeiten </span> k&ouml;nnen Sie w&auml;hlen,
+welche Typen von R&uuml;ckl&auml;ufern (siehe oben) verarbeitet werden
+sollen. Ist keine der beiden Optionen gew&auml;hlt, so werden
+nat&uuml;rlich keine R&uuml;ckl&auml;ufer verarbeitet.</p>
+<p class="item">Wenn Sie den <span class="itemelement">Herunterladen</span>-Button
+klicken, werden neue Nachrichten heruntergeladen und die gew&auml;hlte
+Liste aktualisiert (genauso wie alle anderen Listen welche die selbe
+Email-Adresse f&uuml;r R&uuml;ckl&auml;ufer verwenden).</p>
+<blockquote>
+  <p class="item"><font color="#ff0000">Warnung:</font> Wenn Ihnen das
+Herunterladen neuer Nachrichten sehr langsam erscheint, kann dies ein
+Zeichen daf&uuml;r sein, dass auf dem Server sehr viele Nachrichten
+aufgelaufen sind: Deaktivieren Sie die Option <span class="itemelement">Eine
+Kopie der Nachrichten auf dem Server belassen </span>und klicken Sie
+auf <span class="itemelement">Herunterladen</span> (oder laden Sie die
+Nachrichten mit Ihrem Standard Email-Client herunter). Wurden die
+Nachrichten einmal heruntergeladen werden sie vom Server gel&ouml;scht
+und die folgenden Nachrichten k&ouml;nnen schneller heruntergeladen
+werden.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+</body>
+</html>

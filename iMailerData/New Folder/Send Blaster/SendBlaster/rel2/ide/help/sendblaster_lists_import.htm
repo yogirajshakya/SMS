@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Importing</p>
+<p class="item">You can import data from an external source into the currently
+   selected list. There are four accepted sources:</p>
+<ul>
+  <li class="item"> You can import data from a formatted text file (.csv, .txt), 
+    residing on the local machine or the local network, by selecting <span class="itemelement">Import 
+    form external text file</span>. &#8220;Formatted text&#8221; is an exchange 
+    format widely used by spreadsheet and database software: most software that 
+    falls into this category is able to export data in this format.<br>
+    &nbsp; </li>
+  <li class="item">You can import data from a web site by choosing<span class="itemelement"> 
+    Import from a web site via http://</span>. The process is very similar to 
+    the formatted text method, besides the fact that the file to be imported does 
+    not reside on the local machine or the local network but it is reachable through 
+    the HTTP protocol. The data to be imported can also be dynamically generated 
+    by a script (for example ASP or PHP). This method will allow you to import 
+    the contents of an on-line database that features an exporting script. The 
+    web link will be specified as the data source.<br>
+    &nbsp; </li>
+  <li class="item">You can import data from the Windows Clipboard (after having 
+    pasted data from another software), by selecting <span class="itemelement">Import 
+    from clipboard</span>.<br>
+    &nbsp; </li>
+  <li class="item">You can import data from Outlook Express Address Book (aka 
+    Windows Address Book), by selecting <span class="itemelement">Import from 
+    Outlook Express</span>.</li>
+</ul>
+<p class="item">The data loaded from external sources can be used for one of the 
+  following operations:</p>
+<ul>
+  <li class="item">It can be added to the selected list by choosing the <span class="itemelement">Add 
+    to the list and subscribe new addresses</span>.<br>
+    &nbsp; </li>
+  <li class="item">It can be removed from the selected list by choosing the <span class="itemelement">Remove 
+    new addresses from the list</span> option. All the addresses included in the 
+    data source will be removed, if present.<br>
+    &nbsp; </li>
+  <li class="item">It can be unsubscribed from the list (without removing them 
+    and therefore preserving the data) by choosing the <span class="itemelement">Unsubscribe 
+    new addresses</span> option. This operation is similar to the one described 
+    above, but the addresses are not removed form the list, they simply get marked 
+    as unsubscribed. This method will let you to maintain the data in the list 
+    while avoiding including the addresses in mailing operations.</li>
+</ul>
+<p class="item">After having selected the list, the data source and the operation, 
+  click on the <span class="itemelement">Import</span> button. A wizard-like window 
+  will be shown enabling you to specify a few options needed to complete the importing 
+  operation:</p>
+<ul>
+  <li class="item"> The <span class="itemelement">Import file path</span>, or 
+    the <span class="itemelement">Import file URL</span> in the case of a web 
+    import (importing form the Clipboard or from Outlook Express do not require 
+    any path).<br>
+    &nbsp; </li>
+  <li class="item">The data <span class="itemelement">Format</span> (not needed 
+    to import from Outlook Express): if you choose <span class="itemelement">Delimited</span> 
+    you&#8217;ll also need to specify the <span class="itemelement">Field delimiter</span> 
+    and whether the <span class="itemelement">First row contains field names</span>. 
+    By choosing the <span class="itemelement">Free</span> format only e-mail addresses 
+    will be imported (automatically detected) and data format specification won&#8217;t 
+    be needed.<br>
+    &nbsp; </li>
+  <li class="item">If you&#8217;re performing a typical importing operation (meaning 
+    data adding, or the <span class="itemelement">Add to list and subscribe new 
+    addresses</span> operation), two extra options will be available to indicate 
+    the action to take when an external address (present in the data to be imported) 
+    is already included in the destination list: by choosing the <span class="itemelement">Don&#8217;t 
+    add addresses when duplicated or already present in the list</span> option, 
+    these addresses will be ignored (otherwise they would be added creating doubles); 
+    by choosing the <span class="itemelement">Subscribe addresses already present 
+    in list </span>option, if an address is already in the destination list, but 
+    not subscribed (see <a href="sendblaster_lists_managing.htm" class="itemelement">Manage 
+    lists</a>), new data won&#8217;t be imported but the address will be marked 
+    as subscribed.<br>
+    &nbsp; </li>
+  <li class="item">In the following step you will be finally asked to set the 
+    correspondence between the external data source fields and the SendBlaster 
+    fields and, by clicking on the <span class="itemelement">Next</span> button, 
+    the importing operation will start.</li>
+</ul>
+<p><span class="item"><a href="sendblaster_snapshots.htm" class="itemelement">Snapshots</a> are particularly handy when importing: if you successfully imported a file, take a snapshot of your configuration in order to save the settings you used; you will be able to reuse them later with just a couple of clicks.</span></p>
+<p class="item"><strong><font color="#FF0000">Warning:</font></strong> the correct 
+  indication of the field in the external data source containing e-mail addresses 
+  is particularly important because:</p>
+<ol>
+  <li class="item"><strong>all the external records that do not contain, in the 
+    selected field, a formally valid e-mail address will be ignored</strong>. 
+    Therefore if the wrong field is specified, no record will include a valid 
+    e-mail address and all of the external data will be ignored.</li>
+  <li class="item">the comparison operation between the external data and the 
+    data in the list, to verify if an address is already included, is actually 
+    performed by comparing the e-mail address found in the specified field.</li>
+</ol>
+</body>
+</html>

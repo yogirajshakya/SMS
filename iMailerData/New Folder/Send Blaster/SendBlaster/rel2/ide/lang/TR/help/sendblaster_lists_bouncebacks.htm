@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> Bounce-backs (geri d&ouml;nen mesajlar) y&ouml;netimi</p>
+<p class="item">Bir bounced mesaj (veya bounce-back / geri d&ouml;nen mesaj), al&#305;c&#305;n&#305;n gelen posta kutusuna hi&ccedil; ula&#351;mayan ve g&ouml;ndericiye mesaj&#305;n ula&#351;mad&#305;&#287;&#305;n&#305; belirten i&ccedil;erisinde ilgili hata mesaj&#305; ile birlikte geri g&ouml;nderilen bir mesajd&#305;r. Genel olarak, bu durum mesajlar&#305;n&#305;z&#305; g&ouml;ndermek i&ccedil;in SMTP sunucular&#305; kulland&#305;&#287;&#305;n&#305;zda ger&ccedil;ekle&#351;ir: e&#287;er bir e-posta adresi mevcut de&#287;ilse, SMTP sunucusu bunu kab&uuml;l eder (bilmesi m&uuml;mk&uuml;n olmad&#305;&#287;&#305;ndan) fakat daha sonra mesaj geri g&ouml;nderilir.</p>
+<p class="item">Temelde iki &ccedil;e&#351;it bounce-back mesaj t&uuml;r&uuml; vard&#305;r:</p>
+<ul>
+  <li class="item">Sert bounces: kal&#305;c&#305; bir hata nedeniyle e-posta teslim edilemiyordur (&ouml;rne&#287;in olmayan e-posta adresleri)</li>
+  <li class="item">Yumu&#351;ak bounces: mesaj&#305;n teslim edilememesine neden olan ge&ccedil;ici bir durum mevcuttur (&ouml;rne&#287;in al&#305;c&#305;n&#305;n mesaj sunucusu ge&ccedil;ici olarak me&#351;g&uuml;ld&uuml;r)</li>
+</ul>
+<p class="item">SendBlaster otomatik olarak bir &ccedil;ok bounced mesajlar&#305; tan&#305;yabilir ve bounce eden adresleri se&ccedil;ili liste i&ccedil;erisinden silebilir ve &uuml;yelikten &ccedil;&#305;kartabilir.</p>
+<p class="item">Bounced mesajlar, mesaj&#305;n g&ouml;nderen adrese geri g&ouml;nderilirler ve bu adres &uuml;yelikler veya &uuml;yeliklerden &ccedil;&#305;kmak i&ccedil;in kullan&#305;lan adres olmayabilir (<a href="sendblaster_lists_managing.htm" class="itemelement">&Uuml;yelikleri 
+  y&ouml;net</a> b&ouml;l&uuml;m&uuml;ne bak&#305;n&#305;z). Bu nedenle programa hangi adresleri kontrol etmesi gerekti&#287;i s&ouml;ylenmelidir.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hangi adresi girmeliyim?</strong></font></p>
+      <p>E-posta bouncelar&#305; (geri d&ouml;nen mesajlar) mesaj&#305; g&ouml;nderen adrese geri g&ouml;nderilirler, &uuml;yelik i&ccedil;in kullan&#305;lan adrese de&#287;il. &Ouml;rne&#287;in  &quot;subscriptions@mysite.com&quot; adresini Liste 1 &uuml;yeliklerini y&ouml;netmek i&ccedil;in kulland&#305;&#287;&#305;n&#305;z&#305; ve daha sonra mesajlar&#305;n&#305;z&#305; &quot;newsletter@mysite.com&quot; adresinden g&ouml;nderdi&#287;inizi varsayal&#305;m. Bounce-back mesajlar dolay&#305;s&#305;yla &quot;newsletter@mysite.com&quot; adresine g&ouml;nderilecektir ve bu adres Liste 1 i&ccedil;in<span class="itemelement"> Bounce-backs y&ouml;net</span> i&ccedil;erisinde ayarlayaca&#287;&#305;n&#305;z adres olacakt&#305;r. </p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Kontrol edilecek adres, herhangi bir e-posta istemcisinde oldu&#287;u gibi ilgili adresin POP3 hesab&#305; girilerek ayarlan&#305;r: adrese  (<span class="itemelement">E-posta) </span>ek olarak,<span class="itemelement"> Kullan&#305;c&#305; ad&#305;</span> ve <span class="itemelement">&#350;ifre</span> ile birlikte alan sunucuyu (<span class="itemelement">POP3 Sunucusu</span>) ve gerekli ise sunucunun port adresini &quot;sunucu:port&quot; bi&ccedil;iminde belirtmeniz gerekmektedir.<span class="itemelement"> SSL</span> onay kutusu baz&#305; pop3 sunucular&#305; taraf&#305;ndan (&ouml;rne&#287;in Gmail gibi) ihtiya&ccedil; duyulan SSL ileti&#351;im &ouml;zelli&#287;ini etkinle&#351;tirir. <span class="itemelement">Zaman a&#351;&#305;m&#305;</span> de&#287;eri ba&#287;lant&#305;n&#305;n ne kadar s&uuml;re sonra herhangi bir aktivite yoksa kapat&#305;laca&#287;&#305;n&#305; belirtir. Parametreleri kontrol etmek i&ccedil;in <span class="itemelement">Ba&#287;lant&#305; testi</span> d&uuml;&#287;mesine t&#305;klay&#305;n (herhangi bir mesaj indirilmeyecektir).</p>
+<p class="item"><font color="#FF0000">			Tip:</font> <span class="itemelement">Profiller</span> d&uuml;&#287;mesi birden &ccedil;ok POP3 ayar&#305;n&#305; y&ouml;netmenize olanak sa&#287;lar. Birden &ccedil;ok profil i&ccedil;in hesap bilgileri kay&#305;t edilebilir ve bu nedenle t&uuml;m POP3 ayarlar&#305; bir ka&ccedil; fare t&#305;klamas&#305; ile kaydedilebilir veya geri y&uuml;klenebilir. Bu &ouml;zellik &ouml;zellikle ba&#351;kas&#305; ad&#305;na mesaj g&ouml;nderirken olduk&ccedil;a faydal&#305;d&#305;r.</p>
+<p class="item">E&#287;er  <span class="itemelement">Bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak</span> se&ccedil;ene&#287;i se&ccedil;ilirse, SendBlaster yeni mesajlar&#305; sunucu &uuml;zerinden silmeden indirecektir. Mesajlar&#305;n daha sonra ileriki bir tarihte kullan&#305;m&#305; m&uuml;mk&uuml;n olacakt&#305;r. Yeni mesajlar yok say&#305;lacakt&#305;r..</p>
+<p class="item"> E&#287;er <span class="itemelement">Geri d&ouml;nen (bounced-back) mesajlar&#305; sil </span>se&ccedil;en&#287;i  
+  se&ccedil;ilirse, geri d&ouml;nen adresler se&ccedil;ili listeden silineceklerdir. E&#287;er silinmezlerse sadece liste &uuml;yeli&#287;inden &ccedil;&#305;kart&#305;lacaklard&#305;r.</p>
+<p class="item"><span class="itemelement">Sert bounced mesajlar&#305; i&#351;le</span> 
+  ve <span class="itemelement">Yumu&#351;ak bounced mesajlar&#305; i&#351;le</span><span class="itemelement"> se&ccedil;eneklerini </span> i&#351;aretleyerek, hangi t&uuml;r bounced mesajlar&#305;n i&#351;lenebilece&#287;ini se&ccedil;ebilirsiniz (yukar&#305;daki a&ccedil;&#305;klamlara bak&#305;n); do&#287;al olarak e&#287;er her iki se&ccedil;enekde se&ccedil;ilmez ise hi&ccedil; bir bonuced mesaj i&#351;lenmez.</p>
+<p class="item"><span class="itemelement">&#304;ndir</span> d&uuml;&#287;mesi &uuml;zerine t&#305;kland&#305;ktan sonra, yeni mesajlar indirilecek ve se&ccedil;ili da&#287;&#305;t&#305;m listeleri g&uuml;ncellenecektir (ayn&#305; zamanda ayn&#305; bounced-back e-posta adresi kullanan di&#287;er listelerde g&uuml;ncellenecektir).</p>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Uyar&#305;:</font> e&#287;er yeni mesajlar&#305;n indirilmesi &ccedil;ok yava&#351; gibiyse, bu e-posta sunucusu &uuml;zerinde &ccedil;ok fazla say&#305;da mesaj&#305;n birikti&#287;i anlam&#305;na gelebilir: <span class="itemelement">Bir kopyas&#305;n&#305; sunucu &uuml;zerinde b&#305;rak</span> se&ccedil;ene&#287;ini etkisizle&#351;tirin ve  <span class="itemelement">&#304;ndir</span> d&uuml;&#287;mesi &uuml;zerine t&#305;klay&#305;n (veya standartt e-posta istemcinizi &ccedil;al&#305;&#351;t&#305;r&#305;n). Mesajlar indirildikten sonra sunucu &uuml;zerinden silineceklerdir ve takip eden mesaj indirmeleri daha h&#305;zl&#305; olacakt&#305;r.</p>
+</blockquote>
+<p class="item">&nbsp;</p>
+<hr size="1" noshade>
+<p class="item">*Yeni geri d&ouml;nen (bounce-back) mesaj bi&ccedil;imleri <a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Geli&#351;mi&#351; Ayarlar</a> ekran&#305; i&ccedil;erisinden y&ouml;netilebilir.</p>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title"> H&aring;ndtere abonnement</p>
+<p class="item">SendBlaster kan automatisk h&aring;ntere abonnering (og av-abonnering) 
+  til distribusjonslister. Hver liste kan assosieres med en e-postadresse: n&aring;r 
+  en meldign med &quot;Subscribe&quot; i Emne-feltet er sendt til denne e-postadressen
+  blir avsenderen lagt til listen. Hvis Emnet er &quot;Unsubscribe&quot; 
+  isteden vil avsenderen bli slettet (dersom han/hun stod p&aring; listen). 
+  SendBlaster laster ned meldinger fra POP3-kontoen, verifiserer emnefeltet
+  og oppdaterer den relaterte distribusjonslisten.</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Merk</font>
+    Default emnelinjer (&quot;Subscribe&quot; for abonnering og &quot;Unsubscribe&quot;
+    for kansellering) kan endres i 
+    <a href="sendblaster_settings_advancedsettings.htm" class="itemelement">Advanserte Innstillinger</a>-
+    vinduet.</p>
+</blockquote>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Advarsel:</font> 
+    Adressen som er valgt til administrasjon av abonnement m&aring; tillate nedlasting av POP3-meldinger
+    (samme protokoll som brukes av standard e-postklienter). Det er ikke mulig &aring; bruke rene
+    web-mailadresser (for eksempel Hotmail-tjenester).</p>
+</blockquote>
+<p class="item">Vanligvis vil hver liste f&aring; tildelt en dedikert e-postadresse. 
+  Men det er mulig &aring; tildele samme e-postadresse til mer enn en liste. 
+  I s&aring;fall, n&aring;r en liste er oppdatert, vil alle andre lister som benytter samme
+  abonner/av-abonner adresse bli oppdatert. For eksempel, hvis du lager 2 lister kalt  &quot;Liste 
+  1&quot; og &quot;Liste 2&quot; og de er begge linket til samme administrasjons e-postadresse, 
+  vil &quot;Liste 2&quot; ogs&aring; bli oppdatert n&aring;r meldinger som oppdaterer &quot;Liste 1&quot; blir lastet ned.</p>
+<p class="item">Hver listes administrasjonsadresse settes ved &aring; skrive inn korrekte paramete 
+  for &aring; aksessere POP3-kontoen, akkurat som i et e-post klientprogram: i tillegg til
+  adressen (<span class="itemelement">E-post</span>) m&aring; du spesifisere 
+  mottaksserver (<span class="itemelement">POP3 Server</span>),  <span class="itemelement">Port</span>
+  nummeret (hvis portnummer ikke er spesifisert, så brukes 110), <span class="itemelement">Brukernavn</span> 
+  og <span class="itemelement">Passord</span>. <span class="itemelement">SSL</span> 
+  sjekkboksen aktiverer SSL kommunikasjon, som er n&oslash;dvendig for enkelte pop3 servere 
+  (f.eks Gmails server). I <span class="itemelement">Timeout</span>-feltet 
+  kan du spesifisere antall sekunder med inaktivitet f&oslash;r tilkoblingen brytes.
+  For &aring; verifisere parametrene, trykk p&aring; <span class="itemelement">Test 
+  tilkobling</span>-knappen (ingen meldinger lastes ned).</p>
+<p class="item">Under visse vanskelig forutsigbare forutsetninger, kan det v&aelig;re n&oslash;dvendig &aring; s&oslash;rge for at POP3-serveren laster ned meldinger langsommere; dersom du opplever problemer, kan du fors&oslash;ke &aring; aktivere <span class="itemelement">Saktere</span>-sjekkboksen (det finnes ingen fasit framgangsm&aring;te her, bare fors&oslash;k en av metodene og se hvilken som fungerer best).
+</p>
+<blockquote>
+  <p class="item"><font color="#FF0000">Tips:</font>
+    <span class="itemelement">Profiler</span>-knappen lar deg administrere multiple POP3
+    innstillinger. Kontoinformasjon kan 
+    lagres for multiple profiler, slik at alle POP3-innstillinger lastes/lagres
+    med et par klikk. Denne funksjonaliteten er spesielt nyttig n&aring;r du sender e-post
+    p&aring; vegne av andre; eller bare for &aring; raskt 
+    lagre en profil som du kan bruke senere i samme liste, eller i en annen liste.</p>
+</blockquote>
+<p class="item">Ved &aring; krysse av <span class="itemelement">Behold en kopi av meldingene
+ p&aring; serveren</span>, vil SendBlaster laste ned nye meldinger uten &aring; slette dem fra serveren.
+  Meldingene vil dermed v&aelig;re tilgjengelige for fremtidige brukere. Nye meldinger blir ignorert.</p>
+<p class="item">Ved &aring; krysse av for <span class="itemelement">Bare slett nye abonnerte og kansellerte meldinger</span> vil SendBlaster slette kun meldinger som har blitt identifisert som abonneringer eller kanselleringer; dette er virkelig nyttig dersom du bruker samme e-postadresse for b&aring;de administrering  og for mottak av ikke-administrasjons-meldinger, som tilbakemelding fra lesere og andre meldinger.</p>
+<p class="item"><span class="itemelement">Oppdater alle felt</span> er en ekstremt
+  kraftig opsjon: n&aring;r den er valgt, vil ikke bare emne, men hele meldingsinnholdet bli prosessert;
+  hvis meldingsteksten inneholder <em>feltnavn: verdi</em>-linjer, vil
+  ikke bare kontaktens e-postadresse men alle andre felt blir oppdater tilsvarende ogs&aring;( <a href="#updateallfields">se rute nedenfor</a>).</p>
+<p class="item">Ulempen er at meldingsnedlasting og prosessering blir betydelig langsommere;
+  derfor er det sterkt anbefalt &aring; bruke <span class="itemelement">Oppdater 
+  alle felt</span> kunn&aring;r det virkelig er behov for det, hvilket betyr n&aring;r ditt 
+  web-omr&aring;de genererer abonneringspostersom inneholder flere felter enn bare adressefeltet.</p>
+<p class="item">Ved &aring; klikke p&aring; <span class="itemelement">Last ned</span>-knappen, 
+  vil nye meldinger bli lastet ned, og den vlagte distribusjonslisten blir oppdatert
+  (i tillegg til alle andre lister som benytter samme administrerende e-postadresse).</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hvilken 
+        adress b&oslash;r jeg bruke?</strong></font></p>
+      <p>Det anbefales &aring; dedikere separate abonner / av-abnonner e-postadresser
+	   for hver distribusjonsliste, dvs. en adresse som ikke benyttes til 
+        noen standard e-post sending og mottak. P&aring; denne m&aring;ten reduseres
+        risikoen for &aring; motta spam (som vil bli ignorert) og gj&oslash;r det enklere &aring;
+        administrere listenen. I en slik konfigurasjon er det ikke n&oslash;dvendig &aring; aktivere
+        <span class="itemelement">Behold en kopi av meldingene p&aring; serveren</span>-opsjonen
+		siden meldingen ikke trengs &aring; bli lest av andre programmer. 
+		P&aring; denne m&aring;ten vil nedlastingen g&aring; raskere, og fremfor alt
+		behovet for lagringsplass reduseres. Noen tjenester har en grense p&aring; total
+        plassmenge som meldinger kan oppta, og hvis grensen overskrides vil ikke flere meldinger bli levert.</p>
+      <p>Det er ogs&aring; mulig, men ikke anbefalt, &aring; bruke en &quot;standard&quot; 
+        adresse, som ogs&aring; brukes p&aring; en annen e-postklient til &aring; sende og motta meldinger.
+        Ved et slit oppsett er det helt n&oslash;dvendig &aring; aktivere  <span class="itemelement">Behold 
+		en kopi av meldingene p&aring; serveren</span>-opsjonen (ellers vil meldigner som er lastet ned
+        bli slettet fra serveren). Og enda mer viktig er det at ogs&aring; standard e-mailklienten settes opp
+        til &aring; bevare meldingskopier p&aring; serveren, for &aring; tillate 
+        SendBlaster &aring; lese meldingene(i Outlook Express, etter en konto er valg, velg 
+        <em>Egenskaper / Avanserte innstillinger / Behold en kopi av meldingene p&aring; serveren</em>).</p>
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<blockquote> 
+  <p class="item"><font color="#FF0000">Advarsel:</font> hvis nedlasting av nye meldinger
+    g&aring;r veldig sakte, kan dette indikere at e-postserveren har mange lagrede meldinger 
+	liggende: deaktiver  <span class="itemelement">Behold 
+		en kopi av meldingene p&aring; serveren</span>-opsjonen og klikk p&aring; <span class="itemelement">Last ned</span> 
+    (eller utf&oslash;r nedlasting i din standard e-postklient). Medlingene vil bli slettet fra serveren s&aring; fort de
+	er lastet ned, og senere nedlasting vil g&aring; fortere.</p>
+</blockquote>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong><a name="updateallfields"></a>Hvordan 
+        virker &quot;Oppdater alle felt&quot;</strong></font></p>
+      <p>Mens &quot;normal&quot; prosessering f&aring;r SendBlaster til &aring; laste ned og prosessere
+        meldinger kun basert p&aring; emnefelt, vil <span class="itemelement">Oppdater alle felt</span>-opsjonen 
+        s&oslash;rge for at SendBlaster laster ned og prosesserer hele meldingsteksten, 
+        lete etter linjer i <em>feltnavn: verdi</em>-formatet inne i meldingsteksten, og oppdatere felt tilsvarende.</p>
+      <p>Anta du har to felt kalt &quot;Etternavn&quot; og &quot;By&quot;; 
+        hvis en melding mottasfra  &quot;aaa@aaa.com&quot; med &quot;Subscribe&quot; 
+        som emne og f&oslash;lgende meldingstekst (bemerk at hver linje inneholder et nytt felt):</p>
+      <p>Etternavn: Smith<br>
+        By: New York</p>
+      <p>en ny kontakt &quot;aaa@aaa.com&quot; legges til listen, med &quot;Smith&quot; 
+        som &quot;Etternavn&quot; og &quot;New York&quot; som &quot;By&quot;.</p>
+      <p>Noen andre formater, som bruker samme <span class="itemelement">Tags</span> 
+        som i <a href="sendblaster_messages_compose.htm">Lage meldinger</a>, 
+        er ogs&aring; tillatt: <em>#tag#: verdi</em> og <em>#feltnummer#: verdi</em> 
+        som i f&oslash;lgende eksempler:</p>
+      <p>#Etternavn#: Smith<br>
+        #By#: New York</p>
+      <p>og</p>
+      <p>#2#: Smith<br>
+        #3# : New York</p></td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

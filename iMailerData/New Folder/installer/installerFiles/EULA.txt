@@ -1,0 +1,25 @@
+iMailer License Agreement
+
+Infolancers E Services Pvt. Ltd. - iMailer END USER LICENSE AGREEMENT
+
+IMPORTANT: THIS SOFTWARE END USER LICENSE AGREEMENT ("EULA") IS A LEGAL AGREEMENT BETWEEN YOU AND Infolancers E Services Pvt. Ltd. USE OF THE SOFTWARE PROVIDED WITH THIS AGREEMENT (THE "SOFTWARE") CONSTITUTES YOUR ACCEPTANCE OF THESE TERMS. READ IT CAREFULLY BEFORE COMPLETING THE INSTALLATION PROCESS AND USING THE SOFTWARE. IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT INSTALL AND/OR USE THIS SOFTWARE. BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE PRODUCT, YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA.
+
+1. LICENSE GRANT: Infolancers E Services Pvt. Ltd. grants you a license to use only one copy of the version of this Software on a single computer. "You" means the company, entity or individual whose funds are used to pay the license fee. "Use" means storing, loading, installing, executing or displaying the Software. You may not modify the Software or disable any licensing or control features of the Software except as an intended part of the Software programming features. This license is not transferable to any other system, or to another organization or individual.
+
+2. OWNERSHIP: The Software is owned and copyrighted by Infolancers E Services Pvt. Ltd. Your license confers no title or ownership in the Software and should not be construed as a sale of any right in the Software.
+
+3. COPYRIGHT: The Software and all rights, without limitation including proprietary rights therein, are owned by Infolancers E Services Pvt. Ltd. or its suppliers and are protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The Software is licensed, not sold. You acknowledge that no title to the intellectual property in the Software is transferred to you. You further acknowledge that title and full ownership rights to the Software will remain the exclusive property of Infolancers E Services Pvt. Ltd. and you will not acquire any rights to the Software except as expressly set forth in this license. You agree that any copies of the Software will contain the same proprietary notices which appear on and in the Software.
+
+4. REVERSE ENGINEERING: You agree that you will not attempt to reverse compile, modify, translate, or disassemble the Software in whole or in part.
+	
+5. NO OTHER WARRANTIES: The Software Product is provided "AS IS" without warranty of any kind. Infolancers E Services Pvt. Ltd. disclaims all other warranties with respect to the Software, either Express or Implied, including but not limited to implied warrenties of Merchantability, Fitness for a particular purpose and noninfringement of third party rights. Some jurisdictions do not allow the exclusion of implied warranties or limitations on how long an implied warranty may last, or the exclusion or limitation of incidental or consequential damages, so the above limitations or exclusions may not apply to you. This warranty gives you specific legal rights and you may also have other rights which vary from jurisdiction to jurisdiction.
+
+6. SEVERABILITY: In the event of invalidity of any provision of this license, the parties agree that such invalidity shall not affect the validity of the remaining portions of this license. 
+
+7. NO LIABILITY FOR CONSEQUENTIAL DAMAGES: In no event shall Infolancers E Services Pvt. Ltd. or its suppliers be liable to you for any Consequential, Special, Incidental or Indirect damages of any kind arising out of the delivery performance or use of the software, even if Infolancers E Services Pvt. Ltd. has been advised of the possibility of such damages. In no event will Infolancers E Services Pvt. Ltd. liability for any Claim, whether in Contract, Tort or any other Theory of Liability, exceed the License fee paid by you, if any.
+
+8. GOVERNING LAW: This agreement is governed by the laws of India. If for any provision or portion thereof of the License agreement is found to be unenforceable by a court of competent jurisdiction, that provision shall be enforced in such manner as to effect the intention of the parties hereof, and the remainder of the License agreement shall continue in full force and effect.
+
+9. GENERAL PROVISION: This is the entire agreement between you and Infolancers E Services Pvt. Ltd., which supersedes any prior agreement or understanding, whether written, or oral, relating to the subject matter of this license. If any part of this agreement is found void and unenforceable, it will not affect the validity of the balance of the agreement, which shall remain valid and enforceable according to its terms. This agreement shall automatically terminate upon failure by you to comply with its terms. Infolancers E Services Pvt. Ltd. on its sole discretion, may modify this agreement in writing at any time.
+
+10. DO NOT SEND UNSOLICITED EMAIL: Be aware that you are solely responsible for the messages you send. In many cases sending unsolicited email is in violation of the law, and you will be solely accountable and liable for damages and violations.

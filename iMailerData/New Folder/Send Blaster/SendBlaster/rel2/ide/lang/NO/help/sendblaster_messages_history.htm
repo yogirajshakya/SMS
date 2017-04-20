@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Historikk</p>
+<p class="item">Dette vinduet lar deg se listen over alle sendte meldinger.  
+  Dersom en sendeoperasjon ikke ble fullf&oslash;rt (for eksempel hvis din SMTP-server 
+  ikke lar deg sende fler enn et bestemt antall e-poster innenfor et tidsintervall) 
+  er det mulig &aring; fortsette sendingen fra det punktet der den ble avbrutt, 
+  dvs sende meldingen til alle de mottakerne som ikke ble med i den originale 
+  sendeoperasjonen. </p>
+<p class="item">Hver sendeoperasjon markeres med sendedato, navnet p&aring; distribusjonslisten
+  som meldingen ble sendt til, og meldingens emne.</p>
+<p class="item">Klikk p&aring; <span class="itemelement">E-post forh&aring;ndsvisning</span>-knappen 
+  (eller velg tilsvarende kommando med h&oslash;yre museklikk) for &aring; vise meldingen som ble sendt
+  for valgte oppf&oslash;ring.</p>
+<p class="item"><span class="itemelement">Adresseliste </span>viser en liste
+  over alle adresser som meldingen ble sendt til. Alle adresser som det lyktes &aring; sende
+  meldingen til vises i gr&oslash;nt, mens adresser der sendingen feilet vises i r&oslash;dt.</p>
+<p class="item"><span class="itemelement">Log</span>-knappen viser sendeloggen,
+  som er <em>dialogen</em> som foregikk med SMTP-serveren (eller med mottaker-
+  serverne dersom direct send ble brukt).</p>
+<p class="item">Dersom en eller flere adresser ikke var inkludert i sendeoperasjonen,
+   s&aring; vil siste kolonne i listen (for ufullstendige oppf&oslash;ringer) vise 
+   <img src="img/sendblaster_messages_history_1.gif" width="16" height="16">-knappen.
+   Ved &aring; klikke p&aring; denne fullf&oslash;res sendeoperasjonen, ved hjelp av de aktuelle sendeparametre,
+   som spesifisert i 
+   <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Send
+   </span></a>-fanen. Meldingen blir dermed sendt til alle mottakere som enn&aring; ikke har 
+   mottatt den (de r&oslash;de adressene i Adresseliste-vinduet).</p>
+<p class="item">Historikk-elementer kan slettes ved &aring; velge dem (bruke <em>Ctrl</em>-knappen
+  p&aring; tastaturet for &aring; velge flere elementer, eller bruk <em>Shift </em>-knappen for
+  &aring; velge en gruppe) og ved &aring; klikke p&aring; 
+  <span class="itemelement">Slett elementer</span>-knappen.</p>
+<p class="item">Leverte og ikke-leverte adrsser kan eksporteres som tekst-fil
+  ved hjelp av <span class="itemelement">Eksporter leverte</span>- og <span class="itemelement">Eksporter 
+  ikke-leverte</span>-knappene. Eksportering av ikke-leverte adresser kan ogs&aring; v&aelig;re nyttig
+  n&aring;r du &oslash;nsker &aring; renske bort d&aring;rlige adresser fra lister: du kan senere 
+  <a href="sendblaster_lists_import.htm" class="itemlink">importere filen</a> 
+  ved &aring; velge fjern eller av-abonner opsjoner.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><strong><font color="#009900">N&aring;r 
+        er det nyttig &aring; bruke Historikk-funksjoner? </font></strong></p>
+      <p>Fullf&oslash;ring av sendeoperasjoner ved hjelp av Historikk-funksjonalitet
+        er en fin m&aring;te &aring; komme seg rundt SMTP-serverbegrensninger som ellers ikke tillater 
+        posting av mange meldinger innenfor et kort tidsintervall. SMTP-serverbegrensninger
+        kan arte seg slik at man, uavhengig av innstillinger i <span class="itemelement">Avanserte 
+        innstillinger</span> under 
+        <a href="sendblaster_messages_send.htm" class="itemlink"><span class="itemelement">Send
+        </span></a>-fanen, ikke tillater fullf&oslash;ring av sendeoperasjonen i en enkel operasjon. For 
+        eksempel, i en situasjon der du har en server som ikke tillater sending av mer enn
+        50 meldinger per time og en distribusjonsliste med 100 adresser, vil bare f&oslash;rste halvdel
+        g&aring; gjennom p&aring; f&oslash;rste fors&oslash;k. Etter &aring; ha ventet en time, kan operasjonen fullf&oslash;res fra
+        Historikk-vinduet.</p>
+      <p>Eksportering av ikke-leverte(r&oslash;de) adresser kan ogs&aring; v&aelig;re nyttig n&aring;r du &oslash;nsker &aring; rense lista
+        for d&aring;rlige adresser.</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>SendBlaster</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" class="body" marginheight="8"
+ marginwidth="8">
+<p class="title">Nachrichten senden<br>
+</p>
+<p class="item">Um eine Nachricht zu versenden m&uuml;ssen Sie
+zun&auml;chst den Empf&auml;nger und den Absender angeben.</p>
+<p class="item">Die Liste der Verteilerlisten (festgelegt in <a
+ href="sendblaster_lists_managing.htm" class="itemelement">Listen
+verwalten</a>) wird im Bereich <span class="itemelement">Verteilerliste
+ausw&auml;hlen</span> angezeigt. W&auml;hlen Sie eine aus und diese
+Adressen dieser Liste werden als Empf&auml;nger verwendet. Jeder
+Kontakt erh&auml;lt eine pers&ouml;nliche Nachricht.</p>
+<p class="item">Der Absender wird in den Feldern <span
+ class="itemelement">Email-Adresse des Absenders</span> und <span
+ class="itemelement">Absendername</span> festgelegt. Sie
+k&ouml;nnen diese Felder frei eingeben oder eine Adresse und Namen aus
+den Auswahlboxen w&auml;hlen, welche die letzten 10 f&uuml;r Mailings
+verwendeten Namen und Adressen anzeigen (diese Liste ist leer, wenn
+noch keine Nachricht gesendet wurde). Wenn der Verteilerliste eine An-
+oder Abmeldeadresse hinzugef&uuml;gt wurde, wird diese automatisch als
+Absenderadresse angezeigt. Dies ist nur die Standardvorgabe, die
+Adresse und/oder der Name k&ouml;nnen manuell ge&auml;ndert werden.
+Optional k&ouml;nnen Sie auch eine <span class="itemelement">Antwort A</span><span
+ class="itemelement">dresse</span> angeben: Dies ist die Adresse an die
+Antworten gesendet werden. Wird sie leer gelassen, werden Antworten an
+die Sender-Adresse gesendet (dies ist das Standardverhalten f&uuml;r
+pers&ouml;nliche Nachrichten).</p>
+<p class="item">Um die Nachricht zu senden, klicken Sie einfach auf den
+<span class="itemelement">Senden</span>-Button. Nat&uuml;rlich
+m&uuml;ssen Sie vor dem ersten Mailing oder im Falle, dass die
+Verbindungseinstellungen ge&auml;ndert wurden, erst die <span
+ class="itemelement">Sendeeinstellungen</span> angeben, anderenfalls
+kann die Nachricht nicht gesendet werden.</p>
+<p class="item">Zwei <span class="itemelement">Sendemodi</span> sind
+verf&uuml;gbar:<span class="itemelement"> Direktes Senden</span> oder <span
+ class="itemelement">SMTP Server verwenden</span>.<span
+ class="itemelement"></span></p>
+<ul>
+  <li class="item">Wenn Sie <span class="itemelement">Direktes Senden</span>
+w&auml;hlen, wird die Software nach dem Email Server jedes einzelnen
+Empf&auml;ngers suchen und sich automatisch mit ihm verbinden, wodurch
+der SMTP Server "ausgelassen" wird, der dann in den Sendeeinstellungen
+nicht ber&uuml;cksichtigt werden muss. Um solch eine Suche durchzuf&uuml;hren, wird
+SendBlaster den DNS-Server der gegenw&auml;rtig eingestellten
+Standardverbindung nutzen, allerdings ist es ebenso m&ouml;glich (und
+manchmal auch n&ouml;tig), manuell einen anderen DNS-Server einzustellen,
+indem die Option <span class="itemelement">DNS Server manuell
+einstellen</span> aktiviert und die korrekte IP-Adresse eingegeben
+wird. Beachten Sie bitte, dass bestimmte Email Dom&auml;nen (z.B.
+Hotmail) keine Direktsendungen akzeptieren: Die Nachricht wird
+abgelehnt, wenn Sie von einem Desktopsystem stammt und nicht von einem
+&ouml;ffentlichen SMTP Server.<br>
+Indem die <span class="itemelement">Im Fehlerfall mit SMTP wiederholen</span>-Funktion
+aktiviert wird, wird die Software versuchen, die Nachricht via SMTP
+auszuliefern, wenn sie vorher nicht angenommen wurde. Dabei werden die
+Einstellungen unter <span class="itemelement">SMTP Server verwenden</span>
+stehen verwendet.<br>
+&nbsp; </li>
+  <li class="item">Wenn Sie <span class="itemelement">SMTP Server
+verwenden</span> w&auml;hlen, erfolgt das Senden der Emails wie bei einem
+Standard Email-Client, d.h. indem die Nachricht zum
+eigenen ISP SMTP Server gesendet wird. Deshalb ist es n&ouml;tig, den
+Namen des <span class="itemelement">SMTP Servers</span> anzugeben
+(wenn n&ouml;tig, k&ouml;nnen Sie hier auch eine Port-Nummer im Format
+"Server:Port" angeben). Falls eine Benutzeranmeldung n&ouml;tig ist,
+w&auml;hlen Sie <span class="itemelement">Anmeldung erforderlich</span>
+und geben Sie den <span class="itemelement">Benutzer</span> und
+das <span class="itemelement">Passwort</span> an. Diese Parameter sind
+identisch mit denen, die auch Ihr Email-Client nutzt. Deshalb
+m&uuml;ssen Sie lediglich diese Angaben von einem funktionierenden
+Email Konto "kopieren" (um sicherzustellen, dass der SMTP Server
+erreichbar ist, klicken Sie auf den <span class="itemelement">Verbindungstest</span>-Button).
+Die <span class="itemelement">SSL</span>-Checkbox erm&ouml;glicht die
+SSL Kommunikation welche von einigen SMTP Servern ben&ouml;tigt wird
+(ein typisches Beispiel sind die GMail SMTP Server).<br>
+Wenn Sie die Funktion <span class="itemelement">Im Fehlerfall mit
+direktem
+Senden wiederholen</span> aktivieren, wird die Software versuchen, die
+Nachricht direkt auszuliefern, wenn dies &uuml;ber den SMTP Server
+nicht erfolgreich war, daf&uuml;r werden die <span class="itemelement">Direktes
+Senden</span>-Einstellungen verwendet.</li>
+</ul>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><strong><font color="#009900">Direktsendung oder SMTP-Server
+verwenden?</font></strong></p>
+      <p>Die Entscheidung h&auml;ngt in erster Linie von der
+Verf&uuml;gbarkeit eines guten SMTP Servers ab. Sollte Ihr ISP SMTP
+Server in der Lage sein, viele Nachrichten in kurzer Zeit abzuarbeiten
+oder sogar dazu, mehrere Nachrichten simultan zu senden, so ist der
+Einsatz eines SMTP Servers schneller und zuverl&auml;ssiger, da der
+SMTP Server "n&auml;her" an ihrem Computer als der Email-Server des
+Empf&auml;ngers ist.</p>
+      <p>Da aber manche Provider ihre Server gegen den Versand von Spam
+sch&uuml;tzen, gibt es teilweise eine Begrenzung der versendbaren
+Nachrichten pro Zeiteinheit oder der Anzahl der simultan zu
+versendenden Nachrichten. (z.B. k&ouml;nnte ein SMTP Server nicht mehr
+als eine Nachricht alle 5 Sekunden akzeptieren oder nicht mehr als 2
+Nachrichten gleichzeitig). Alle Nachrichten, die diese
+Beschr&auml;nkungen &uuml;berschreiten werden als Fehler
+zur&uuml;ckgewiesen. Dies bedeutet nicht, dass der Server oder die
+Software nicht richtig funktionieren, es bedeutet lediglich, dass die
+Einstellungen bez&uuml;glich der Zeit in den <span class="itemelement">Erweiterten
+Einstellungen</span> angepasst werden m&uuml;ssen.</p>
+      <p>In solchen F&auml;llen k&ouml;nnte es schneller und bequemer
+sein, den Direktversand zu nutzen. Der Direktversand ben&ouml;tigt ein
+wenig mehr Zeit, um jede einzelne Nachricht auszuliefern (da f&uuml;r
+jede Nachricht eine Anfrage an den DNS Server gestellt werden muss und
+der Email Server sehr "weit" vom PC des Nutzers sein kann). Dieser
+erh&ouml;hte Zeitbedarf wird durch die M&ouml;glichkeit, mehrere
+Nachrichten gleichzeitig zu senden, kompensiert. Zus&auml;tzliche
+Pausen zwischen den einzelnen Nachrichten sind dann nicht notwendig.</p>
+      <p>Direktes Senden ist ebenso effizient, wenn ein Mailing
+durchgef&uuml;hrt werden soll, ohne dass der SMTP Server bekannt ist
+(typischerweise ist dies der Fall, wenn ein Notebook "ausw&auml;rts"
+verwendet wird, nicht im B&uuml;ro oder zu Hause - sehr verbreitet bei
+einem &ouml;ffentlich zug&auml;nglichen Wireless Network).</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="item">Die <span class="itemelement">Erweiterte Einstellungen</span>
+erlauben Ihnen, das Sendezeitverhalten genau einzustellen. Das kann
+n&uuml;tzlich sein, wenn Sie ein Mailing mit der
+h&ouml;chstm&ouml;glichen Geschwindigkeit durchf&uuml;hren
+m&ouml;chten, welche die Antispam-Beschr&auml;nkungen des SMTP Servers
+erlauben. Nachfolgend die Bedeutung der einzelnen Optionen:</p>
+<ul class="item">
+  <li><span class="itemelement">Pause zwischen Nachrichten</span>:
+Die Anzahl der Sekunden, die zwischen dem Versenden zweier Nachrichten
+abgewartet wird.</li>
+  <li><span class="itemelement">Pause zwischen zwei Bl&ouml;cken</span>:
+Die
+Anzahl der Sekunden, die zwischen zwei zu versendenden Bl&ouml;cken von
+Nachrichten gewartet wird.</li>
+  <li><span class="itemelement">Nachrichten pro Block</span>: Die
+Anzahl der Nachrichten, die pro Block versendet werden</li>
+  <li><span class="itemelement">Timeout</span>: Die maximale Anzahl der
+Sekunden, nach der das Senden der Nachrichten abgebrochen wird.</li>
+  <li><span class="itemelement">Verbindungen</span>: Die Anzahl an
+gleichzeitigen Verbindungen, was nichts anderes als die Anzahl der
+gleichzeitig zu sendenden Nachrichten bedeutet*.</li>
+  <li><span class="itemelement">Weitere Versuche im Fehlerfall</span>:
+Wenn der SMTP Server oder der Server des Empf&auml;ngers (beim Direkten
+Senden) die Nachricht nicht akzeptiert, kann die Software eine
+bestimmte Anzahl an Sekunden warten und es ein oder mehrere Male erneut
+versuchen.</li>
+  <li><span class="itemelement">Pause zwischen Versuchen</span>: Die
+Anzahl der Sekunden der Verz&ouml;gerung, bevor erneut versucht wird,
+eine nicht akzeptierte Nachricht zu senden.</li>
+</ul>
+<p class="item">Die richtige Konfiguration kann nicht vor dem
+Durchf&uuml;hren mehrerer Versuche gefunden werden, bei denen die
+Anzahl der tats&auml;chlich ausgelieferten Nachrichten verglichen
+werden. Um die Einstellungen zu vereinfachen, sind einige <span
+ class="itemelement">Empfohlene Einstellungen</span> verf&uuml;gbar.
+Sie sind m&ouml;glicherweise nicht f&uuml;r Ihre Verbindung optimiert,
+k&ouml;nnen aber als gute Einstiegswerte f&uuml;r die Suche nach der
+besten Konfiguration betrachtet werden.</p>
+<p class="item"><strong><font color="#ff0000">Achtung:</font></strong>
+Verteilerlisten k&ouml;nnen ung&uuml;ltige Email-Adressen enthalten
+oder manche Email Server k&ouml;nnen zeitweise inaktiv sein. Deshalb
+ist es normal, dass beim Verwenden an lange Verteilerlisten, trotz der
+Sendeeinstellungen, nicht alle Nachrichten ausgeliefert werden
+k&ouml;nnen. Ein gewisser Prozentsatz wird mit einer Fehlermeldung
+zur&uuml;ckkommen. In diesem Fall ist es m&ouml;glich, das Mailing zu
+einem sp&auml;teren Zeitpunkt &uuml;ber den <span
+ style="text-decoration: underline;"></span><a
+ href="sendblaster_messages_history.htm">Verlauf</a> abzuschliessen.</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong> Wie finde ich die richtigen
+erweiterten Einstellungen?</strong></font></p>
+      <p>Um die richtigen erweitereten Einstellungen herauszufinden,
+ist es n&ouml;tig, verschiedene Kombinationen (normalerweise sollte
+eine Liste mit 10 Adressen ausreichen) zu testen und zu
+&uuml;berpr&uuml;fen, wie viele Nachrichten tats&auml;chlich
+ausgeliefert wurden (diese Information wird am Ende des Mailings
+gezeigt, wo es ebenso m&ouml;glich ist, die Logs zu
+&uuml;berpr&uuml;fen). Nutzer, die mit einem ausreichend "toleranten"
+SMTP Server verbunden sind, werden wahrscheinlich nur selten Probleme
+erleben, unabh&auml;ngig von den verwendeten Einstellungen, die
+lediglich die Versendegeschwindigkeit beeinflussen.<br>
+Andererseits k&ouml;nnte es bei einer eher "strikten" Handhabung auf
+Seiten des SMTP Servers n&ouml;tig sein, den Versand von Nachrichten zu
+verlangsamen oder auf das gleichzeitige Versenden von Nachrichten zu
+verzichten, sollen gute Ergebnisse erzielt werden. </p>
+      <p>Einige einfache Regeln, die man beachten sollte:</p>
+      <ul>
+        <li>Ein toleranter SMTP Server erlaubt schnelles Senden ohne
+Pausen (oder mit nur wenigen Pausen). Auf eher stark beschr&auml;nkten
+SMTP Servers, die mehrere Antispamfilter verwenden erh&ouml;hen Sie die
+Zahl der Pausen und senken die Anzahl der gleichzeitigen Verbindungen.</li>
+        <li>Normalerweise erlauben SMTP Server keinen gleichzeitigen
+Versand von
+vielen Nachrichten, deshalb ist es sinnvoll im SMTP Modus, die Anzahl
+der Verbindungen zu verringern oder in bestimmten Situationen auf 1
+zu setzen (keine gleichzeitigen Verbindungen). Wenn der SMTP Server mit
+Antispam-Begrenzungsmechanismen ausger&uuml;stet ist, k&ouml;nnte es
+n&ouml;tig sein,
+das Versenden der Nachrichten zu verlangsamen, indem eine Pause von
+einigen Sekunden zwischen dem Versand der einzelnen Nachrichten
+eingebaut wird oder zwischen dem Versenden der einzelnen Bl&ouml;cke.
+Au&szlig;erdem sollten Bl&ouml;cke nicht mehr als ein paar Dutzend
+Nachrichten
+enthalten.</li>
+        <li>Im Falle des Direktversands mit einer
+Standard-Verteilerliste, die Adressen bei verschiedenen Dom&auml;nen
+enth&auml;lt, werden die Nachrichten an diese verschiedenen Server
+ausgeliefert: Deshalb ist es hier m&ouml;glich, die Anzahl der
+Verbindungen relativ hoch auszuw&auml;hlen* und nur wenige oder gar
+keine Pausen zwischen dem Versenden der Nachrichten oder der
+Bl&ouml;cke zu setzen.</li>
+        <li>Die Anzahl der Sendeversuche im Fehlerfalle zu
+erh&ouml;hen, kann zu einer h&ouml;heren Erfolgsrate f&uuml;hren, wird
+aber das Mailing verlangsamen, besonders wenn die Anzahl der
+gleichzeitigen Verbindungen gering ist. Das Mailing zu einem
+sp&auml;teren Zeitpunkt &uuml;ber den <a
+ href="sendblaster_messages_history.htm">Verlauf</a><a
+ href="../../../old%20translation/help/sendblaster_messages_history.htm"></a>
+zu beenden (nach einigen weiteren Minuten) ist eine gute
+Herangehensweise.</li>
+      </ul>
+      </td>
+      <td width="7%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="item">Unter den erweiterten Einstellungen k&ouml;nnen Sie
+auch den Nachrichten <span class="itemelement">Kodierung</span><span
+ style="font-style: italic;"><span style="font-weight: bold;">-</span></span>Modus
+finden: W&auml;hlen Sie zwischen <span class="itemelement">Quoted
+Printable</span> und <span class="itemelement">Base64</span>. Der
+Nachrichten-Header enth&auml;lt Informationen, die wiedergeben, welche
+Software diese Nachricht erstellt hat (der <span class="itemelement">X-Mailer
+Text</span>): Wenn Sie die <span class="itemelement">Standard</span>-Einstellung
+w&auml;hlen, wird der Header den Namen SendBlaster und die Version
+wiedergeben. Anderenfalls k&ouml;nnen Sie einen freien Text eingeben,
+um das Versenden mittels eines anderen Email-Clients zu simulieren oder
+w&auml;hlen Sie die <span class="itemelement">Keine</span>-Option, um
+keine Nachrichtenkopfinformationen in die Email einzuf&uuml;gen.</p>
+<p class="item">Die <span class="itemelement">Dom&auml;nen</span>-Option
+erm&ouml;glicht das Bearbeiten des Namens der Maschine, die die
+Software f&uuml;r die Verbindung zum SMTP Server oder zum Email Server
+nutzt. Dies kann besonders dann sinnvoll sein, wenn Sie <span
+ class="itemelement">Direktes Senden </span> nutzen: Manche Server
+&uuml;berpr&uuml;fen Dom&auml;nennamen, bevor Sie Nachrichten
+akzeptieren.
+Sie erwarten, dass der Dom&auml;nenname mit dem &ouml;ffentlichen <em>Hostnamen</em>
+im Netzwerk korrespondiert, vor dem Akzeptieren einer Nachricht
+f&uuml;hren sie einen <em>Ping</em> (oder vergleichbare Operationen)
+durch, um zu &uuml;berpr&uuml;fen, ob der Dom&auml;nenname mit der
+IP-Adresse der Maschine &uuml;bereinstimmt, die um eine Verbindung
+anfragt. Sollte dies der Fall sein, k&ouml;nnte die Auswahl der Option <span
+ class="itemelement">Internetadresse</span> die Anzahl der
+abgewiesenen Nachrichten reduzieren. Wir empfehlen den Gebrauch der
+Standardeinstellung oder den Gebrauch der <span class="itemelement">Internetadresse</span>
+wenn Sie den Direktversand nutzen und <span class="itemelement">lokaler
+Rechnername</span> wenn Sie SMTP nutzen (SMTP Server f&uuml;hren
+normalerweise keine &Uuml;berpr&uuml;fungen von Dom&auml;nennamen
+durch).<br>
+SendBlaster &uuml;berpr&uuml;ft die &ouml;ffentliche Adresse Ihres
+Rechners bei jedem Start. Sollte die Internetverbindung beim Start
+nicht zur Verf&uuml;gung stehen, wird die &ouml;ffentliche Adresse leer
+gelassen. Stattdessen wird der Name des lokalen Rechners verwendet.
+Wenn eine feste &ouml;ffentliche IP verf&uuml;gbar ist, k&ouml;nnen
+erfahrene Nutzer die Option <span class="itemelement">Benutzerdefiniert...</span>
+w&auml;hlen und einen festen Wert (bitte beachten Sie, dass ein <em>Hostname</em>
+n&ouml;tig ist - keine IP-Adresse) - aber denken Sie immer daran, dass
+falsche Einstellungen den Erfolg des Mailings gef&auml;hrden k&ouml;nnen.</p>
+<hr noshade="noshade" size="1">
+<p class="item">* In der freien Version sind maximal 2 Verbindungen
+m&ouml;glich, auch wenn eine h&ouml;here Zahl eingegeben werden kann.</p>
+</body>
+</html>

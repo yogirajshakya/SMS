@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Importeren</p>
+<p class="item">U kan data importeren vanuit een externe bron in de geselecteerrde lijst. Er zijn vier bronnen die geaccepteerd worden:</p>
+<ul>
+  <li class="item"> U kan data importeren vanuit een tekst bestand (.csv, .txt), 
+    die op de lokale machine staan of op het lokale netwerk, door 'importeer uit een extern bestand' te selecteren. 'Formatted tekst' is een veel gebruikt formaat in spreadsheet en database software; de meeste software die hieronder valt kan data exportern.<br>
+    &nbsp; </li>
+  <li class="item">U kan data importeren van een website door <span class="itemelement">Importeer van een web site via http://</span> te kiezen. Het process is bijna hetzelfde als de 'Formatted tekst' methode, behalve dat het te importeren bestand niet op het lokale netwerk of computer hoeft te staan maar op bereikbaar is door het HTTP protocol. De te importeren data kan ook dynamisch gegenereerd worden door een script (bijvoorbeeld ASP of PHP). Deze methode laat u de inhoud van een online database dat een exporteer script heeft importeren. De web link zal gespecificeerd worden als de data bron.<br>
+    &nbsp; </li>
+  <li class="item">U kan data importeren vanuit Windows Klembord (nadat u het heeft gekopieerd vanuit een ander programma), door <span class="itemelement">Importeer 
+    van klembord </span>te selecteren.<br>
+    &nbsp; </li>
+  <li class="item">U kan data importeren vanuit Outlook Express Address Book (aka 
+    Windows Address Book), door<span class="itemelement"> Importeer vanuit 
+    Outlook Express</span> te selecteren.</li>
+</ul>
+<p class="item">De data die van externe bronnen wordt geladen kan gebruikt worden voor het volgende:</p>
+<ul>
+  <li class="item">Het kan toegevoegd worden aan de geselecteerde lijst door de <span class="itemelement">Voeg toe aan lijst en schrijf nieuwe adressen in</span> optie te kiezen.<br>
+    &nbsp; </li>
+  <li class="item">Het kan van de geselecteerde lijst verwijderd worden door de <span class="itemelement">Verwijder nieuwe adressen van de lijst</span> optie te kiezen. Alle adressen die in de externe bron staan zullen verwijderd worden van de lijst, als ze er in staan.<br>
+    &nbsp; </li>
+  <li class="item">Het kan worden uitgeschreven van de lijst (zonder ze te verwijderen, hierdoor bewaard u de data) door de optie<span class="itemelement"> Schrijf nieuwe adressen uit</span> te kiezen. Dit gaat op dezelfde manier als hierboven beschreven, maar de adressen worden niet verwijderd uit de lijst, ze worden gewoon uitgeschreven. Deze methode laat u de data in de lijst behouden zonder de adressen toe te voegen aan in mailings.</li>
+</ul>
+<p class="item">Nadat u een lijst, de data bron, en de actie heb geselecteerd, klikt u op de <span class="itemelement">Importeer</span> knop. Een soort wizard scherm komt omhoog waar u een paar opties in kan stellen die nodig zijn voor het afhandelen van het importeren:</p>
+<ul>
+  <li class="item"> Het<span class="itemelement"> Pad naar het bestand</span>, of de <span class="itemelement">URL naar het bestand </span>als u van het web importeerd (bij importeren van Klembord of vanuit Outlook Express hoeft u geen pad in te vullen).<br>
+    &nbsp; </li>
+  <li class="item">Het data<span class="itemelement"> Formaat</span> (niet nodig bij importeren vanuit Outlook Express): als u <span class="itemelement">Ontgrenst </span>kiest moet u ook een <span class="itemelement">Veld ontgrenzer </span>invullen en of de <span class="itemelement">Eerste rij veldnamen bevat</span>. 
+    Door te kiezen voor het <span class="itemelement">Vrij </span>formaat worden alleen e-mail adressen ge&iuml;mporteerd (automatisch gedetecteerd) en is er geen data formaat nodig.<br>
+    &nbsp; </li>
+  <li class="item">Als u een bepaalde importeer actie uitvoerd (data toevoegen, of de <span class="itemelement">Voeg toe aan lijst en schrijf nieuwe adressen in </span>optie), zijn er twee extra opties beschikbaar om de actie te bepalen die wordt uitgevoerd al een extern adres (in de data die wordt ge&iuml;mporteerd) ook al in de doel lijst staat; door te kiezen voor  <span class="itemelement">Voeg dubbele adressen of adressen die al in de lijst staan niet toe </span>optie, worden deze adressen genegeerd (anders worden ze toegevoegd en staan ze er dubbel in); door te kiezen voor de <span class="itemelement">Schrijf adressen die al in de lijst staan in</span> optie, worden adressen die al in de lijst staan maar niet zijn ingeschreven(zie <a href="sendblaster_lists_managing.htm" class="itemelement">Onderhoud lijsten</a>) ingeschreven, nieuwe data wordt niet ge&iuml;mporteerd maar de adressen worden gemarkeerd als ingeschreven.<br>
+    &nbsp; </li>
+  <li class="item">In de volgende stap wordt u gevraagd communicatie tussen de externe bron en de SendBlaster velden in te stellen en door op de <span class="itemelement">Volgende </span>knop te klikken, 
+    wordt het importeren gestart.</li>
+</ul>
+<p class="item"><strong><font color="#FF0000">Waarschuwing:</font></strong> de goede indicatie van het veld in de externe bron met e-mail adressen is zeer belangrijk want:</p>
+<ol>
+  <li class="item"><strong>alle externe records die geen email adres, een goed en geldig email adres bevatten in het geselecteerde veld worden genegeerd.</strong> Daarom worden er geen e-mails toegevoegd als u het verkeerde veld specificeert, en wordt alle externe data genegeerd.</li>
+  <li class="item">de vergelijkings operatie tussen de externe data en de data in de lijst om te kijken of het e-mail adres er al in staat , wordt eigenlijk gedaan door het adres dat in het gespecificeerde veld staat te vergelijken.</li>
+</ol>
+</body>
+</html>

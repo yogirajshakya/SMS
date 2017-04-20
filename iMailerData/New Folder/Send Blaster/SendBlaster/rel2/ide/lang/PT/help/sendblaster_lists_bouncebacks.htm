@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>SendBlaster</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+    <p class="title">
+        Gerir devolu&ccedil;&otilde;es</p>
+    <p class="item">
+        Um e-mail devolvido &eacute; um e-mail que nunca chega &agrave; caixa de entrada
+        do destinat&aacute;rio e volta para tr&aacute;s para o remetente com uma mensagem
+        de erro que indica o motivo pelo qual a mensagem n&atilde;o foi entregue com sucesso.
+        Normalmente isto acontece quando os mailings s&atilde;o enviados atrav&eacute;s
+        de servidores SMTP: se um endere&ccedil;o n&atilde;o existir, o servidor SMTP (que
+        n&atilde;o tem forma de o saber) ir&aacute; aceitar a mensagem de qualquer forma,
+        mas esta ser&aacute; devolvida mais tarde.</p>
+    <p class="item">
+        H&aacute; dois tipos de devolu&ccedil;&otilde;es:</p>
+    <ul>
+        <li class="item">Devolu&ccedil;&otilde;es r&iacute;gidas: o e-mail n&atilde;o p&ocirc;de
+            ser entregue devido a um erro permanente (por exemplo, um endere&ccedil;o n&atilde;o
+            existente)</li>
+        <li class="item">Devolu&ccedil;&otilde;es suaves: existe uma condi&ccedil;&atilde;o
+            tempor&aacute;ria que provocou que a entrega do e-mail falhasse (por exemplo, o
+            servidor de e-mail do destinat&aacute;rio estar temporariamente ocupado)</li>
+    </ul>
+    <p class="item">
+        O SendBlaster pode reconhecer automaticamente a maioria* dos e-mails devolvidos
+        e cancelar a subscri&ccedil;&atilde;o ou mesmo apagar os endere&ccedil;os devolvidos
+        da lista seleccionada.</p>
+    <p class="item">
+        Os e-mails devolvidos ser&atilde;o enviados para o endere&ccedil;o de envio do mailing
+        que n&atilde;o poder&aacute; ser o mesmo endere&ccedil;o utilizado para as subscri&ccedil;&otilde;es
+        e cancelamentos (ver <span class="itemlink"><a href="sendblaster_lists_managing.htm"
+            class="itemelement">Gerir subscri&ccedil;&otilde;es</a></span>). Por isso &eacute;
+        necess&aacute;rio dizer ao programa qual dever&aacute; ser o endere&ccedil;o a ser
+        verificado.</p>
+    <table width="100%" border="0" cellpadding="4" cellspacing="0">
+        <tr>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td width="100%" bgcolor="#FFFF99" class="item">
+                <p>
+                    <font color="#009900"><strong>Que endere&ccedil;o deverei introduzir?</strong></font></p>
+                <p>
+                    Lembre-se que as devolu&ccedil;&otilde;es de e-mail s&atilde;o enviadas para o endere&ccedil;o
+                    de remetente do mailing e n&atilde;o para o endere&ccedil;o utilizado para subscri&ccedil;&otilde;es.
+                    Suponha que voc&ecirc; escolhe &quot;subscricoes@meusite.com&quot; como endere&ccedil;o
+                    de gest&atilde;o das subscri&ccedil;&otilde;es da lista 1 e, mais tarde, envia os
+                    seus mailings a partir do endere&ccedil;o &quot;newsletter@meusite.com&quot;. Deste
+                    modo as devolu&ccedil;&otilde;es ser&atilde;o enviadas para &quot;newsletter@meusite.com&quot;
+                    e este ser&aacute; o endere&ccedil;o que ter&aacute; de configurar na sec&ccedil;&atilde;o
+                    <span class="itemelement">Gerir devolu&ccedil;&otilde;es</span> da lista 1.</p>
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>
+    <p class="item">
+        O endere&ccedil;o a verificar &eacute; definido digitando os par&acirc;metros correctos
+        de acesso &agrave; conta POP3, tal como software de cliente de e-mail: para al&eacute;m
+        do endere&ccedil;o (<span class="itemelement">E-mail</span>) ser&aacute; tamb&eacute;m
+        necess&aacute;rio especificar o servidor que recebe (<span class="itemelement">servidor
+            POP3</span>), o número da <span class="itemelement">Porta</span> (se não for
+        especificada nenhuma, a porta padrão a utilizar é a 110), o <span class="itemelement">
+            Utilizador</span> e a <span class="itemelement">Senha</span>. A caixa de verifica&ccedil;&atilde;o
+        <span class="itemelement">SSL</span> activa a comunica&ccedil;&atilde;o SSL, que
+        poder&aacute; ser necess&aacute;ria para alguns servidores pop3 (o servidor do Gmail,
+        por exemplo). No campo <span class="itemelement">Tempo de expira&ccedil;&atilde;o</span>
+        voc&ecirc; poder&aacute; digitar o n&uacute;mero de segundos de inactividade a partir
+        dos quais a conex&atilde;o ser&aacute; terminada. Para verificar os par&acirc;metros,
+        clique no bot&atilde;o <span class="itemelement">Testar conex&atilde;o</span> (nenhuma
+        mensagem ser&aacute; descarregada).</p>
+    <blockquote>
+        <p class="item">
+            <font color="#FF0000">Dica:</font> O botão <span class="itemelement">Perfis</span>
+            permite gerir múltiplas copntas POP3. A informação de conta pode ser guardada para
+            vários perfirs, de forma a que as definições da conta POP3 sejam guardas/carregadas
+            num par de cliques. Esta funcionalidade é especialmente útil quando envia emails
+            em nome de outra pessoa.
+        </p>
+    </blockquote>
+    <p class="item">
+        Quando a op&ccedil;&atilde;o <span class="itemelement">Manter c&oacute;pia das mensagens
+            no servidor</span> estiver assinalada, o SendBlaster ir&aacute; descarregar
+        as novas mensagens sem as apagar do servidor. As mensagens ficar&atilde;o depois
+        dispon&iacute;veis para usos futuros. As novas mensagens ser&atilde;o ignoradas.</p>
+    <p class="item">
+        Ao seleccionar <span class="itemelement">Apagar apenas as novas mensagens devolvidas</span>,
+        o SendBlaster irá apagar apenas estas mensagens, deixando as restantes mensagens
+        no servidor.</p>
+    <p class="item">
+        Se a op&ccedil;&atilde;o <span class="itemelement">Apagar endere&ccedil;os devolvidos
+        </span>estiver assinalada, os endere&ccedil;os devolvidos ser&atilde;o apagados
+        a lista seleccionada. Caso contr&aacute;rio, apenas as suas subscri&ccedil;&otilde;es
+        ser&atilde;o canceladas na lista.</p>
+    <p class="item">
+        Se assinalar as op&ccedil;&otilde;es <span class="itemelement">Processar devolu&ccedil;&otilde;es
+            r&iacute;gidas</span> e <span class="itemelement">Processar devolu&ccedil;&otilde;es
+                suaves </span>poder&aacute; escolher quais os tipos de devolu&ccedil;&atilde;o
+        (ver acima) que dever&atilde;o ser processados; se nenhuma op&ccedil;&atilde;o estiver
+        assinalada n&atilde;o ser&atilde;o processados nenhuns e-mails devolvidos.</p>
+    <p class="item">
+        Ao clicar no bot&atilde;o <span class="itemelement">Descarregar</span>, as novas
+        mensagens ser&atilde;o descarregas e a lista de distribui&ccedil;&atilde;o seleccionada
+        ser&aacute; actualizada (assim como todas as outras listas que utilizem o mesmo
+        endere&ccedil;o de e-mail para as devolu&ccedil;&otilde;es).</p>
+    <blockquote>
+        <p class="item">
+            <font color="#FF0000">Aviso:</font> se o descarregar das novas mensagens parecer
+            lento, pode ser sinal que hajam muitas mensagens em espera no servidor de e-mail:
+            desactive a op&ccedil;&atilde;o <span class="itemelement">Manter c&oacute;pia das mensagens
+                no servidor</span> e clique em <span class="itemelement">Descarregar</span>
+            (ou descarregue-as no seu cliente de e-mail). As mensagens, assim que forem descarregadas,
+            ser&atilde;o apagadas do servidor e as opera&ccedil;&otilde;es de descarregar seguintes
+            ser&atilde;o mais r&aacute;pidas.</p>
+    </blockquote>
+    <p class="item">
+        &nbsp;</p>
+    <hr size="1" noshade>
+    <p class="item">
+        *Os novos formatos de emails devolvidos podem ser geridos na janela de <a href="sendblaster_settings_advancedsettings.htm"
+            class="itemlink">Configurações Avançadas</a>.</p>
+</body>
+</html>

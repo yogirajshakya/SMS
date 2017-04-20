@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>SendBlaster</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+<body leftmargin="8" topmargin="8" class="body" marginheight="8"
+ marginwidth="8">
+<p class="title">Nachricht verfassen<br>
+</p>
+<p class="item">Das "Nachricht verfassen"-Formular erlaubt es Ihnen,
+die
+Nachricht zu erstellen, die im Anschluss an eine Verteilerliste
+gesendet werden soll.</p>
+<p class="item">Das Erstellen der Nachricht wird so wie das Erstellen
+einer Standard Email in einem Email-Client gehandhabt: geben Sie die
+Betreffzeile bei <span class="itemelement">Betreff</span> ein,
+f&uuml;gen Sie alle ben&ouml;tigten <span class="itemelement">Anh&auml;nge</span>*
+ein und geben Sie den Text der Nachricht ein. Falls der Text spezielle
+Zeichen (nicht-lateinische) ben&ouml;tigt, m&uuml;ssen Sie zuerst den <span
+ class="itemelement">Zeichensatz</span> &auml;ndern (der
+Standardzeichensatz kann im Formular <a
+ href="sendblaster_settings_fields.htm" class="itemlink"><span
+ class="itemelement">Fenster und Erscheinungsbild</span></a>
+ge&auml;ndert werden).</p>
+<blockquote>
+  <p class="item"><font color="#ff0000">Achtung:</font> Der Zeichensatz
+f&uuml;r die betreffende Nachricht muss <strong>vor</strong>
+dem Erstellen der Nachricht ge&auml;ndert werden, wenn Sie die
+gew&uuml;nschten
+Ergebnisse erzielen wollen. Wird das vorherige &Auml;ndern des
+Zeichensatzes
+vers&auml;umt, kann dies leicht zu Fehlern f&uuml;hren..</p>
+</blockquote>
+<p class="item">Die Seite zeigt zwei Textbereiche:</p>
+<ul>
+  <li class="item">Im Hauptbereich, wo die lange Werkzeugleiste zu
+sehen ist, k&ouml;nnen Sie formatierten Text einf&uuml;gen, um eine
+HTML-Nachricht zu erstellen. Ebenso k&ouml;nnen Sie Bilder und Links
+einf&uuml;gen und Sie k&ouml;nnen den automatisch generierten HTML-Code
+&uuml;berpr&uuml;fen (und &auml;ndern), indem Sie auf den <span
+ class="itemelement">Code anzeigen</span>-Button in der oberen Leiste
+klicken.<br>
+&nbsp; </li>
+  <li class="item">Im <span class="itemelement">Nur Text</span>-Bereich
+k&ouml;nnen Sie die Nachricht im nur-Text-Format eingeben. Manche
+Empf&auml;nger der Nachricht verf&uuml;gen m&ouml;glicherweise nicht
+&uuml;ber die M&ouml;glichkeit, Nachrichten im HTML-Format anzuzeigen.
+Deshalb ist es wichtig, ein alternatives Format f&uuml;r die Inhalte zu
+liefern, ohne jegliche Bilder und/oder Links. Eine "nur-Text"-Version
+kann automatisch aus dem formatierten Text generiert werden, indem Sie
+auf den <span class="itemelement">Text aus HTML</span>-Button klicken,
+nachdem Sie das Erstellen Ihrer Nachricht beendet haben.</li>
+</ul>
+<p class="item">Um individualisierte Nachrichten zu senden (im
+Gegensatz zu allgemein verfassten Nachrichten), k&ouml;nnen Sie sowohl
+im Text als auch in der Betreffzeile (sowohl im HTML-Bereich als auch
+im "nur Text"-Bereich) so genannte <span class="itemelement">Tags</span>
+einf&uuml;gen. Jedes Tag ist eigentlich eine Variable: Wenn die
+Nachricht gesendet wird, wird das Tag mit dem eigentlichen Inhalt des
+zugeh&ouml;rigen Feldes des jeweiligen Empf&auml;ngers ersetzt. Wenn
+z.B. die Liste ein "businessname"-Feld und ein "address"-Feld
+enth&auml;lt (<a href="sendblaster_settings_fields.htm" class="itemlink">Feldnamen
+k&ouml;nnen ge&auml;ndert werden</a><a
+ href="../../../old%20translation/help/sendblaster_settings_fields.htm"
+ class="itemlink"></a>) erhalten Sie, wenn Sie in der Nachricht
+folgenden Text eingeben:</p>
+<blockquote>
+  <p class="valore">An #businessname#<br>
+#address#</p>
+</blockquote>
+<p class="item">wird der Empf&auml;nger eine personalisierte Nachricht
+wie folgt erhalten (z.B.):</p>
+<blockquote>
+  <p class="valore">An die  Coca Cola Company<br>
+Atlanta, GA</p>
+</blockquote>
+<p class="item">Da die Feldnamen ver&auml;ndert werden k&ouml;nnen, ist
+es ebenso m&ouml;glich, "fixe" Tags (feldnnamenunabh&auml;ngige Tags)
+zu verwenden, die sich auf die Feldnummer beziehen (#1#, #2#, und so
+weiter bis zu #10#). Die Feldnummern finden sich im Fenster <a
+ href="sendblaster_settings_fields.htm" class="itemlink"><span
+ class="itemelement">Felder und Erscheinungsbild</span></a>. Zwei
+besondere Tags werden ebenfalls angeboten: <span class="itemelement">#listname#</span>,
+welches durch den Namen der Liste, an den die Nachricht gesendet wird,
+ersetzt wird, <span class="itemelement">#managingemail#</span>
+welches durch die Email-Adresse ersetzt wird, an die die An- oder
+Abmeldungen gesendet werden (dies erlaubt Nutzern auf einfachem Wege,
+Ihre Adressen aus der Liste zu entfernen) und <span class="itemelement">#systemdate#</span>
+welches durch das aktuelle Systemdatum ersetzt wird, entsprechend Ihrer
+Windows Systemeinstellungen.</p>
+<table border="0" cellpadding="4" cellspacing="0" width="100%">
+  <tbody>
+    <tr>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td class="item" bgcolor="#ffff99" width="100%">
+      <p><font color="#009900"><strong>Wie erzeugt man einen
+Abmelde-Link?</strong></font></p>
+      <p>SendBlaster kann die Verteilerlisten verwalten, indem es
+Nachrichten von einer zugeordneten Email-Adresse herunterl&auml;dt,
+verschieden f&uuml;r jede Liste (<a
+ href="sendblaster_lists_subscribe.htm" class="itemlink"><span
+ class="itemelement">Listen verwalten</span></a>). Deshalb ist es
+einfach, mittels Tags, einen Abmelde-Link in den HTML-Code
+einzuf&uuml;gen:</p>
+      <blockquote>
+        <p class="valore">&lt;a
+href="mailto:#managingemail#?Subject=Unsubscribe"&gt;Abmelden&lt;/a&gt;</p>
+      </blockquote>
+      <p>Dieser HTML-Code kann in einer HTML-Nachricht eingef&uuml;gt
+werden, indem Sie auf <span class="itemelement">Code anzeigen</span>
+klicken oder als Link eingef&uuml;gt werden, indem Sie den <span
+ class="itemelement">Link</span>-Button in der Formatierungsleiste
+klicken (in diesem Fall muss: <em><strong>mailto:#managingemail#?Subject=Unsubscribe</strong></em>
+im Link-Fenster eingegeben werden. Ist der Link erstellt, kann der Text
+"Abmelden" (oder &Auml;hnliches) eingegeben werden, um den hier
+angezeigten Text zu ersetzen).</p>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p class="item">Die bearbeitete Nachricht kann im .eml-Format
+gespeichert werden (kompatibel mit den meisten Email-Clients), indem
+Sie auf den <span class="itemelement">Speichern</span>-Button klicken.</p>
+<p class="item">Um eine neue Nachricht zu erstellen, k&ouml;nnen Sie
+bei Null beginnen (mit dem <span class="itemelement">Neu</span> oder
+dem <span class="itemelement">Vorlage w&auml;hlen</span>-Button) oder
+den <span class="itemelement">&Ouml;ffnen</span>-Button benutzen, der
+eine zuvor erstellte Nachricht &ouml;ffnet:</p>
+<ul>
+  <li class="item">Importieren Sie eine .eml-Datei (z.B. mit Outlook
+erstellt) mit <span class="itemelement">Importieren</span> / <span
+ class="itemelement"> Email von externer .eml-Datei importieren</span><span
+ class="itemelement"></span></li>
+  <li class="item">Laden Sie eine bereits versendete Nachricht mit <span
+ class="itemelement">Importieren</span> / <span class="itemelement">&Ouml;ffne
+Email aus dem Verlauf</span><span class="itemelement"></span></li>
+  <li class="item">Importieren eines formatierten Textes von einer
+HTML-Seite von der lokalen Festplatte inklusive Bildern mit <span
+ class="itemelement">Importieren</span> / <span class="itemelement">HTML
+aus einer Datei importieren</span><span class="itemelement"></span></li>
+  <li class="item">"nur Text" mit <span class="itemelement">Importieren</span>
+/ <span class="itemelement">nur Text aus externer Datei importieren</span><span
+ class="itemelement"></span></li>
+</ul>
+<p class="item">Der Button <span class="itemelement">Text aus HTML</span>
+erm&ouml;glicht es, "nur Text" aus einer in HTML formatierten
+Nachrichten zu generieren. Deshalb ist es ratsam, ihn erst nach
+Fertigstellung der Nachricht zu verwenden.</p>
+<p class="item">Vor dem Versand der Nachricht ist es m&ouml;glich, (und
+extrem ratsam) zu &uuml;berpr&uuml;fen, wie die Nachricht in einem
+Email-Client dargestellt wird, indem Sie den <span class="itemelement">Email
+Vorschau</span>-Button nutzen. </p>
+<hr noshade="noshade" size="1">
+<p class="item">* Anh&auml;nge sind nur in der Pro-Version
+verf&uuml;gbar.</p>
+</body>
+</html>

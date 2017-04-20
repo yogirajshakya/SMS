@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Manage lists</p>
+<p class="item">SendBlaster can manage multiple distribution lists*. </p>
+<p class="item">The current list is selected through the drop-down box found in 
+  the upper side of the window. Next to it, you can find 3 buttons that will let 
+  you to create a new list (button <span class="itemelement">New</span><span class="item">), 
+  rename the current list (</span><span class="itemelement">Rename</span><span class="item">), 
+  delete it (</span><span class="itemelement">Delete</span><span class="item">) 
+  or send it to the printer (</span><span class="itemelement">Print</span><span class="item">)</span><span class="item">. 
+  These tasks can also be performed by clicking on the drop-down box with the 
+  right mouse button.</span></p>
+<p class="item">The remaining area of the window is dedicated to the address list 
+  of the selected distribution list.</p>
+<p class="item">Each address shows: the subscription state (marked by the <img src="img/sendblaster_lists_managing_1.gif" width="12" height="12"> 
+  and <img src="img/sendblaster_lists_managing_2.gif" width="12" height="12"> 
+  icons), the activation state (marked by a checkbox), the contents of the 15
+  <a href="sendblaster_settings_fields.htm" class="itemlink">custom fields</a> 
+  (the first one is always the e-mail address), the presence of comments (marked 
+  by the <img src="img/sendblaster_lists_managing_3.gif" width="15" height="10"> 
+  icon, clicking on it will open the comments). Columns order can be modified 
+  by moving columns (simply drag the column header). The columns can also be resized. 
+</p>
+<p class="item">During a <a href="sendblaster_messages_send.htm" class="itemlink">send 
+  operation</a>, the addresses marked as unsubscribed or inactive will be skipped. 
+  The sending operation will therefore affect only those addresses that are currently 
+  both subscribed and active. You can easily detect the addresses that will not 
+  be included in mailings since they are shown in grey:</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><img src="img/sendblaster_lists_managing_4.gif" width="156" height="94"></td>
+    <td valign="middle" class="item">&nbsp;</td>
+    <td width="100%" valign="top" class="item">In the example to the left a mailing
+      operation will only affect the first address since it is the only one both 
+      subscribed and active.</td>
+  </tr>
+</table>
+<p class="item">The address list can be freely sorted by clicking on column headers. 
+  Dragging one or more column headers in the area above the list (<span class="itemelement">Drag 
+  a column header in this area to group data</span>) will let you to group addresses
+  based on the contents of the selected fields. The <span class="itemelement">Total
+  </span>checkbox will also be shown, enabling you (when checked) to find out 
+  the number of addresses included in each group.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>How 
+        to filter addresses</strong></font></p>
+      <p>Temporairily activating/deactivating one or more items (without having
+        to unsubscribe them) will allow you to send a message to a subgroup of
+        addresses in the list. With this feature you will be able to create powerful filtering to be applied
+        to mailing processes. </p>
+      <p>For instance, if a &quot;City&quot; field is defined you can send a message
+        only to those that live in a specific city, temporarily disabling all
+        other addresses. If a &quot;Job&quot; field is defined you'll be able
+        to send a message only to certain professional categories (it will also
+        be possible to combine these 2 filters.</p>
+      <p>SendBlaster provides a powerfull data filter builder which lets users fine tune their
+      mailing by selecting and enabling or disabling records matching some conditions. It supports
+      multiple conditions and complex operators, so that they can visually
+      build a powerful SQL query without writing code. This filter builder can be
+      accessed using the <span class="itemelement">Filter</span> button.</p>
+      <p>Disabling of one or more addresses will also enable you to create exclusion
+        lists (addresses to which no message will ever be sent, not even if the
+        user will spontaneously subscribe to the list).</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">On top of the address list you can find the list management toolbar.
+  You can access these commands also through the context menu that is displayed
+  when right-clicking with the mouse on the list.</p>
+<p class="item">You can insert a new address (button <span class="itemelement">New</span>),
+  modify the selected address (<span class="itemelement">Modify</span>) or delete 
+  one or more addresses (<span class="itemelement">Delete</span>). You can select 
+  multiple addresses using both the keyboard and the mouse: clicking on an address 
+  while the <em>Ctrl </em>key is pressed will add the address to the selection, 
+  clicking on an address while the <em>Shift</em> key is pressed will add a group 
+  of addresses.</p>
+<p class="item">With the <span class="itemelement">Cut</span> / <span class="itemelement">Copy</span> 
+  / <span class="itemelement">Paste</span><span class="item"> buttons you can 
+  delete the addresses or copy them to/from the clipboard (if you need to select 
+  all records right click on any record and choose </span><span class="itemelement">Select
+  all</span><span class="item">).</span></p>
+<p class="item">The buttons <span class="itemelement">Subscribe selected addresses</span> 
+  and <span class="itemelement">Unsubscribe selected addresses</span> will allow 
+  you to manually manage subscriptions to the selected list (subscribing an address 
+  will cause a modification of the subscription date). The buttons <span class="itemelement">Enable 
+  selected addresses</span> and <span class="itemelement">Disable selected addresses 
+  </span>will let you to activate/deactivate an addresses regardless of its subscription 
+  state.</p>
+<p class="item">The <span class="itemelement">Filter</span> button allows users to filter data
+using up to 5 filtering rules, much like a SQL query would do but without the complexities; it also allows to specify an action to perform on all contacts
+that match the rules: <span class="itemelement">Activate/Deactivate</span> them, or
+<span class="itemelement">Subscribe/Unsubscribe</span> them, you can also
+choose to <span class="itemelement">Deactivate</span> non matching contacts, or just leave them as they are.
+</p>
+<p class="item">The <span class="itemelement">History</span> button will show
+  a list of previously sent messages to the selected address.</p>
+<p class="item">Clicking on the <span class="itemelement">Notes </span>button
+   will show a new window in which to insert a free text to be associated with
+  the 
+  current address. The addresses associated with a note are marked by the <img src="img/sendblaster_lists_managing_3.gif" width="15" height="10"> 
+  icon in the last column (clicking on this icon will also show the Notes window).</p>
+<p class="item">The <span class="itemelement">Search</span>** button will show 
+  a window that will let you to search a text in a specific field or in multiple 
+  fields (including notes). By selecting <span class="itemelement">Match whole
+  word</span><span class="item"> the searching operation will display all addresses 
+  that match exactly the value specified. Otherwise the searching operation will 
+  display all addresses that contain the value even if it doesn't exactly match 
+  the value specified. To move through the resulting list use the </span><span class="itemelement">Find 
+  first</span><span class="item">, </span><span class="itemelement">Next</span><span class="item"> 
+  and </span><span class="itemelement">Previous</span><span class="item"> buttons 
+  in the search window.</span></p>
+<p class="item">The <span class="itemelement">Find Duplicates</span> button will show a window that allows to manage
+duplicate email addresses across lists. You can search for duplicates in selected lists, and
+remove or edit duplicate contacts from the duplicates window. Notice that you can have duplicate
+e-mail addresses in your lists and choose wether you want to send messages to duplicate e-mail
+addresses in the <a href="sendblaster_settings_advancedsettings.htm" class="itemlink">Advanced Settings</a> window.
+</p>
+<p class="item">The <span class="itemelement">Toggle view</span> button enables
+  you to switch between the normal view and the &quot;Card view&quot; (and back). 
+  In the &quot;Card view&quot; each address will be shown as a separate card with 
+  a cutomizable width. Navigation is made possible by the horizontal scroll bar.</p>
+<p class="item">You may want to use only a subset of the 15 available fields; 
+  in order to save space on screen, by clicking on <span class="itemelement">Visible 
+  fields</span> you can choose which fields will be displayed.</p>
+<hr size="1" noshade>
+<p class="item">*The Free edition can manage up to 2 distribution lists.<br>
+  **Search is only available in the Pro edition</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

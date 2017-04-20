@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Bounce-backs aangepaste formaten</p>
+<p class="item">Aangezien bounce-back email formaten origineel bedoelt waren om door mensen gelezen te worden en er geen standaard is kan SendBlaster de meest voorkomende bounce-back formaten verwerken met zijn eigen interne database, maar het kan voorkomen dat u te maken krijgt met formaten die niet herkend worden door het programma. Als dit gebeurd, kan u ze handmatig toevoegen aan de database van SendBlaster, zodat dit nieuwe formaat ook verwerkt kan worden.</p>
+<p class="item">Een aangepast formaat bestaat uit een paar regels; aan alle moet voldaan worden om het bericht als een bounce-back te beschouwen (met andere woorden, de logische operator van de regels is EN).</p>
+<p class="item">Als u een <span class="itemelement">Nieuw formaat</span> wilt toevoegen, moet als eerst een patroon in het onderwerp of in andere headers identifceren, wat uniek is om het bericht als een bounce-back te identificeren (een <span class="itemelement">Hard bounce</span>, als u de checkbox aan zet, of een soft bounce als de checkbox niet aan staat). De drop-down lijst van headers dient alleen als voorbeeld, u kan handmatig een specifieke header invullen door de naam in te vullen in het <span class="itemelement">Header</span> veld en het gewenste patroon in het <span class="itemelement">Waarde </span>veld.</p>
+<p class="item">Een <span class="itemelement">patroon </span>kan wildcards bevatten(het &quot;*&quot; teken wat &quot;elk character&quot; betekend): bijvoorbeeld als u &quot;*aflevering*melding*&quot; als het onderwerp patroon invult, zal elk bericht met de woorden &quot;aflevering&quot; en &quot;melding&quot; in het onderwerp - bijv. &quot;aflevering naar xxx@yyy.com melding mislukking&quot; - zal worden gezien als een bounce-back, vooropgesteld dat het ook aan de andere voorwaarden voldoet. Als u &quot;aflevering melding&quot; gebruikt zonder wildcards, zullen alleen berichten waarvan het onderwerp precies &quot;aflevering melding&quot; worden verwerkt als bounce-back, &quot;aflevering naar xxx@yyy.com melding mislukking&quot; zal niet worden gezien als geldig onderwerp.</p>
+<p class="item">U kan ook bepaalde woorden (onderbroken door een komma) die in een bericht gevonden moeten worden specificeren: als geen van deze woorden wordt gevonden wordt het bericht niet als een bounce-back beschouwt. Bijvoorbeeld, de meeste bounce-backs bevatten het woord &quot;reden&quot; (gevolgd door tekst waarin de reden wordt uitgelegd waarom het bericht niet is afgeleverd). Denk eraan dat de lijst van woorden geen patroon is (u kan geen wildcards gebruiken) en de logische operator is OF. </p>
+<p class="item">Als een bepaald bericht aan alle regels die u hebt gedefinieerd voldoet, wordt het verwerkt als een bounce-back, en alle e-mail adressen die gevonden worden in het bericht zullen uitgeschreven worden, als ze ook in de lijst staan waarvoor u de bounces download. Het kan dat u postmaster adressen wilt negeren met een patroon.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">Als voorbeeld</font></strong></p>
+    <p class="item">Laten we zeggen dat u berichten wilt behandelen als bounce-backs als ze:</p>
+        <p class="item">a) de woorden &quot;onafleverbaar&quot; en &quot;bericht&quot; in het onderwerp hebben;<br>
+          b) ze zijn van een &quot;postmaster@...&quot; adres;<br>
+          c) hun Content-Type header is &quot;afleverings melding&quot; of &quot;niet afgeleverd melding&quot;<br>
+          d)  het woord &quot;reden&quot; of &quot;error&quot; in het bericht hebben</p>
+      <p class="item">en u wilt het adres (&quot;postmaster@...&quot;) natuurlijk niet uitgeschreven hebben, aangezien het echte onbereikbare adres ergens in het bericht staat. </p>
+        <p class="item">Hier staat hoe het formaat eruit kan zien: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(checked)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Partroon van onderwerp:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*onafleverbaar*bericht*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Van</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Waarde:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Waarde:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*aflevering*melding*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Bericht bevat :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reden, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Uitgesloten :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>En hier is een veel simpeler formaat, die alle berichten met het woord &quot;onafleverbaar&quot; in het onderwerp hebben(en sluit de adressen postmaster@... en majordomo@... uit):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(checked)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong><strong>Partroon van onderwerp</strong>:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*onafleverbaar*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(leeg)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Waarde:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(leeg)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(leeg)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Waarde:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(leeg)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Bericht bevat :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(leeg)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Uitgesloten :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFFF99" class="item">&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

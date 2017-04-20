@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.style1 {
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 8pt;
+}
+</style>
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Czarna lista</p>
+<p class="item"><span class="itemelement">Czarna lista</span> to filtr, która 
+pozwala na zabezpieczenie konkretnych adresów email lub domen, przed 
+otrzymywaniem emaili, w zale&#380;no&#347;ci od ich&nbsp;
+<a href="sendblaster_lists_managing.htm">subskrypcji/stanu aktywacji</a>.</p>
+<p class="item">Gdy wysy&#322;asz wiadomo&#347;&#263; do konkretnej listy, przed wysy&#322;k&#261; Sendblaster 
+sprawdza czy adres odbiorcy lub domena nie s&#261; na czarnej li&#347;cie: je&#380;eli tak jest 
+adres jest pomini&#281;ty (<em>wiadomo&#347;&#263; &quot;&lt;adres&gt;: 
+  blacklisted</em>&quot; pojawi si&#281; w panelu logów).</p>
+<p class="item">Sendblaster wspiera dwa rodzaje czarnych list:</p>
+<ul>
+  <li class="item"><span class="itemelement">Adresowa</span> czarna lista: 
+	wprowad&#378; tu adres je&#380;eli nie chcesz wys&#322;a&#263; nigdy na niego wiadomo&#347;ci.<br>
+    &nbsp; </li>
+  <li class="item"><span class="itemelement">Domenowa</span> czarna lista*: 
+	zamiast pojedy&#324;czego adresu, mo&#380;esz okre&#347;li&#263; ca&#322;&#261; domen&#281; (domena email to ta 
+	cz&#281;&#347;&#263;, która wyst&#281;puje po znaku &quot;@&quot; w adresie email: pami&#281;taj aby 
+	nie podawa&#263; <em>&quot;www.</em>&quot; lub &#380;adnej nazwy trzeciego poziomu). 
+    Kiedy domena jest na czarnej li&#347;cie, na &#380;aden adres do niej nale&#380;&#261;cy nie 
+	zostanie wys&#322;ana jakakolwiek wiadomo&#347;&#263;.</li>
+</ul>
+<p class="item">Mo&#380;esz wprowadzi&#263; dane jako zwyk&#322;y tekst; ka&#380;dy wiersz musi 
+zawiera jeden adres lub domen&#281; (bez &#380;adnych dodatkowych znaków: nie mo&#380;esz u&#380;y&#263; 
+symboli ogólnych). Mo&#380;esz zrobi&#263; kopiuj / wklej ze schowka, aby zmienia&#263; czarne 
+listy za pomoc&#261; oprogramowania firm trzecich; lub nacisn&#261;&#263; przycisk
+<span class="itemelement">Edycja notatnikiem </span><span class="style1">aby 
+otworzy&#263; czarna list&#281; z wbudowanym edytorem </span>Windows (program nie 
+przestanie dzia&#322;a&#263; do kiedy nie sko&#324;czysz edycji i nie zamkniesz notatnik).</p>
+<form>
+  <p class="item">Oto przyk&#322;ad poprawnej czarnej listy <span class="itemelement">adresowej</span>:</p>
+  <p> 
+    <textarea name="addresses">address1@domain.com
+test2@site.biz
+</textarea>
+  </p>
+  <p class="item">oraz poprawnej <span class="itemelement">domenowej </span>
+	czarnej listy:</p>
+  <p> 
+    <textarea name="domains">domain.com
+site.biz
+</textarea>
+  </p>
+  <p class="item"><font color="#FF0000"><strong>Te czarne listy s&#261; z&#322;e</strong></font> 
+	poniewa&#380; maj&#261; albo symbole ogólne (<em>&quot;*</em>&quot;) i nazwy domen 
+	trzeciego poziomu (&quot;<em>www.&quot;</em>):</p>
+  <p> 
+    <textarea name="wrong" id="wrong">www.domain.com
+*@site.biz
+</textarea>
+  </p>
+  <p class="item">Pami&#281;taj &#380;e czarne listy maj&#261; limit rozmiaru i nie mog&#261; 
+	zast&#281;powa&#263; w&#322;a&#347;ciwych operacji zako&#324;czenia subskrypcji. Generaln&#261; zasad&#261; 
+	jest, &#380;e s&#261; u&#380;ywane w razie nag&#322;ej potrzeby lub do specjalnych zada&#324; (np. 
+	kto&#347; bezpo&#347;rednio zaznacza &#380;e nie chce dostawa&#263; emaili od ciebie, czy to po 
+	zako&#324;czeniu subskrypcji,&nbsp; czy te&#380; aby nie wysy&#322;a&#263; listów z newsletterem 
+	do konkurencji).</p>
+  <p>&nbsp; </p>
+</form>
+<hr size="1" noshade>
+<p class="item">*Tylko w wersji Pro</p>
+<p class="item">&nbsp;</p>
+</body>
+</html>

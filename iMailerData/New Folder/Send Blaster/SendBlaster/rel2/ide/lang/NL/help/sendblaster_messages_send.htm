@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Berichten versturen</p>
+<p class="item">Om berichten te kunnen versturen moet u eerst de onvanger en de verzender instellen.</p>
+<p class="item">De lijst met distributie lijsten (<a href="sendblaster_lists_managing.htm" class="itemelement">Onderhoud lijsten</a>) is te zien in het <span class="itemelement">Selecteer distributie lijst </span>veld. Selecteer er &eacute;&eacute;n en de adressen in de lijst woden ingevuld als ontvangers. Elk contact zal een persoonlijk bericht ontvangen.</p>
+<p class="item">De afzender moet bepaald worden in de <span class="itemelement">Verstuurder Sender</span> 
+  <span class="itemelement">e-mail adres</span> en <span class="itemelement">Naam verstuurder</span> velden. U kan gewoon typen in deze velden of een adres en naam selecteren uit de comboboxen, die de laatste 10 namen en adressen die zijn gebruikt laat zien (de lijst is leeg als er nog niet eerder een bericht is verstuurd). Als een in/uitschrijvings adres wordt meegegeven aan de geselecteerde distributie lijst , zal het automatisch te zien zijn als het adres van de afzender. Maar dit is gewoon standaard gedrag, het adres en/of naam kan handmatig aangepast worden.</p>
+<p class="item">U kan ook optioneel een <span class="itemelement">Antwoord-naar adres </span>instellen: de antwoorden zullen naar dit adres gestuurd worden. Als het leeggelaten wordt, zullen antwoorden worden gestuurd naar het adres van de afzender (dit is het standaard gedrag voor persoonlijke e-mail).</p>
+<p class="item">Om een bericht te versturen klikt u op de <span class="itemelement">Verstuur </span>knop. Als dit de eerste keer is dat u iets verstuurd, of als de verbindings instellingen zijn verandert, is het natuurlijk nodig dat u eerst de <span class="itemelement">Verzend instellingen</span> instelt, anders worden berichten niet verstuurd.</p>
+<p class="item">Er zijn twee<span class="itemelement"> Verzend methodes </span>beschikbaar: <span class="itemelement">Direct versturen </span> en <span class="itemelement">Gebruik SMTP server.</span></p>
+<ul>
+  <li class="item">Als u <span class="itemelement">Direct versturen </span>gebruikt zal het programma de e-mail server van elke ontvanger opzoeken en daar automatisch mee verbinden, en slaat daarmee de SMTP server over die dan niet nodig is. Om zo'n zoekopdracht uit te voeren zal Sendblaster de huidige standaard DNS verbinding gebruiken, maar het is ook mogelijk (en soms nodig) om handmatig een andere DNS in te stellen, door de optie <span class="itemelement">Stel DNS server handmatig in </span>te gebruiken en het goede IP adres in te typen. Denk eraan dat sommige e-mail domeinen (bijvoorbeeld, hotmail) direct versturen niet toestaan; het bericht wordt geweigerd als het van een desktop systeem afkomt in plaats van een publieke SMTP server. Door<span class="itemelement"> Opnieuw proberen met SMTP bij fouten</span> aan te zetten, 
+    zal als het bericht niet geaccepteerd wordt door de e-mail server van de ontvanger het programma het opnieuw proberen met de SMTP server met de <span class="itemelement">Gebruikt SMTP server</span>instellingen.<br>
+    &nbsp; </li>
+  <li class="item">Door <span class="itemelement">Gebruik SMTP server </span>te selecteren, 
+    zal het versturen van e-mail net zo gaan als in een normale e-mail client, als in, het bericht afleveren bij iemands eigen ISP SMTP server. Het is daarom nodig om de naam van de  <span class="itemelement">SMTP server</span> 
+    mee te geven(welke, als het nodig is ook een poortnummer nodig heeft zoals server:poort) en als gebruikers authenticatie nodig is moet u de <span class="itemelement">Authenticatie 
+    nodig </span>selecteren en een <span class="itemelement">Gebruikersnaam </span>en <span class="itemelement">Wachtwoord </span>meegeven. deze parameters zijn degene die u gebruikt in uw e-mail client, alles wat u daarom hoeft te doen is ze kopie&euml;ren van een werkende e-mail account (om er zeker van te zijn dat de server bereikbaar is klikt u op de  <span class="itemelement">Verbindingstest</span> knop). 
+    De <span class="itemelement">SSL</span> checkbox zet SSL communicatie aan, wat bij sommige SMTP servers nodig is(een voorbeeld is Gmail's SMTP 
+    server).<br>
+    Door <span class="itemelement">Opnieuw proberen met direct verzenden bij fouten</span> aan te zetten, kan als het bericht niet wordt geaccepteerd door de SMTP server, het programma proberen het bericht direct naar de e-mail server van de ontvanger te sturen met de <span class="itemelement">Direct verzenden </span>instellingen.</li>
+</ul>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item">
+<p><font color="#009900"></font><strong><font color="#009900">Gebruik direct verzenden of de SMTP server?</font></strong></p>
+<p>Dat hangt van meerdere dingen of, ten eerste, de beschikbaarheid van een goede SMTP server. Als uw ISP SMTP server snel veel berichten kan versturen of zelfs meerdere tegelijk kan versturen, is een SMTP server gebruiken sneller en betrouwbaarder, aangezien uw server 'dichter bij' uw computer is dan de e-mail server van een ontvanger.</p>
+      <p>Maar, sommige providers, om te voorkomen dat de server voor spam gebruikt wordt hebben beperkingen aan de hoeveelheid berichten dat binnen een bepaalde tijd verstuurd kan worden aangebracht en de hoeveelheid berichten die tegelijkertijd verstuurd kan worden (bijvoorbeeld, een SMTP server kan niet meer als 1 bericht in 5 seconden accepteren, en niet meer als 2 berichten tegelijk versturen). Alle berichten die over deze beperkingen gaan worden geweigerd met een fout. Dit betekend niet dat de server of het programma niet goed werkt maar dat het nodig is om een andere timing in te stellen in de <span class="itemelement">Geavanceerde instellingen</span>.</p>
+      <p>In zulke gevallen, kan het sneller zen handiger zijn om de 'direct versturen' methode te gebruiken. Het direct versturen heeft een beetje meer tijd nodig voor elke afleveringg (aangezien het een aanvraag naar de DNS server moet doen en de e-mail server kan heel ver van de pc van de gebruiker staan), maar deze verhoging in tijd wordt gecompenseerd door de mogelijkheid om meer berichten tegelijk te sturen zonder extra pauzes tussen de berichten hoeven te houden.</p>
+      <p>Direct versturen is ook handig als een mailing gedaan moet worden met een verbinding waarop u de SMTP server niet weet (bijvoorbeeld als u met uw laptop weg bent, dus niet thuis of op het kantoor - gewoonlijk als u een op een publiekelijk draadloos netwerk zit).</p>
+      </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">De<span class="itemelement"> Geavanceerde instellingen </span>laten de timing van de verzending fine-tunen. Dit is makkleijk om een verzending zo snel mogelijk als toegestaan is door de SMTP server en de antispam beperkingen. Hier is de betekenis van elke optie:</p>
+<ul class="item">
+  <li><span class="itemelement">Pauze tussen berichten </span>: de hoeveelheid seconden tussen het versturen van de berichten.</li>
+  <li><span class="itemelement">Pauze tussen blocks</span>: de hoeveelheid seconden die er tussen elk block zitten.</li>
+  <li><span class="itemelement">Berichten per block</span>: de hoeveelheid berichten in elk block.</li>
+  <li><span class="itemelement">Timeout</span>: de maximum hoeveelheid seconde waarna een verzending gestopt wordt.</li>
+  <li><span class="itemelement">Verbindingen</span>: de maximum hoeveelheid gelijktijdige verbindingen, de hoeveelheid berichten die tegelijk verstuurd kan worden*.</li>
+  <li><span class="itemelement">Verdere pogingen in geval van fouten</span>: Als de SMTP server of de server van de ontvanger (voor direct versturen) het bericht niet accepteerd, kan het programma een paar seconden wachten om dan nog een paar keer te proberen het bericht te versturen.</li>
+  <li><span class="itemelement">Pauze tussen pogingen</span>: de hoeveelheid seconden vertraging voordat een niet geaccepteerd bericht opnieuw wordt verzonden.</li>
+</ul>
+<p class="item">De goede configuratie kan niet ingesteld worden voordat u een paar pogingen hebt gedaan, waarmee u de hoeveelheid berichten verifieerd die aankomen. Om de instellingen makkelijker te maken zijn er <span class="itemelement">Aanbevolen instellingen </span>beschikbaar. Het kan zijn dat ze niet optimaal zijn voor uw verbinding maar ze kunnen gezien worden als een goed start punt om de beste configutatie te krijgen.</p>
+<p class="item"><strong><font color="#FF0000">Waarschuwing:</font></strong> Distributie
+  lijsten kunnen ongeldige e-mailadressen bevatten of sommige e-mail servers kunnen tijdelijk offline zijn. Daarom als u een lijst gebruikt die veel adressen bevat is het normaal en onvermijdelijk dat, ondank de gekozen verzend methode en instellingen, niet alle berichten afgeleverd kunnen worden en een bepaald percentage terug komt met een error. In zo'n geval kan u proberen om de mailing later af te maken met de <a href="sendblaster_messages_history.htm">geschiedenis</a> functies.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> 
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"> <p><font color="#009900"><strong>Hoe kan ik de goede geavanceerde instellingen krijgen?</strong></font></p>
+      <p>Om de goede geavanceerde instellingen te krijgen is het nodig om verschillende combinaties uit te proberen (gewoonlijk is een lijst met 10 adressen genoeg) en te controleren hoeveel daarvan er aankomen (deze info wordt aan het eind van het verzenden gegeven, ook staat het in de logs). Gebruikers die een 'tolerant' genoeg SMTP server hebben zullen niet veel problemen hebben, onafhankelijk van de instellingen die dat alleen de snelheid aanpassen. <br>
+        Aan de andere kant, als u SMTP server'streng' is , moet u misschien de snelheid verlagen en niet meerdere berichten tegelijk sturen om toch veel berichten af te kunnen leveren.</p>
+      <p>Hier zijn een paar makkelijke regels die de moeite waard zijn:</p>
+      <ul>
+        <li>Een tolerante SMTP server laat u snel versturen zonder pauzes. Op strenge SMTP servers die meerdere antispam filters gebruiken, moeten de pauzes omhoog en het gelijke aantal verbindingen naar beneden.</li>
+        <li>Normaliter, laten SMTP servers niet toe dat er veel berichten tegelijker tijd worden verstuurd,daaromals u SMTP gebruikt moet de hoeveelheid verbindingen laag zijn in sommige gevallen zelfs 1 (geen gelijktijdige verbindingen). Als de SMTP server antispam , kan het nodig zijn om het verzenden van de berichten te vertragen door een paar seconden pauze tussen de berichten in te stellen, en een langere pauze tussen de blocks . Ook moeten de blocks niet meer als een paar dozijn berichten bevatten</li>
+        <li>Als u direct verstuurd met een standaard distibutie lijst met adressen die tot verschillende domeinen behoren, zullen de berichten naar meerdere servers afgeleverd worden: het is daarom mogelijk om een groot nummer aan verbindingen in te stellen en een beperkte (of geen) pauze tussen berichten of blocks.</li>
+        <li>Het aantal pogingen om opnieuw te proberen bij een fout verhogen kan ervoor zorgen dat er meer berichten afgeleverd worden maar het vertraagd het verzend proces, helemaal als het aantal gelijktijdige verbindingen laag is. De mailing later afmaken vanuit het <a href="sendblaster_messages_history.htm">geschiedenis</a> scherm (nadat u een paar minuten heeft gewacht) kan een goed idee zijn.</li>
+      </ul></td>
+    <td width="7%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+<p class="item">Onder de geavanceerde instellingen kan u ook de <span class="itemelement">Encoding</span> 
+  mode vinden: kies tussen<span class="itemelement"> quoted-printable</span> en <span class="itemelement">base64</span>. 
+  De header inhoud die het programma laat zien dat het bericht heeft gemaakt(de <span class="itemelement">Xmailer 
+  text</span>): Door de <span class="itemelement">Standaard </span>instellingen te hebruiken zal SendBlaster's naam en versie in de header te zien zijn. Anders kan u er gewoon tekst in typen, om net te doen of u via een andere e-mail client stuurt of kies  <span class="itemelement">Geen</span> optie om helemaal geeen header mee te sturen.</p>
+<p class="item"><span class="itemelement">Domein</span> optie laat u de machine naar die gebruikt wordt door het programma om verbinding te maken met de SMTP server of e-mail servers van ontvangers veranderen. dit kan handig zijn als u <span class="itemelement">Direct 
+  versturen</span> gebruikt: sommige servers controleren een domein naam voordat ze berichten accepteren; daar moet de domeinnaam gelijk zijn met de publieke hostname van het netwerk, en voordat het berichten accepteert sturen ze eeen ping (of iets soort gelijks) om te kijken of de domeinnaam hoort bij het ip-adres van de computer die verbinding wil. Als dit het geval is, kan het selecteren van <span class="itemelement">Internet 
+  adres </span> het aantal geweigerde bericht naar beneden brengen. Wij raden aan om de standaard instellingen te gebruiken, of om <span class="itemelement">Internet adres</span> te gebruiken als u direct verstuurd en <span class="itemelement">PC local name</span> als u SMTP gebruikt (SMTP servers 
+  kijken niet naar de domein naam).<br>
+  SendBlaster controleerd het publieke adres va uw machine elke keer als het gestart wordt; als er geen internet verbinding beschikbaar bij het starten, wordt publiek adres leeg gelaten en wordt de lokale naam van de PC gebruikt. Als een fixed IP beschikbaar is, kunnen gevorderde gebruikers <span class="itemelement">Gedefinieerd door gebruiker...</span> 
+  gebruiken en een fixed waarde invullen (let erop dat een hostnaam nodig is niet een IP adres) - maar denk eraan dat verkeerde instellingen een goede mailing kunnen verpesten.</p>
+<hr size="1" noshade>
+<p class="item">*In de Gratis versie is het maximum aantal verbindingen 2, zelf als er meer ingevuld wordt.</p>
+</body>
+</html>

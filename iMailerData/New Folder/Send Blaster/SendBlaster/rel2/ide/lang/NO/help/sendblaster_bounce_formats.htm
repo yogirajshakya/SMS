@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//NO">
+<html>
+<head>
+<title>SendBlaster</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="sendblaster.css" rel="stylesheet" type="text/css">
+</head>
+
+<body leftmargin="8" topmargin="8" marginwidth="8" marginheight="8" class="body">
+<p class="title">Bounce-backs tilpassede formater</p>
+<p class="item">Bounce-back e/postformater ble opprinnelig designet for &aring; v&aelig;re menneskelig lesbare, ikke maskinlesbare, 
+derfor finnes det ikke noe standardformat eller noen regel. SendBlaster kan prosessere de fleste vanlige bounce-back/formater ved hjelp av den innebygde databasen, 
+men du kan oppleve at enkelte formater ikke blir gjenkjent av programvaren. Hvis dette skjer, kan du manuelt legge til et nytt, tilpasset format til SendBlasters bounce-back database.</p>
+<p class="item">Et tilpasset format best&aring;r av noen regler; alle m&aring; oppfylles for at meldingen skal oppfattes som en bounce-back (med andre ord, regelens logiske operator er AND). </p>
+<p class="item">Hvis du &oslash;nsker &aring; legge til et <span class="itemelement">Nytt format</span> m&aring; du f&oslash;rst identifisere noen m&oslash;nstre i Emne eller i andre headerfelter som unikt identifiserer meldingen som en bounce-back (en <span class="itemelement">Hard bounce</span> dersom checkbox'en er markert, ellers en soft bounce). Rullgardin-listen med headere er kun et eksempel, du kan manuelt legge til en spesifik header ved &aring; skrive inn header-navnet i  <span class="itemelement">Header</span>-feltet og &oslash;nsket m&oslash;nster i  <span class="itemelement">Verdi</span>-feltet.</p>
+<p class="item">Et <span class="itemelement">m&oslash;nster</span> inneholder typisk jokertegn (&quot;*&quot;-tegnet, som betyr &quot;vilk&aring;rlig karakter&quot;): for eksempel, hvis du skriver inn &quot;*delivery*notification*&quot; som m&oslash;nster for Emne-feltet, vil alle meldinger som inneholder ordene &quot;delivery&quot; og &quot;notification&quot;  i Emne-feltet - f.eks. &quot;delivery to xxx@yyy.com notification failure&quot; - bli oppfattet som bounce-back, gitt at meldingen tilfredsstiller eventuelt andre regler du har definert. Hvis du bruker &quot;delivery notification&quot;, uten jokertegn vil kun meldinger som har n&oslash;yaktig  &quot;delivery notification&quot; som Emne-felt bli prosessert som  bounce-back - &quot;delivery to xxx@yyy.com notification failure&quot; vil ikke bli prosessert som bounce-back.</p>
+<p class="item">Du kan ogs&aring; skrive inn spesifike ord (separert med komma) som m&aring; forekomme i meldingsteksten: hvis ingen av ordene blir funnet blir ikke meldingen ansett som en bounce-back. For eksempel, de fleste bounce-backs inneholder ordet &quot;reason&quot; (etterfulgt av en tekst som forklarer grunnen til at meldingen ikke ble levert). Vennligst merk at listen av ord ikke er et m&oslash;nster (du kan ikke bruke jokertegn) og listens logiske operator er OR. </p>
+<p class="item">Hvis en melding oppfyller alle reglene du har definert, vil den bli prosessert som en bounce-back, og alle e-postadresser som finnes inne i meldingsteksten blir av-abonnert dersom de ogs&aring; finnes i listen du laster ned bouncer for. Du kan ogs&aring; ekskludere typiske postmaster-adresser ved hjelp av et m&oslash;nster.</p>
+<table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <td width="100%" bgcolor="#FFFF99" class="item"><p><strong><font color="#009900">Et eksempel </font></strong></p>
+        <p class="item">La oss si at du &oslash;nsker &aring; prosessere meldinger som bounce-back dersom de:</p>
+        <p class="item">a) har ordene &quot;undeliverable&quot; og &quot;message&quot; i emnefeltet;<br>
+          b) kommer fra en &quot;postmaster@...&quot; adresse;<br>
+          c)  Content-Type headeren er &quot;delivery notification&quot; eller &quot;delivery failure notification&quot;<br>
+          d)  inneholder ordet &quot;reason&quot; eller &quot;error&quot; i meldingsteksten</p>
+        <p class="item">og selvf&oslash;lgelig &oslash;nsker du ikke at avsenderadressen (&quot;postmaster@...&quot;) skal av-abonneres, siden den virkelige, utilgjengelige adressen finnes et sted i meldingsteksten. </p>
+        <p class="item">Slik kan formatet se ut: </p>
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">(markert)</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>M&oslash;nster for Emne:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*undeliverable*message*</td>
+          </tr>
+          <tr>
+            <td width="0" class="item"><strong>1.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">From</td>
+          </tr>
+          <tr>
+            <td width="0" class="item">&nbsp;</td>
+            <td class="item"><strong>Verdi:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*postmaster*</td>
+          </tr>
+          <tr>
+            <td class="item"><strong>2.</strong></td>
+            <td class="item"><strong>Header:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">Content-Type</td>
+          </tr>
+          <tr>
+            <td class="item">&nbsp;</td>
+            <td class="item"><strong>Verdi:</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">*delivery*notification*</td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Meldingsteksten inneholder :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">reason, error </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="item"><strong>Ekskludér :</strong></td>
+            <td class="item">&nbsp;</td>
+            <td class="item">postmaster@*</td>
+          </tr>
+        </table>
+    <p>Og her er et mye enklere format, som prosesserer alle meldinger med ordet &quot;undeliverable&quot; i emne-feltet (og ekskluderer b&aring;de postmaster@... og majordomo@... adressene):</p>
+    <table border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td colspan="2" class="item"><strong>Hard bounce :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">(markert)</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>M&oslash;nster for Emne:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">*undeliverable*</td>
+      </tr>
+      <tr>
+        <td width="0" class="item"><strong>1.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(tom)</em></td>
+      </tr>
+      <tr>
+        <td width="0" class="item">&nbsp;</td>
+        <td class="item"><strong>Verdi:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(tom)</em></td>
+      </tr>
+      <tr>
+        <td class="item"><strong>2.</strong></td>
+        <td class="item"><strong>Header:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(tom)</em></td>
+      </tr>
+      <tr>
+        <td class="item">&nbsp;</td>
+        <td class="item"><strong>Verdi:</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(tom)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Meldingsteksten inneholder :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item"><em>(tom)</em></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="item"><strong>Ekskludér :</strong></td>
+        <td class="item">&nbsp;</td>
+        <td class="item">postmaster@*, majordomo@* </td>
+      </tr>
+    </table>    
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
